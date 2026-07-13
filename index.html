@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Explore and book reservations at the finest dining establishments: Gourmet Bistro, Sushi Zen, and La Piazza.">
+  <meta name="description" content="Explore and book reservations at the finest dining establishments: Gourmet Bistro, Sushi Zen, La Piazza, and The Portrait Gallery.">
   <title>Epicurean Portal - Finest Restaurants Collection</title>
   <link rel="stylesheet" href="global.css">
   <style>
@@ -17,6 +17,9 @@
       background: radial-gradient(circle, rgba(99, 102, 241, 0.08) 0%, transparent 70%);
       pointer-events: none;
       z-index: 0;
+    }
+    .gallery-gradient {
+      background: linear-gradient(135deg, #18181b 0%, #27272a 50%, #78350f 100%); /* Charcoal and gold glow */
     }
   </style>
 </head>
@@ -84,6 +87,25 @@
           <div class="card-footer">
             <span class="card-price">Price: <span>$$</span>$$</span>
             <a href="la-piazza.html" class="visit-btn" aria-label="Visit La Piazza Website">
+              Visit Website ➔
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- The Portrait Gallery Card -->
+      <article class="portal-card glass-panel" id="card-gallery">
+        <div class="card-image-wrapper">
+          <span class="card-rating-badge">★ 4.8</span>
+          <div class="card-img-placeholder gallery-gradient">🖼</div>
+        </div>
+        <div class="card-content">
+          <span class="card-cuisine">Small Plates & Cocktails</span>
+          <h2 class="card-title">The Portrait Gallery</h2>
+          <p class="card-description">Exquisite small plates, seasonal menus, and artisan cocktails in an intimate, art-filled historic landmark in Matthews.</p>
+          <div class="card-footer">
+            <span class="card-price">Price: <span>$$$</span>$</span>
+            <a href="portrait-gallery.html" class="visit-btn" aria-label="Visit The Portrait Gallery Website">
               Visit Website ➔
             </a>
           </div>
