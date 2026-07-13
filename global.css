@@ -159,17 +159,6 @@ a {
   transform: scale(1.08);
 }
 
-.bistro-gradient {
-  background: linear-gradient(135deg, #1e3a1e 0%, #3b5e3b 100%); /* Forest green */
-}
-
-.sushi-gradient {
-  background: linear-gradient(135deg, #111827 0%, #1f2937 50%, #7f1d1d 100%); /* Slate and crimson */
-}
-
-.piazza-gradient {
-  background: linear-gradient(135deg, #7c2d12 0%, #c2410c 100%); /* Terracotta */
-}
 
 .card-rating-badge {
   position: absolute;
