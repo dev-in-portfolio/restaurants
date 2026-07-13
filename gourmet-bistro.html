@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gourmet Bistro - Exquisite French-American Cuisine</title>
+  <link rel="stylesheet" href="global.css">
+  <style>
+    /* Premium Styling specifically for Gourmet Bistro */
+    body {
+      background-color: #fcfbf7; /* Warm cream */
+      color: #2c3e2b; /* Deep forest green */
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Cinzel', serif;
+      color: #1e301e;
+      letter-spacing: 0.05em;
+    }
+
+    .bistro-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+
+    /* Navbar */
+    .bistro-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid rgba(30, 48, 30, 0.1);
+      margin-bottom: 3rem;
+    }
+
+    .back-link {
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #556b2f;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: var(--transition-fast);
+    }
+
+    .back-link:hover {
+      color: #1e301e;
+      transform: translateX(-3px);
+    }
+
+    .bistro-logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #1e301e;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+    }
+
+    .bistro-reserve-btn {
+      font-family: var(--font-sans);
+      background-color: #1e301e;
+      color: #fcfbf7;
+      padding: 0.6rem 1.4rem;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      transition: var(--transition-fast);
+    }
+
+    .bistro-reserve-btn:hover {
+      background-color: #3b5e3b;
+      box-shadow: 0 4px 12px rgba(30, 48, 30, 0.15);
+    }
+
+    /* Hero */
+    .bistro-hero {
+      text-align: center;
+      padding: 4rem 1rem;
+      background: linear-gradient(135deg, rgba(30, 48, 30, 0.03) 0%, rgba(95, 111, 82, 0.08) 100%);
+      border-radius: 12px;
+      margin-bottom: 5rem;
+      border: 1px solid rgba(30, 48, 30, 0.05);
+    }
+
+    .bistro-hero-tag {
+      font-family: var(--font-sans);
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      color: #556b2f;
+      margin-bottom: 1rem;
+      display: block;
+      font-weight: 600;
+    }
+
+    .bistro-hero-title {
+      font-size: 3.2rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+
+    .bistro-hero-desc {
+      font-size: 1.15rem;
+      color: #4a5d4a;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.8;
+      font-style: italic;
+    }
+
+    /* Sections */
+    .section-title {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 3rem;
+      position: relative;
+      padding-bottom: 1rem;
+    }
+
+    .section-title::after {
+      content: '⚜';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1rem;
+      color: #a8904c; /* Gold */
+    }
+
+    /* Menu Grid */
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 3rem;
+      margin-bottom: 6rem;
+    }
+
+    .menu-category {
+      background: rgba(30, 48, 30, 0.01);
+      border: 1px dashed rgba(30, 48, 30, 0.15);
+      border-radius: 8px;
+      padding: 2.5rem;
+    }
+
+    .category-title {
+      font-size: 1.5rem;
+      border-bottom: 1px solid rgba(30, 48, 30, 0.1);
+      padding-bottom: 0.5rem;
+      margin-bottom: 2rem;
+      color: #556b2f;
+    }
+
+    .menu-item {
+      margin-bottom: 2rem;
+    }
+
+    .menu-item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.4rem;
+    }
+
+    .menu-item-name {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    .menu-item-dots {
+      flex-grow: 1;
+      border-bottom: 1px dotted rgba(30, 48, 30, 0.3);
+      margin: 0 10px;
+    }
+
+    .menu-item-price {
+      font-weight: 700;
+      color: #a8904c;
+    }
+
+    .menu-item-desc {
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      color: #657565;
+      font-weight: 400;
+    }
+
+    .menu-item-badge {
+      display: inline-block;
+      font-family: var(--font-sans);
+      font-size: 0.7rem;
+      background: rgba(168, 144, 76, 0.1);
+      color: #a8904c;
+      padding: 0.1rem 0.4rem;
+      border-radius: 4px;
+      font-weight: 600;
+      margin-left: 0.5rem;
+      vertical-align: middle;
+    }
+
+    /* Booking Form */
+    .booking-section {
+      background-color: #1e301e;
+      color: #fcfbf7;
+      padding: 4rem 3rem;
+      border-radius: 12px;
+      box-shadow: 0 15px 30px rgba(30, 48, 30, 0.2);
+      margin-bottom: 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .booking-section h2 {
+      color: #fcfbf7;
+    }
+
+    .booking-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .form-group label {
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #a8904c;
+    }
+
+    .form-group input, .form-group select {
+      font-family: var(--font-sans);
+      background: rgba(252, 251, 247, 0.08);
+      border: 1px solid rgba(252, 251, 247, 0.15);
+      border-radius: 4px;
+      padding: 0.8rem;
+      color: #fcfbf7;
+      font-size: 0.95rem;
+      outline: none;
+      transition: var(--transition-fast);
+    }
+
+    .form-group input:focus, .form-group select:focus {
+      border-color: #a8904c;
+      background: rgba(252, 251, 247, 0.12);
+    }
+
+    .booking-submit-btn {
+      grid-column: 1 / -1;
+      margin-top: 1.5rem;
+      font-family: var(--font-sans);
+      background-color: #a8904c;
+      color: #1e301e;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 4px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      transition: var(--transition-smooth);
+    }
+
+    .booking-submit-btn:hover {
+      background-color: #cbb470;
+      box-shadow: 0 4px 15px rgba(168, 144, 76, 0.3);
+    }
+
+    /* Success Panel */
+    .success-panel {
+      display: none;
+      text-align: center;
+      padding: 2rem 0;
+      animation: fadeInUp 0.6s ease;
+    }
+
+    .success-icon {
+      font-size: 4rem;
+      color: #a8904c;
+      margin-bottom: 1rem;
+    }
+
+    .success-title {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .success-msg {
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      color: #cbd5e1;
+    }
+
+    /* Footer */
+    .bistro-footer {
+      text-align: center;
+      padding: 3rem 0;
+      border-top: 1px solid rgba(30, 48, 30, 0.1);
+      color: #7d8a7d;
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .menu-grid {
+        grid-template-columns: 1fr;
+      }
+      .bistro-hero-title {
+        font-size: 2.3rem;
+      }
+      .booking-section {
+        padding: 2.5rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="bistro-container">
+    
+    <!-- Navigation -->
+    <nav class="bistro-nav">
+      <a href="index.html" class="back-link">
+        ← Back to Directory
+      </a>
+      <div class="bistro-logo">Gourmet Bistro</div>
+      <a href="#book-table" class="bistro-reserve-btn">Book Table</a>
+    </nav>
+
+    <!-- Hero -->
+    <header class="bistro-hero">
+      <span class="bistro-hero-tag">Est. 2012</span>
+      <h1 class="bistro-hero-title">Culinary Perfection, Welcoming Charm</h1>
+      <p class="bistro-hero-desc">"Every dish tells a story, every ingredient is selected with passion, and every dinner is designed as a celebration of the senses."</p>
+    </header>
+
+    <!-- Menu -->
+    <main>
+      <section>
+        <h2 class="section-title">Chef's Menu</h2>
+        <div class="menu-grid">
+          
+          <!-- Starters -->
+          <div class="menu-category">
+            <h3 class="category-title">Hors d'Œuvres</h3>
+            
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <span class="menu-item-name">French Onion Soup</span>
+                <span class="menu-item-dots"></span>
+                <span class="menu-item-price">$16</span>
+              </div>
+              <p class="menu-item-desc">Slow caramelized sweet onions, rich beef bone broth, cognac, toasted sourdough crouton, Gruyère gratinée.</p>
+            </div>
+
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <span class="menu-item-name">Truffled Escargot</span>
+                <span class="menu-item-dots"></span>
+                <span class="menu-item-price">$22</span>
+              </div>
+              <p class="menu-item-desc">Wild burgundy snails baked in garlic-herb butter, white wine, black winter truffle essence, flaky puff pastry shell.</p>
+            </div>
+
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <span class="menu-item-name">Bistro Heirloom Burrata<span class="menu-item-badge">V</span></span>
+                <span class="menu-item-dots"></span>
+                <span class="menu-item-price">$18</span>
+              </div>
+              <p class="menu-item-desc">Creamy burrata cheese, local heirloom tomatoes, toasted pine nuts, basil-infused oil, aged balsamic reduction glaze.</p>
+            </div>
+          </div>
+
+          <!-- Main Entrees -->
+          <div class="menu-category">
+            <h3 class="category-title">Entrées Principales</h3>
+
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <span class="menu-item-name">Steak Frites</span>
+                <span class="menu-item-dots"></span>
+                <span class="menu-item-price">$45</span>
+              </div>
+              <p class="menu-item-desc">Pan-seared USDA Prime ribeye, rosemary truffle sea salt frites, accompanied by a decadent green peppercorn brandy sauce.</p>
+            </div>
+
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <span class="menu-item-name">Duck à l'Orange</span>
+                <span class="menu-item-dots"></span>
+                <span class="menu-item-price">$42</span>
+              </div>
+              <p class="menu-item-desc">Crisp roasted duck breast, parsnip purée, sautéed haricots verts, drizzled with a bright orange-cardamom glaze.</p>
+            </div>
+
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <span class="menu-item-name">Wild Mushroom Risotto<span class="menu-item-badge">GF</span></span>
+                <span class="menu-item-dots"></span>
+                <span class="menu-item-price">$34</span>
+              </div>
+              <p class="menu-item-desc">Creamy Arborio rice slow-cooked with roasted forest mushrooms, grana padano, chives, white truffle oil.</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Reservation Form Section -->
+      <section id="book-table" class="booking-section">
+        <h2 class="section-title" style="margin-bottom: 1.5rem;">Reserve A Table</h2>
+        
+        <form id="reservation-form">
+          <p style="text-align: center; color: #a5b4fc; font-family: var(--font-sans); font-size: 0.95rem; margin-bottom: 2rem;">Secure your table instantly online. We look forward to welcoming you.</p>
+          <div class="booking-grid">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" required placeholder="John Doe">
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" required placeholder="john@example.com">
+            </div>
+
+            <div class="form-group">
+              <label for="date">Preferred Date</label>
+              <input type="date" id="date" required>
+            </div>
+
+            <div class="form-group">
+              <label for="time">Preferred Time</label>
+              <select id="time" required>
+                <option value="17:00">5:00 PM</option>
+                <option value="18:00">6:00 PM</option>
+                <option value="19:00">7:00 PM</option>
+                <option value="20:00">8:00 PM</option>
+                <option value="21:00">9:00 PM</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="guests">Guests Count</label>
+              <select id="guests" required>
+                <option value="2">2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+                <option value="5">5 Guests</option>
+                <option value="6">6+ Guests</option>
+              </select>
+            </div>
+
+            <button type="submit" class="booking-submit-btn">Confirm Reservation</button>
+          </div>
+        </form>
+
+        <div class="success-panel" id="success-panel">
+          <div class="success-icon">⚜</div>
+          <h3 class="success-title">Reservation Requested!</h3>
+          <p class="success-msg" id="success-message">Thank you. A confirmation email has been dispatched to your address.</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bistro-footer">
+      <p>© 2026 Gourmet Bistro. 450 Culinary Ave, New York. | Mon - Sun: 5:00 PM - 11:00 PM</p>
+    </footer>
+  </div>
+
+  <script>
+    // Handle reservation submissions
+    const form = document.getElementById('reservation-form');
+    const successPanel = document.getElementById('success-panel');
+    const successMsg = document.getElementById('success-message');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const date = document.getElementById('date').value;
+      const time = document.getElementById('time').value;
+      const guests = document.getElementById('guests').value;
+
+      // Mock submitting...
+      form.style.display = 'none';
+      successPanel.style.display = 'block';
+      successMsg.innerHTML = `Thank you, <strong>${name}</strong>! Your table for <strong>${guests} guests</strong> on <strong>${date}</strong> at <strong>${time}</strong> has been requested. We have sent a confirmation details to <strong>${email}</strong>.`;
+    });
+  </script>
+</body>
+</html>

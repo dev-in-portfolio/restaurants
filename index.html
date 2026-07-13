@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore and book reservations at the finest dining establishments: Gourmet Bistro, Sushi Zen, and La Piazza.">
+  <title>Epicurean Portal - Finest Restaurants Collection</title>
+  <link rel="stylesheet" href="global.css">
+  <style>
+    /* Unique elements for index.html */
+    .portal-bg-decor {
+      position: absolute;
+      top: -200px;
+      right: -200px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(99, 102, 241, 0.08) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="portal-bg-decor"></div>
+
+  <main class="portal-container" id="main-portal">
+    <!-- Header -->
+    <header class="portal-header">
+      <h1 class="portal-title">The Epicurean Directory</h1>
+      <p class="portal-subtitle">Discover curated menus, unique aesthetics, and make reservations at our handpicked premium dining spots.</p>
+    </header>
+
+    <!-- Restaurant Portal Grid -->
+    <section class="restaurant-grid">
+      
+      <!-- Gourmet Bistro Card -->
+      <article class="portal-card glass-panel" id="card-bistro">
+        <div class="card-image-wrapper">
+          <span class="card-rating-badge">★ 4.8</span>
+          <div class="card-img-placeholder bistro-gradient">🍷</div>
+        </div>
+        <div class="card-content">
+          <span class="card-cuisine">French-American</span>
+          <h2 class="card-title">Gourmet Bistro</h2>
+          <p class="card-description">Classic recipes meets modern cooking. Cozy fireplace, refined rustic wood accents, and an exquisite wine list.</p>
+          <div class="card-footer">
+            <span class="card-price">Price: <span>$$$</span>$</span>
+            <a href="gourmet-bistro.html" class="visit-btn" aria-label="Visit Gourmet Bistro Website">
+              Visit Website ➔
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Sushi Zen Card -->
+      <article class="portal-card glass-panel" id="card-sushi">
+        <div class="card-image-wrapper">
+          <span class="card-rating-badge">★ 4.9</span>
+          <div class="card-img-placeholder sushi-gradient">🍣</div>
+        </div>
+        <div class="card-content">
+          <span class="card-cuisine">Japanese Sushi</span>
+          <h2 class="card-title">Sushi Zen</h2>
+          <p class="card-description">Experience minimalist beauty and masterfully crafted nigiri, sashimi, and custom maki rolls. Slate dark ambiance.</p>
+          <div class="card-footer">
+            <span class="card-price">Price: <span>$$$$</span></span>
+            <a href="sushi-zen.html" class="visit-btn" aria-label="Visit Sushi Zen Website">
+              Visit Website ➔
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- La Piazza Card -->
+      <article class="portal-card glass-panel" id="card-piazza">
+        <div class="card-image-wrapper">
+          <span class="card-rating-badge">★ 4.7</span>
+          <div class="card-img-placeholder piazza-gradient">🍕</div>
+        </div>
+        <div class="card-content">
+          <span class="card-cuisine">Traditional Italian</span>
+          <h2 class="card-title">La Piazza</h2>
+          <p class="card-description">Fresh brick-oven pizzas, hand-rolled pastas, and warm olive-grove outdoor seating. Just like in Rome.</p>
+          <div class="card-footer">
+            <span class="card-price">Price: <span>$$</span>$$</span>
+            <a href="la-piazza.html" class="visit-btn" aria-label="Visit La Piazza Website">
+              Visit Website ➔
+            </a>
+          </div>
+        </div>
+      </article>
+
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sushi Zen - Authentic Japanese Artistry</title>
+  <link rel="stylesheet" href="global.css">
+  <style>
+    /* Premium dark-mode styling for Sushi Zen */
+    body {
+      background-color: #0b0f17; /* Dark slate */
+      color: #e2e8f0; /* Soft white */
+      font-family: 'Inter', sans-serif;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      color: #ffffff;
+      letter-spacing: -0.01em;
+    }
+
+    .zen-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+
+    /* Navbar */
+    .zen-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      margin-bottom: 3rem;
+    }
+
+    .back-link {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #94a3b8;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: var(--transition-fast);
+    }
+
+    .back-link:hover {
+      color: #e11d48; /* Crimson */
+      transform: translateX(-3px);
+    }
+
+    .zen-logo {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      border-left: 3px solid #e11d48;
+      padding-left: 10px;
+    }
+
+    .zen-reserve-btn {
+      background-color: #e11d48;
+      color: #ffffff;
+      padding: 0.6rem 1.4rem;
+      border-radius: 2px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: var(--transition-fast);
+      letter-spacing: 0.05em;
+    }
+
+    .zen-reserve-btn:hover {
+      background-color: #be123c;
+      box-shadow: 0 4px 15px rgba(225, 29, 72, 0.4);
+    }
+
+    /* Hero */
+    .zen-hero {
+      text-align: center;
+      padding: 5rem 1rem;
+      background: radial-gradient(circle at center, rgba(225, 29, 72, 0.05) 0%, transparent 70%);
+      border-radius: 8px;
+      margin-bottom: 5rem;
+      border: 1px solid rgba(255, 255, 255, 0.03);
+    }
+
+    .zen-hero-tag {
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 0.3em;
+      color: #e11d48;
+      margin-bottom: 1.2rem;
+      display: block;
+      font-weight: 600;
+    }
+
+    .zen-hero-title {
+      font-size: 3.5rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.1;
+      font-weight: 800;
+    }
+
+    .zen-hero-desc {
+      font-size: 1.1rem;
+      color: #94a3b8;
+      max-width: 650px;
+      margin: 0 auto;
+      line-height: 1.8;
+      font-weight: 300;
+    }
+
+    /* Section Title */
+    .section-title {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 4rem;
+      font-weight: 700;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 2px;
+      background-color: #e11d48;
+      margin: 1rem auto 0 auto;
+    }
+
+    /* Signature Showcase Grid */
+    .showcase-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-bottom: 6rem;
+    }
+
+    .showcase-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      overflow: hidden;
+      transition: var(--transition-smooth);
+    }
+
+    .showcase-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(225, 29, 72, 0.3);
+      box-shadow: 0 10px 25px rgba(225, 29, 72, 0.1);
+    }
+
+    .showcase-visual {
+      height: 180px;
+      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3.5rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .showcase-info {
+      padding: 1.5rem;
+    }
+
+    .showcase-name {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .showcase-price {
+      color: #e11d48;
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+
+    .showcase-desc {
+      font-size: 0.9rem;
+      color: #94a3b8;
+      line-height: 1.5;
+    }
+
+    /* Menu Section Layout */
+    .zen-menu-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 6rem;
+    }
+
+    .zen-menu-table tr {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .zen-menu-table td {
+      padding: 1.5rem 1rem;
+      vertical-align: top;
+    }
+
+    .menu-name-cell {
+      font-weight: 600;
+      font-size: 1.1rem;
+      width: 30%;
+    }
+
+    .menu-desc-cell {
+      color: #94a3b8;
+      font-size: 0.95rem;
+      width: 55%;
+    }
+
+    .menu-price-cell {
+      text-align: right;
+      font-weight: 700;
+      color: #e11d48;
+      font-size: 1.1rem;
+      width: 15%;
+    }
+
+    /* Reservation Form */
+    .zen-booking {
+      background-color: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 4rem 3rem;
+      border-radius: 8px;
+      margin-bottom: 4rem;
+    }
+
+    .booking-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .form-group label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #e11d48;
+      font-weight: 600;
+    }
+
+    .form-group input, .form-group select {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 2px;
+      padding: 0.8rem;
+      color: #ffffff;
+      font-size: 0.95rem;
+      outline: none;
+      transition: var(--transition-fast);
+    }
+
+    .form-group input:focus, .form-group select:focus {
+      border-color: #e11d48;
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .zen-submit-btn {
+      grid-column: 1 / -1;
+      margin-top: 1.5rem;
+      background-color: #e11d48;
+      color: #ffffff;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 2px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      transition: var(--transition-smooth);
+    }
+
+    .zen-submit-btn:hover {
+      background-color: #be123c;
+      box-shadow: 0 4px 15px rgba(225, 29, 72, 0.3);
+    }
+
+    /* Success Panel */
+    .success-panel {
+      display: none;
+      text-align: center;
+      padding: 2rem 0;
+      animation: fadeInUp 0.6s ease;
+    }
+
+    .success-icon {
+      font-size: 4rem;
+      color: #e11d48;
+      margin-bottom: 1rem;
+    }
+
+    .success-title {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .success-msg {
+      font-size: 1rem;
+      color: #94a3b8;
+    }
+
+    /* Footer */
+    .zen-footer {
+      text-align: center;
+      padding: 3rem 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      color: #64748b;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .zen-booking {
+        padding: 2.5rem 1.5rem;
+      }
+      .zen-hero-title {
+        font-size: 2.5rem;
+      }
+      .zen-menu-table td {
+        padding: 1rem 0.5rem;
+      }
+      .menu-name-cell {
+        width: 40%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="zen-container">
+    
+    <!-- Navigation -->
+    <nav class="zen-nav">
+      <a href="index.html" class="back-link">
+        ← Back to Directory
+      </a>
+      <div class="zen-logo">Sushi Zen</div>
+      <a href="#book-table" class="zen-reserve-btn">Book Table</a>
+    </nav>
+
+    <!-- Hero -->
+    <header class="zen-hero">
+      <span class="zen-hero-tag">Absolute Precision</span>
+      <h1 class="zen-hero-title">Experience Pure Gastronomy</h1>
+      <p class="zen-hero-desc">Enjoy high-grade sushi and seasonal omakase curated by master chefs in a quiet, slate-black minimalist environment designed to enhance focused appreciation.</p>
+    </header>
+
+    <main>
+      <!-- Signature Rolls -->
+      <section>
+        <h2 class="section-title">Signature Creations</h2>
+        <div class="showcase-grid">
+          
+          <div class="showcase-card">
+            <div class="showcase-visual">🌋</div>
+            <div class="showcase-info">
+              <h3 class="showcase-name">
+                <span>Dragon Volcano Roll</span>
+                <span class="showcase-price">$26</span>
+              </h3>
+              <p class="showcase-desc">Spicy blue crab and cucumber topped with sliced avocado, toasted freshwater eel, spicy aioli, sweet unagi reduction, and scallions.</p>
+            </div>
+          </div>
+
+          <div class="showcase-card">
+            <div class="showcase-visual">🍣</div>
+            <div class="showcase-info">
+              <h3 class="showcase-name">
+                <span>The Truffle Toro</span>
+                <span class="showcase-price">$32</span>
+              </h3>
+              <p class="showcase-desc">Fatty bluefin tuna belly lightly seared with a blowtorch, topped with fresh shaved black truffles, chives, and a drop of house soy glaze.</p>
+            </div>
+          </div>
+
+          <div class="showcase-card">
+            <div class="showcase-visual">🌿</div>
+            <div class="showcase-info">
+              <h3 class="showcase-name">
+                <span>Zen Garden Maki</span>
+                <span class="showcase-price">$20</span>
+              </h3>
+              <p class="showcase-desc">Pickled gobo root, cucumber, blanched asparagus, wrapped in shiso leaf, blanketed with roasted bell pepper, finished with ginger vinaigrette.</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Classic Menu -->
+      <section>
+        <h2 class="section-title">Omakase & Classic Menu</h2>
+        <table class="zen-menu-table">
+          <tbody>
+            <tr>
+              <td class="menu-name-cell">Chef's Omakase</td>
+              <td class="menu-desc-cell">A personal journey of 12 hand-selected nigiri sushi pieces, prepared and presented individually based on the freshest morning catches.</td>
+              <td class="menu-price-cell">$140</td>
+            </tr>
+            <tr>
+              <td class="menu-name-cell">Sashimi Platter</td>
+              <td class="menu-desc-cell">15 premium cuts of raw fish including bluefin tuna, king salmon, yellowtail, red snapper, and sweet scallops. Served with fresh grated wasabi.</td>
+              <td class="menu-price-cell">$65</td>
+            </tr>
+            <tr>
+              <td class="menu-name-cell">Wagyu Nigiri</td>
+              <td class="menu-desc-cell">A5 Miyazaki Japanese Wagyu beef, lightly torched, served over warm seasoned sushi rice, finished with garlic chips and sweet soy.</td>
+              <td class="menu-price-cell">$38</td>
+            </tr>
+            <tr>
+              <td class="menu-name-cell">Matcha Crème Brûlée</td>
+              <td class="menu-desc-cell">Rich organic Uji green tea custard, topped with a crisp caramelized sugar crust and local raspberries.</td>
+              <td class="menu-price-cell">$14</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Reservation Form Section -->
+      <section id="book-table" class="zen-booking">
+        <h2 class="section-title" style="margin-bottom: 1.5rem;">Omakase Reservation</h2>
+        
+        <form id="reservation-form">
+          <p style="text-align: center; color: #94a3b8; font-size: 0.95rem; margin-bottom: 2rem;">Reservations open 30 days in advance. Limited counter seats available.</p>
+          <div class="booking-grid">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" required placeholder="John Doe">
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" required placeholder="john@example.com">
+            </div>
+
+            <div class="form-group">
+              <label for="date">Preferred Date</label>
+              <input type="date" id="date" required>
+            </div>
+
+            <div class="form-group">
+              <label for="time">Preferred Time</label>
+              <select id="time" required>
+                <option value="17:30">5:30 PM (First Seating)</option>
+                <option value="19:30">7:30 PM (Second Seating)</option>
+                <option value="21:30">9:30 PM (Final Seating)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="guests">Guests Count</label>
+              <select id="guests" required>
+                <option value="1">1 Guest</option>
+                <option value="2">2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+              </select>
+            </div>
+
+            <button type="submit" class="zen-submit-btn">Book Counter Seat</button>
+          </div>
+        </form>
+
+        <div class="success-panel" id="success-panel">
+          <div class="success-icon">🇯🇵</div>
+          <h3 class="success-title">Seat Reserved!</h3>
+          <p class="success-msg" id="success-message">Thank you. A confirmation email has been dispatched to your address.</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="zen-footer">
+      <p>© 2026 Sushi Zen. 88 Omakase Way, San Francisco. | Tue - Sat: 5:30 PM - 11:30 PM</p>
+    </footer>
+  </div>
+
+  <script>
+    // Handle reservation submissions
+    const form = document.getElementById('reservation-form');
+    const successPanel = document.getElementById('success-panel');
+    const successMsg = document.getElementById('success-message');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const date = document.getElementById('date').value;
+      const time = document.getElementById('time').value;
+      const guests = document.getElementById('guests').value;
+
+      form.style.display = 'none';
+      successPanel.style.display = 'block';
+      successMsg.innerHTML = `Arigato, <strong>${name}</strong>. Your counter seating reservation for <strong>${guests} guest(s)</strong> on <strong>${date}</strong> at <strong>${time}</strong> is confirmed. A receipt details has been sent to <strong>${email}</strong>.`;
+    });
+  </script>
+</body>
+</html>
