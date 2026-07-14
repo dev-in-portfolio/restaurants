@@ -1,0 +1,52 @@
+name: Generate Block 1 restaurant demos
+
+on:
+  push:
+    branches:
+      - agent/block-1-boudreauxs
+    paths:
+      - scripts/install_block1_bundle.py
+      - .github/workflows/generate-block1.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out branch
+        uses: actions/checkout@v4
+        with:
+          ref: agent/block-1-boudreauxs
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install and validate Block 1
+        run: python scripts/install_block1_bundle.py
+
+      - name: Check whitespace
+        run: git diff --check
+
+      - name: Commit generated demos
+        shell: bash
+        run: |
+          if git diff --quiet && git diff --cached --quiet; then
+            echo "No generated changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html BLOCK1_STATUS.md \
+            eddies-place salud-cerveceria the-degenerate growlers-pourhouse \
+            the-goodyear-house the-daily-tavern artisans-palate intermezzo-pizzeria \
+            euro-grill-cafe midtown-tavern the-hobbyist enderly-coffee \
+            giddy-goat-coffee harpers-cafe-pineville middle-james-brewing \
+            kits-trackside-crafts pintville-craft-beer miro-spanish-grille zinicola
+          git commit -m "Complete all Block 1 restaurant demos [skip ci]"
+          git push origin HEAD:agent/block-1-boudreauxs
