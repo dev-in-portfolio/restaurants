@@ -1,55 +1,21 @@
 (() => {
-  const mobileFixes = document.createElement('link');
-  mobileFixes.rel = 'stylesheet';
-  mobileFixes.href = 'mobile-fixes.css';
-  document.head.appendChild(mobileFixes);
-
   const toggle = document.querySelector('[data-nav-toggle]');
   const links = document.querySelector('[data-nav-links]');
-  if (toggle && links) {
-    toggle.addEventListener('click', () => {
-      const open = links.classList.toggle('is-open');
-      toggle.setAttribute('aria-expanded', String(open));
-    });
-  }
-
-  const filterButtons = document.querySelectorAll('[data-filter]');
-  const dishes = document.querySelectorAll('[data-category]');
-  filterButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const filter = button.dataset.filter;
-      filterButtons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
-      dishes.forEach(dish => {
-        dish.hidden = filter !== 'all' && dish.dataset.category !== filter;
-      });
-    });
-  });
-
+  if (toggle && links) toggle.addEventListener('click', () => { const open = links.classList.toggle('is-open'); toggle.setAttribute('aria-expanded', String(open)); });
+  const buttons = [...document.querySelectorAll('[data-filter]')];
+  const dishes = [...document.querySelectorAll('[data-category]')];
+  buttons.forEach(button => button.addEventListener('click', () => { const wanted = button.dataset.filter; buttons.forEach(b => b.setAttribute('aria-pressed', String(b === button))); dishes.forEach(d => d.hidden = wanted !== 'all' && d.dataset.category !== wanted); }));
   const planner = document.querySelector('[data-planner]');
   if (planner) {
-    const occasion = planner.querySelector('[data-occasion]');
-    const group = planner.querySelector('[data-group]');
-    const timing = planner.querySelector('[data-timing]');
-    const title = document.querySelector('[data-plan-title]');
-    const copy = document.querySelector('[data-plan-copy]');
-    const list = document.querySelector('[data-plan-list]');
+    const occasion = planner.querySelector('[data-occasion]'); const count = planner.querySelector('[data-count]'); const timing = planner.querySelector('[data-timing]');
+    const title = planner.querySelector('[data-plan-title]'); const summary = planner.querySelector('[data-plan-summary]'); const list = planner.querySelector('[data-plan-list]');
     const plans = {
-      'Dinner with friends': ['Share an arrival window with the group', 'Start with a round for the table', 'Confirm the current menu before heading over'],
-      'Birthday table': ['Choose one point person for the group', 'Ask about current celebration and dessert policies', 'Keep the first order simple so the table can settle in'],
-      'NoDa night out': ['Use Boudreaux’s as the food stop in your 36th Street plan', 'Check the route and parking before leaving', 'Leave room for a walk through the neighborhood'],
-      'Brunch meetup': ['Confirm today’s brunch hours', 'Plan the table size before arrival', 'Choose a clear meeting point outside the restaurant']
+      'Feed the crew':['Pick one menu lane before everyone arrives','Choose a single point person for the table','Confirm the current menu and group seating directly'],
+      'Birthday in NoDa':['Ask about current celebration policies','Build the evening around a clear arrival time','Keep the first round simple so the table can settle'],
+      'Brunch meetup':['Confirm current brunch service first','Choose a meeting point on 36th Street','Plan for the neighborhood to be part of the outing'],
+      'First stop, long night':['Use Boudreaux’s as the food anchor','Check parking or transit before leaving','Leave the next stop flexible']
     };
-
-    const update = () => {
-      const selected = occasion.value;
-      const count = Math.max(1, Number(group.value) || 1);
-      const when = timing.value.toLowerCase();
-      title.textContent = selected;
-      copy.textContent = `${count} ${count === 1 ? 'guest' : 'guests'} · ${when}. Here is a simple plan for keeping the visit easy.`;
-      list.innerHTML = plans[selected].map(item => `<li>${item}</li>`).join('');
-    };
-
-    [occasion, group, timing].forEach(input => input.addEventListener('input', update));
-    update();
+    const update = () => { const n = Math.max(1, Number(count.value) || 1); title.textContent = occasion.value; summary.textContent = `${n} ${n === 1 ? 'person' : 'people'} · ${timing.value.toLowerCase()}.`; list.innerHTML = plans[occasion.value].map(item => `<li>${item}</li>`).join(''); };
+    [occasion,count,timing].forEach(el => el.addEventListener('input', update)); update();
   }
 })();

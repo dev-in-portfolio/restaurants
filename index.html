@@ -10,7 +10,9 @@
     .portal-bg-decor{position:absolute;top:-200px;right:-200px;width:600px;height:600px;background:radial-gradient(circle,rgba(99,102,241,.08),transparent 70%);pointer-events:none;z-index:0}
     .concept-notice{max-width:920px;margin:1.4rem auto 0;padding:1rem 1.2rem;border:1px solid rgba(255,255,255,.12);border-radius:1rem;background:rgba(255,255,255,.045);color:#cbd5e1;font-size:.92rem;line-height:1.6}
     .concept-notice strong{color:#fff}.card-rating-badge{letter-spacing:.08em}
+    .premium-card{outline:1px solid rgba(242,182,67,.8);box-shadow:0 24px 70px rgba(0,0,0,.42)}
     .full-card{outline:1px solid rgba(245,190,92,.36);box-shadow:0 18px 55px rgba(0,0,0,.25)}.prototype-card{opacity:.82}
+    .premium-card .card-rating-badge{background:linear-gradient(135deg,#f6d56e,#d99534);color:#12100a}
     .full-card .card-rating-badge{background:linear-gradient(135deg,#f0b85c,#d97a42);color:#17100a}.prototype-card .card-rating-badge{background:#334155;color:#e2e8f0}
   </style>
 </head>
@@ -20,12 +22,13 @@
     <header class="portal-header">
       <h1 class="portal-title">Restaurant Website Concepts</h1>
       <p class="portal-subtitle">Custom redesign demonstrations created for independent restaurants across Charlotte, Matthews, Pineville and Monroe.</p>
-      <div class="concept-notice"><strong>Honest status:</strong> FULL cards contain five substantive pages and are published, but remain premium-QA pending. PROTOTYPE cards contain one page and are incomplete.</div>
+      <div class="concept-notice"><strong>Honest status:</strong> PREMIUM cards are individually rebuilt and browser-reviewed. FULL cards contain five substantive pages but still await premium QA. PROTOTYPE cards contain one page and are incomplete.</div>
     </header>
     <section class="restaurant-grid" id="restaurant-grid" aria-label="Restaurant website redesign concepts"></section>
   </main>
   <script>
     const concepts = [
+      {name:"Boudreaux’s Kitchen & Tavern",area:"Charlotte · NoDa",cuisine:"Southern Cajun • Tavern • 36th Street",description:"A black-metal, cast-signage and lo-fi mural experience built directly from Boudreaux’s real NoDa identity—not a generic restaurant template.",emoji:"🐊",href:"boudreauxs/index.html",gradient:"linear-gradient(135deg,#050606,#1c211f 48%,#a5432d)",status:"premium"},
       {name:"The Portrait Gallery",area:"Matthews",cuisine:"Small Plates & Cocktails",description:"An editorial, art-forward redesign for an intimate downtown dining room, cocktail bar and private-event destination.",emoji:"🖼",href:"portrait-gallery/index.html",gradient:"linear-gradient(135deg,#18181b,#27272a 50%,#78350f)",status:"prototype"},
       {name:"Lang Van",area:"Charlotte",cuisine:"Vietnamese Cuisine",description:"A warm standalone brand home centered on Vietnamese comfort food, hospitality and an easy call-first customer journey.",emoji:"🍲",href:"lang-van/index.html",gradient:"linear-gradient(135deg,#064e3b,#047857 50%,#b45309)",status:"prototype"},
       {name:"Brooks' Sandwich House",area:"Charlotte",cuisine:"Burgers & Southern Classics",description:"A bold walk-up burger concept celebrating a Charlotte institution, its cash-only character and neighborhood identity.",emoji:"🍔",href:"brooks-sandwich-house/index.html",gradient:"linear-gradient(135deg,#dc2626,#b91c1c 50%,#eab308)",status:"prototype"},
@@ -80,7 +83,7 @@
       {name:"Portofino’s",area:"Charlotte Area",cuisine:"Italian • New York-Style Pizza • Multiple Locations",description:"A location-first Italian experience separating full-service restaurants from Uptown Express.",emoji:"🍕",href:"portofinos/index.html",gradient:"linear-gradient(135deg,#a9342d,#31583f 52%,#d0a04d)",status:"full"}
     ];
     const grid=document.getElementById('restaurant-grid');
-    grid.innerHTML=concepts.map(item=>{const full=item.status==='full';return `<article class="portal-card glass-panel ${full?'full-card':'prototype-card'}"><div class="card-image-wrapper"><span class="card-rating-badge">${full?'FULL 5-PAGE • QA PENDING':'1-PAGE • INCOMPLETE'}</span><div class="card-img-placeholder" style="background:${item.gradient}">${item.emoji}</div></div><div class="card-content"><span class="card-cuisine">${item.cuisine}</span><h2 class="card-title">${item.name}</h2><p class="card-description">${item.description}</p><div class="card-footer"><span class="card-price">Area: <span>${item.area}</span></span><a href="${item.href}" class="visit-btn">${full?'View Full Demo':'View Incomplete Prototype'} ➔</a></div></div></article>`}).join('');
+    grid.innerHTML=concepts.map(item=>{const premium=item.status==='premium';const full=premium||item.status==='full';const badge=premium?'PREMIUM • IDENTITY REBUILD':full?'FULL 5-PAGE • QA PENDING':'1-PAGE • INCOMPLETE';const label=premium?'View Premium Demo':full?'View Full Demo':'View Incomplete Prototype';return `<article class="portal-card glass-panel ${premium?'premium-card':full?'full-card':'prototype-card'}"><div class="card-image-wrapper"><span class="card-rating-badge">${badge}</span><div class="card-img-placeholder" style="background:${item.gradient}">${item.emoji}</div></div><div class="card-content"><span class="card-cuisine">${item.cuisine}</span><h2 class="card-title">${item.name}</h2><p class="card-description">${item.description}</p><div class="card-footer"><span class="card-price">Area: <span>${item.area}</span></span><a href="${item.href}" class="visit-btn">${label} ➔</a></div></div></article>`}).join('');
   </script>
 </body>
 </html>
