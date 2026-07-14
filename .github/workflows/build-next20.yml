@@ -1,10 +1,9 @@
 name: Build next 20 restaurant demos
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - '.migration/next20/run'
+  issues:
+    types: [opened]
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -15,6 +14,7 @@ concurrency:
 
 jobs:
   build:
+    if: github.event_name == 'workflow_dispatch' || github.event.issue.title == 'Run next 20 restaurant build'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -81,11 +81,9 @@ jobs:
               total_pages += len(html_pages)
               if len(html_pages) != 5:
                   errors.append(f'{slug}: expected 5 HTML pages, found {len(html_pages)}')
-
               for required in ('site.css', 'site.js', 'evidence.md'):
                   if not (folder / required).is_file():
                       errors.append(f'{slug}: missing {required}')
-
               for page in html_pages:
                   text = page.read_text(encoding='utf-8')
                   if '<nav' not in text or '<main' not in text or '<footer' not in text:
@@ -98,12 +96,7 @@ jobs:
                       clean = href.split('#', 1)[0]
                       if clean and not (page.parent / clean).exists():
                           errors.append(f'{page}: broken internal link {href}')
-
-              js_check = subprocess.run(
-                  ['node', '--check', str(folder / 'site.js')],
-                  capture_output=True,
-                  text=True,
-              )
+              js_check = subprocess.run(['node', '--check', str(folder / 'site.js')], capture_output=True, text=True)
               if js_check.returncode:
                   errors.append(f'{slug}: JavaScript syntax failure: {js_check.stderr.strip()}')
 
@@ -116,11 +109,9 @@ jobs:
               errors.append('unsupported browser or premium claim found in portfolio')
           if total_pages != 100:
               errors.append(f'expected 100 restaurant pages, found {total_pages}')
-
           if errors:
               print('\n'.join(errors))
               sys.exit(1)
-
           print('Validated 20 restaurants, 100 HTML pages, all links and JavaScript checks passed.')
           PY
 
