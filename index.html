@@ -33,6 +33,7 @@
     </header>
     <section class="restaurant-grid" id="restaurant-grid" aria-label="Restaurant website redesign concepts"></section>
   </main>
+  <script src="portal-leads-message2.js"></script>
   <script>
     const concepts = [
       {name:"Boudreaux’s Kitchen & Tavern",area:"Charlotte · NoDa",cuisine:"Southern Cajun • Tavern • 36th Street",description:"A black-metal, cast-signage and lo-fi mural experience built directly from Boudreaux’s real NoDa identity—not a generic restaurant template.",emoji:"🐊",href:"boudreauxs/index.html",gradient:"linear-gradient(135deg,#050606,#1c211f 48%,#a5432d)",status:"premium"},
@@ -328,6 +329,7 @@
       {name:"Mother of Dragons",area:"Charlotte",cuisine:"Website Lead • Not Built Yet",description:"Lead: The concept has a strong name and identity opportunity but needs a direct customer-facing page for menu, hours, events and reservations.",emoji:"🍽️",href:"mother-of-dragons/index.html",gradient:"linear-gradient(135deg,#081216,#1e6670 52%,#9b7425)",status:"lead"},
       {name:"Renaldo’s Culinary Experience",area:"Charlotte",cuisine:"Website Lead • Not Built Yet",description:"Lead: The culinary-experience positioning can be made clearer with a direct site for services, menus, booking and story.",emoji:"🍽️",href:"renaldos-culinary-experience/index.html",gradient:"linear-gradient(135deg,#10273a,#a84d2f 52%,#d9a13b)",status:"lead"}
     ];
+    concepts.push(...(window.restaurantLeadsMessage2||[]));
     const grid=document.getElementById('restaurant-grid');
     const alphaNav=document.getElementById('alpha-nav');
     const sortName=name=>name.replace(/^(the|a|an)\s+/i,'').normalize('NFD').replace(/[\u0300-\u036f]/g,'');
