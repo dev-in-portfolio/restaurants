@@ -1,22 +1,29 @@
-name: Generate Block 1 restaurant demos
+name: Finalize Block 1 restaurant demos
 
 on:
   push:
     branches:
       - agent/block-1-boudreauxs
     paths:
-      - scripts/install_block1_bundle.py
+      - scripts/finalize_block1.py
       - .github/workflows/generate-block1.yml
+  pull_request:
+    branches:
+      - main
+    paths:
+      - scripts/finalize_block1.py
+      - .github/workflows/generate-block1.yml
+      - boudreauxs/**
   workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  generate:
+  validate-and-finalize:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out branch
+      - name: Check out Block 1 branch
         uses: actions/checkout@v4
         with:
           ref: agent/block-1-boudreauxs
@@ -27,26 +34,21 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Install and validate Block 1
-        run: python scripts/install_block1_bundle.py
+      - name: Validate all 20 Block 1 demos
+        run: python scripts/finalize_block1.py
 
       - name: Check whitespace
         run: git diff --check
 
-      - name: Commit generated demos
+      - name: Commit Block 1 status and portfolio updates
         shell: bash
         run: |
-          if git diff --quiet && git diff --cached --quiet; then
-            echo "No generated changes to commit."
+          if git diff --quiet; then
+            echo "Block 1 already finalized."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add index.html BLOCK1_STATUS.md \
-            eddies-place salud-cerveceria the-degenerate growlers-pourhouse \
-            the-goodyear-house the-daily-tavern artisans-palate intermezzo-pizzeria \
-            euro-grill-cafe midtown-tavern the-hobbyist enderly-coffee \
-            giddy-goat-coffee harpers-cafe-pineville middle-james-brewing \
-            kits-trackside-crafts pintville-craft-beer miro-spanish-grille zinicola
-          git commit -m "Complete all Block 1 restaurant demos [skip ci]"
+          git add index.html BLOCK1_STATUS.md
+          git commit -m "Finalize all Block 1 restaurant demos [skip ci]"
           git push origin HEAD:agent/block-1-boudreauxs
