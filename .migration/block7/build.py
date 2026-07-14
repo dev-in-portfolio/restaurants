@@ -471,7 +471,11 @@ def art(r):
     return f'''<svg viewBox="0 0 400 400" role="img" aria-label="Custom illustration for {esc(r["name"])}"><g fill="none" stroke="currentColor" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"><circle cx="200" cy="190" r="118"/><path d="M110 215h180M135 165h130M165 115h70"/><circle cx="150" cy="250" r="18"/><circle cx="250" cy="250" r="18"/></g><text x="200" y="382" text-anchor="middle" font-family="Arial" font-size="14" font-weight="700">{esc(r["name"])}</text></svg>'''
 def nav(r, current):
     items=[("index.html","Home"),("menu.html","Menu"),("story.html","Story"),(r["tool"],r["toolName"]),("visit.html","Visit")]
-    links=''.join(f'<a href="{href}" {"aria-current=\\"page\\"" if href==current else ""}>{esc(label)}</a>' for href,label in items)
+    parts=[]
+    for href,label in items:
+        attr='aria-current="page"' if href==current else ''
+        parts.append(f'<a href="{href}" {attr}>{esc(label)}</a>')
+    links=''.join(parts)
     return f'''<a class="skip" href="#main">Skip to content</a><div class="notice">Unofficial redesign concept - current details require owner confirmation - forms do not submit</div><nav class="site-nav"><a class="brand" href="index.html">{esc(r["name"])}</a><button class="nav-toggle" data-nav-toggle aria-expanded="false">Menu</button><div class="nav-links" data-nav-links>{links}</div></nav>'''
 def shell(r, title, current, body, page_class=""):
     return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Unofficial five-page website concept for {esc(r["name"])}"><title>{esc(title)} | {esc(r["name"])}</title><link rel="stylesheet" href="site.css"></head><body class="layout-{esc(r["layout"])} {page_class}">{nav(r,current)}<main id="main">{body}</main><footer><strong>{esc(r["name"])}</strong><span>{esc(r["area"])}</span><p>Unofficial sales demonstration. Not affiliated with or operated by the restaurant.</p></footer><script src="site.js"></script></body></html>'''
