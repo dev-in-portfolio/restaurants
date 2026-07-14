@@ -1,0 +1,60 @@
+name: Add Boudreaux portfolio card
+
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    if: github.event.issue.number == 10 && github.event.comment.body == '/add-boudreaux-card'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Add and verify portfolio card
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root = Path('.')
+          required = ['index.html','menu.html','story.html','groups.html','visit.html']
+          missing = [name for name in required if not (root/'boudreauxs'/name).is_file()]
+          if missing:
+              raise SystemExit('Missing Boudreaux pages: ' + ', '.join(missing))
+          path = root/'index.html'
+          text = path.read_text(encoding='utf-8')
+          href = 'boudreauxs/index.html'
+          if f'"href":"{href}"' not in text:
+              marker = 'const concepts=['
+              if marker not in text:
+                  raise SystemExit('Portfolio concepts array not found')
+              card = {
+                  'name':'Boudreaux’s Restaurant',
+                  'area':'Charlotte',
+                  'cuisine':'Louisiana-Inspired • Kitchen & Tavern • NoDa',
+                  'href':href,
+                  'emoji':'🐊',
+                  'status':'static',
+                  'description':'Five-page restaurant-specific sales demo; static QA complete, browser visual QA pending.'
+              }
+              pos = text.index(marker) + len(marker)
+              text = text[:pos] + json.dumps(card, ensure_ascii=False, separators=(',',':')) + ',' + text[pos:]
+              path.write_text(text, encoding='utf-8')
+          updated = path.read_text(encoding='utf-8')
+          if f'"href":"{href}"' not in updated:
+              raise SystemExit('Boudreaux portfolio card was not added')
+          PY
+      - name: Remove temporary workflow and publish
+        run: |
+          rm .github/workflows/add-boudreaux-portfolio-card.yml
+          git config user.name 'restaurant-demo-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add index.html .github/workflows/add-boudreaux-portfolio-card.yml
+          git diff --cached --quiet && exit 0
+          git commit -m 'Add Boudreaux portfolio card [skip ci]'
+          git push origin main
