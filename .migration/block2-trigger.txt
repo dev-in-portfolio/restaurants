@@ -1,1 +1,0 @@
-Trigger Block 2 repository generation and validation — corrected repository path.
