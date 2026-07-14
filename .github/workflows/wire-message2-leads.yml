@@ -1,4 +1,4 @@
-name: Wire message 2 restaurant leads
+name: Finalize restaurant lead portal
 
 on:
   push:
@@ -10,7 +10,7 @@ permissions:
   contents: write
 
 jobs:
-  wire-portal:
+  finalize-portal:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -18,7 +18,7 @@ jobs:
           ref: main
           fetch-depth: 0
 
-      - name: Add message 2 lead data to portal
+      - name: Merge lead sources without duplicate restaurant tiles
         run: |
           python3 - <<'PY'
           from pathlib import Path
@@ -26,64 +26,65 @@ jobs:
           path = Path('index.html')
           text = path.read_text(encoding='utf-8')
 
-          # Repair the missing comma before the three manually appended Message 1 leads.
-          text = text.replace(
-              'status:"lead"}\n      {name:"Cafe South"',
-              'status:"lead"},\n      {name:"Cafe South"',
-              1,
-          )
+          supplement_tag = '  <script src="portal-leads-supplement.js"></script>\n'
+          message2_tag = '  <script src="portal-leads-message2.js"></script>\n'
+          if supplement_tag not in text:
+              if message2_tag not in text:
+                  raise SystemExit('Message 2 script tag is missing')
+              text = text.replace(message2_tag, message2_tag + supplement_tag, 1)
 
-          script_tag = '  <script src="portal-leads-message2.js"></script>\n'
-          inline_anchor = '  <script>\n    const concepts = ['
-          if script_tag not in text:
-              if inline_anchor not in text:
-                  raise SystemExit('Could not find portal script anchor')
-              text = text.replace(inline_anchor, script_tag + inline_anchor, 1)
-
-          push_line = '    concepts.push(...(window.restaurantLeadsMessage2||[]));\n'
-          grid_anchor = "    ];\n    const grid=document.getElementById('restaurant-grid');"
-          if push_line not in text:
-              if grid_anchor not in text:
-                  raise SystemExit('Could not find concepts array end')
-              text = text.replace(
-                  grid_anchor,
-                  '    ];\n' + push_line + "    const grid=document.getElementById('restaurant-grid');",
-                  1,
-              )
+          old_push = '    concepts.push(...(window.restaurantLeadsMessage2||[]));\n'
+          dedupe_merge = '''    const portalNameKey=name=>name.normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'');
+    const portalExistingNames=new Set(concepts.map(item=>portalNameKey(item.name)));
+    for(const item of [...(window.restaurantLeadsMessage2||[]),...(window.restaurantLeadSupplement||[])]){
+      const key=portalNameKey(item.name);
+      if(!portalExistingNames.has(key)){concepts.push(item);portalExistingNames.add(key);}
+    }
+'''
+          if old_push in text:
+              text = text.replace(old_push, dedupe_merge, 1)
+          elif 'portalExistingNames' not in text:
+              raise SystemExit('Could not find Message 2 merge line')
 
           path.write_text(text, encoding='utf-8')
           PY
 
-      - name: Validate portal scripts and counts
+      - name: Validate JavaScript and count unique restaurant tiles
         run: |
           node --check portal-leads-message2.js
+          node --check portal-leads-supplement.js
           python3 - <<'PY'
           from pathlib import Path
           import re
-
           html = Path('index.html').read_text(encoding='utf-8')
-          if 'portal-leads-message2.js' not in html:
-              raise SystemExit('Message 2 lead script is not loaded')
-          if 'restaurantLeadsMessage2' not in html:
-              raise SystemExit('Message 2 lead data is not merged into concepts')
           scripts = re.findall(r'<script>(.*?)</script>', html, re.S)
           Path('/tmp/portal-inline.js').write_text(scripts[-1], encoding='utf-8')
           PY
           node --check /tmp/portal-inline.js
           node - <<'NODE'
           const fs=require('fs'),vm=require('vm');
-          const ctx={window:{}};
-          vm.createContext(ctx);
-          vm.runInContext(fs.readFileSync('portal-leads-message2.js','utf8'),ctx);
-          if(ctx.window.restaurantLeadsMessage2.length!==195){
-            throw new Error(`Expected 195 Message 2 leads, found ${ctx.window.restaurantLeadsMessage2.length}`);
-          }
+          const html=fs.readFileSync('index.html','utf8');
+          const inline=[...html.matchAll(/\{name:"([^"]+)"/g)].map(match=>match[1]);
+          const context={window:{}};
+          vm.createContext(context);
+          vm.runInContext(fs.readFileSync('portal-leads-message2.js','utf8'),context);
+          vm.runInContext(fs.readFileSync('portal-leads-supplement.js','utf8'),context);
+          const message2=context.window.restaurantLeadsMessage2||[];
+          const supplement=context.window.restaurantLeadSupplement||[];
+          const key=name=>name.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'');
+          const all=[...inline,...message2.map(item=>item.name),...supplement.map(item=>item.name)];
+          const unique=new Set(all.map(key));
+          const report={inline_tiles:inline.length,message2_tiles:message2.length,supplement_tiles:supplement.length,total_unique_tiles:unique.size,duplicates_removed:all.length-unique.size};
+          fs.writeFileSync('portal-count.json',JSON.stringify(report,null,2)+'\n');
+          console.log(report);
+          if(message2.length!==195) throw new Error(`Expected 195 Message 2 tiles, found ${message2.length}`);
+          if(supplement.length!==3) throw new Error(`Expected 3 supplement tiles, found ${supplement.length}`);
           NODE
 
-      - name: Commit portal wiring
+      - name: Commit final portal wiring and count
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add index.html
-          git commit -m 'Show restaurant leads from blocks 12 through 22'
+          git add index.html portal-count.json
+          git commit -m 'Deduplicate and verify all queued restaurant tiles'
           git push origin HEAD:main
