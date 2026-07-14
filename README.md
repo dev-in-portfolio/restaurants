@@ -38,9 +38,10 @@ When this repository is connected and the user sends only a restaurant list, imm
 4. Build all five pages for every restaurant.
 5. Connect all pages with working desktop and mobile navigation.
 6. Validate every page, link, interaction and disclosure.
-7. Add or update the portfolio card only after all five pages exist.
-8. Commit and push every completed five-page demo.
-9. Ensure the changes are on the default branch before reporting completion.
+7. Complete the premium-evidence review described below.
+8. Add or update the portfolio card only after all five pages exist.
+9. Commit and push every completed five-page demo.
+10. Ensure the changes are on the default branch before reporting completion.
 
 Do not ask the user to repeat the project, choose a template, approve a plan, request a commit, request a push or remember to merge.
 
@@ -53,21 +54,26 @@ To prevent ambiguous status reports:
 - **Single-page prototype** means one authored page. It is incomplete and must never be called a full demo, premium demo, finished site or completed restaurant.
 - **Partial five-page demo** means two to four substantive pages exist. It is incomplete.
 - **Full five-page demo** means at least five separate substantive pages exist, are linked together, validated and published on the default branch.
-- **Production-ready website** means owner-approved branding, photography, menus, policies and real integrations are connected. A full five-page sales demo is not automatically production-ready.
+- **Premium five-page demo** means a full five-page demo that also passes every anti–faux-premium quality gate and browser-rendered visual QA requirement below.
+- **Production-ready website** means owner-approved branding, photography, menus, policies and real integrations are connected. A premium five-page sales demo is not automatically production-ready.
 
-Never use the word **built**, **done**, **finished**, **complete**, **full**, **premium** or **bespoke** without making clear whether the result is a single-page prototype, a full five-page demo or a production-ready website.
+Never use the word **built**, **done**, **finished**, **complete**, **full**, **premium** or **bespoke** without making clear whether the result is a single-page prototype, a full five-page demo, a premium five-page demo or a production-ready website.
 
-When reporting completion, state the exact count:
+When reporting completion, state the exact count and status:
 
-> `Restaurant Name — 5/5 pages built and published`
+> `Restaurant Name — 5/5 pages built and published; full five-page demo; premium QA pending`
+
+Only after every premium gate passes may the report say:
+
+> `Restaurant Name — 5/5 pages built, published and visually QA-tested; premium five-page demo`
 
 If fewer than five pages exist, report the actual count and say it is incomplete:
 
-> `Restaurant Name — 1/5 pages built; incomplete`
+> `Restaurant Name — 1/5 pages built; incomplete single-page prototype`
 
-## Non-negotiable definition of a full bespoke premium demo
+## Non-negotiable definition of a full five-page demo
 
-A restaurant may be labeled **FULL**, **BESPOKE**, **PREMIUM** or **COMPLETE** only when all of the following are true:
+A restaurant may be labeled **FULL** or **COMPLETE** only when all of the following are true:
 
 - At least five separate substantive HTML pages exist for that restaurant.
 - The restaurant’s default page is `<restaurant-slug>/index.html`.
@@ -80,7 +86,6 @@ A restaurant may be labeled **FULL**, **BESPOKE**, **PREMIUM** or **COMPLETE** o
 - The pages are individually authored for that restaurant.
 - The site has a restaurant-specific information architecture and page order.
 - The site has a distinct visual identity appropriate to that business.
-- The site includes at least one meaningful restaurant-specific interaction, such as a menu finder, event planner, catering estimator, meal switcher, heat ladder, pairing tool, curb-service guide or group-order builder.
 - The customer journey is based on that restaurant’s actual needs.
 - The copy is based on verified facts or clearly labeled proposed functionality.
 - Forms are visibly demonstrations and never submit data.
@@ -88,9 +93,175 @@ A restaurant may be labeled **FULL**, **BESPOKE**, **PREMIUM** or **COMPLETE** o
 - All HTML, CSS, JavaScript, links and navigation have been validated.
 - All files are committed and present on the default branch.
 
-A shared stylesheet may provide resets, accessibility utilities, typography loading and non-submitting demo-form behavior. It must not supply the restaurant’s page architecture or make every demo use the same hero/cards/grid/form skeleton.
+A shared stylesheet may provide resets, accessibility utilities, typography loading, consistent site navigation and non-submitting demo-form behavior. It must not supply the restaurant’s page architecture, visual identity or make every demo use the same hero/cards/grid/form skeleton.
 
-## What does not count as a full demo
+## Anti–faux-premium rule — hard stop
+
+**A site is not premium merely because it is dark, animated, colorful, custom-coded, labeled bespoke, or split into five files.**
+
+The word **PREMIUM** is reserved for work that visibly and functionally exceeds an ordinary template. A full five-page demo that fails any requirement in this section must be called:
+
+> `Full five-page demo — premium QA pending`
+
+It must not be called premium, bespoke premium, polished, finished premium, owner-ready or presentation-ready.
+
+### 1. No dressed-up shared shell
+
+A premium site must not be the same underlying composition repeated with new colors, restaurant names and copy.
+
+The following are prohibited:
+
+- Reusing the same hero proportions, card grid, section order, conversion block and footer composition across restaurants.
+- Reusing the same five page layouts with only wording and colors changed.
+- Repeating a generic pattern such as hero → three cards → menu cards → form on most pages.
+- Using a data object or shared renderer to generate restaurant pages.
+- Calling inline restaurant-specific CSS “bespoke” when the actual DOM structure remains substantially identical.
+- Hiding template reuse behind renamed classes.
+
+Shared navigation, accessibility helpers, resets and form-safety code are allowed. The restaurant’s **information architecture, page compositions, visual rhythm and conversion journey must be individually designed**.
+
+### 2. Five real pages, not one design copied five times
+
+Each of the five pages must have its own page-level purpose and composition.
+
+Premium fails when:
+
+- The menu, about, conversion and contact pages are shortened copies of the homepage.
+- Interior pages use identical hero and card structures with only headings changed.
+- Pages exist mostly to satisfy the file count.
+- Content is thin, generic or interchangeable with another restaurant.
+- Navigation links exist but the pages do not provide substantial new value.
+
+### 3. Restaurant-specific content depth
+
+The site must demonstrate meaningful research, not restaurant-themed filler.
+
+Across the five pages, premium work must include verified or clearly qualified details such as:
+
+- Correct business identity and location information.
+- Real cuisine, service model and customer use cases.
+- Verified menu categories or clearly labeled representative menu direction.
+- The restaurant’s genuine story, atmosphere or neighborhood role.
+- Its actual conversion needs: ordering, catering, events, private dining, reservations, taproom visits, multiple locations or another relevant path.
+- Specific weaknesses in the existing digital experience that the redesign resolves.
+
+Generic phrases such as “fresh ingredients,” “unforgettable experience,” “something for everyone,” “where flavor meets community” or interchangeable hospitality copy do not establish premium quality.
+
+### 4. Meaningful interactions, not decorative buttons
+
+A premium five-page demo must include **at least two functional restaurant-specific interactions across the site**, including at least one conversion-oriented interaction.
+
+Examples include:
+
+- Searchable or filterable menu.
+- Catering estimator.
+- Group-order builder.
+- Reservation or private-event planner.
+- Location selector with location-specific content.
+- Beer, wine or pairing finder.
+- Meal-time, heat-level or dietary menu selector.
+- Event calendar controls.
+- Curb-service or pickup decision guide.
+
+Anchor scrolling, hover effects, carousels, decorative tabs that reveal minimal copy, fake success messages and generic contact forms do not count by themselves.
+
+### 5. Premium visual evidence
+
+A premium site must have a deliberate visual-asset strategy across all five pages.
+
+Preferred evidence:
+
+- Owner-provided or owner-approved photography and logos.
+- Legally usable official brand assets appropriate for an unofficial sales presentation.
+- Purpose-built original illustrations, diagrams, menu graphics or identity elements when approved photography is unavailable.
+
+Premium fails when the visual system is mostly:
+
+- Generic gradients.
+- Radial-gradient “food plates.”
+- Large translucent words used as fake imagery.
+- Recolored circles, rectangles or interchangeable abstract blocks.
+- Emoji used as primary restaurant art.
+- The same illustration treatment repeated across unrelated restaurants.
+- Stock imagery that does not depict the restaurant and is presented as though it does.
+
+Custom illustrations may be used, but they must be **purpose-built, varied, restaurant-specific and clearly illustrations**. They cannot serve as a low-effort substitute for a complete visual design.
+
+### 6. Premium polish across the whole site
+
+Premium quality must remain consistent beyond the homepage.
+
+All five pages must show:
+
+- Intentional typography and spacing.
+- Clear hierarchy and readable content.
+- Consistent but non-repetitive art direction.
+- Designed desktop and mobile states.
+- Useful empty, disabled and demonstration states where applicable.
+- Consistent navigation and calls to action.
+- No raw filenames, placeholder text, broken assets, horizontal overflow, clipped content or accidental browser defaults.
+- No page that looks unfinished compared with the homepage.
+
+### 7. Browser-rendered visual QA is mandatory for the premium label
+
+Code inspection alone cannot establish premium quality.
+
+Before using **PREMIUM** or **BESPOKE PREMIUM**, every page must be browser-rendered and checked at minimum in:
+
+- A desktop viewport.
+- A mobile viewport.
+
+The review must check:
+
+- Layout integrity.
+- Navigation behavior.
+- Legibility and contrast.
+- Overflow and clipping.
+- Asset loading.
+- Interaction behavior.
+- Page-to-page visual consistency.
+- Whether the result actually looks premium rather than merely containing premium-sounding code.
+
+If browser rendering or screenshots are blocked by the environment, report:
+
+> `5/5 pages built and code-validated; browser visual QA blocked; not yet eligible for PREMIUM label`
+
+**Never infer visual polish from HTML and CSS alone. Never label a site premium when browser-rendered QA was not completed.**
+
+### 8. Honest asset and integration status
+
+A premium sales demo may use demonstration forms and proposed integrations, but it must distinguish them clearly.
+
+Do not claim:
+
+- Real ordering when the button is a demo.
+- Real reservations when no reservation provider is connected.
+- Live menu availability when it is static.
+- Current event data when it is representative.
+- Owner-approved photography or branding when approval has not occurred.
+- Production readiness when key assets or integrations are pending.
+
+Missing owner assets do not automatically block a premium sales demo, but the replacement visual system must still pass the premium visual-evidence standard above.
+
+## Premium evidence report
+
+Before marking any restaurant premium, record and report this evidence:
+
+- `Pages: 5/5 substantive pages`
+- `Navigation: desktop passed / mobile passed`
+- `Distinct page compositions: 5/5`
+- `Restaurant-specific interactions: [exact count and names]`
+- `Visual assets: owner-approved / legally usable official / original illustration system`
+- `Desktop browser QA: passed`
+- `Mobile browser QA: passed`
+- `Broken links/assets: 0`
+- `Forms: demonstration-only and non-submitting`
+- `Default branch: confirmed`
+- `Final status: PREMIUM` or `premium QA pending`
+
+A vague statement such as “custom,” “high-end,” “fully authored,” “restaurant-specific,” or “premium-styled” is not evidence.
+
+## What does not count as a full or premium demo
 
 Never call any of the following full, complete, premium or finished:
 
@@ -102,9 +273,13 @@ Never call any of the following full, complete, premium or finished:
 - A sidecar `premium.html` while the default site remains generic.
 - A page made mostly from interchangeable gradient cards.
 - A generic hero, feature cards, menu cards and contact form repeated across businesses.
+- Five files generated from the same structure with headings changed.
 - A restaurant folder or portfolio card without all five pages.
 - An unfinished local site, unpushed branch or unmerged pull request.
 - A site that has not been validated.
+- A site that has not passed browser-rendered desktop and mobile QA.
+- A site whose interior pages are visibly weaker or thinner than its homepage.
+- A site that uses labels, commit messages or README wording as a substitute for evidence.
 
 Do not claim that a restaurant is finished merely because its homepage, folder or portfolio card exists.
 
@@ -157,15 +332,15 @@ Production versions should replace concept illustrations with owner-approved pho
 
 Verify these details whenever practical:
 
-- Exact business name and active status
-- Address and ZIP code
-- Phone number
-- Current hours
-- Website and official social accounts
-- Menu items described as signatures
-- Founding year and ownership history
-- Ordering, delivery and reservation methods
-- Catering, events and multiple locations
+- Exact business name and active status.
+- Address and ZIP code.
+- Phone number.
+- Current hours.
+- Website and official social accounts.
+- Menu items described as signatures.
+- Founding year and ownership history.
+- Ordering, delivery and reservation methods.
+- Catering, events and multiple locations.
 
 Never invent owner names, founding dates, family histories, awards, sourcing claims, scratch-made claims, prices, live availability, current specials, reservation policies or delivery policies.
 
@@ -177,14 +352,14 @@ Every page of every demo must say that it is an unofficial presentation concept 
 
 Forms must:
 
-- Never send information
-- Never create a reservation or order
-- Never claim the restaurant received a request
-- Confirm that the interaction was only a demonstration
+- Never send information.
+- Never create a reservation or order.
+- Never claim the restaurant received a request.
+- Confirm that the interaction was only a demonstration.
 
-## Validation checklist
+## Full-demo validation checklist
 
-Before reporting a restaurant complete, confirm:
+Before reporting a restaurant as a full five-page demo, confirm:
 
 - The restaurant folder contains at least five substantive HTML pages.
 - `index.html`, a menu page, an about/story page, a restaurant-specific conversion page and a visit/contact page exist.
@@ -193,25 +368,52 @@ Before reporting a restaurant complete, confirm:
 - Desktop and mobile navigation work.
 - Every portfolio card links to the restaurant’s `index.html`.
 - Names and locations are correct.
-- The site has a distinct architecture and restaurant-specific interaction.
+- The site has a distinct architecture and restaurant-specific customer journey.
 - Required CSS and JavaScript files resolve correctly.
 - Inline JavaScript parses successfully.
 - Internal links do not point to missing pages or IDs.
 - Forms cannot transmit data.
 - Disclosures are present on all five pages.
 - Mobile layouts are included on all five pages.
-- Browser rendering has been checked when the environment permits it.
-- If browser rendering is blocked by the environment, report that honestly instead of claiming screenshot validation.
 - All changes are committed and present on the default branch.
 
 A restaurant that fails any required five-page check must be reported as incomplete.
 
+## Premium validation checklist
+
+Before applying a premium label, also confirm:
+
+- Every anti–faux-premium rule has been reviewed explicitly.
+- The five page compositions are meaningfully distinct.
+- The site does not substantially duplicate another restaurant’s DOM structure or visual system.
+- At least two meaningful restaurant-specific interactions work.
+- The asset strategy passes the premium visual-evidence standard.
+- Every page has comparable visual polish and content depth.
+- Desktop browser-rendered QA passed for all five pages.
+- Mobile browser-rendered QA passed for all five pages.
+- Broken links and broken assets equal zero.
+- The premium evidence report has been completed.
+
+A full five-page demo that fails any premium check remains a **full five-page demo — premium QA pending**.
+
 ## Portfolio-card rule
 
-Do not mark a portfolio card **BESPOKE**, **PREMIUM**, **FULL** or **COMPLETE** until all five pages have passed validation and are published on the default branch.
+Do not mark a portfolio card **BESPOKE**, **PREMIUM** or **BESPOKE PREMIUM** until the full five-page demo and every premium-quality gate have passed.
 
-Single-page prototypes may appear only when clearly labeled **1-PAGE PROTOTYPE — INCOMPLETE**.
+A five-page site that has not passed premium QA may be labeled only:
+
+> `FULL 5-PAGE DEMO — PREMIUM QA PENDING`
+
+Single-page prototypes may appear only when clearly labeled:
+
+> `1-PAGE PROTOTYPE — INCOMPLETE`
+
+Partial sites may appear only when clearly labeled with the real count:
+
+> `3/5 PAGES — INCOMPLETE`
+
+Existing portfolio cards must be relabeled whenever their actual files or validation evidence do not support their current label.
 
 ## Repository intent in one sentence
 
-**Research real independent restaurants, build accurate five-page restaurant-specific sales demos, validate every page honestly, and publish them automatically for Devin to use in person.**
+**Research real independent restaurants, build accurate five-page restaurant-specific sales demos, prove premium quality through evidence and browser-rendered QA, label every status honestly, and publish completed work automatically for Devin to use in person.**
