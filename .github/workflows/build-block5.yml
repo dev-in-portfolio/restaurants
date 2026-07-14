@@ -24,7 +24,7 @@ jobs:
       - name: Reconstruct checksum-verified Block 5 generator
         shell: bash
         run: |
-          cat .migration/block5hex/part00 .migration/block5hex/part01 .migration/block5hex/part02 .migration/block5hex/part03 .migration/block5hex/part04 .migration/block5hex/part05 > /tmp/block5.hex
+          cat .migration/block5hex/part00 .migration/block5hex/part01 .migration/block5hex/part02a .migration/block5hex/part02b .migration/block5hex/part03 .migration/block5hex/part04 .migration/block5hex/part05 > /tmp/block5.hex
           python - <<'PY'
           from pathlib import Path
           payload = Path('/tmp/block5.hex').read_text(encoding='utf-8').strip()
