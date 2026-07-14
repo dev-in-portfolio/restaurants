@@ -6,275 +6,112 @@ The goal is for Devin to walk into an independent restaurant and say:
 
 > “I already redesigned your website. Here is what it could look like.”
 
-These are presentation demos—not live restaurant websites, public ordering systems, or a consumer directory.
+These are presentation demos—not live restaurant websites, ordering systems, reservation systems, or a consumer directory.
 
----
+## Automatic workflow for connected threads
 
-# Instructions for Connected ChatGPT / Codex Threads
+When this repository is connected and the user sends only a restaurant list, immediately:
 
-## Primary rule
+1. Verify each restaurant is open and identify the correct location.
+2. Research Google Business information, the official website, official social accounts, current menus, ordering/reservation services and recent reliable local coverage.
+3. Identify the restaurant’s actual digital weaknesses and strongest sales opportunity.
+4. Build the demos completely.
+5. Validate the files and interactions.
+6. Commit and push every completed demo.
+7. Ensure the changes are on the default branch before reporting completion.
 
-When this repository is connected and the user sends only a restaurant list, immediately research, build, validate, commit, push, and merge the demos.
+Do not ask the user to repeat the project, choose a template, approve a plan, request a commit, request a push or remember to merge.
 
-Example input:
+Publishing is automatic unless GitHub permissions technically prevent it. If permissions block completion, report the exact blocker.
 
-```text
-Restaurant One — Charlotte
-Restaurant Two — Matthews
-Restaurant Three — Pineville
-```
+## Non-negotiable definition of a bespoke premium demo
 
-Do not require the user to:
+A demo may be labeled **BESPOKE** or **PREMIUM** only when all of the following are true:
 
-- Re-explain the project
-- Choose a template
-- Supply restaurant links
-- Approve a plan
-- Ask for a commit
-- Ask for a push
-- Ask for a pull request
-- Ask for a merge
-- Remind the assistant to publish the work
+- The restaurant’s real default page is `<restaurant-slug>/index.html`.
+- The page is individually authored for that restaurant.
+- The page has a restaurant-specific layout and section order.
+- The page has a distinct visual identity appropriate to that business.
+- The page includes at least one meaningful restaurant-specific interaction, such as a menu finder, event planner, catering estimator, meal switcher, heat ladder, pairing tool, curb-service guide or group-order builder.
+- The customer journey is based on that restaurant’s actual needs.
+- The copy is based on verified facts or clearly labeled proposed functionality.
+- The form is visibly a demo and never submits data.
+- The page works responsively on mobile and desktop.
+- The page has been structurally and JavaScript validated.
 
-This README is the authoritative operating workflow.
+A shared stylesheet may provide resets, accessibility utilities, typography loading and non-submitting demo-form behavior. It must not supply the restaurant’s page architecture or make every demo use the same hero/cards/grid/form skeleton.
 
----
+## What is not premium
 
-# Mandatory End-to-End Workflow
+Never call any of the following premium:
 
-For every restaurant batch:
+- A shared renderer populated with different restaurant data.
+- The same page skeleton with only colors, names and copy changed.
+- A sidecar `premium.html` while the default `index.html` remains generic.
+- A page made mostly from interchangeable gradient cards.
+- A generic hero, three feature cards, four menu cards and contact form repeated across businesses.
+- An unfinished local page, unpushed branch or unmerged pull request.
+- A page that has not been validated.
 
-1. Verify each restaurant is currently operating.
-2. Research its current website, Google Business information, official social pages, menu, ordering links, reservation systems, and obvious website weaknesses.
-3. Build a restaurant-specific demo using the existing shared system.
-4. Add the restaurant to `concept-sites.js`.
-5. Create its folder and `index.html` loader page.
-6. Add its card to the root `index.html` portfolio.
-7. Validate every folder path, card link, concept key, disclosure, and demo form.
-8. Commit all completed changes.
-9. Push the commit to GitHub.
-10. Ensure the completed work is merged into the repository’s default branch.
-11. Confirm the default branch contains the new demos before reporting completion.
+Do not claim that a demo is finished merely because a folder or restaurant card exists.
 
-## Publishing is automatic
+## Visual assets
 
-**A batch is not complete merely because files were created locally or placed on a feature branch.**
+Use assets only when they are legally usable and appropriate for a sales presentation:
 
-The assistant must automatically finish the Git workflow without waiting for the user to remember or request it.
+- Owner-provided or owner-approved restaurant photography and logos are preferred.
+- Official restaurant assets may be referenced only when their use is appropriate and clearly part of an unofficial redesign presentation.
+- When approved photography is unavailable, create a distinct custom illustration system rather than pretending a generic stock or gradient block is a restaurant photograph.
+- Never imply that an illustration is an actual interior, dish or storefront photograph.
 
-Preferred behavior:
+Production versions should replace concept illustrations with owner-approved photography and final brand assets.
 
-- When direct default-branch writes are permitted, commit the changes directly to the default branch.
-- When branch protection requires a pull request, create a branch, commit, push, open the pull request, merge it into the default branch, and confirm the merge.
-- Do not leave the work only in an unpushed local checkout.
-- Do not stop after opening a draft pull request.
-- Do not report “done” while the new demos exist only on an unmerged branch.
-- Do not ask for separate approval to commit, push, or merge unless GitHub permissions or branch protection technically prevent completion.
+## Accuracy rules
 
-If permissions prevent the final push or merge, complete everything possible and report the exact blocker. Otherwise, publishing and merging are mandatory and automatic.
+Verify these details whenever practical:
 
-Do not modify or remove existing demos unless the user explicitly asks.
-
----
-
-# Research and Accuracy Rules
-
-Research every restaurant before writing factual copy.
-
-Use sources in this order whenever available:
-
-1. Google Maps / Google Business Profile
-2. Official restaurant website
-3. Official restaurant social accounts
-4. Official ordering or reservation platforms
-5. Reliable recent local reporting
-
-Verify whenever practical:
-
-- Current operating status
-- Exact business name
+- Exact business name and active status
 - Address and ZIP code
 - Phone number
-- Hours
-- Official website
-- Menu and recognizable dishes
-- Ordering and reservation methods
-- Catering and private-event services
-- Founding year
-- Ownership or family history
-- Multiple locations
+- Current hours
+- Website and official social accounts
+- Menu items described as signatures
+- Founding year and ownership history
+- Ordering, delivery and reservation methods
+- Catering, events and multiple locations
 
-Never invent restaurant facts such as:
+Never invent owner names, founding dates, family histories, awards, sourcing claims, scratch-made claims, prices, live availability, current specials, reservation policies or delivery policies.
 
-- Founding years
-- Owner names
-- Family histories
-- Awards
-- Michelin recognition
-- Sourcing claims
-- Imported ingredients
-- Scratch-made claims
-- Exact recipes
-- Landmark status
-- Delivery policies
-- Reservation policies
-- Live wait times
-- Current specials
-- Current prices
+When a fact cannot be verified, use explicit confirmation language instead of guessing.
 
-When a fact cannot be confirmed, use conservative wording such as:
+## Disclosure rules
 
-```text
-Current phone to be confirmed with the restaurant
-Current hours to be confirmed before launch
-Exact current location to be confirmed
-Owner-approved menu details would replace these demo examples
-```
-
-Creative headlines, taglines, design direction, proposed integrations, and clearly labeled representative menu sections are allowed.
-
----
-
-# Demo Architecture
-
-Shared files:
-
-- `concept-sites.css` — responsive shared visual system
-- `concept-sites.js` — restaurant data and shared renderer
-- `index.html` — main redesign portfolio
-
-Each restaurant gets a lowercase kebab-case folder:
-
-```text
-restaurant-name/index.html
-```
-
-Example loader:
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Unofficial website redesign concept for RESTAURANT in CITY, North Carolina.">
-  <title>RESTAURANT | Website Redesign Concept</title>
-  <link rel="stylesheet" href="../concept-sites.css">
-</head>
-<body data-concept="uniqueConceptKey">
-  <noscript>This restaurant website concept requires JavaScript to display.</noscript>
-  <script src="../concept-sites.js"></script>
-</body>
-</html>
-```
-
-The `data-concept` value must exactly match the restaurant object key in `concept-sites.js`.
-
-Each concept must include restaurant-specific:
-
-- Name and location
-- Cuisine and experience positioning
-- Color palette and hero treatment
-- Headline and introductory copy
-- Three highlight statistics
-- Three website-opportunity cards
-- Four representative menu or experience spotlights
-- Brand story
-- Tags
-- Address, phone, email, and hours when verified
-- Primary call to action
-- Appropriate inquiry type
-
-A demo must not feel like the same generic website with only the name and colors changed.
-
----
-
-# Demo Disclosure Rules
-
-Every demo must visibly include:
-
-```text
-Unofficial website redesign concept • Presentation demo
-```
-
-The footer must clarify that the demo is not affiliated with or operated by the restaurant.
+Every demo must say that it is an unofficial presentation concept and is not affiliated with or operated by the restaurant.
 
 Forms must:
 
-- Be demonstrations only
 - Never send information
-- Never imply the restaurant received an order, reservation, or message
-- Confirm clearly:
+- Never create a reservation or order
+- Never claim the restaurant received a request
+- Confirm that the interaction was only a demonstration
 
-```text
-Demo complete — no information was submitted.
-```
+## Validation checklist
 
-Never create fake live wait times, table availability, inventory, order confirmations, or restaurant responses.
+Before completion, confirm:
 
----
+- Every requested restaurant has a real `index.html`.
+- Every portfolio card links to that `index.html`.
+- Names and locations are correct.
+- Each bespoke demo has a distinct architecture and interaction.
+- Required CSS and JavaScript files resolve correctly.
+- Inline JavaScript parses successfully.
+- Forms cannot transmit data.
+- Disclosures are present.
+- Mobile layouts are included.
+- Browser rendering has been checked when the environment permits it.
+- If browser rendering is blocked by the environment, report that honestly instead of claiming screenshot validation.
+- All changes are committed and present on the default branch.
 
-# Main Portfolio Rules
+## Repository intent in one sentence
 
-Add one card for every new demo to the root `index.html` concepts array.
-
-Each card must include:
-
-- Restaurant name
-- Accurate area
-- Cuisine or experience type
-- Concise sales angle
-- Emoji
-- Correct folder link
-- Distinct gradient
-- `DEMO` badge
-
-Do not use fabricated ratings or prices.
-
----
-
-# Completion Checklist
-
-Before reporting completion, confirm:
-
-- [ ] Every requested restaurant has a folder and `index.html`.
-- [ ] Every `data-concept` key exists in `concept-sites.js`.
-- [ ] Every concept key is unique.
-- [ ] Every portfolio card links to the correct folder.
-- [ ] Restaurant names are spelled correctly.
-- [ ] Operating status was checked.
-- [ ] Core facts are verified or explicitly marked for confirmation.
-- [ ] No unsupported history, awards, ownership, sourcing, or menu claims were added.
-- [ ] Demo forms do not send data.
-- [ ] Every page retains the unofficial-demo disclosure.
-- [ ] Mobile structure remains intact.
-- [ ] Changes were committed.
-- [ ] Changes were pushed to GitHub.
-- [ ] Changes are present on the default branch.
-- [ ] Any required pull request was merged.
-
-Only after all applicable boxes are complete should the assistant report that the batch is done.
-
----
-
-# Future Thread Experience
-
-The user should be able to connect the repository and send only:
-
-```text
-Build these demos next:
-
-Restaurant A — Charlotte
-Restaurant B — Matthews
-Restaurant C — Pineville
-```
-
-The assistant should perform the complete research, build, validation, commit, push, and merge workflow automatically.
-
-Only ask a question when two distinct active businesses share the same name and the correct one cannot be resolved through research.
-
----
-
-# Repository Intent in One Sentence
-
-**Research real independent restaurants, build accurate restaurant-specific redesign demos, publish and merge every completed batch to GitHub automatically, and keep the portfolio ready for Devin’s in-person website sales pitches.**
+**Research real independent restaurants, build accurate and genuinely restaurant-specific sales demos, validate them honestly, and publish them automatically for Devin to use in person.**
