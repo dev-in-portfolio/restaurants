@@ -1,0 +1,72 @@
+name: Wire message 3 restaurant leads
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/wire-message3-leads.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch-portal:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Add final lead source and deduplicate portal names
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          path = Path('index.html')
+          text = path.read_text(encoding='utf-8')
+
+          message2_tag = '  <script src="portal-leads-message2.js"></script>'
+          message3_tag = '  <script src="portal-leads-message3.js"></script>'
+          if message3_tag not in text:
+              if message2_tag not in text:
+                  raise SystemExit('Message 2 script tag not found')
+              text = text.replace(message2_tag, message2_tag + '\n' + message3_tag, 1)
+
+          old_push = '    concepts.push(...(window.restaurantLeadsMessage2||[]));'
+          new_merge = '''    const restaurantNameKey=name=>name.normalize('NFKD').replace(/[\\u0300-\\u036f]/g,'').toLowerCase().replace(/&/g,'and').replace(/[^a-z0-9]+/g,'').replace(/^(the|an|a)/,'').replace(/(restaurant|cafe|company|co)$/,'');
+    const seenRestaurantNames=new Set(concepts.map(item=>restaurantNameKey(item.name)));
+    [...(window.restaurantLeadsMessage2||[]),...(window.restaurantLeadsMessage3||[])].forEach(item=>{const key=restaurantNameKey(item.name);if(!seenRestaurantNames.has(key)){concepts.push(item);seenRestaurantNames.add(key);}});'''
+          if old_push in text:
+              text = text.replace(old_push, new_merge, 1)
+          elif 'window.restaurantLeadsMessage3' not in text:
+              raise SystemExit('Existing Message 2 merge line not found')
+
+          path.write_text(text, encoding='utf-8')
+          PY
+
+      - name: Validate portal JavaScript
+        run: |
+          node --check portal-leads-message2.js
+          node --check portal-leads-message3.js
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          html = Path('index.html').read_text(encoding='utf-8')
+          if 'portal-leads-message3.js' not in html:
+              raise SystemExit('Message 3 script is not loaded')
+          if 'restaurantLeadsMessage3' not in html:
+              raise SystemExit('Message 3 leads are not merged')
+          scripts = re.findall(r'<script>(.*?)</script>', html, re.S)
+          Path('/tmp/portal-inline.js').write_text(scripts[-1], encoding='utf-8')
+          PY
+          node --check /tmp/portal-inline.js
+
+      - name: Commit final portal list
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html
+          git commit -m 'Show restaurant leads from blocks 23 through 33'
+          git push origin HEAD:main
