@@ -60,6 +60,83 @@ http://localhost:8080/
 
 A hard reset does not delete untracked local folders. If an old local route such as `boudreauxs-restaurant/` survives locally, the repo should either redirect it or the stale local folder should be cleaned up.
 
+## Multi-model collaboration — additive by default
+
+This repository is intentionally designed for **multiple models or agents to work at the same time**.
+
+Concurrent activity is normal. While one model is working, another model may add comments, commits, branches, restaurant folders, portal tiles, QA files, research notes, fixes, or documentation updates.
+
+**Do not freak out when new work appears. Do not assume the repository has been corrupted. Sync, preserve, integrate, and keep adding.**
+
+### Expected behavior
+
+Every model must:
+
+- Re-fetch `main` and the specific files it plans to edit before writing.
+- Assume unfamiliar recent changes may be valid work from another model.
+- Preserve unrelated work and add new work on top of it.
+- Keep edits narrow whenever practical.
+- Continue working when concurrent changes are compatible.
+- Integrate both sets of changes when the same shared file has changed.
+- Resolve conflicts minimally instead of replacing the entire file.
+- Merge or publish completed work to `main` so the normal portal remains current.
+- Leave other active restaurant folders alone unless a shared fix genuinely requires touching them.
+- Treat new comments, review notes, status messages, and commits as coordination information—not as a reason to stop.
+
+### Prohibited panic responses
+
+A model must **not** do any of the following merely because unfamiliar work appeared:
+
+- Hard reset the repository.
+- Force-push a shared branch.
+- Repoint `main` to an older commit.
+- Rebase or rewrite shared history.
+- Delete another model’s branch, restaurant folder, comments, QA output, lead data, or documentation.
+- Revert commits simply because the model did not create them.
+- Replace the entire portal, README, or lead source when a targeted edit will work.
+- Pause the project to ask Devin whether every new comment or commit is legitimate.
+- Interpret normal concurrent changes as an emergency.
+
+### Shared-file rule
+
+Files such as `index.html`, `README.md`, shared styles, lead-data files, and portal scripts may be edited by several models.
+
+Before modifying a shared file:
+
+1. Fetch its latest version from `main`.
+2. Identify the smallest safe change.
+3. Preserve all unrelated additions.
+4. Apply the new change on top.
+5. Validate the combined result.
+6. Publish the combined result without erasing concurrent work.
+
+When two models add restaurants at the same time, both additions should survive. When comments or status notes appear, leave them intact unless the task specifically requires changing them.
+
+### Restaurant ownership during active work
+
+Models should work primarily inside their assigned restaurant folder.
+
+- Do not redesign a restaurant another model is actively rebuilding unless explicitly assigned to help.
+- Do not overwrite another restaurant’s visual system with a shared template.
+- Shared portal edits should normally be limited to adding or updating the relevant tile.
+- Before publishing, sync with the latest `main` and integrate any concurrent portal changes.
+
+### When to stop and escalate
+
+Stop and report a blocker only when there is a **real destructive conflict**, such as:
+
+- Two incompatible rebuilds are being made for the same restaurant.
+- A required file was deleted and its intended replacement is unclear.
+- A concurrent change introduces a security issue, exposed secret, or destructive automation.
+- The latest combined code cannot be validated without choosing between mutually exclusive implementations.
+- GitHub permissions prevent a safe update.
+
+Normal new comments, commits, tiles, files, branches, or edits are **not blockers**.
+
+The default response to concurrent work is:
+
+> Pull the latest state, keep everyone’s valid additions, add your work, validate it, and continue.
+
 ## Portal tile rules
 
 Every restaurant tile must have one honest status.
@@ -525,4 +602,4 @@ A full five-page demo that fails any premium check remains a **full five-page de
 
 ## Repository intent in one sentence
 
-**Find real restaurant website opportunities, keep every lead visible in the portal, build accurate five-page restaurant-specific sales demos, prove premium quality through evidence and browser-rendered QA, label every status honestly, and publish completed work to `main` so Devin can use it in person.**
+**Find real restaurant website opportunities, keep every lead visible in the portal, let multiple models build safely in parallel, preserve everyone’s valid additions, build accurate five-page restaurant-specific sales demos, prove premium quality through evidence and browser-rendered QA, label every status honestly, and publish completed work to `main` so Devin can use it in person.**
