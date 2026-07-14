@@ -30,13 +30,21 @@ for (const [label, viewport] of Object.entries(sizes)) {
         title: document.title,
         scrollWidth: document.documentElement.scrollWidth,
         clientWidth: document.documentElement.clientWidth,
-        h1: rect ? { left: rect.left, right: rect.right, top: rect.top, bottom: rect.bottom, width: rect.width } : null,
+        h1: rect ? {
+          left: rect.left,
+          right: rect.right,
+          top: rect.top,
+          bottom: rect.bottom,
+          width: rect.width,
+          scrollWidth: h1.scrollWidth,
+          clientWidth: h1.clientWidth
+        } : null,
         currentNav: document.querySelectorAll('[aria-current="page"]').length,
         textLength: document.body.innerText.trim().length
       };
     });
     const overflow = metrics.scrollWidth > metrics.clientWidth + 1;
-    const clipped = metrics.h1 && (metrics.h1.left < -1 || metrics.h1.right > metrics.clientWidth + 1);
+    const clipped = metrics.h1 && metrics.h1.scrollWidth > metrics.h1.clientWidth + 1;
     const ok = response?.ok() && !overflow && !clipped && metrics.currentNav === 1 && metrics.textLength > 650 && errors.length === 0;
     if (!ok) failed = true;
     report.push({ label, route, status: response?.status(), overflow, clipped, errors, ...metrics, ok });
