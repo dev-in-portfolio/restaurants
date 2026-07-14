@@ -1,0 +1,89 @@
+name: Wire message 2 restaurant leads
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/wire-message2-leads.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  wire-portal:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Add message 2 lead data to portal
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          path = Path('index.html')
+          text = path.read_text(encoding='utf-8')
+
+          # Repair the missing comma before the three manually appended Message 1 leads.
+          text = text.replace(
+              'status:"lead"}\n      {name:"Cafe South"',
+              'status:"lead"},\n      {name:"Cafe South"',
+              1,
+          )
+
+          script_tag = '  <script src="portal-leads-message2.js"></script>\n'
+          inline_anchor = '  <script>\n    const concepts = ['
+          if script_tag not in text:
+              if inline_anchor not in text:
+                  raise SystemExit('Could not find portal script anchor')
+              text = text.replace(inline_anchor, script_tag + inline_anchor, 1)
+
+          push_line = '    concepts.push(...(window.restaurantLeadsMessage2||[]));\n'
+          grid_anchor = "    ];\n    const grid=document.getElementById('restaurant-grid');"
+          if push_line not in text:
+              if grid_anchor not in text:
+                  raise SystemExit('Could not find concepts array end')
+              text = text.replace(
+                  grid_anchor,
+                  '    ];\n' + push_line + "    const grid=document.getElementById('restaurant-grid');",
+                  1,
+              )
+
+          path.write_text(text, encoding='utf-8')
+          PY
+
+      - name: Validate portal scripts and counts
+        run: |
+          node --check portal-leads-message2.js
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          html = Path('index.html').read_text(encoding='utf-8')
+          if 'portal-leads-message2.js' not in html:
+              raise SystemExit('Message 2 lead script is not loaded')
+          if 'restaurantLeadsMessage2' not in html:
+              raise SystemExit('Message 2 lead data is not merged into concepts')
+          scripts = re.findall(r'<script>(.*?)</script>', html, re.S)
+          Path('/tmp/portal-inline.js').write_text(scripts[-1], encoding='utf-8')
+          PY
+          node --check /tmp/portal-inline.js
+          node - <<'NODE'
+          const fs=require('fs'),vm=require('vm');
+          const ctx={window:{}};
+          vm.createContext(ctx);
+          vm.runInContext(fs.readFileSync('portal-leads-message2.js','utf8'),ctx);
+          if(ctx.window.restaurantLeadsMessage2.length!==195){
+            throw new Error(`Expected 195 Message 2 leads, found ${ctx.window.restaurantLeadsMessage2.length}`);
+          }
+          NODE
+
+      - name: Commit portal wiring
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html
+          git commit -m 'Show restaurant leads from blocks 12 through 22'
+          git push origin HEAD:main
