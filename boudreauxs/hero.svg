@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Louisiana bayou night meets NoDa street art</title>
+  <desc id="desc">An original illustrated scene with cypress silhouettes, warm lantern light, water reflections and colorful geometric mural shapes.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#071d1a"/>
+      <stop offset="0.58" stop-color="#12372e"/>
+      <stop offset="1" stop-color="#6f2f20"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#041512"/>
+      <stop offset="0.46" stop-color="#173f35"/>
+      <stop offset="1" stop-color="#4c2119"/>
+    </linearGradient>
+    <radialGradient id="moon" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#fff5c8"/>
+      <stop offset="0.55" stop-color="#e8bd64"/>
+      <stop offset="1" stop-color="#b8742d" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="18"/></filter>
+    <pattern id="mural" width="220" height="220" patternUnits="userSpaceOnUse" patternTransform="rotate(-8)">
+      <rect width="220" height="220" fill="#9b3e26"/>
+      <path d="M0 180L80 0h70L70 220H0z" fill="#d59a3a"/>
+      <circle cx="175" cy="55" r="42" fill="#1f6d62"/>
+      <path d="M120 220l100-95v95z" fill="#f0cf86"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#sky)"/>
+  <circle cx="1160" cy="235" r="190" fill="url(#moon)" filter="url(#glow)" opacity="0.55"/>
+  <circle cx="1160" cy="235" r="92" fill="#f4d98f" opacity="0.9"/>
+  <path d="M0 520C210 430 340 500 520 440s360-20 520 45 360 25 560-40v300H0z" fill="#0b241f" opacity="0.88"/>
+  <g fill="#06120f">
+    <path d="M105 610c15-180 38-330 90-440 22 80 27 170 11 282 60-62 105-78 135-48-65 47-105 105-120 174l-12 132z"/>
+    <path d="M410 650c18-190 46-348 88-470 28 92 32 186 20 288 68-58 120-68 155-24-74 38-118 92-145 164l-15 130z"/>
+    <path d="M1320 620c-8-170-2-302 26-430 40 98 58 202 52 316 58-44 108-48 145-10-68 27-109 70-130 124l-10 120z"/>
+  </g>
+  <rect y="700" width="1600" height="300" fill="url(#water)"/>
+  <g opacity="0.35" stroke="#d99b4a" stroke-width="7" fill="none">
+    <path d="M760 760c160 26 300 22 470-10"/>
+    <path d="M840 820c100 18 206 16 322-6"/>
+    <path d="M960 884c74 11 144 8 212-4"/>
+  </g>
+  <g transform="translate(1035 560)">
+    <rect x="0" y="0" width="510" height="260" rx="18" fill="#130d0b" opacity="0.86"/>
+    <rect x="24" y="24" width="462" height="212" rx="8" fill="url(#mural)"/>
+    <path d="M55 206c82-118 150-145 210-95 54 44 100 34 170-36" fill="none" stroke="#f8e3a4" stroke-width="16" stroke-linecap="round" opacity="0.86"/>
+  </g>
+  <g transform="translate(160 690)">
+    <path d="M0 88c120-90 250-94 390-12 90 52 194 62 312 28-82 74-176 112-284 114-161 2-300-42-418-130z" fill="#020806" opacity="0.94"/>
+    <circle cx="140" cy="92" r="8" fill="#d8a343"/>
+    <circle cx="198" cy="78" r="7" fill="#d8a343"/>
+    <path d="M96 122c92 22 177 18 255-14" stroke="#d8a343" stroke-width="7" fill="none" stroke-linecap="round" opacity="0.7"/>
+  </g>
+  <g transform="translate(640 530)">
+    <path d="M0 70h120l-18 165H18z" fill="#32130d"/>
+    <path d="M15 85h90l-12 128H27z" fill="#df9a32" opacity="0.9"/>
+    <path d="M60 0v76M32 22h56" stroke="#f4d98f" stroke-width="10" stroke-linecap="round"/>
+    <ellipse cx="60" cy="227" rx="120" ry="28" fill="#e8a13b" opacity="0.16" filter="url(#glow)"/>
+  </g>
+</svg>
