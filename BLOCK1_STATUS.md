@@ -5,6 +5,7 @@ Block 1 contains 20 restaurant website demos.
 - **Boudreaux’s Restaurant** is the new five-page demo added by this branch.
 - The other **19 five-page demos were already present on `main`** and are included in this branch.
 - Each restaurant home page exposes five-page navigation: Home, Menu, Story, one restaurant-specific conversion page, and Visit.
+- `scripts/finalize_block1.py` validates the exact 20 folders, the five distinct page targets, internal links, one current navigation state per page, page titles, and JavaScript syntax when Node is available.
 - Browser-rendered desktop and mobile visual QA is still pending, so none of these demos is labeled premium.
 
 | # | Restaurant | Folder | Page set / conversion path | Branch status |
