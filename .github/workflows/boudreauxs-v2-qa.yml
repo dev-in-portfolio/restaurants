@@ -1,9 +1,10 @@
-name: Boudreaux's v2 browser QA
+name: Boudreaux's identity browser QA
 on:
   pull_request:
     branches: [main]
     paths:
       - 'boudreauxs/**'
+      - 'boudreauxs-restaurant/**'
       - 'scripts/boudreauxs-v2-qa.mjs'
       - '.github/workflows/boudreauxs-v2-qa.yml'
 jobs:
@@ -32,5 +33,5 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: boudreauxs-v2-browser-review
-          path: qa/boudreauxs-v2
+          name: boudreauxs-identity-browser-review
+          path: qa/boudreauxs-v3
