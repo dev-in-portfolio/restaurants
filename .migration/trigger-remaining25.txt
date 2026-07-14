@@ -1,1 +1,2 @@
 Trigger the checksum-verified workflow that completes the 25 remaining restaurant demos.
+Retry after workflow registration.
