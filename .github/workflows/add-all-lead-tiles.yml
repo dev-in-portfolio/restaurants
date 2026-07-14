@@ -1,0 +1,92 @@
+name: Add every restaurant lead tile
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/add-all-lead-tiles.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch-portal:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Add lead tiles to the portal
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          path = Path('index.html')
+          text = path.read_text(encoding='utf-8')
+
+          notice_old = 'PROTOTYPE cards contain one page and are incomplete.</div>'
+          notice_new = 'PROTOTYPE cards contain one page and are incomplete. LEAD cards are queued restaurants from the full lead list and do not link to demos until their rebuild is published.</div>'
+          if notice_old in text:
+              text = text.replace(notice_old, notice_new, 1)
+
+          style_anchor = '    .full-card .card-rating-badge{background:linear-gradient(135deg,#f0b85c,#d97a42);color:#17100a}.prototype-card .card-rating-badge{background:#334155;color:#e2e8f0}\n'
+          lead_styles = '    .lead-card{opacity:.74;border-style:dashed}.lead-card .card-rating-badge{background:#475569;color:#f8fafc}.visit-btn.disabled{cursor:default;opacity:.72;pointer-events:none}\n'
+          if '.lead-card{' not in text:
+              if style_anchor not in text:
+                  raise SystemExit('Could not find portal card style anchor')
+              text = text.replace(style_anchor, style_anchor + lead_styles, 1)
+
+          if 'src="portal-leads.js"' not in text:
+              script_anchor = '  <script>\n    const concepts = ['
+              if script_anchor not in text:
+                  raise SystemExit('Could not find concepts script anchor')
+              text = text.replace(script_anchor, '  <script src="portal-leads.js"></script>\n' + script_anchor, 1)
+
+          push_line = '    concepts.push(...(window.restaurantLeads||[]));\n'
+          if push_line not in text:
+              array_end = "    ];\n    const grid=document.getElementById('restaurant-grid');"
+              if array_end not in text:
+                  raise SystemExit('Could not find concepts array end')
+              text = text.replace(array_end, '    ];\n' + push_line + "    const grid=document.getElementById('restaurant-grid');", 1)
+
+          old_pattern = re.compile(r"    grid\.innerHTML=sortedConcepts\.map\(item=>\{const premium=.*?\}\)\.join\(''\);", re.S)
+          new_render = '''    grid.innerHTML=sortedConcepts.map(item=>{const premium=item.status==='premium';const full=premium||item.status==='full';const lead=item.status==='lead';const badge=premium?'PREMIUM • IDENTITY REBUILD':full?'FULL 5-PAGE • QA PENDING':lead?'LEAD • NOT BUILT YET':'1-PAGE • INCOMPLETE';const label=premium?'View Premium Demo':full?'View Full Demo':lead?'Queued for Rebuild':'View Incomplete Prototype';const cardClass=premium?'premium-card':full?'full-card':lead?'lead-card':'prototype-card';const action=lead?`<span class="visit-btn disabled" aria-disabled="true">${label}</span>`:`<a href="${item.href}" class="visit-btn">${label} ➔</a>`;const letter=letterFor(item);const heading=letter!==lastLetter?`<h2 class="letter-heading" id="letter-${letter}">${letter}</h2>`:'';lastLetter=letter;return `${heading}<article class="portal-card glass-panel ${cardClass}"><div class="card-image-wrapper"><span class="card-rating-badge">${badge}</span><div class="card-img-placeholder" style="background:${item.gradient}">${item.emoji}</div></div><div class="card-content"><span class="card-cuisine">${item.cuisine}</span><h2 class="card-title">${item.name}</h2><p class="card-description">${item.description}</p><div class="card-footer"><span class="card-price">Area: <span>${item.area}</span></span>${action}</div></div></article>`}).join('');'''
+          text, count = old_pattern.subn(new_render, text, count=1)
+          if count != 1:
+              raise SystemExit(f'Expected one portal render expression, found {count}')
+
+          path.write_text(text, encoding='utf-8')
+          PY
+
+      - name: Validate portal JavaScript and lead count
+        run: |
+          node --check portal-leads.js
+          python3 - <<'PY'
+          from pathlib import Path
+          from html.parser import HTMLParser
+          import re
+
+          html = Path('index.html').read_text(encoding='utf-8')
+          if 'portal-leads.js' not in html:
+              raise SystemExit('Lead data script is not loaded')
+          if 'LEAD • NOT BUILT YET' not in html:
+              raise SystemExit('Lead tile renderer is missing')
+          leads = Path('portal-leads.js').read_text(encoding='utf-8')
+          count = len(re.findall(r'\["', leads))
+          if count != 219:
+              raise SystemExit(f'Expected 219 queued leads, found {count}')
+          scripts = re.findall(r'<script>(.*?)</script>', html, re.S)
+          Path('/tmp/portal-inline.js').write_text(scripts[-1], encoding='utf-8')
+          PY
+          node --check /tmp/portal-inline.js
+
+      - name: Commit portal update
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html
+          git commit -m 'Show every restaurant lead in the portal'
+          git push origin HEAD:main
