@@ -29,6 +29,7 @@ jobs:
       - name: Render and inspect every page
         run: node scripts/boudreauxs-v2-qa.mjs
       - name: Upload browser review set
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: boudreauxs-v2-browser-review
