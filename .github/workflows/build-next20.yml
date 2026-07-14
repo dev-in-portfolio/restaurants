@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - '.github/workflows/build-next20.yml'
+      - '.migration/next20/run'
 
 permissions:
   contents: write
