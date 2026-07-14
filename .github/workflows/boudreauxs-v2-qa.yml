@@ -1,0 +1,35 @@
+name: Boudreaux's v2 browser QA
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'boudreauxs/**'
+      - 'scripts/boudreauxs-v2-qa.mjs'
+      - '.github/workflows/boudreauxs-v2-qa.yml'
+jobs:
+  browser-qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install Playwright
+        run: |
+          npm init -y
+          npm install playwright@1.52.0
+          npx playwright install --with-deps chromium
+      - name: Check JavaScript syntax
+        run: node --check boudreauxs/site.js
+      - name: Serve repository
+        run: |
+          python3 -m http.server 8080 >/tmp/boudreauxs-server.log 2>&1 &
+          sleep 2
+      - name: Render and inspect every page
+        run: node scripts/boudreauxs-v2-qa.mjs
+      - name: Upload browser review set
+        uses: actions/upload-artifact@v4
+        with:
+          name: boudreauxs-v2-browser-review
+          path: qa/boudreauxs-v2
