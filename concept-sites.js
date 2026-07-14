@@ -1,191 +1,113 @@
 const concepts = {
   garrison: {
-    name: "The Garrison",
-    short: "G",
-    location: "Historic Downtown Pineville",
-    cuisine: "American Kitchen • Cocktails • Live Events",
-    accent: "#d59a5b",
-    accent2: "#52675c",
-    paper: "#100e0d",
+    name: "The Garrison", short: "G", location: "Historic Downtown Pineville", cuisine: "American Kitchen • Cocktails • Live Events", accent: "#d59a5b", accent2: "#52675c", paper: "#100e0d",
     heroImage: "radial-gradient(circle at 75% 20%, rgba(213,154,91,.33), transparent 22rem), linear-gradient(125deg, #080706 0%, #20150f 46%, #39443d 100%)",
     headline: "A downtown gathering place with two stories to tell.",
     lede: "A richer digital home for Pineville's restaurant and cocktail bar—built around American classics, craft drinks, upstairs entertainment, and the character of its historic Main Street setting.",
-    stats: [
-      ["314 Main Street", "Historic Pineville"],
-      ["Two levels", "Dining, bars and events"],
-      ["American classics", "Steaks, seafood and more"]
-    ],
-    features: [
-      ["01", "Restaurant + cocktail bar", "Lead with the full experience instead of reducing The Garrison to a menu and address."],
-      ["02", "Upstairs energy", "Give live music, comedy, private gatherings and special events a dedicated promotional home."],
-      ["03", "Historic setting", "Use the former bank building and downtown location as part of the restaurant's visual identity."]
-    ],
-    menu: [
-      ["From the grill", "Filets and ribeyes", "American steakhouse favorites presented with a modern neighborhood feel."],
-      ["House specialties", "Cheerwine short ribs", "A locally recognizable signature direction for a Pineville audience."],
-      ["Seafood", "Pan-seared scallops", "A refined entrée spotlight with seasonal accompaniments."],
-      ["Shareables", "Toasted ravioli and wings", "Approachable plates designed for drinks, gatherings and repeat visits."]
-    ],
-    storyTitle: "Historic bones. Modern neighborhood energy.",
-    story: "The Garrison opened in downtown Pineville as a two-level restaurant and cocktail bar in a former early-1900s bank building. This concept gives the food, drinks, patio and upstairs programming equal visual weight—so guests can understand the entire experience before they arrive.",
-    tags: ["Cocktail bar", "Live music", "Private events", "Patio", "American classics", "Downtown Pineville"],
-    address: "314 Main Street, Pineville, NC",
-    phone: "Current phone to be confirmed with the restaurant",
-    hours: "Current operating hours should be synced from the restaurant's active listing",
-    actionLabel: "Plan an evening",
-    actionText: "Explore dinner, drinks and upcoming events",
-    formTopic: "Private event or general inquiry"
+    stats: [["314 Main Street", "Historic Pineville"], ["Two levels", "Dining, bars and events"], ["American classics", "Steaks, seafood and more"]],
+    features: [["01", "Restaurant + cocktail bar", "Lead with the full experience instead of reducing The Garrison to a menu and address."], ["02", "Upstairs energy", "Give live music, comedy, private gatherings and special events a dedicated promotional home."], ["03", "Historic setting", "Use the former bank building and downtown location as part of the restaurant's visual identity."]],
+    menu: [["From the grill", "Filets and ribeyes", "American steakhouse favorites presented with a modern neighborhood feel."], ["House specialties", "Cheerwine short ribs", "A locally recognizable signature direction for a Pineville audience."], ["Seafood", "Pan-seared scallops", "A refined entrée spotlight with seasonal accompaniments."], ["Shareables", "Toasted ravioli and wings", "Approachable plates designed for drinks, gatherings and repeat visits."]],
+    storyTitle: "Historic bones. Modern neighborhood energy.", story: "The Garrison opened in downtown Pineville as a two-level restaurant and cocktail bar in a former early-1900s bank building. This concept gives the food, drinks, patio and upstairs programming equal visual weight—so guests can understand the entire experience before they arrive.",
+    tags: ["Cocktail bar", "Live music", "Private events", "Patio", "American classics", "Downtown Pineville"], address: "314 Main Street, Pineville, NC", phone: "Current phone to be confirmed with the restaurant", hours: "Current operating hours should be synced from the restaurant's active listing", actionLabel: "Plan an evening", actionText: "Explore dinner, drinks and upcoming events", formTopic: "Private event or general inquiry"
   },
   homestyle: {
-    name: "Home Style Kitchn",
-    short: "H",
-    location: "Charlotte, North Carolina",
-    cuisine: "Soul Food • Comfort Plates • Catering",
-    accent: "#e3ad59",
-    accent2: "#9e4f36",
-    paper: "#120c09",
+    name: "Home Style Kitchn", short: "H", location: "Charlotte, North Carolina", cuisine: "Soul Food • Comfort Plates • Catering", accent: "#e3ad59", accent2: "#9e4f36", paper: "#120c09",
     heroImage: "radial-gradient(circle at 20% 15%, rgba(227,173,89,.28), transparent 20rem), linear-gradient(135deg, #150b07 0%, #4b2014 52%, #1b271c 100%)",
-    headline: "Comfort food that feels personal before the first bite.",
-    lede: "A warm, direct restaurant concept for a Charlotte soul-food kitchen—designed to make rotating plates, catering, pickup information and social updates easier to find.",
-    stats: [
-      ["Charlotte-made", "Local soul-food identity"],
-      ["Rotating plates", "Fresh reasons to return"],
-      ["Catering-ready", "Family and group occasions"]
-    ],
-    features: [
-      ["01", "Today's plate first", "A flexible homepage module can spotlight what is cooking now without requiring a full menu rebuild."],
-      ["02", "Clear pickup journey", "Put the current pickup location, service window and ordering destination in one obvious place."],
-      ["03", "Catering that converts", "Turn social interest into structured requests for celebrations, offices and family gatherings."]
-    ],
-    menu: [
-      ["Daily plates", "Home-style entrée rotation", "A flexible area for the kitchen's current protein, sides and availability."],
-      ["Classic sides", "Made for mix-and-match meals", "Show the day's vegetables, starches and comfort-food favorites."],
-      ["Family meals", "Built for sharing", "A clean path for larger pickup orders and weekend gatherings."],
-      ["Catering", "Custom event packages", "Owner-confirmed menus and pricing can be added before launch."]
-    ],
-    storyTitle: "Built around what the kitchen is serving now.",
-    story: "Home Style Kitchn currently has a social-first public footprint. This concept intentionally avoids invented founding dates, ownership stories and fixed menu claims. Instead, it creates a polished home for the real information the owner can confirm: today's plates, pickup details, catering and the food photographs already driving interest.",
-    tags: ["Soul food", "Rotating menu", "Pickup", "Catering", "Family meals", "Charlotte"],
-    address: "Charlotte, NC — current service location to be confirmed",
-    phone: "Contact details to be supplied by the restaurant",
-    hours: "Service days and hours to be confirmed before launch",
-    actionLabel: "See today's plates",
-    actionText: "A future live menu or social-feed destination",
-    formTopic: "Catering or menu inquiry"
+    headline: "Comfort food that feels personal before the first bite.", lede: "A warm, direct restaurant concept for a Charlotte soul-food kitchen—designed to make rotating plates, catering, pickup information and social updates easier to find.",
+    stats: [["Charlotte-made", "Local soul-food identity"], ["Rotating plates", "Fresh reasons to return"], ["Catering-ready", "Family and group occasions"]],
+    features: [["01", "Today's plate first", "A flexible homepage module can spotlight what is cooking now without requiring a full menu rebuild."], ["02", "Clear pickup journey", "Put the current pickup location, service window and ordering destination in one obvious place."], ["03", "Catering that converts", "Turn social interest into structured requests for celebrations, offices and family gatherings."]],
+    menu: [["Daily plates", "Home-style entrée rotation", "A flexible area for the kitchen's current protein, sides and availability."], ["Classic sides", "Made for mix-and-match meals", "Show the day's vegetables, starches and comfort-food favorites."], ["Family meals", "Built for sharing", "A clean path for larger pickup orders and weekend gatherings."], ["Catering", "Custom event packages", "Owner-confirmed menus and pricing can be added before launch."]],
+    storyTitle: "Built around what the kitchen is serving now.", story: "Home Style Kitchn currently has a social-first public footprint. This concept intentionally avoids invented founding dates, ownership stories and fixed menu claims. Instead, it creates a polished home for the real information the owner can confirm: today's plates, pickup details, catering and the food photographs already driving interest.",
+    tags: ["Soul food", "Rotating menu", "Pickup", "Catering", "Family meals", "Charlotte"], address: "Charlotte, NC — current service location to be confirmed", phone: "Contact details to be supplied by the restaurant", hours: "Service days and hours to be confirmed before launch", actionLabel: "See today's plates", actionText: "A future live menu or social-feed destination", formTopic: "Catering or menu inquiry"
   },
   one: {
-    name: "The One Tapas & Bar",
-    short: "1",
-    location: "Weddington / Matthews Area",
-    cuisine: "Spanish Inspiration • Global Small Plates • Cocktails",
-    accent: "#e8a66a",
-    accent2: "#7c4a66",
-    paper: "#0d0b10",
-    heroImage: "radial-gradient(circle at 80% 25%, rgba(232,166,106,.3), transparent 22rem), linear-gradient(130deg, #0a080c 0%, #321a28 50%, #4c2c1c 100%)",
-    headline: "One table. Many flavors. A night worth sharing.",
-    lede: "A refined, mobile-first redesign for a locally owned tapas bar pairing Spanish inspiration with global flavors, seasonal small plates and a serious cocktail program.",
-    stats: [
-      ["Small plates", "Designed to share"],
-      ["Happy hour", "Tuesday–Thursday"],
-      ["Private parties", "Celebrations and events"]
-    ],
-    features: [
-      ["01", "Lead with atmosphere", "Replace generic restaurant-template language with a confident evening-out identity."],
-      ["02", "Make specials useful", "Give Cocktail Tuesday, Wine Wednesday and Sangria Thursday a clean recurring home."],
-      ["03", "Convert celebrations", "Bring reservations and private-party inquiries forward instead of burying them below widgets."]
-    ],
-    menu: [
-      ["Tapas", "Charred octopus", "A visually striking small plate that immediately communicates the kitchen's range."],
-      ["From the land", "Herb-crusted lamb lollipops", "An elevated shareable designed for date nights and group dining."],
-      ["Seafood", "Grilled branzino", "A polished centerpiece alongside mussels, shrimp and seasonal preparations."],
-      ["Dessert + drinks", "Dulce de leche crème brûlée", "Pair the final course with an espresso martini or smoky old fashioned."]
-    ],
-    storyTitle: "Spanish inspiration without borders.",
-    story: "The One describes itself as locally owned, combining Spanish inspiration with flavors from around the world. The redesign emphasizes the social rhythm of tapas dining: order a few plates, pass them around, discover something new and stay for another round.",
-    tags: ["Tapas", "Cocktails", "Wine", "Happy hour", "Reservations", "Private parties"],
-    address: "3116 Weddington Road, Suite 600, Charlotte, NC 28105",
-    phone: "(980) 245-2609",
-    email: "contact@theonetapas.com",
-    hours: "Tue–Thu 4:30–10 PM • Fri 4:30–10:30 PM • Sat 1–10:30 PM • Sun 11:30 AM–8 PM",
-    actionLabel: "Reserve a table",
-    actionText: "A future reservation integration",
-    formTopic: "Reservation or private-party inquiry"
+    name: "The One Tapas & Bar", short: "1", location: "Weddington / Matthews Area", cuisine: "Spanish Inspiration • Global Small Plates • Cocktails", accent: "#e8a66a", accent2: "#7c4a66", paper: "#0d0b10",
+    heroImage: "radial-gradient(circle at 80% 25%, rgba(232,166,106,.3), transparent 22rem), linear-gradient(130deg, #0a080c 0%, #321a28 50%, #4c2c1c 100%)", headline: "One table. Many flavors. A night worth sharing.", lede: "A refined, mobile-first redesign for a locally owned tapas bar pairing Spanish inspiration with global flavors, seasonal small plates and a serious cocktail program.",
+    stats: [["Small plates", "Designed to share"], ["Happy hour", "Tuesday–Thursday"], ["Private parties", "Celebrations and events"]],
+    features: [["01", "Lead with atmosphere", "Replace generic restaurant-template language with a confident evening-out identity."], ["02", "Make specials useful", "Give Cocktail Tuesday, Wine Wednesday and Sangria Thursday a clean recurring home."], ["03", "Convert celebrations", "Bring reservations and private-party inquiries forward instead of burying them below widgets."]],
+    menu: [["Tapas", "Charred octopus", "A visually striking small plate that immediately communicates the kitchen's range."], ["From the land", "Herb-crusted lamb lollipops", "An elevated shareable designed for date nights and group dining."], ["Seafood", "Grilled branzino", "A polished centerpiece alongside mussels, shrimp and seasonal preparations."], ["Dessert + drinks", "Dulce de leche crème brûlée", "Pair the final course with an espresso martini or smoky old fashioned."]],
+    storyTitle: "Spanish inspiration without borders.", story: "The One describes itself as locally owned, combining Spanish inspiration with flavors from around the world. The redesign emphasizes the social rhythm of tapas dining: order a few plates, pass them around, discover something new and stay for another round.",
+    tags: ["Tapas", "Cocktails", "Wine", "Happy hour", "Reservations", "Private parties"], address: "3116 Weddington Road, Suite 600, Charlotte, NC 28105", phone: "(980) 245-2609", email: "contact@theonetapas.com", hours: "Tue–Thu 4:30–10 PM • Fri 4:30–10:30 PM • Sat 1–10:30 PM • Sun 11:30 AM–8 PM", actionLabel: "Reserve a table", actionText: "A future reservation integration", formTopic: "Reservation or private-party inquiry"
   },
   deluxe: {
-    name: "Deluxe Fun Dining",
-    short: "D",
-    location: "Uptown Charlotte",
-    cuisine: "Experiential Dining • Global Flavors • Cocktails",
-    accent: "#ee74c4",
-    accent2: "#41c7c7",
-    paper: "#09080d",
-    heroImage: "radial-gradient(circle at 70% 20%, rgba(238,116,196,.3), transparent 22rem), linear-gradient(135deg, #09080d 0%, #271242 48%, #0a4c53 100%)",
-    headline: "Dinner should never feel ordinary.",
-    lede: "A bold digital stage for Uptown's interactive dining experience—where playful presentations, global flavors, cocktails and celebrations all compete for the spotlight.",
-    stats: [
-      ["Two levels", "Dining and private events"],
-      ["Weekend brunch", "Big plates and bigger energy"],
-      ["Interactive", "Food made for the moment"]
-    ],
-    features: [
-      ["01", "Show the spectacle", "Replace exposed image filenames and generic galleries with deliberate visual storytelling."],
-      ["02", "Clarify the schedule", "Separate dinner, Friday nightlife and weekend brunch into an easy mobile format."],
-      ["03", "Own the celebration", "Make birthdays, date nights, group dining and the private second floor central conversion paths."]
-    ],
-    menu: [
-      ["Playful starters", "Popcorn shrimp presentation", "A signature visual moment delivered in a real popcorn-style machine."],
-      ["Main event", "Tomahawk steak", "A dramatic shareable centerpiece suited to celebrations and content-worthy nights."],
-      ["Brunch", "It's All There Bloody Mary", "A towering signature drink finished with an extravagant seafood garnish."],
-      ["Cocktails", "Color, smoke and tableside energy", "A dedicated showcase for the bar program instead of a generic menu link."]
-    ],
-    storyTitle: "Luxury, humor and theatrical presentation.",
-    story: "Deluxe Fun Dining is built around more than food. The experience mixes globally influenced New American cooking with imaginative plating, cocktails and entertainment. This redesign makes that promise immediately visible while simplifying practical details for guests planning a night out.",
-    tags: ["Experiential dining", "Weekend brunch", "Cocktails", "Birthdays", "Date night", "Private floor"],
-    address: "305 West 4th Street, Charlotte, NC 28202",
-    phone: "(980) 332-2220 • (980) 349-2114",
-    email: "info@deluxefundining.com",
-    hours: "Mon closed • Tue–Thu 4:30–10 PM • Fri 4:30 PM–12 AM • Sat 10:30 AM–12 AM • Sun 10:30 AM–9 PM",
-    actionLabel: "Book the experience",
-    actionText: "A future reservation and event-booking path",
-    formTopic: "Celebration or private-event inquiry"
+    name: "Deluxe Fun Dining", short: "D", location: "Uptown Charlotte", cuisine: "Experiential Dining • Global Flavors • Cocktails", accent: "#ee74c4", accent2: "#41c7c7", paper: "#09080d", heroImage: "radial-gradient(circle at 70% 20%, rgba(238,116,196,.3), transparent 22rem), linear-gradient(135deg, #09080d 0%, #271242 48%, #0a4c53 100%)", headline: "Dinner should never feel ordinary.", lede: "A bold digital stage for Uptown's interactive dining experience—where playful presentations, global flavors, cocktails and celebrations all compete for the spotlight.",
+    stats: [["Two levels", "Dining and private events"], ["Weekend brunch", "Big plates and bigger energy"], ["Interactive", "Food made for the moment"]],
+    features: [["01", "Show the spectacle", "Replace exposed image filenames and generic galleries with deliberate visual storytelling."], ["02", "Clarify the schedule", "Separate dinner, Friday nightlife and weekend brunch into an easy mobile format."], ["03", "Own the celebration", "Make birthdays, date nights, group dining and the private second floor central conversion paths."]],
+    menu: [["Playful starters", "Popcorn shrimp presentation", "A signature visual moment delivered in a real popcorn-style machine."], ["Main event", "Tomahawk steak", "A dramatic shareable centerpiece suited to celebrations and content-worthy nights."], ["Brunch", "It's All There Bloody Mary", "A towering signature drink finished with an extravagant seafood garnish."], ["Cocktails", "Color, smoke and tableside energy", "A dedicated showcase for the bar program instead of a generic menu link."]],
+    storyTitle: "Luxury, humor and theatrical presentation.", story: "Deluxe Fun Dining is built around more than food. The experience mixes globally influenced New American cooking with imaginative plating, cocktails and entertainment. This redesign makes that promise immediately visible while simplifying practical details for guests planning a night out.",
+    tags: ["Experiential dining", "Weekend brunch", "Cocktails", "Birthdays", "Date night", "Private floor"], address: "305 West 4th Street, Charlotte, NC 28202", phone: "(980) 332-2220 • (980) 349-2114", email: "info@deluxefundining.com", hours: "Mon closed • Tue–Thu 4:30–10 PM • Fri 4:30 PM–12 AM • Sat 10:30 AM–12 AM • Sun 10:30 AM–9 PM", actionLabel: "Book the experience", actionText: "A future reservation and event-booking path", formTopic: "Celebration or private-event inquiry"
   },
   madgreek: {
-    name: "Mad Greek Café",
-    short: "MG",
-    location: "South Boulevard • Charlotte",
-    cuisine: "Greek Classics • Family Tradition • Catering",
-    accent: "#75bce8",
-    accent2: "#e4c66a",
-    paper: "#071017",
-    heroImage: "radial-gradient(circle at 75% 15%, rgba(117,188,232,.3), transparent 22rem), linear-gradient(135deg, #06121d 0%, #0b4562 52%, #6f632b 100%)",
-    headline: "Charlotte's Greek table, refreshed for a new generation.",
-    lede: "A bright, family-centered redesign celebrating the café's 1991 roots, Greek island heritage, classic menu and the next chapter led by the Pitsonis family.",
-    stats: [
-      ["Since 1991", "A Charlotte Greek tradition"],
-      ["Family operated", "Old favorites, new chapter"],
-      ["Dine, order, cater", "One clear digital home"]
-    ],
-    features: [
-      ["01", "Put the story first", "The founding family and 2024 transition deserve more prominence than a generic template layout."],
-      ["02", "Unify ordering", "Bring Clover, DoorDash, Uber Eats and Grubhub options into one understandable decision point."],
-      ["03", "Grow catering", "Turn family recipes and group-friendly Greek food into a stronger catering presentation."]
-    ],
-    menu: [
-      ["Pita favorites", "Gyros and souvlaki", "Classic wraps and platters built around seasoned meats, warm pita and house sauces."],
-      ["Greek table", "Spanakopita and mezze", "Shareable starters including hummus, tzatziki and flaky spinach pie."],
-      ["From the grill", "Lamb chops", "A dinner centerpiece served with familiar Greek sides and bright Mediterranean flavor."],
-      ["Fresh classics", "Greek salad", "Crisp vegetables, feta, olives and a house-style dressing that anchors the menu."]
-    ],
-    storyTitle: "From Lefkada and Athens to South Boulevard.",
-    story: "Brothers Chris and George Limberakis opened Mad Greek Café in 1991, bringing recipes from Lefkada, Greece, to Charlotte. In 2024, Athens native Kostas Pitsonis and his Charlotte-raised son Yianni began the restaurant's next chapter while preserving the dishes regulars know.",
-    tags: ["Greek cuisine", "Family history", "Online ordering", "Catering", "Reservations", "South Boulevard"],
-    address: "5011 South Boulevard, Charlotte, NC 28217",
-    phone: "(704) 523-8296",
-    email: "madgreekofclt@gmail.com",
-    hours: "Mon closed • Tue–Thu 10 AM–9 PM • Fri–Sat 10 AM–10 PM • Sun 10 AM–9 PM",
-    actionLabel: "Order Greek favorites",
-    actionText: "A future unified ordering destination",
-    formTopic: "Catering, reservation or general inquiry"
+    name: "Mad Greek Café", short: "MG", location: "South Boulevard • Charlotte", cuisine: "Greek Classics • Family Tradition • Catering", accent: "#75bce8", accent2: "#e4c66a", paper: "#071017", heroImage: "radial-gradient(circle at 75% 15%, rgba(117,188,232,.3), transparent 22rem), linear-gradient(135deg, #06121d 0%, #0b4562 52%, #6f632b 100%)", headline: "Charlotte's Greek table, refreshed for a new generation.", lede: "A bright, family-centered redesign celebrating the café's 1991 roots, Greek island heritage, classic menu and the next chapter led by the Pitsonis family.",
+    stats: [["Since 1991", "A Charlotte Greek tradition"], ["Family operated", "Old favorites, new chapter"], ["Dine, order, cater", "One clear digital home"]],
+    features: [["01", "Put the story first", "The founding family and 2024 transition deserve more prominence than a generic template layout."], ["02", "Unify ordering", "Bring Clover, DoorDash, Uber Eats and Grubhub options into one understandable decision point."], ["03", "Grow catering", "Turn family recipes and group-friendly Greek food into a stronger catering presentation."]],
+    menu: [["Pita favorites", "Gyros and souvlaki", "Classic wraps and platters built around seasoned meats, warm pita and house sauces."], ["Greek table", "Spanakopita and mezze", "Shareable starters including hummus, tzatziki and flaky spinach pie."], ["From the grill", "Lamb chops", "A dinner centerpiece served with familiar Greek sides and bright Mediterranean flavor."], ["Fresh classics", "Greek salad", "Crisp vegetables, feta, olives and a house-style dressing that anchors the menu."]],
+    storyTitle: "From Lefkada and Athens to South Boulevard.", story: "Brothers Chris and George Limberakis opened Mad Greek Café in 1991, bringing recipes from Lefkada, Greece, to Charlotte. In 2024, Athens native Kostas Pitsonis and his Charlotte-raised son Yianni began the restaurant's next chapter while preserving the dishes regulars know.",
+    tags: ["Greek cuisine", "Family history", "Online ordering", "Catering", "Reservations", "South Boulevard"], address: "5011 South Boulevard, Charlotte, NC 28217", phone: "(704) 523-8296", email: "madgreekofclt@gmail.com", hours: "Mon closed • Tue–Thu 10 AM–9 PM • Fri–Sat 10 AM–10 PM • Sun 10 AM–9 PM", actionLabel: "Order Greek favorites", actionText: "A future unified ordering destination", formTopic: "Catering, reservation or general inquiry"
+  },
+  derby: {
+    name: "The Derby Restaurant", short: "D", location: "Monroe, North Carolina", cuisine: "Classic American • Local Gathering Place", accent: "#d2a85f", accent2: "#713d2d", paper: "#100c09", heroImage: "radial-gradient(circle at 75% 15%, rgba(210,168,95,.28), transparent 22rem), linear-gradient(135deg, #120b07 0%, #4a2619 52%, #28271d 100%)", headline: "A Monroe classic deserves a website with staying power.", lede: "A confident neighborhood-restaurant redesign built around familiar American plates, local regulars and the kind of straightforward hospitality that keeps a dining room relevant for generations.",
+    stats: [["Monroe", "Local restaurant identity"], ["Familiar favorites", "Comfort over trends"], ["Pitch-ready", "Owner facts added before launch"]],
+    features: [["01", "Lead with familiarity", "Present The Derby as a dependable Monroe gathering place instead of forcing it into a trendy template."], ["02", "Make the menu easy", "Organize everyday favorites, specials and takeout information for fast mobile decisions."], ["03", "Verify before launch", "Keep address, phone, hours and history owner-confirmed rather than repeating stale listing data."]],
+    menu: [["House favorites", "Classic American plates", "A flexible spotlight for the dishes regulars order most often."], ["Lunch", "Sandwiches and daily specials", "A practical section for midday traffic and rotating offers."], ["Dinner", "Comfort-forward entrées", "Clear categories for hearty plates without unsupported signature claims."], ["Groups", "Family and community dining", "Space for larger orders, meetings and local gatherings if offered."]],
+    storyTitle: "Local recognition is the brand advantage.", story: "The Derby's strongest digital opportunity is not an invented origin story. It is the trust already attached to its name in Monroe. This concept turns that recognition into a clear menu, current hours, directions and a polished first impression.",
+    tags: ["American restaurant", "Monroe", "Comfort food", "Local regulars", "Takeout", "Daily specials"], address: "Monroe, NC — exact current listing to be confirmed", phone: "Current phone to be confirmed with the restaurant", hours: "Current hours to be confirmed before presentation", actionLabel: "Plan a visit", actionText: "Owner-approved menu and contact details would replace the demo fields", formTopic: "General or group-dining inquiry"
+  },
+  beefbottle: {
+    name: "Beef ’N Bottle", short: "B&B", location: "South Boulevard • Charlotte", cuisine: "Steakhouse • Wine • Old-School Charlotte", accent: "#d14a42", accent2: "#c49a58", paper: "#090706", heroImage: "radial-gradient(circle at 75% 15%, rgba(209,74,66,.25), transparent 22rem), linear-gradient(135deg, #070505 0%, #351311 48%, #493a22 100%)", headline: "Where Charlotte still comes for the steakhouse ritual.", lede: "A refined redesign that keeps the dark paneling, candlelight, white linens and unapologetically old-school character—while making reservations, menus and gift cards dramatically easier to use.",
+    stats: [["Since 1958", "A Charlotte institution"], ["Dine-in only", "No delivery or takeout"], ["4538 South Blvd", "Private parking"]],
+    features: [["01", "Preserve the atmosphere", "Modernize the digital experience without sanding away the steakhouse's nostalgic identity."], ["02", "Clarify reservations", "Put the call-first policy and limited OpenTable availability in one prominent place."], ["03", "Sell the traditions", "Feature gift cards, Monday half-price wine and the Club Room as real reasons to return."]],
+    menu: [["Steaks", "Choice-cut ribeye", "The classic order that anchors the restaurant's long-running reputation."], ["Surf + turf", "Filet with seafood", "A traditional steakhouse combination with shrimp, scallops, oysters or salmon."], ["Sides", "Onion rings and steakhouse classics", "Familiar accompaniments that regulars treat as part of the ritual."], ["Wine", "Monday half-price selections", "A recurring offer on glasses and bottles up to the restaurant's stated limit."]],
+    storyTitle: "Do not redesign the soul out of it.", story: "Beef ’N Bottle has served Charlotte since 1958 and explicitly describes itself as dine-in only. The opportunity is not to turn it into a generic online-ordering restaurant. It is to preserve the intimate steakhouse mood while fixing navigation, image quality, mobile reservations and the gift-card journey.",
+    tags: ["Since 1958", "Steakhouse", "Dine-in only", "OpenTable", "Gift cards", "Wine"], address: "4538 South Boulevard, Charlotte, NC 28209", phone: "(704) 523-9977", hours: "Mon–Thu 5–10 PM • Fri–Sat 4–10 PM • Sun 4–9 PM", actionLabel: "Request a reservation", actionText: "Call-first reservations with limited OpenTable availability", formTopic: "Reservation or special-occasion inquiry"
+  },
+  kristophers: {
+    name: "Kristophers Sports Bar", short: "K", location: "Matthews, North Carolina", cuisine: "Sports Bar • Wings • Neighborhood Pub", accent: "#76b852", accent2: "#d2a73b", paper: "#071008", heroImage: "radial-gradient(circle at 70% 20%, rgba(118,184,82,.25), transparent 22rem), linear-gradient(135deg, #050905 0%, #15381a 50%, #40361a 100%)", headline: "Every game. Every table. One neighborhood home field.", lede: "A game-day-first redesign for a Matthews sports bar—built to surface current specials, major matchups, the full menu and practical information before kickoff.",
+    stats: [["Matthews", "Neighborhood sports bar"], ["Game-day ready", "TVs, food and drinks"], ["Flexible demo", "Current details owner-confirmed"]],
+    features: [["01", "Today's games", "A live schedule module could tell guests exactly what is playing and when."], ["02", "Specials that update", "Replace buried social posts with a structured weekly food-and-drink calendar."], ["03", "Menu before kickoff", "Make wings, burgers, sandwiches and group orders easy to scan on a phone."]],
+    menu: [["Game-day food", "Wings and shareables", "A clear home for sauces, baskets and group-friendly starters."], ["Pub favorites", "Burgers and sandwiches", "Reliable sports-bar choices presented without invented signature claims."], ["Cold drinks", "Beer and bar specials", "A future owner-managed list for taps, bottles and recurring promotions."], ["Groups", "Watch parties", "A conversion path for teams, alumni groups and local fan clubs."]],
+    storyTitle: "A sports bar website should feel live.", story: "Kristophers does not need decorative restaurant copy. It needs a fast answer to three questions: What game is on, what is the special and can my group get a table? This concept organizes the site around those real customer decisions.",
+    tags: ["Sports bar", "Matthews", "Wings", "Burgers", "Watch parties", "Weekly specials"], address: "Matthews, NC — exact current address to be verified", phone: "Current phone to be confirmed with the restaurant", hours: "Current opening and kitchen hours to be confirmed", actionLabel: "Plan game day", actionText: "Future game schedule, specials and group-booking destination", formTopic: "Watch-party or group inquiry"
+  },
+  sireds: {
+    name: "Sir Edmond Halley’s", short: "SEH", location: "Park Road Shopping Center • Charlotte", cuisine: "English-Style Pub • Global Comfort Food • Patio", accent: "#cf9f45", accent2: "#4c7057", paper: "#090c09", heroImage: "radial-gradient(circle at 80% 15%, rgba(207,159,69,.27), transparent 22rem), linear-gradient(135deg, #070906 0%, #213626 52%, #48351c 100%)", headline: "The neighborhood pub hidden beneath Park Road.", lede: "A warm, slightly eccentric redesign for Charlotte's underground-style freehouse—built around the patio, Guinness, pub comfort, global flavors and the sense that regulars have found a place of their own.",
+    stats: [["Park Road", "Tucked below the shopping center"], ["Pub patio", "A Charlotte favorite"], ["Freehouse spirit", "Beer, food and regulars"]],
+    features: [["01", "Make the entrance findable", "Use clear directions and visual cues for a pub that can be easy for first-time guests to miss."], ["02", "Sell the patio", "Give one of the restaurant's best-known features the prominence it deserves."], ["03", "Keep the personality", "Modernize menus and events without turning a real neighborhood pub into polished corporate sameness."]],
+    menu: [["Pub classics", "Fish, chips and hearty plates", "A familiar foundation for an English-style freehouse menu."], ["Global comfort", "Curries and rotating favorites", "Room for the menu's broader international influence."], ["From the taps", "Guinness and draught beer", "A beverage-first section designed for regulars and curious newcomers."], ["The Half Yard", "A memorable pub challenge", "A playful nod to the unusually tall 32-ounce beer glass associated with Sir Ed's."]],
+    storyTitle: "A hidden pub should still be easy to discover.", story: "Sir Edmond Halley’s has long operated as a relaxed pub at Park Road Shopping Center, known for Guinness, an excellent patio and its tucked-away location. The redesign keeps that lived-in character while making directions, menus, events and hours easier to trust.",
+    tags: ["English-style pub", "Patio", "Guinness", "Park Road", "Neighborhood bar", "Comfort food"], address: "Park Road Shopping Center, Charlotte, NC", phone: "Current phone to be confirmed with the restaurant", hours: "Current pub and kitchen hours to be confirmed", actionLabel: "Find the pub", actionText: "A future directions, menu and events destination", formTopic: "General, event or group inquiry"
+  },
+  americana: {
+    name: "Americana Restaurant", short: "A", location: "Matthews, North Carolina", cuisine: "American Family Dining • Breakfast • Comfort Food", accent: "#d05446", accent2: "#5d7f9d", paper: "#0d0b0b", heroImage: "radial-gradient(circle at 75% 15%, rgba(208,84,70,.24), transparent 22rem), linear-gradient(135deg, #120808 0%, #41201d 48%, #223947 100%)", headline: "Familiar food. Clear information. No guesswork.", lede: "A straightforward family-restaurant redesign for Matthews—focused on breakfast, everyday American comfort, current hours and the details guests actually need.",
+    stats: [["Matthews", "Local family dining"], ["All-day appeal", "Breakfast through dinner"], ["Owner-verified", "Facts before launch"]],
+    features: [["01", "Breakfast gets a real home", "Make the morning menu and serving hours immediately visible."], ["02", "Keep choices simple", "Organize familiar favorites into readable mobile categories."], ["03", "Remove stale-listing risk", "Use one owner-managed source for current hours, phone, holiday closures and specials."]],
+    menu: [["Breakfast", "Eggs, pancakes and morning plates", "A flexible presentation for the restaurant's confirmed breakfast menu."], ["Lunch", "Sandwiches and everyday favorites", "Fast-scanning categories for regular weekday visits."], ["Dinner", "American comfort plates", "A practical structure for entrées, sides and family dining."], ["Daily specials", "Reasons to check back", "An owner-editable area for rotating offers and seasonal features."]],
+    storyTitle: "Useful beats complicated.", story: "Americana's demo is intentionally conservative because small family restaurants are often harmed by stale third-party data. The production version would begin with owner-confirmed menu categories, exact hours, photographs and the restaurant's own story.",
+    tags: ["Family restaurant", "Matthews", "Breakfast", "American comfort", "Daily specials", "Takeout"], address: "Matthews, NC — exact current address to be verified", phone: "Current phone to be confirmed with the restaurant", hours: "Current service hours to be confirmed", actionLabel: "View the menu", actionText: "Owner-approved menu and operational information would replace the demo fields", formTopic: "General or group-dining inquiry"
+  },
+  diamond: {
+    name: "The Diamond Restaurant", short: "♦", location: "Plaza Midwood • Charlotte", cuisine: "Classic Diner • Greek-American • Breakfast", accent: "#75bdd7", accent2: "#e15959", paper: "#071013", heroImage: "radial-gradient(circle at 75% 15%, rgba(117,189,215,.25), transparent 22rem), linear-gradient(135deg, #071015 0%, #15495a 50%, #532222 100%)", headline: "A Charlotte diner icon, polished without losing the chrome.", lede: "A retro-modern redesign for a Plaza Midwood landmark—built around breakfast, Greek-American comfort food, counter-service character and generations of neighborhood memory.",
+    stats: [["Plaza Midwood", "Commonwealth Avenue landmark"], ["Classic diner", "Breakfast and comfort food"], ["Local history", "A story worth preserving"]],
+    features: [["01", "Use the real visual language", "Lean into diner chrome, neon and counter culture instead of a generic café template."], ["02", "Protect the history", "Give long-time customers and neighborhood newcomers a clear account of the restaurant's legacy."], ["03", "Make the basics current", "Keep hours, phone, menu and closure notices accurate from one source."]],
+    menu: [["Breakfast", "Eggs, griddle plates and diner coffee", "A morning-first section designed for quick scanning."], ["Greek-American", "Gyros and familiar specialties", "A dedicated home for the restaurant's Greek influence."], ["Diner classics", "Burgers and comfort plates", "Everyday favorites presented with clear options and sides."], ["Neighborhood value", "Daily specials", "A flexible area for affordable rotating meals and longtime staples."]],
+    storyTitle: "The website should feel like the building.", story: "The Diamond's opportunity is visual and historical: preserve the unmistakable diner personality while giving customers a dependable mobile menu and current visit information. Any founding date or ownership history would be confirmed directly before production launch.",
+    tags: ["Plaza Midwood", "Diner", "Breakfast", "Greek-American", "Charlotte history", "Counter service"], address: "1901 Commonwealth Avenue, Charlotte, NC 28205", phone: "Current phone to be confirmed with the restaurant", hours: "Current breakfast and dining hours to be confirmed", actionLabel: "Stop by the diner", actionText: "A future current-menu and directions destination", formTopic: "General or group inquiry"
+  },
+  margauxs: {
+    name: "Margaux’s Wine, Pizza & Market", short: "M", location: "Historic Downtown Pineville", cuisine: "St. Louis-Style Pizza • Wine • Market", accent: "#d87578", accent2: "#9dbb82", paper: "#10090b", heroImage: "radial-gradient(circle at 75% 15%, rgba(216,117,120,.27), transparent 22rem), linear-gradient(135deg, #12080a 0%, #592529 50%, #31432c 100%)", headline: "Thin-crust pizza, a bottle for the table and something good to take home.", lede: "A neighborhood-market redesign for Pineville's wine-and-pizza shop—built around St. Louis-style pies, retail bottles, casual dining and its connection to downtown Main Street.",
+    stats: [["316 Main Street", "Historic Pineville"], ["St. Louis-style", "Thin and crispy pizza"], ["Wine + market", "Dine in and take home"]],
+    features: [["01", "Explain the pizza", "Use visuals and concise copy to make the St. Louis-style crust a memorable differentiator."], ["02", "Show the market", "Treat retail wine and specialty goods as a major reason to visit, not a footnote."], ["03", "Connect the neighborhood", "Cross-promote the sister relationship with The Garrison without confusing the two brands."]],
+    menu: [["Pizza", "St. Louis-style cheese pie", "Thin, crisp and cut for sharing—the signature format highlighted by local food coverage."], ["Wine", "Bottles for the table or home", "A browsable retail-and-dining experience with owner-curated selections."], ["Market", "Take-home finds", "A flexible area for specialty items and rotating retail inventory."], ["Gatherings", "Casual downtown occasions", "A simple route for group orders and neighborhood events if offered."]],
+    storyTitle: "Pizza shop, bottle shop and neighborhood market.", story: "Margaux's opened in downtown Pineville in early 2021 and sits next to its sister restaurant, The Garrison. This concept presents the business as more than a pizza counter by giving wine, market goods and the Main Street location equal prominence.",
+    tags: ["St. Louis-style pizza", "Wine", "Market", "Pineville", "Main Street", "Sister restaurant"], address: "316 Main Street, Pineville, NC", phone: "Current phone to be confirmed with the restaurant", hours: "Current shop and kitchen hours to be confirmed", actionLabel: "Explore pizza and wine", actionText: "A future ordering, wine and market destination", formTopic: "Order, wine or group inquiry"
+  },
+  thirstybeaver: {
+    name: "The Thirsty Beaver Saloon", short: "TB", location: "Plaza Midwood • Charlotte", cuisine: "Dive Bar • Cheap Beer • Live Music", accent: "#e16b38", accent2: "#9d9a59", paper: "#0d0907", heroImage: "radial-gradient(circle at 75% 15%, rgba(225,107,56,.28), transparent 22rem), linear-gradient(135deg, #100806 0%, #532114 48%, #34331d 100%)", headline: "The little dive bar that would not move.", lede: "A deliberately rough-edged digital tribute to Charlotte's most defiant saloon—surrounded by apartments, covered in stories and still pouring cheap beer on Central Avenue.",
+    stats: [["Since 2008", "Neighborhood saloon"], ["1225 Central Ave", "The bar inside the apartment horseshoe"], ["Nationally known", "Still unmistakably local"]],
+    features: [["01", "Do not over-polish it", "The redesign should feel hand-painted, stubborn and real—not like a luxury cocktail bar."], ["02", "Tell the survival story", "The building's refusal to disappear is one of the strongest hospitality stories in Charlotte."], ["03", "Keep events current", "Give live music and special nights a usable calendar without changing the saloon's personality."]],
+    menu: [["Cold beer", "Simple, inexpensive pours", "The bar's identity is built on accessibility rather than an elaborate beverage program."], ["Saloon character", "Pool, music and regulars", "The experience matters more than a polished menu description."], ["Charlotte folklore", "The building that stayed", "A visual timeline of the apartment development constructed around the bar."], ["Famous visit", "Mick Jagger stopped in", "A nationally shared moment that still feels perfectly on-brand."]],
+    storyTitle: "Charlotte's own little house from Up.", story: "Brothers Brian and Mark Wilson opened the Thirsty Beaver in 2008. When surrounding land was redeveloped, the property owner declined to sell and the apartment complex was built around the tiny saloon. The bar became a symbol of Plaza Midwood's resistance to losing every rough edge.",
+    tags: ["Dive bar", "Since 2008", "Plaza Midwood", "Live music", "Cheap beer", "Charlotte icon"], address: "1225 Central Avenue, Charlotte, NC 28204", phone: "Current phone to be confirmed with the saloon", hours: "Current bar hours to be confirmed", actionLabel: "Find the Beaver", actionText: "A future events, directions and bar-information destination", formTopic: "Event or general inquiry"
   }
 };
 
@@ -205,12 +127,9 @@ const menuCards = data.menu.map(([category, title, text]) => `
   <article class="menu-card"><header><h3>${esc(title)}</h3><span>${esc(category)}</span></header><ul class="menu-list"><li><strong>${esc(title)}</strong><span>${esc(text)}</span></li></ul></article>`).join('');
 const statCards = data.stats.map(([value, label]) => `<div class="stat"><strong>${esc(value)}</strong><span>${esc(label)}</span></div>`).join('');
 const tags = data.tags.map(tag => `<span class="tag">${esc(tag)}</span>`).join('');
-const details = [
-  ['Address', data.address],
-  ['Phone', data.phone],
-  ['Email', data.email],
-  ['Hours', data.hours]
-].filter(([, value]) => value).map(([label, value]) => `<div class="detail"><small>${esc(label)}</small><strong>${esc(value)}</strong></div>`).join('');
+const details = [['Address', data.address], ['Phone', data.phone], ['Email', data.email], ['Hours', data.hours]]
+  .filter(([, value]) => value)
+  .map(([label, value]) => `<div class="detail"><small>${esc(label)}</small><strong>${esc(value)}</strong></div>`).join('');
 
 document.body.innerHTML = `
   <div class="demo-ribbon">Unofficial website redesign concept • Presentation demo</div>
@@ -218,50 +137,14 @@ document.body.innerHTML = `
     <a class="brand-lockup" href="#top"><span class="brand-mark">${esc(data.short)}</span><span class="brand-text"><strong>${esc(data.name)}</strong><span>${esc(data.location)}</span></span></a>
     <div class="nav-links"><a href="#menu">Menu</a><a href="#story">Story</a><a href="#visit">Visit</a><a class="nav-cta" href="#contact">${esc(data.actionLabel)}</a></div>
   </nav>
-
   <header class="hero" id="top">
-    <div class="hero-content">
-      <p class="eyebrow">${esc(data.cuisine)}</p>
-      <h1>${esc(data.headline)}</h1>
-      <p class="hero-lede">${esc(data.lede)}</p>
-      <div class="hero-actions"><a class="btn btn-primary" href="#menu">Explore the concept</a><a class="btn" href="../index.html">← All restaurant demos</a></div>
-    </div>
+    <div class="hero-content"><p class="eyebrow">${esc(data.cuisine)}</p><h1>${esc(data.headline)}</h1><p class="hero-lede">${esc(data.lede)}</p><div class="hero-actions"><a class="btn btn-primary" href="#menu">Explore the concept</a><a class="btn" href="../index.html">← All restaurant demos</a></div></div>
   </header>
-
   <section class="stats" aria-label="Restaurant highlights">${statCards}</section>
-
-  <section class="section">
-    <div class="section-head"><div><span class="section-kicker">Designed for this restaurant</span><h2>Not another template.</h2></div><p class="section-intro">This speculative redesign is built around the business's actual positioning and most useful customer journeys. Operational details are connected only after owner approval.</p></div>
-    <div class="card-grid">${featureCards}</div>
-  </section>
-
-  <section class="section" id="menu">
-    <div class="section-head"><div><span class="section-kicker">Menu spotlight</span><h2>Make the food memorable.</h2></div><p class="section-intro">Representative menu and experience highlights for the presentation concept. Final dishes, descriptions and pricing would be confirmed with the restaurant before launch.</p></div>
-    <div class="menu-grid">${menuCards}</div>
-  </section>
-
-  <section class="section" id="story">
-    <div class="story-layout">
-      <article class="story-panel"><span class="section-kicker">Brand story</span><h3>${esc(data.storyTitle)}</h3><p>${esc(data.story)}</p><div class="tag-list">${tags}</div></article>
-      <article class="story-panel"><span class="section-kicker">What the redesign improves</span><h3>One clear digital front door.</h3><p>Guests should not have to piece together menus, hours, social posts, ordering links and event information across unrelated platforms. This concept organizes the restaurant's strongest selling points into a focused mobile experience.</p><p><strong>Production launch:</strong> owner-approved copy, current menu data, photography, analytics, SEO, real ordering links and secure form delivery.</p></article>
-    </div>
-  </section>
-
-  <section class="section" id="visit">
-    <div class="visit-layout">
-      <article class="visit-panel"><span class="section-kicker">Visit and connect</span><h3>${esc(data.name)}</h3><div class="detail-list">${details}</div><p>${esc(data.actionText)}</p></article>
-      <article class="form-panel" id="contact"><span class="section-kicker">Interactive demo</span><h3>${esc(data.formTopic)}</h3><p>This form demonstrates the proposed customer experience. It is intentionally not connected to the restaurant.</p>
-        <form class="demo-form" id="demo-form">
-          <label>Name<input name="name" autocomplete="name" required></label>
-          <label>Email<input name="email" type="email" autocomplete="email" required></label>
-          <label class="full">How can the restaurant help?<textarea name="message" required></textarea></label>
-          <button class="btn btn-primary full" type="submit">Preview submission</button>
-        </form>
-        <div class="form-result" id="form-result" role="status">Demo complete — no information was submitted.</div>
-      </article>
-    </div>
-  </section>
-
+  <section class="section"><div class="section-head"><div><span class="section-kicker">Designed for this restaurant</span><h2>Not another template.</h2></div><p class="section-intro">This speculative redesign is built around the business's actual positioning and most useful customer journeys. Operational details are connected only after owner approval.</p></div><div class="card-grid">${featureCards}</div></section>
+  <section class="section" id="menu"><div class="section-head"><div><span class="section-kicker">Menu spotlight</span><h2>Make the food memorable.</h2></div><p class="section-intro">Representative menu and experience highlights for the presentation concept. Final dishes, descriptions and pricing would be confirmed with the restaurant before launch.</p></div><div class="menu-grid">${menuCards}</div></section>
+  <section class="section" id="story"><div class="story-layout"><article class="story-panel"><span class="section-kicker">Brand story</span><h3>${esc(data.storyTitle)}</h3><p>${esc(data.story)}</p><div class="tag-list">${tags}</div></article><article class="story-panel"><span class="section-kicker">What the redesign improves</span><h3>One clear digital front door.</h3><p>Guests should not have to piece together menus, hours, social posts, ordering links and event information across unrelated platforms. This concept organizes the restaurant's strongest selling points into a focused mobile experience.</p><p><strong>Production launch:</strong> owner-approved copy, current menu data, photography, analytics, SEO, real ordering links and secure form delivery.</p></article></div></section>
+  <section class="section" id="visit"><div class="visit-layout"><article class="visit-panel"><span class="section-kicker">Visit and connect</span><h3>${esc(data.name)}</h3><div class="detail-list">${details}</div><p>${esc(data.actionText)}</p></article><article class="form-panel" id="contact"><span class="section-kicker">Interactive demo</span><h3>${esc(data.formTopic)}</h3><p>This form demonstrates the proposed customer experience. It is intentionally not connected to the restaurant.</p><form class="demo-form" id="demo-form"><label>Name<input name="name" autocomplete="name" required></label><label>Email<input name="email" type="email" autocomplete="email" required></label><label class="full">How can the restaurant help?<textarea name="message" required></textarea></label><button class="btn btn-primary full" type="submit">Preview submission</button></form><div class="form-result" id="form-result" role="status">Demo complete — no information was submitted.</div></article></div></section>
   <footer class="site-footer"><strong>${esc(data.name)}</strong> website redesign concept. Unofficial presentation demo; not affiliated with or operated by the restaurant.</footer>
 `;
 
