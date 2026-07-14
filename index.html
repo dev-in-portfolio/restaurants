@@ -14,6 +14,12 @@
     .full-card{outline:1px solid rgba(245,190,92,.36);box-shadow:0 18px 55px rgba(0,0,0,.25)}.prototype-card{opacity:.82}
     .premium-card .card-rating-badge{background:linear-gradient(135deg,#f6d56e,#d99534);color:#12100a}
     .full-card .card-rating-badge{background:linear-gradient(135deg,#f0b85c,#d97a42);color:#17100a}.prototype-card .card-rating-badge{background:#334155;color:#e2e8f0}
+
+    .alpha-nav{max-width:1100px;margin:1.35rem auto 2.2rem;display:flex;flex-wrap:wrap;gap:.45rem;justify-content:center}
+    .alpha-nav a{min-width:2.2rem;text-align:center;text-decoration:none;border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:.45rem .62rem;color:#e2e8f0;background:rgba(255,255,255,.055);font-weight:800;font-size:.82rem;letter-spacing:.08em}
+    .alpha-nav a:hover,.alpha-nav a:focus{background:rgba(245,190,92,.18);border-color:rgba(245,190,92,.75);color:#fff}
+    .letter-heading{grid-column:1/-1;margin:1.25rem 0 .15rem;padding-top:.8rem;border-top:1px solid rgba(255,255,255,.12);color:#f0b85c;font-size:1.05rem;font-weight:900;letter-spacing:.18em;text-transform:uppercase}
+    .letter-heading:first-child{margin-top:0;border-top:0}
   </style>
 </head>
 <body>
@@ -23,6 +29,7 @@
       <h1 class="portal-title">Restaurant Website Concepts</h1>
       <p class="portal-subtitle">Custom redesign demonstrations created for independent restaurants across Charlotte, Matthews, Pineville and Monroe.</p>
       <div class="concept-notice"><strong>Honest status:</strong> PREMIUM cards are individually rebuilt and browser-reviewed. FULL cards contain five substantive pages but still await premium QA. PROTOTYPE cards contain one page and are incomplete.</div>
+      <nav class="alpha-nav" id="alpha-nav" aria-label="Jump to restaurants by letter"></nav>
     </header>
     <section class="restaurant-grid" id="restaurant-grid" aria-label="Restaurant website redesign concepts"></section>
   </main>
@@ -45,7 +52,7 @@
       {name:"Tacos El Nevado",area:"Charlotte",cuisine:"Mexican Cuisine",description:"A two-location concept centered on street tacos, traditional plates and current ordering.",emoji:"🌮",href:"tacos-el-nevado/index.html",gradient:"linear-gradient(135deg,#ea580c,#10b981 50%,#090707)",status:"prototype"},
       {name:"Gus' Family Restaurant",area:"Monroe",cuisine:"American & Greek Comfort Food",description:"A welcoming family-diner redesign for familiar plates, Greek favorites and takeout.",emoji:"🥩",href:"gus-restaurant/index.html",gradient:"linear-gradient(135deg,#0284c7,#84cc16 50%,#07090e)",status:"prototype"},
       {name:"Food For Your Soul CLT",area:"Charlotte",cuisine:"Southern Soul Food",description:"A brand-forward home for a social-first soul-food concept with current plates and pickup.",emoji:"🍯",href:"food-soul/index.html",gradient:"linear-gradient(135deg,#fbbf24,#ef4444 50%,#0b0808)",status:"prototype"},
-      {name:"Queen's Soul Food",area:"Charlotte",cuisine:"Southern Soul Food",description:"A comfort-food concept consolidating menus, catering, ordering and the restaurant story.",emoji:"👑",href:"queens-soul/index.html",gradient:"linear-gradient(135deg,#8b5cf6,#fbbf24 50%,#090510)",status:"prototype"},
+      {name:"Queen's Soul Food",area:"Charlotte",cuisine:"Southern Soul Food",description:"A comfort-food concept consolidating menus, catering and the restaurant story.",emoji:"👑",href:"queens-soul/index.html",gradient:"linear-gradient(135deg,#8b5cf6,#fbbf24 50%,#090510)",status:"prototype"},
       {name:"E.L.K. of Monroe",area:"Monroe",cuisine:"Modern Southern Tavern",description:"A downtown tavern concept giving burgers, drinks and local events a stronger home.",emoji:"🦌",href:"elk-monroe/index.html",gradient:"linear-gradient(135deg,#f59e0b,#64748b 50%,#0d0f12)",status:"prototype"},
       {name:"The Palace Restaurant",area:"Monroe",cuisine:"American Diner",description:"A nostalgic diner presentation for breakfast, family meals, takeout and daily details.",emoji:"🥞",href:"palace-monroe/index.html",gradient:"linear-gradient(135deg,#ef4444,#fef9c3 50%,#0d0406)",status:"prototype"},
       {name:"The Garrison",area:"Pineville",cuisine:"American Kitchen • Cocktails • Events",description:"A bank-inspired two-floor experience with a dining-room switcher and Great Room event funnel.",emoji:"🥃",href:"the-garrison/index.html",gradient:"linear-gradient(135deg,#17100c,#a66f3f 52%,#405248)",status:"prototype"},
@@ -83,7 +90,14 @@
       {name:"Portofino’s",area:"Charlotte Area",cuisine:"Italian • New York-Style Pizza • Multiple Locations",description:"A location-first Italian experience separating full-service restaurants from Uptown Express.",emoji:"🍕",href:"portofinos/index.html",gradient:"linear-gradient(135deg,#a9342d,#31583f 52%,#d0a04d)",status:"full"}
     ];
     const grid=document.getElementById('restaurant-grid');
-    grid.innerHTML=concepts.map(item=>{const premium=item.status==='premium';const full=premium||item.status==='full';const badge=premium?'PREMIUM • IDENTITY REBUILD':full?'FULL 5-PAGE • QA PENDING':'1-PAGE • INCOMPLETE';const label=premium?'View Premium Demo':full?'View Full Demo':'View Incomplete Prototype';return `<article class="portal-card glass-panel ${premium?'premium-card':full?'full-card':'prototype-card'}"><div class="card-image-wrapper"><span class="card-rating-badge">${badge}</span><div class="card-img-placeholder" style="background:${item.gradient}">${item.emoji}</div></div><div class="card-content"><span class="card-cuisine">${item.cuisine}</span><h2 class="card-title">${item.name}</h2><p class="card-description">${item.description}</p><div class="card-footer"><span class="card-price">Area: <span>${item.area}</span></span><a href="${item.href}" class="visit-btn">${label} ➔</a></div></div></article>`}).join('');
+    const alphaNav=document.getElementById('alpha-nav');
+    const sortName=name=>name.replace(/^(the|a|an)\s+/i,'').normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+    const letterFor=item=>sortName(item.name).charAt(0).toUpperCase();
+    const sortedConcepts=[...concepts].sort((a,b)=>sortName(a.name).localeCompare(sortName(b.name),undefined,{sensitivity:'base'}));
+    const letters=[...new Set(sortedConcepts.map(letterFor))];
+    alphaNav.innerHTML=letters.map(letter=>`<a href="#letter-${letter}">${letter}</a>`).join('');
+    let lastLetter='';
+    grid.innerHTML=sortedConcepts.map(item=>{const premium=item.status==='premium';const full=premium||item.status==='full';const badge=premium?'PREMIUM • IDENTITY REBUILD':full?'FULL 5-PAGE • QA PENDING':'1-PAGE • INCOMPLETE';const label=premium?'View Premium Demo':full?'View Full Demo':'View Incomplete Prototype';const letter=letterFor(item);const heading=letter!==lastLetter?`<h2 class="letter-heading" id="letter-${letter}">${letter}</h2>`:'';lastLetter=letter;return `${heading}<article class="portal-card glass-panel ${premium?'premium-card':full?'full-card':'prototype-card'}"><div class="card-image-wrapper"><span class="card-rating-badge">${badge}</span><div class="card-img-placeholder" style="background:${item.gradient}">${item.emoji}</div></div><div class="card-content"><span class="card-cuisine">${item.cuisine}</span><h2 class="card-title">${item.name}</h2><p class="card-description">${item.description}</p><div class="card-footer"><span class="card-price">Area: <span>${item.area}</span></span><a href="${item.href}" class="visit-btn">${label} ➔</a></div></div></article>`}).join('');
   </script>
 </body>
 </html>
