@@ -1,0 +1,9 @@
+# The Local Charlotte — evidence report
+
+- Status: FULL 5-PAGE DEMO — STATIC QA COMPLETED; BROWSER VISUAL QA PENDING
+- Pages: index.html, menu.html, story.html, local-night.html, visit.html
+- Restaurant-specific interaction: Local Night Planner
+- Secondary interaction: menu search/filter
+- Visual system: tavern layout, patio custom SVG motif, restaurant-specific palette
+- Content boundary: The concept uses only the restaurant’s neighborhood bar-and-grill positioning; current operational details require confirmation.
+- Premium status: NOT CLAIMED

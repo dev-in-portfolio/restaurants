@@ -1,5 +1,32 @@
 # Restaurant Demo Status
 
+<!-- BLOCK 5 START -->
+
+## Block 5 — full five-page demos; static QA completed; browser visual QA pending
+
+- Shun Lee Palace — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- Malaya Kitchen — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- Taste of SHU — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- Franklin Court Grille — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- Cajun Queen — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- PostScript Restaurant — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- Jasmine Grill Pineville — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- South 21 Matthews — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- Hilltop Fish Fare & Steakhouse — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- The Local Charlotte — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- d.d. Peckers’ Wing Shack — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- JackBeagle’s — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- Laurel Market — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- Stacks Kitchen — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- Yanni Bistro — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- Grace O’Malley’s — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- Johnny Burrito — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- Rhino Market & Deli — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- Cajun Yard Dog — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- Boardwalk Billy’s — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+
+<!-- BLOCK 5 END -->
+
 <!-- BLOCK 4 START -->
 
 ## Block 4 — full five-page demos; static QA completed; browser visual QA pending
