@@ -1,0 +1,61 @@
+name: Build Block 2 restaurant demos
+
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    if: github.event.issue.number == 11 && github.event.comment.body == '/build-block2'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out Block 2 branch
+        uses: actions/checkout@v4
+        with:
+          ref: agent/block-2-complete
+          fetch-depth: 0
+
+      - name: Reconstruct and verify generator
+        shell: bash
+        run: |
+          cat .migration/block2hex/part00 \
+              .migration/block2hex/part01 \
+              .migration/block2hex/part02 \
+              .migration/block2hex/part03a \
+              .migration/block2hex/part03b \
+              .migration/block2hex/part04a \
+              .migration/block2hex/part04b > /tmp/block2.hex
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib
+          raw = Path('/tmp/block2.hex').read_text(encoding='utf-8').strip()
+          data = bytes.fromhex(raw)
+          expected = '6c3da76b820a8c65f93bc09dfee4671182d207b690e4fc99eb9dfebb35c85c5b'
+          actual = hashlib.sha256(data).hexdigest()
+          if actual != expected:
+              raise SystemExit(f'Generator checksum mismatch: {actual}')
+          Path('/tmp/build_block2.py').write_bytes(data)
+          PY
+          python -m py_compile /tmp/build_block2.py
+
+      - name: Generate and validate Block 2
+        run: python /tmp/build_block2.py
+
+      - name: Remove migration payload
+        run: rm -rf .migration/block2 .migration/block2hex
+
+      - name: Check whitespace
+        run: git diff --check
+
+      - name: Commit generated demos
+        shell: bash
+        run: |
+          git config user.name 'restaurant-demo-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add -A
+          git diff --cached --quiet && exit 0
+          git commit -m 'Build Block 2 full five-page restaurant demos [skip ci]'
+          git push origin HEAD:agent/block-2-complete
