@@ -1,5 +1,32 @@
 # Restaurant Demo Status
 
+<!-- BLOCK 4 START -->
+
+## Block 4 — full five-page demos; static QA completed; browser visual QA pending
+
+- Mert’s Heart & Soul — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- Community Kitchen Café — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- Artisen Gelato — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- High Octane Coffee, Creamery & Eatery — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- PePeRo Korean Market & Restaurant — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- Ben Thanh Vietnamese Cuisine — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- Thomas Street Tavern — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- Freshwaters Southern New Orleans — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- Indigo Tea & Coffee — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- A Piece of Havana — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- Las Americas Restaurant & Bakery — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- JAMZ Pizzeria & Deli — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- Ms. DiDi’s Caribbean Kitchen — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- Archive CLT — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- The Batchmaker / Batch House — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- 220°C Bánh Mì & Coffee — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- Abugida Ethiopian Café — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- Enat Ethiopian Restaurant — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- Pinky’s Westside Grill — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- Due Amici Pizzeria — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+
+<!-- BLOCK 4 END -->
+
 ## Full five-page demos — static QA completed; browser visual QA pending
 
 - Napoli Italian Restaurant — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA blocked by the environment and still pending; premium not claimed
