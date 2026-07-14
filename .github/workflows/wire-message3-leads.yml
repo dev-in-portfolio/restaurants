@@ -70,3 +70,5 @@ jobs:
           git add index.html
           git commit -m 'Show restaurant leads from blocks 23 through 33'
           git push origin HEAD:main
+
+# retrigger after the workflow existed on main
