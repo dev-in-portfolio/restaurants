@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 220" role="img" aria-labelledby="title desc">
+  <title id="title">Boudreaux's alligator mark</title>
+  <desc id="desc">A custom geometric alligator illustration.</desc>
+  <g fill="none" stroke="currentColor" stroke-width="13" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M61 131c66-2 125-28 185-32 61-4 115 14 166 7 47-7 91-35 133-33 13 1 27 5 36 14-20 1-37 8-51 21 18 4 35 13 48 27-46-7-87 2-126 18-56 23-111 36-174 30-58-6-112-28-171-24-24 2-48 7-69 17 12-23 35-37 61-45-19-6-32-17-38-30z"/>
+    <path d="M283 100c-7-26-24-42-48-53 7 24 22 42 44 55M326 100c11-26 31-41 57-48-11 23-29 40-52 50M185 151l-26 34M422 144l28 35"/>
+    <circle cx="512" cy="88" r="4" fill="currentColor" stroke="none"/>
+  </g>
+</svg>
