@@ -29,7 +29,8 @@ jobs:
             .migration/next20hex/part01 \
             .migration/next20hex/part02 \
             .migration/next20hex/part03 \
-            .migration/next20hex/part04_05 \
+            .migration/next20hex/part04 \
+            .migration/next20hex/part05 \
             .migration/next20hex/part06 \
             .migration/next20hex/part07 \
             .migration/next20hex/part08 > /tmp/next20.hex
