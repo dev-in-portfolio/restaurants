@@ -1,0 +1,282 @@
+{
+  "restaurants": 25,
+  "html_pages": 125,
+  "status": "static QA complete; browser visual QA pending",
+  "sites": [
+    {
+      "name": "República Restaurant & Lounge",
+      "slug": "republica",
+      "pages": [
+        "index.html",
+        "menu.html",
+        "story.html",
+        "celebrations.html",
+        "visit.html"
+      ]
+    },
+    {
+      "name": "Tacos El Nevado",
+      "slug": "tacos-el-nevado",
+      "pages": [
+        "index.html",
+        "menu.html",
+        "story.html",
+        "order-guide.html",
+        "visit.html"
+      ]
+    },
+    {
+      "name": "Gus' Family Restaurant",
+      "slug": "gus-restaurant",
+      "pages": [
+        "index.html",
+        "menu.html",
+        "story.html",
+        "family-meals.html",
+        "visit.html"
+      ]
+    },
+    {
+      "name": "Food For Your Soul CLT",
+      "slug": "food-soul",
+      "pages": [
+        "index.html",
+        "menu.html",
+        "story.html",
+        "catering.html",
+        "visit.html"
+      ]
+    },
+    {
+      "name": "Queen's Soul Food",
+      "slug": "queens-soul",
+      "pages": [
+        "index.html",
+        "menu.html",
+        "story.html",
+        "group-orders.html",
+        "visit.html"
+      ]
+    },
+    {
+      "name": "E.L.K. of Monroe",
+      "slug": "elk-monroe",
+      "pages": [
+        "index.html",
+        "menu.html",
+        "story.html",
+        "gatherings.html",
+        "visit.html"
+      ]
+    },
+    {
+      "name": "The Palace Restaurant",
+      "slug": "palace-monroe",
+      "pages": [
+        "index.html",
+        "menu.html",
+        "story.html",
+        "meal-finder.html",
+        "visit.html"
+      ]
+    },
+    {
+      "name": "The Garrison",
+      "slug": "the-garrison",
+      "pages": [
+        "index.html",
+        "menu.html",
+        "story.html",
+        "events.html",
+        "visit.html"
+      ]
+    },
+    {
+      "name": "Home Style Kitchn",
+      "slug": "home-style-kitchn",
+      "pages": [
+        "index.html",
+        "menu.html",
+        "story.html",
+        "catering.html",
+        "visit.html"
+      ]
+    },
+    {
+      "name": "The One Tapas & Bar",
+      "slug": "the-one-tapas",
+      "pages": [
+        "index.html",
+        "menu.html",
+        "story.html",
+        "tapas-planner.html",
+        "visit.html"
+      ]
+    },
+    {
+      "name": "Deluxe Fun Dining",
+      "slug": "deluxe-fun-dining",
+      "pages": [
+        "index.html",
+        "menu.html",
+        "story.html",
+        "experience-planner.html",
+        "visit.html"
+      ]
+    },
+    {
+      "name": "Mad Greek Café",
+      "slug": "mad-greek-cafe",
+      "pages": [
+        "index.html",
+        "menu.html",
+        "story.html",
+        "family-catering.html",
+        "visit.html"
+      ]
+    },
+    {
+      "name": "The Derby Restaurant",
+      "slug": "the-derby",
+      "pages": [
+        "index.html",
+        "menu.html",
+        "story.html",
+        "gatherings.html",
+        "visit.html"
+      ]
+    },
+    {
+      "name": "Beef ’N Bottle",
+      "slug": "beef-n-bottle",
+      "pages": [
+        "index.html",
+        "menu.html",
+        "story.html",
+        "occasion-planner.html",
+        "visit.html"
+      ]
+    },
+    {
+      "name": "Kristophers Sports Bar",
+      "slug": "kristophers-sports-bar",
+      "pages": [
+        "index.html",
+        "menu.html",
+        "story.html",
+        "game-day.html",
+        "visit.html"
+      ]
+    },
+    {
+      "name": "Sir Edmond Halley’s",
+      "slug": "sir-edmond-halleys",
+      "pages": [
+        "index.html",
+        "menu.html",
+        "story.html",
+        "pub-planner.html",
+        "visit.html"
+      ]
+    },
+    {
+      "name": "Americana Restaurant",
+      "slug": "americana-restaurant",
+      "pages": [
+        "index.html",
+        "menu.html",
+        "story.html",
+        "family-table.html",
+        "visit.html"
+      ]
+    },
+    {
+      "name": "The Diamond Restaurant",
+      "slug": "diamond-restaurant",
+      "pages": [
+        "index.html",
+        "menu.html",
+        "story.html",
+        "diner-guide.html",
+        "visit.html"
+      ]
+    },
+    {
+      "name": "Margaux’s Wine, Pizza & Market",
+      "slug": "margauxs-wine-pizza-market",
+      "pages": [
+        "index.html",
+        "menu.html",
+        "story.html",
+        "pairing-planner.html",
+        "visit.html"
+      ]
+    },
+    {
+      "name": "The Thirsty Beaver Saloon",
+      "slug": "thirsty-beaver-saloon",
+      "pages": [
+        "index.html",
+        "menu.html",
+        "story.html",
+        "music-night.html",
+        "visit.html"
+      ]
+    },
+    {
+      "name": "Moosehead Grill",
+      "slug": "moosehead-grill",
+      "pages": [
+        "index.html",
+        "menu.html",
+        "story.html",
+        "wing-night.html",
+        "visit.html"
+      ]
+    },
+    {
+      "name": "Comet Grill",
+      "slug": "comet-grill",
+      "pages": [
+        "index.html",
+        "menu.html",
+        "story.html",
+        "music-and-groups.html",
+        "visit.html"
+      ]
+    },
+    {
+      "name": "South 21 Drive-In",
+      "slug": "south-21-drive-in",
+      "pages": [
+        "index.html",
+        "menu.html",
+        "story.html",
+        "drive-in-guide.html",
+        "visit.html"
+      ]
+    },
+    {
+      "name": "House of Pizza",
+      "slug": "house-of-pizza",
+      "pages": [
+        "index.html",
+        "menu.html",
+        "story.html",
+        "pizza-builder.html",
+        "visit.html"
+      ]
+    },
+    {
+      "name": "New Zealand Café",
+      "slug": "new-zealand-cafe",
+      "pages": [
+        "index.html",
+        "menu.html",
+        "story.html",
+        "sushi-guide.html",
+        "visit.html"
+      ]
+    }
+  ]
+}
