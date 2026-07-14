@@ -1,0 +1,1 @@
+trigger Block 6 checksum-verified restaurant build
