@@ -8,7 +8,7 @@ const sizes = {
   mobile: { width: 390, height: 844 }
 };
 
-await fs.mkdir('qa/boudreauxs-v2', { recursive: true });
+await fs.mkdir('qa/boudreauxs-v3', { recursive: true });
 const browser = await chromium.launch({ headless: true });
 const report = [];
 let failed = false;
@@ -30,15 +30,7 @@ for (const [label, viewport] of Object.entries(sizes)) {
         title: document.title,
         scrollWidth: document.documentElement.scrollWidth,
         clientWidth: document.documentElement.clientWidth,
-        h1: rect ? {
-          left: rect.left,
-          right: rect.right,
-          top: rect.top,
-          bottom: rect.bottom,
-          width: rect.width,
-          scrollWidth: h1.scrollWidth,
-          clientWidth: h1.clientWidth
-        } : null,
+        h1: rect ? { left: rect.left, right: rect.right, width: rect.width, scrollWidth: h1.scrollWidth, clientWidth: h1.clientWidth } : null,
         currentNav: document.querySelectorAll('[aria-current="page"]').length,
         textLength: document.body.innerText.trim().length
       };
@@ -48,19 +40,17 @@ for (const [label, viewport] of Object.entries(sizes)) {
     const ok = response?.ok() && !overflow && !clipped && metrics.currentNav === 1 && metrics.textLength > 650 && errors.length === 0;
     if (!ok) failed = true;
     report.push({ label, route, status: response?.status(), overflow, clipped, errors, ...metrics, ok });
-    await page.screenshot({ path: `qa/boudreauxs-v2/${route.replace('.html','')}-${label}.png`, fullPage: true });
+    await page.screenshot({ path: `qa/boudreauxs-v3/${route.replace('.html','')}-${label}.png`, fullPage: true });
     await page.close();
   }
   const interactive = await context.newPage();
   await interactive.goto(base + 'menu.html', { waitUntil: 'networkidle' });
   await interactive.click('[data-filter="seafood"]');
-  const visibleSeafood = await interactive.locator('[data-category]:visible').count();
-  if (visibleSeafood !== 2) failed = true;
+  if (await interactive.locator('[data-category]:visible').count() !== 2) failed = true;
   await interactive.goto(base + 'gatherings.html', { waitUntil: 'networkidle' });
-  await interactive.selectOption('[data-occasion]', { label: 'Birthday table' });
-  await interactive.fill('[data-group]', '12');
-  const plannerCopy = await interactive.locator('[data-plan-copy]').innerText();
-  if (!plannerCopy.includes('12 guests')) failed = true;
+  await interactive.selectOption('[data-occasion]', { label: 'Birthday in NoDa' });
+  await interactive.fill('[data-count]', '12');
+  if (!(await interactive.locator('[data-plan-summary]').innerText()).includes('12 people')) failed = true;
   if (label === 'mobile') {
     await interactive.goto(base + 'index.html', { waitUntil: 'networkidle' });
     await interactive.click('[data-nav-toggle]');
@@ -70,9 +60,9 @@ for (const [label, viewport] of Object.entries(sizes)) {
   await context.close();
 }
 await browser.close();
-await fs.writeFile('qa/boudreauxs-v2/report.json', JSON.stringify(report, null, 2));
+await fs.writeFile('qa/boudreauxs-v3/report.json', JSON.stringify(report, null, 2));
 if (failed) {
   console.error(JSON.stringify(report, null, 2));
   process.exit(1);
 }
-console.log('Boudreaux\'s v2 browser QA passed.');
+console.log('Boudreaux\'s identity rebuild browser QA passed.');
