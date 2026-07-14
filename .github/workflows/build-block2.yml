@@ -28,6 +28,7 @@ jobs:
               .migration/block2hex/part03b \
               .migration/block2hex/part04a \
               .migration/block2hex/part04b > /tmp/block2.hex
+          mkdir -p scripts
           python - <<'PY'
           from pathlib import Path
           import hashlib
@@ -37,15 +38,17 @@ jobs:
           actual = hashlib.sha256(data).hexdigest()
           if actual != expected:
               raise SystemExit(f'Generator checksum mismatch: {actual}')
-          Path('/tmp/build_block2.py').write_bytes(data)
+          Path('scripts/build_block2.py').write_bytes(data)
           PY
-          python -m py_compile /tmp/build_block2.py
+          python -m py_compile scripts/build_block2.py
 
       - name: Generate and validate Block 2
-        run: python /tmp/build_block2.py
+        run: python scripts/build_block2.py
 
-      - name: Remove migration payload
-        run: rm -rf .migration/block2 .migration/block2hex
+      - name: Remove migration payload and temporary generator
+        run: |
+          rm -rf .migration/block2 .migration/block2hex
+          rm -f scripts/build_block2.py
 
       - name: Check whitespace
         run: git diff --check
