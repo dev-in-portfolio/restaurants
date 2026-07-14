@@ -1,1 +1,1 @@
-trigger Block 5 checksum-verified restaurant build
+trigger Block 5 checksum-verified restaurant build — corrected segment
