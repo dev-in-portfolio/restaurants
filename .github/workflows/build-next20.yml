@@ -1,9 +1,8 @@
 name: Build next 20 restaurant demos
 
 on:
-  issues:
-    types: [opened]
-  workflow_dispatch:
+  pull_request:
+    types: [opened, reopened, synchronize]
 
 permissions:
   contents: write
@@ -14,11 +13,12 @@ concurrency:
 
 jobs:
   build:
-    if: github.event_name == 'workflow_dispatch' || github.event.issue.title == 'Run next 20 restaurant build'
+    if: github.event.pull_request.title == 'Run next 20 restaurant build'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: main
           fetch-depth: 0
 
       - name: Reconstruct verified restaurant package
@@ -130,4 +130,4 @@ jobs:
           git add -A
           git diff --cached --quiet && exit 0
           git commit -m 'Build next 20 full five-page restaurant demos [skip ci]'
-          git push
+          git push origin main
