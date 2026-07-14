@@ -1,5 +1,32 @@
 # Restaurant Demo Status
 
+<!-- BLOCK 6 START -->
+
+## Block 6 — full five-page demos; static QA completed; browser visual QA pending
+
+- Rusty’s Deli & Grille — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- Bedder Bedder & Moore — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- Bisonte Pizza Co. — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- Wan Fu Quality Chinese Cuisine — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- Baoding — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- Saigon Palace — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- Arooji’s Wine Room — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- Oggi Ristorante Italiano — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- Prime Fish — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- The Blue Taj — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- Bird Pizzeria — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- Cuzzo’s Cuisine — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- Hip Hop Smoothies — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- Lulu’s Express — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- Mr. Charles Chicken & Fish — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- Nick & Mike Bar and Grill — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- Mad Dash Kitchen — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- Surefire Market — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- Two Scoops Creamery — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+- Ten58 Sports Bar & Lounge — 5/5 pages; structural, internal-link and JavaScript validation completed; browser visual QA pending; premium not claimed
+
+<!-- BLOCK 6 END -->
+
 <!-- BLOCK 5 START -->
 
 ## Block 5 — full five-page demos; static QA completed; browser visual QA pending
