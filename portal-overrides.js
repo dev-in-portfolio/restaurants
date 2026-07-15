@@ -812,5 +812,15 @@ window.portalOverrides = [
     href: "hopfly-brewing/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
     status: "qa"
+  },
+  {
+    name: "House of Leng",
+    area: "Charlotte area",
+    cuisine: "Six-Page Restaurant Experience",
+    description: "Six-page concept upgraded with a custom grill guide and interactive planner. Static validation passed; desktop/mobile browser QA remains pending.",
+    emoji: "🔥",
+    href: "house-of-leng/index.html",
+    gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
+    status: "qa"
   }
 ];
