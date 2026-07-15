@@ -292,5 +292,15 @@ window.portalOverrides = [
     href: "dbs-tavern/index.html",
     gradient: "linear-gradient(135deg,#1a2a3a,#c0392b 52%,#1a1a1a)",
     status: "premium"
+  },
+  {
+    name: "Deejai Thai",
+    area: "Myers Park",
+    cuisine: "Traditional Thai & Sushi",
+    description: "Providence Road neighborhood fixture serving classic Thai noodle dishes, curries, and fresh sushi rolls since 2009. Features an interactive curry spice planner.",
+    emoji: "🍜",
+    href: "deejai-thai/index.html",
+    gradient: "linear-gradient(135deg,#8b1a1a,#e8b830 52%,#1a1a1a)",
+    status: "premium"
   }
 ];
