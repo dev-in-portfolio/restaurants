@@ -212,5 +212,15 @@ window.portalOverrides = [
     href: "carolina-beer-temple/index.html",
     gradient: "linear-gradient(135deg,#f59e0b,#7c2d12 52%,#0f172a)",
     status: "premium"
+  },
+  {
+    name: "Carolina Scoops",
+    area: "South Charlotte",
+    cuisine: "Artisanal Ice Cream Shop",
+    description: "Premium handcrafted ice cream, flavor flights, and custom kids party packages in South Charlotte. Friendly local dessert shop. Features an interactive flavor flight builder.",
+    emoji: "🍦",
+    href: "carolina-scoops/index.html",
+    gradient: "linear-gradient(135deg,#b83c68,#f3bd48 52%,#2f806e)",
+    status: "premium"
   }
 ];
