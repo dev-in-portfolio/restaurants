@@ -34,7 +34,6 @@ jobs:
           set -euo pipefail
           python3 - <<'PY'
           from pathlib import Path
-
           repair = Path('controller/.github/scripts/phase2-repair.py')
           text = repair.read_text(encoding='utf-8')
           text = text.replace("'main':['MISSING']", "'main':['*']")
@@ -65,12 +64,65 @@ jobs:
           WORK_ROOT="$GITHUB_WORKSPACE/work" OUT_DIR="$GITHUB_WORKSPACE/out" \
             python3 controller/.github/scripts/phase2-repair.py 2>&1 | tee out/phase2-static.log
 
+      - name: Repair responsive runtime and duplicate-id defects
+        shell: bash
+        run: |
+          set -euo pipefail
           python3 - <<'PY'
           import json
+          import re
           import subprocess
           from pathlib import Path
-          report = json.loads(Path('out/phase2-static-report.json').read_text(encoding='utf-8'))
-          expected = sorted(report['changedFiles'])
+
+          root = Path('work')
+          report_path = Path('out/phase2-static-report.json')
+          report = json.loads(report_path.read_text(encoding='utf-8'))
+          responsive = '''\n<style data-phase2-responsive>\nhtml,body{max-width:100%;overflow-x:clip}*,*::before,*::after{box-sizing:border-box}img,svg,video,canvas,iframe{max-width:100%;height:auto}table{max-width:100%}\n@media(max-width:600px){body>*{max-width:100%}nav,.nav,[class*="nav"]{max-width:100%;height:auto!important;min-height:0;flex-wrap:wrap!important}.nav-links,[class*="nav-links"],[class*="links"]{max-width:100%;min-width:0;flex-wrap:wrap!important;gap:.5rem!important}main,header,footer,section,form,[class*="container"],[class*="wrapper"],[class*="grid"]{max-width:100%;min-width:0}input,select,textarea,button{max-width:100%}}\n</style>\n'''
+          changed = set(report['changedFiles'])
+
+          for target in report['targets']:
+              if target['group'] not in {'B', 'C'}:
+                  continue
+              site = root / target['path']
+              for file in site.rglob('*.html'):
+                  text = file.read_text(encoding='utf-8')
+                  original = text
+                  legacy_counter = 0
+                  tag_pattern = re.compile(r'<([A-Za-z][\w:-]*)([^>]*\bid=["\']main["\'][^>]*)>', re.I)
+                  def replace_legacy(match):
+                      nonlocal legacy_counter
+                      if match.group(1).lower() == 'main':
+                          return match.group(0)
+                      legacy_counter += 1
+                      return re.sub(r'\bid=["\']main["\']', f'id="phase2-legacy-main-{legacy_counter}"', match.group(0), count=1, flags=re.I)
+                  text = tag_pattern.sub(replace_legacy, text)
+                  if 'data-phase2-responsive' not in text:
+                      if re.search(r'</head\s*>', text, flags=re.I):
+                          text = re.sub(r'</head\s*>', responsive + '</head>', text, count=1, flags=re.I)
+                      else:
+                          raise SystemExit(f'{file}: missing closing head for responsive repair')
+                  if text != original:
+                      file.write_text(text, encoding='utf-8')
+                      changed.add(file.relative_to(root).as_posix())
+
+          dom = root / 'doms-dive-bar' / 'specials.html'
+          text = dom.read_text(encoding='utf-8')
+          fixed = text.replace("whatever's new on tap", "whatever\\'s new on tap")
+          if fixed == text:
+              raise SystemExit('Dom specials JavaScript apostrophe defect was not found.')
+          dom.write_text(fixed, encoding='utf-8')
+          changed.add(dom.relative_to(root).as_posix())
+
+          report['changedFiles'] = sorted(changed)
+          report['changedFileCount'] = len(report['changedFiles'])
+          report['browserDefectRepairs'] = {
+              'responsiveContainmentAppliedToGroups': ['B','C'],
+              'duplicateLegacyMainIdsRenamed': True,
+              'domsDiveBarSpecialsJavaScriptFixed': True,
+          }
+          report_path.write_text(json.dumps(report, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
+
+          expected = report['changedFiles']
           actual = sorted(subprocess.check_output(['git','-C','work','diff','--name-only'], text=True).splitlines())
           if actual != expected:
               raise SystemExit(f'Changed-file safety mismatch. expected={expected} actual={actual}')
