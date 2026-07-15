@@ -22,5 +22,15 @@ window.portalOverrides = [
     href: "131-main-restaurant/index.html",
     gradient: "linear-gradient(135deg,#eab308,#2d1f18 52%,#121214)",
     status: "premium"
+  },
+  {
+    name: "Beef 'N Bottle",
+    area: "Charlotte",
+    cuisine: "Classic American Steakhouse",
+    description: "Charlotte's landmark retro steakhouse since 1958. Dimly-lit booths, celebrity headshot walls, and aged choice cuts. Features an interactive steak customizer, temperature guide, and private banquet planner.",
+    emoji: "🥩",
+    href: "beef-n-bottle/index.html",
+    gradient: "linear-gradient(135deg,#991b1b,#22120b 52%,#0a0a0a)",
+    status: "premium"
   }
 ];
