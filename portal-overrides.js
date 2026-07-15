@@ -452,5 +452,15 @@ window.portalOverrides = [
     href: "el-puro-cuban-restaurant/index.html",
     gradient: "linear-gradient(135deg,#6b1d28,#c4862b 52%,#faf6f0)",
     status: "premium"
+  },
+  {
+    name: "El Valle Mexican Restaurant",
+    area: "South Charlotte & Matthews",
+    cuisine: "Authentic Mexican Restaurant",
+    description: "Family-owned local favorite preparing legendary warm cheese dip, quesabirria tacos with consommé dipping broth, and sizzling hot fajitas since 1998. Features an interactive street taco builder.",
+    emoji: "🌮",
+    href: "el-valle-mexican-restaurant/index.html",
+    gradient: "linear-gradient(135deg,#5c2c10,#faf5ee 52%,#1a0b04)",
+    status: "premium"
   }
 ];
