@@ -532,5 +532,15 @@ window.portalOverrides = [
     href: "good-food-on-montford/index.html",
     gradient: "linear-gradient(135deg,#4a3728,#c9a84c 52%,#faf6f0)",
     status: "premium"
+  },
+  {
+    name: "Gotcha Matcha & Espresso",
+    area: "Uptown",
+    cuisine: "Ceremonial Matcha Bar",
+    description: "Uptown ceremonial grade matcha bar featuring creative Thai-inspired flavors like pandan, purple ube, coconut, and boba, all served in zero-waste compostable cups. Features an interactive matcha lab customizer.",
+    emoji: "🍵",
+    href: "gotcha-matcha-espresso/index.html",
+    gradient: "linear-gradient(135deg,#2d5a3d,#c9a84c 52%,#faf8f4)",
+    status: "premium"
   }
 ];
