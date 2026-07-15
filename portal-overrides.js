@@ -232,5 +232,15 @@ window.portalOverrides = [
     href: "caswell-station/index.html",
     gradient: "linear-gradient(135deg,#065f46,#1e293b 52%,#0f172a)",
     status: "premium"
+  },
+  {
+    name: "Cornerstone Pub & Grill",
+    area: "Matthews",
+    cuisine: "Neighborhood Sports Pub",
+    description: "Matthews gastropub and local sports tavern serving draft beers, crispy wings, and sirloin steaks in a friendly neighborhood setting. Features an interactive daily specials and pint planner.",
+    emoji: "🍔",
+    href: "cornerstone-pub-grill/index.html",
+    gradient: "linear-gradient(135deg,#244b38,#8f3e2c 52%,#f8fafc)",
+    status: "premium"
   }
 ];
