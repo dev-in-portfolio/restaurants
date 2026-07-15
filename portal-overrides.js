@@ -342,5 +342,15 @@ window.portalOverrides = [
     href: "doans-vietnamese-cuisine/index.html",
     gradient: "linear-gradient(135deg,#a32020,#d4a017 52%,#1a1a1a)",
     status: "premium"
+  },
+  {
+    name: "Dolce Osteria",
+    area: "Dilworth",
+    cuisine: "Regional Italian Cuisine",
+    description: "Charming Dilworth osteria preparing regional handmade pastas including Roman carbonara and cacio e pepe, seasonal starters, and Italian wines in a romantic setting. Features an interactive pasta board customizer.",
+    emoji: "🍝",
+    href: "dolce-osteria/index.html",
+    gradient: "linear-gradient(135deg,#4a6b3a,#8b3a2a 52%,#1a1a1a)",
+    status: "premium"
   }
 ];
