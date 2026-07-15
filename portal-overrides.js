@@ -591,7 +591,7 @@ window.portalOverrides = [
     emoji: "🍳",
     href: "aj-family-restaurant/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
-    status: "qa"
+    status: "promoted"
   },
   {
     name: "Alexander Michael's",
@@ -611,7 +611,7 @@ window.portalOverrides = [
     emoji: "☕",
     href: "alice-jules-coffee-house/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
-    status: "qa"
+    status: "promoted"
   },
   {
     name: "Amélie's French Bakery & Café",
@@ -631,7 +631,7 @@ window.portalOverrides = [
     emoji: "🍽️",
     href: "amina/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
-    status: "qa"
+    status: "promoted"
   },
   {
     name: "Anatolia Cafe & Cuisine",
@@ -641,7 +641,7 @@ window.portalOverrides = [
     emoji: "🥢",
     href: "anatolia-cafe-and-cuisine/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
-    status: "qa"
+    status: "promoted"
   },
   {
     name: "Fenian's Keep",
@@ -651,7 +651,7 @@ window.portalOverrides = [
     emoji: "🍺",
     href: "fenians-keep/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
-    status: "qa"
+    status: "promoted"
   },
   {
     name: "Fiamma Ristorante",
@@ -691,7 +691,7 @@ window.portalOverrides = [
     emoji: "🍝",
     href: "flour-shop/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
-    status: "qa"
+    status: "promoted"
   },
   {
     name: "Flower Child",
@@ -711,7 +711,7 @@ window.portalOverrides = [
     emoji: "🍳",
     href: "food-soul/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
-    status: "qa"
+    status: "promoted"
   },
   {
     name: "Free Range Brewing",
@@ -751,7 +751,7 @@ window.portalOverrides = [
     emoji: "🍳",
     href: "harpers-cafe/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
-    status: "qa"
+    status: "promoted"
   },
   {
     name: "Hathaway's Fried Chicken",
@@ -761,7 +761,7 @@ window.portalOverrides = [
     emoji: "🍳",
     href: "hathaways-fried-chicken/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
-    status: "qa"
+    status: "promoted"
   },
   {
     name: "Hawthorne's NY Pizza & Bar",
@@ -821,7 +821,7 @@ window.portalOverrides = [
     emoji: "🥢",
     href: "house-of-leng/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
-    status: "qa"
+    status: "promoted"
   },
   {
     name: "Humbug",
@@ -901,7 +901,7 @@ window.portalOverrides = [
     emoji: "🍺",
     href: "kits-trackside-crafts/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
-    status: "qa"
+    status: "promoted"
   },
   {
     name: "La Belle Hélène",
@@ -931,7 +931,7 @@ window.portalOverrides = [
     emoji: "🥢",
     href: "lang-van/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
-    status: "qa"
+    status: "promoted"
   },
   {
     name: "Laurel Market",
@@ -941,7 +941,7 @@ window.portalOverrides = [
     emoji: "🍽️",
     href: "laurel-market/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
-    status: "qa"
+    status: "promoted"
   },
   {
     name: "Le Kebab Grill",
@@ -951,7 +951,7 @@ window.portalOverrides = [
     emoji: "🥢",
     href: "le-kebab-grill/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
-    status: "qa"
+    status: "promoted"
   },
   {
     name: "Legion Brewing",
@@ -991,7 +991,7 @@ window.portalOverrides = [
     emoji: "🥢",
     href: "les-sandwiches-cafe/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
-    status: "qa"
+    status: "promoted"
   },
   {
     name: "Link & Pin",
@@ -1061,7 +1061,7 @@ window.portalOverrides = [
     emoji: "🥢",
     href: "lula-banh-mi-and-bakery/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
-    status: "qa"
+    status: "promoted"
   },
   {
     name: "Lupie's Cafe",
@@ -1081,7 +1081,7 @@ window.portalOverrides = [
     emoji: "🌮",
     href: "machu-picchu/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
-    status: "qa"
+    status: "promoted"
   },
   {
     name: "Manolo's Latin Bakery",
@@ -1101,7 +1101,7 @@ window.portalOverrides = [
     emoji: "🌮",
     href: "marias-mexican-restaurant/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
-    status: "qa"
+    status: "promoted"
   },
   {
     name: "Matthews Social House",
@@ -1111,7 +1111,7 @@ window.portalOverrides = [
     emoji: "🍺",
     href: "matthews-social-house/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
-    status: "qa"
+    status: "promoted"
   },
   {
     name: "McKoy's Smokehouse & Saloon",
@@ -1141,7 +1141,7 @@ window.portalOverrides = [
     emoji: "🌮",
     href: "miguels-restaurant/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
-    status: "qa"
+    status: "promoted"
   },
   {
     name: "MJ Donuts",
@@ -1151,7 +1151,7 @@ window.portalOverrides = [
     emoji: "🍩",
     href: "mj-donuts/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
-    status: "qa"
+    status: "promoted"
   },
   {
     name: "Open Kitchen",
@@ -1181,7 +1181,7 @@ window.portalOverrides = [
     emoji: "🍳",
     href: "palace-monroe/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
-    status: "qa"
+    status: "promoted"
   },
   {
     name: "Picadeli's Pub-In-Deli",
@@ -1191,7 +1191,7 @@ window.portalOverrides = [
     emoji: "🍺",
     href: "picadelis-pub-in-deli/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
-    status: "qa"
+    status: "promoted"
   },
   {
     name: "Portofino's",
@@ -1211,7 +1211,7 @@ window.portalOverrides = [
     emoji: "🍺",
     href: "portrait-gallery/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
-    status: "qa"
+    status: "promoted"
   },
   {
     name: "Queen's Soul Food",
@@ -1221,7 +1221,7 @@ window.portalOverrides = [
     emoji: "🍳",
     href: "queens-soul/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
-    status: "qa"
+    status: "promoted"
   },
   {
     name: "República Restaurant & Lounge",
@@ -1231,7 +1231,7 @@ window.portalOverrides = [
     emoji: "🌮",
     href: "republica/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
-    status: "qa"
+    status: "promoted"
   },
   {
     name: "Royal Cafe & Creperie",
@@ -1291,7 +1291,7 @@ window.portalOverrides = [
     emoji: "🍳",
     href: "the-dive-n/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
-    status: "qa"
+    status: "promoted"
   },
   {
     name: "The Goodyear House",
