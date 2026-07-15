@@ -107,8 +107,9 @@ jobs:
           dom = root / 'doms-dive-bar' / 'specials.html'
           text = dom.read_text(encoding='utf-8')
           fixed = text.replace("whatever's new on tap", "whatever\\'s new on tap")
+          fixed = fixed.replace("$6 Shanky's Whip — spiced whiskey, dangerously smooth", "$6 Shanky\\'s Whip — spiced whiskey, dangerously smooth")
           if fixed == text:
-              raise SystemExit('Dom specials JavaScript apostrophe defect was not found.')
+              raise SystemExit('Dom specials JavaScript apostrophe defects were not found.')
           dom.write_text(fixed, encoding='utf-8')
           changed.add(dom.relative_to(root).as_posix())
 
