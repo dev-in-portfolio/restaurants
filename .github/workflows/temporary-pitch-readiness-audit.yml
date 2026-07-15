@@ -19,171 +19,97 @@ jobs:
           node <<'NODE'
           const fs = require('fs');
           const path = require('path');
-          const vm = require('vm');
 
-          function safeDecode(value) {
-            try { return decodeURIComponent(value); } catch { return value; }
-          }
-          function stripHtml(html) {
-            return String(html)
-              .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, ' ')
-              .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, ' ')
-              .replace(/<!--([\s\S]*?)-->/g, ' ')
-              .replace(/<[^>]+>/g, ' ')
-              .replace(/&[a-z0-9#]+;/gi, ' ')
-              .replace(/\s+/g, ' ')
-              .trim();
-          }
-          function wordCount(html) {
-            const text = stripHtml(html);
-            return text ? text.split(/\s+/).filter(Boolean).length : 0;
-          }
-          function localRefs(html) {
-            const refs = [];
-            const re = /\b(?:href|src)\s*=\s*["']([^"']+)["']/gi;
-            let match;
-            while ((match = re.exec(String(html)))) refs.push(match[1]);
-            return refs.filter(ref => ref && !/^(?:https?:|mailto:|tel:|javascript:|data:|#|\/\/)/i.test(ref));
-          }
-
-          let promoted = [];
-          try {
-            const sandbox = { window: {} };
-            vm.createContext(sandbox);
-            vm.runInContext(fs.readFileSync('portal-overrides.js', 'utf8'), sandbox);
-            promoted = (sandbox.window.portalOverrides || [])
-              .filter(x => x.status === 'promoted' && x.portalSection !== 'later')
-              .sort((a,b) => String(a.name).localeCompare(String(b.name)));
-          } catch (error) {
-            fs.writeFileSync('pitch-readiness-audit.json', JSON.stringify({fatal:String(error.stack || error)}, null, 2));
-            fs.writeFileSync('pitch-readiness-summary.txt', 'FATAL=' + String(error.stack || error));
-            process.exit(0);
-          }
-
-          const placeholderPatterns = [
-            ['concept-content', /concept content for/i],
-            ['illustrative-examples', /illustrative examples only/i],
-            ['verify-restaurant-information', /actual restaurant information should be verified/i],
-            ['lorem-ipsum', /lorem ipsum/i],
-            ['todo', /\bTODO\b/i],
-            ['replace-text', /replace (?:this|with|me)/i],
-            ['sample-content', /sample (?:content|text|menu)/i],
-            ['placeholder-content', /placeholder (?:content|text|image)/i]
-          ];
-
-          const results = [];
-          for (const item of promoted) {
-            const folder = path.dirname(item.href || '');
-            const hard = [];
-            const warnings = [];
-            const detail = {};
-            try {
-              if (!folder || folder === '.' || !fs.existsSync(folder) || !fs.statSync(folder).isDirectory()) {
-                hard.push('missing-folder');
-                results.push({name:item.name, folder, category:'not-ready', hard, warnings, detail});
+          function parseOverrideObjects(source) {
+            const marker = 'window.portalOverrides = [';
+            const start = source.indexOf(marker);
+            const end = source.lastIndexOf('];');
+            const body = source.slice(start + marker.length, end);
+            const chunks = [];
+            let depth = 0, begin = -1, quote = '', escape = false;
+            for (let i = 0; i < body.length; i++) {
+              const c = body[i];
+              if (quote) {
+                if (escape) escape = false;
+                else if (c === '\\') escape = true;
+                else if (c === quote) quote = '';
                 continue;
               }
-
-              const htmlFiles = fs.readdirSync(folder).filter(f => f.toLowerCase().endsWith('.html')).sort();
-              detail.htmlFiles = htmlFiles;
-              detail.pageCount = htmlFiles.length;
-              if (htmlFiles.length < 6) hard.push(`fewer-than-6-pages:${htmlFiles.length}`);
-              if (!htmlFiles.includes('index.html')) hard.push('missing-index');
-
-              const pageStats = [];
-              const titles = new Set();
-              const brokenRefs = [];
-              const placeholderHits = [];
-              const shortPages = [];
-              const veryShortPages = [];
-              const pagesWithoutNav = [];
-              const pagesWithoutMain = [];
-
-              for (const file of htmlFiles) {
-                const full = path.join(folder, file);
-                const html = fs.readFileSync(full, 'utf8');
-                const wc = wordCount(html);
-                const titleMatch = html.match(/<title[^>]*>([\s\S]*?)<\/title>/i);
-                const title = titleMatch ? titleMatch[1].replace(/\s+/g, ' ').trim() : '';
-                if (title) titles.add(title.toLowerCase());
-                if (wc < 120) shortPages.push(`${file}:${wc}`);
-                if (wc < 70) veryShortPages.push(`${file}:${wc}`);
-                if (!/<nav\b/i.test(html)) pagesWithoutNav.push(file);
-                if (!/<main\b/i.test(html)) pagesWithoutMain.push(file);
-                for (const [label, pattern] of placeholderPatterns) if (pattern.test(html)) placeholderHits.push(`${file}:${label}`);
-
-                for (const ref of localRefs(html)) {
-                  const cleaned = safeDecode(ref.split('#')[0].split('?')[0]);
-                  if (!cleaned) continue;
-                  const resolved = path.resolve(folder, path.dirname(file), cleaned);
-                  if (!resolved.startsWith(path.resolve('.'))) continue;
-                  if (!fs.existsSync(resolved)) brokenRefs.push(`${file}->${ref}`);
-                }
-                pageStats.push({file, words:wc, title});
+              if (c === '"' || c === "'" || c === '`') { quote = c; continue; }
+              if (c === '{') { if (depth === 0) begin = i; depth++; }
+              else if (c === '}') {
+                depth--;
+                if (depth === 0 && begin >= 0) { chunks.push(body.slice(begin, i + 1)); begin = -1; }
+                if (depth < 0) depth = 0;
               }
-
-              detail.pageStats = pageStats;
-              detail.uniqueTitles = titles.size;
-              detail.shortPages = shortPages;
-              detail.veryShortPages = veryShortPages;
-              detail.placeholderHits = placeholderHits;
-              detail.brokenRefs = brokenRefs;
-              detail.pagesWithoutNav = pagesWithoutNav;
-              detail.pagesWithoutMain = pagesWithoutMain;
-
-              if (placeholderHits.length) hard.push(`placeholder-copy:${placeholderHits.length}`);
-              if (brokenRefs.length) hard.push(`broken-local-references:${brokenRefs.length}`);
-              if (veryShortPages.length >= 2) hard.push(`multiple-very-short-pages:${veryShortPages.length}`);
-              if (titles.size < Math.min(5, htmlFiles.length)) hard.push(`insufficient-unique-page-titles:${titles.size}`);
-              if (shortPages.length) warnings.push(`short-pages:${shortPages.length}`);
-              if (pagesWithoutNav.length) warnings.push(`pages-without-nav:${pagesWithoutNav.length}`);
-              if (pagesWithoutMain.length) warnings.push(`pages-without-main:${pagesWithoutMain.length}`);
-
-              const tokenSets = pageStats.map(p => {
-                const html = fs.readFileSync(path.join(folder,p.file),'utf8');
-                const tokens = stripHtml(html).toLowerCase().split(/[^a-z0-9]+/).filter(x => x.length > 3);
-                return {file:p.file, set:new Set(tokens)};
-              });
-              const nearDuplicates = [];
-              for (let i=0;i<tokenSets.length;i++) {
-                for (let j=i+1;j<tokenSets.length;j++) {
-                  const a = tokenSets[i].set;
-                  const b = tokenSets[j].set;
-                  if (!a.size || !b.size) continue;
-                  let intersection = 0;
-                  for (const token of a) if (b.has(token)) intersection++;
-                  const score = intersection / (a.size + b.size - intersection);
-                  if (score >= 0.82) nearDuplicates.push(`${tokenSets[i].file}~${tokenSets[j].file}:${score.toFixed(2)}`);
-                }
-              }
-              detail.nearDuplicates = nearDuplicates;
-              if (nearDuplicates.length >= 2) hard.push(`near-duplicate-pages:${nearDuplicates.length}`);
-              else if (nearDuplicates.length) warnings.push('possible-near-duplicate-page');
-
-              const category = hard.length ? 'not-ready' : (warnings.length ? 'review-first' : 'pitchable-as-is');
-              results.push({name:item.name, folder, category, hard, warnings, detail});
-            } catch (error) {
-              results.push({name:item.name, folder, category:'not-ready', hard:['audit-error'], warnings:[], detail:{error:String(error.stack || error)}});
             }
+            const parsed = [], errors = [];
+            for (const chunk of chunks) {
+              try { parsed.push(Function(`"use strict"; return (${chunk});`)()); }
+              catch (error) { errors.push({sample:chunk.slice(0,160), error:String(error.message || error)}); }
+            }
+            return {parsed, errors, chunkCount:chunks.length};
+          }
+          function safeDecode(value) { try { return decodeURIComponent(value); } catch { return value; } }
+          function stripHtml(html) {
+            return String(html).replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi,' ').replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi,' ').replace(/<!--([\s\S]*?)-->/g,' ').replace(/<[^>]+>/g,' ').replace(/&[a-z0-9#]+;/gi,' ').replace(/\s+/g,' ').trim();
+          }
+          function wordCount(html) { const t=stripHtml(html); return t ? t.split(/\s+/).filter(Boolean).length : 0; }
+          function localRefs(html) {
+            const refs=[], re=/\b(?:href|src)\s*=\s*["']([^"']+)["']/gi; let m;
+            while ((m=re.exec(String(html)))) refs.push(m[1]);
+            return refs.filter(r=>r && !/^(?:https?:|mailto:|tel:|javascript:|data:|#|\/\/)/i.test(r));
           }
 
-          const counts = results.reduce((acc,r) => { acc[r.category] = (acc[r.category] || 0) + 1; return acc; }, {});
-          const report = {generatedAt:new Date().toISOString(), promotedCount:promoted.length, counts, results};
-          fs.writeFileSync('pitch-readiness-audit.json', JSON.stringify(report,null,2));
-          const summary = [
-            `PROMOTED_COUNT=${promoted.length}`,
-            `PITCHABLE_AS_IS=${counts['pitchable-as-is']||0}`,
-            `REVIEW_FIRST=${counts['review-first']||0}`,
-            `NOT_READY=${counts['not-ready']||0}`,
-            '',
-            'NOT_READY_NAMES=',
-            ...results.filter(r=>r.category==='not-ready').map(r=>`- ${r.name}: ${r.hard.join(', ')}`),
-            '',
-            'REVIEW_FIRST_NAMES=',
-            ...results.filter(r=>r.category==='review-first').map(r=>`- ${r.name}: ${r.warnings.join(', ')}`)
-          ].join('\n');
-          fs.writeFileSync('pitch-readiness-summary.txt', summary);
-          console.log(summary);
+          const parsed = parseOverrideObjects(fs.readFileSync('portal-overrides.js','utf8'));
+          const promoted = parsed.parsed.filter(x=>x && x.status==='promoted' && x.portalSection!=='later').sort((a,b)=>String(a.name).localeCompare(String(b.name)));
+          const placeholderPatterns = [
+            ['concept-content',/concept content for/i],['illustrative-examples',/illustrative examples only/i],['verify-info',/actual restaurant information should be verified/i],['lorem',/lorem ipsum/i],['todo',/\bTODO\b/i],['sample-content',/sample (?:content|text|menu)/i],['placeholder',/placeholder (?:content|text|image)/i]
+          ];
+          const results=[];
+          for (const item of promoted) {
+            const folder=path.dirname(item.href||''); const hard=[], warnings=[], detail={};
+            try {
+              if (!folder || folder==='.' || !fs.existsSync(folder) || !fs.statSync(folder).isDirectory()) { hard.push('missing-folder'); results.push({name:item.name,folder,category:'not-ready',hard,warnings,detail}); continue; }
+              const files=fs.readdirSync(folder).filter(f=>f.toLowerCase().endsWith('.html')).sort();
+              detail.htmlFiles=files; detail.pageCount=files.length;
+              if (files.length<6) hard.push(`fewer-than-6-pages:${files.length}`);
+              if (!files.includes('index.html')) hard.push('missing-index');
+              const pageStats=[], titles=new Set(), broken=[], placeholders=[], short=[], veryShort=[], noNav=[], noMain=[];
+              for (const file of files) {
+                const html=fs.readFileSync(path.join(folder,file),'utf8'); const wc=wordCount(html);
+                const tm=html.match(/<title[^>]*>([\s\S]*?)<\/title>/i); const title=tm?tm[1].replace(/\s+/g,' ').trim():'';
+                if (title) titles.add(title.toLowerCase());
+                if (wc<120) short.push(`${file}:${wc}`); if (wc<70) veryShort.push(`${file}:${wc}`);
+                if (!/<nav\b/i.test(html)) noNav.push(file); if (!/<main\b/i.test(html)) noMain.push(file);
+                for (const [label,re] of placeholderPatterns) if (re.test(html)) placeholders.push(`${file}:${label}`);
+                for (const ref of localRefs(html)) {
+                  const cleaned=safeDecode(ref.split('#')[0].split('?')[0]); if (!cleaned) continue;
+                  const resolved=path.resolve(folder,path.dirname(file),cleaned); if (!resolved.startsWith(path.resolve('.'))) continue;
+                  if (!fs.existsSync(resolved)) broken.push(`${file}->${ref}`);
+                }
+                pageStats.push({file,words:wc,title});
+              }
+              detail.pageStats=pageStats; detail.uniqueTitles=titles.size; detail.shortPages=short; detail.veryShortPages=veryShort; detail.placeholderHits=placeholders; detail.brokenRefs=broken; detail.pagesWithoutNav=noNav; detail.pagesWithoutMain=noMain;
+              if (placeholders.length) hard.push(`placeholder-copy:${placeholders.length}`);
+              if (broken.length) hard.push(`broken-local-references:${broken.length}`);
+              if (veryShort.length>=2) hard.push(`multiple-very-short-pages:${veryShort.length}`);
+              if (titles.size<Math.min(5,files.length)) hard.push(`insufficient-unique-page-titles:${titles.size}`);
+              if (short.length) warnings.push(`short-pages:${short.length}`);
+              if (noNav.length) warnings.push(`pages-without-nav:${noNav.length}`);
+              if (noMain.length) warnings.push(`pages-without-main:${noMain.length}`);
+              const tokenSets=pageStats.map(p=>({file:p.file,set:new Set(stripHtml(fs.readFileSync(path.join(folder,p.file),'utf8')).toLowerCase().split(/[^a-z0-9]+/).filter(x=>x.length>3))}));
+              const dup=[];
+              for(let i=0;i<tokenSets.length;i++) for(let j=i+1;j<tokenSets.length;j++) { const a=tokenSets[i].set,b=tokenSets[j].set; if(!a.size||!b.size)continue; let n=0; for(const x of a)if(b.has(x))n++; const s=n/(a.size+b.size-n); if(s>=.82)dup.push(`${tokenSets[i].file}~${tokenSets[j].file}:${s.toFixed(2)}`); }
+              detail.nearDuplicates=dup; if(dup.length>=2)hard.push(`near-duplicate-pages:${dup.length}`); else if(dup.length)warnings.push('possible-near-duplicate-page');
+              results.push({name:item.name,folder,category:hard.length?'not-ready':warnings.length?'review-first':'pitchable-as-is',hard,warnings,detail});
+            } catch(error) { results.push({name:item.name,folder,category:'not-ready',hard:['audit-error'],warnings:[],detail:{error:String(error.stack||error)}}); }
+          }
+          const counts=results.reduce((a,r)=>(a[r.category]=(a[r.category]||0)+1,a),{});
+          const report={generatedAt:new Date().toISOString(),overrideParse:{chunkCount:parsed.chunkCount,parsedCount:parsed.parsed.length,errorCount:parsed.errors.length,errors:parsed.errors},promotedCount:promoted.length,counts,results};
+          fs.writeFileSync('pitch-readiness-audit.json',JSON.stringify(report,null,2));
+          const summary=[`OVERRIDE_OBJECTS=${parsed.parsed.length}/${parsed.chunkCount}`,`OVERRIDE_PARSE_ERRORS=${parsed.errors.length}`,`PROMOTED_COUNT=${promoted.length}`,`PITCHABLE_AS_IS=${counts['pitchable-as-is']||0}`,`REVIEW_FIRST=${counts['review-first']||0}`,`NOT_READY=${counts['not-ready']||0}`,'','NOT_READY_NAMES=',...results.filter(r=>r.category==='not-ready').map(r=>`- ${r.name}: ${r.hard.join(', ')}`),'','REVIEW_FIRST_NAMES=',...results.filter(r=>r.category==='review-first').map(r=>`- ${r.name}: ${r.warnings.join(', ')}`)].join('\n');
+          fs.writeFileSync('pitch-readiness-summary.txt',summary); console.log(summary);
           NODE
       - uses: actions/upload-artifact@v4
         if: always()
