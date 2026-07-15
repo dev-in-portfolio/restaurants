@@ -592,5 +592,15 @@ window.portalOverrides = [
     href: "aj-family-restaurant/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
     status: "qa"
+  },
+  {
+    name: "Alexander Michael's Historic Tavern",
+    area: "Charlotte area",
+    cuisine: "Six-Page Restaurant Experience",
+    description: "Six-page concept upgraded with a custom flight planner and interactive planner. Static validation passed; desktop/mobile browser QA remains pending.",
+    emoji: "🍺",
+    href: "alexander-michaels/index.html",
+    gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
+    status: "qa"
   }
 ];
