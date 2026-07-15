@@ -28,5 +28,11 @@ jobs:
           const pri={lead:0,incomplete:1,qa:2,premium:3},by=new Map();
           for(const [type,items] of [['legacy',legacy.items],['lead',m2],['lead',m3],['override',ov]])for(const item of items){const isLead=item.status==='lead'||type==='lead';const allowed=type==='override'&&['lead','incomplete','qa','premium'].includes(item.status);const status=allowed?item.status:(isLead?'lead':'incomplete');const key=normalizeName(String(item.name||''));if(!key)continue;const cur=by.get(key);if(!cur||pri[status]>=pri[cur.status])by.set(key,{...item,status});}
           const counts={};for(const x of by.values())counts[x.status]=(counts[x.status]||0)+1;
-          console.log('PORTAL_COUNT_RESULT='+JSON.stringify({total:by.size,counts,source:{legacy:legacy.items.length,message2:m2.length,message3:m3.length,overrides:ov.length},legacyParseErrors:legacy.errors}));
+          const result={total:by.size,counts,source:{legacy:legacy.items.length,message2:m2.length,message3:m3.length,overrides:ov.length},legacyParseErrors:legacy.errors};
+          fs.writeFileSync('portal-count.json',JSON.stringify(result,null,2)+'\n');
+          console.log('PORTAL_COUNT_RESULT='+JSON.stringify(result));
           NODE
+      - uses: actions/upload-artifact@v4
+        with:
+          name: portal-count
+          path: portal-count.json
