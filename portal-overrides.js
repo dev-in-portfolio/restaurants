@@ -422,5 +422,15 @@ window.portalOverrides = [
     href: "east-74-restaurant/index.html",
     gradient: "linear-gradient(135deg,#1a3a5c,#c4862b 52%,#faf6f0)",
     status: "premium"
+  },
+  {
+    name: "Eddie V's Prime Seafood",
+    area: "Uptown",
+    cuisine: "Luxury Seafood & Steakhouse",
+    description: "Elegant Uptown dining destination at Trade & Tryon serving pristine fresh seafood, USDA prime steaks, and hand-shaken cocktails alongside nightly live jazz in the V Lounge. Features an interactive raw bar customizer.",
+    emoji: "🦞",
+    href: "eddie-vs-prime-seafood/index.html",
+    gradient: "linear-gradient(135deg,#c9a84c,#0d0a07 52%,#1a1208)",
+    status: "premium"
   }
 ];
