@@ -112,5 +112,15 @@ window.portalOverrides = [
     href: "barts-mart/index.html",
     gradient: "linear-gradient(135deg,#ec4899,#06b6d4 52%,#0e0914)",
     status: "premium"
+  },
+  {
+    name: "Birdsong Brewing Company",
+    area: "NoDa",
+    cuisine: "Local Craft Brewery",
+    description: "Unfiltered, balanced, and dry-hopped craft beers brewed in a 100% solar-powered brewhouse. Outdoor deck and free peanuts. Features an interactive beer flight builder and carbon offset calculator.",
+    emoji: "☀️",
+    href: "birdsong-brewing-company/index.html",
+    gradient: "linear-gradient(135deg,#f59e0b,#08100b 52%,#040806)",
+    status: "premium"
   }
 ];
