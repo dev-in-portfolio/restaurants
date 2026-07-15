@@ -1,0 +1,32 @@
+name: Continue six-page restaurant upgrades
+
+on:
+  push:
+    branches:
+      - agent/continue-restaurant-upgrades
+    paths:
+      - .github/workflows/continue-six-page-upgrades.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: continue-six-page-restaurant-upgrades
+  cancel-in-progress: false
+
+jobs:
+  upgrade:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run scoped restaurant upgrades
+        run: python scripts/continue_six_page_upgrades.py
+
+      - name: Push restaurant-level commits
+        shell: bash
+        run: |
+          git push origin HEAD:${GITHUB_REF_NAME}
