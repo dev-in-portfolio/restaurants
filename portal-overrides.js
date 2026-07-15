@@ -882,5 +882,15 @@ window.portalOverrides = [
     href: "kid-cashew/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
     status: "qa"
+  },
+  {
+    name: "Kindred",
+    area: "Charlotte area",
+    cuisine: "Six-Page Restaurant Experience",
+    description: "Six-page concept upgraded with a custom signature experience and interactive planner. Static validation passed; desktop/mobile browser QA remains pending.",
+    emoji: "🍽️",
+    href: "kindred/index.html",
+    gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
+    status: "qa"
   }
 ];
