@@ -222,5 +222,15 @@ window.portalOverrides = [
     href: "carolina-scoops/index.html",
     gradient: "linear-gradient(135deg,#b83c68,#f3bd48 52%,#2f806e)",
     status: "premium"
+  },
+  {
+    name: "Caswell Station",
+    area: "Elizabeth",
+    cuisine: "Neighborhood Gastropub",
+    description: "Elizabeth tavern inside a historic building, serving craft beers and New American comfort plates on a massive patio. Features an interactive weekly event and trivia seating planner.",
+    emoji: "🏡",
+    href: "caswell-station/index.html",
+    gradient: "linear-gradient(135deg,#065f46,#1e293b 52%,#0f172a)",
+    status: "premium"
   }
 ];
