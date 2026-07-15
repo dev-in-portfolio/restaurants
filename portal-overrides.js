@@ -92,5 +92,15 @@ window.portalOverrides = [
     href: "barcelona-wine-bar/index.html",
     gradient: "linear-gradient(135deg,#991b1b,#120d0b 52%,#080605)",
     status: "premium"
+  },
+  {
+    name: "Barrington's Restaurant",
+    area: "Foxcroft",
+    cuisine: "New American Fine Dining",
+    description: "Chef Bruce Moffett's flagship 45-seat dining room serving seasonal New American cuisine crafted from organic, locally harvested ingredients. Features an interactive tasting menu planner and sommelier pairing finder.",
+    emoji: "🕯️",
+    href: "barringtons-restaurant/index.html",
+    gradient: "linear-gradient(135deg,#c5a059,#7c2d12 52%,#120e0c)",
+    status: "premium"
   }
 ];
