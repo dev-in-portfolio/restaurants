@@ -132,5 +132,15 @@ window.portalOverrides = [
     href: "blinders-sports-lounge/index.html",
     gradient: "linear-gradient(135deg,#10b981,#070a09 52%,#030504)",
     status: "premium"
+  },
+  {
+    name: "Bossy Beulah's",
+    area: "Charlotte Area",
+    cuisine: "Fried Chicken Shack",
+    description: "Crispy pasture-raised fried chicken sandwiches, bites, and wings crafted from Grandma Beulah's family recipe. Features an interactive sandwich stack builder and multi-location finder.",
+    emoji: "🐔",
+    href: "bossy-beulahs/index.html",
+    gradient: "linear-gradient(135deg,#dc2626,#fef08a 52%,#fafaf6)",
+    status: "premium"
   }
 ];
