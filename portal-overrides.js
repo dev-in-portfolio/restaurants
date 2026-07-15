@@ -302,5 +302,15 @@ window.portalOverrides = [
     href: "deejai-thai/index.html",
     gradient: "linear-gradient(135deg,#8b1a1a,#e8b830 52%,#1a1a1a)",
     status: "premium"
+  },
+  {
+    name: "Devil's Logic Brewing",
+    area: "Midtown / Elizabeth",
+    cuisine: "Local Craft Brewery",
+    description: "Midtown craft brewery serving on-site brewed IPAs, lagers, and sours in a massive taproom with rooftop views. Features an interactive taproom flight builder.",
+    emoji: "🍺",
+    href: "devils-logic-brewing/index.html",
+    gradient: "linear-gradient(135deg,#cc2222,#0a0a0a 52%,#121212)",
+    status: "premium"
   }
 ];
