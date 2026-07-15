@@ -1,0 +1,37 @@
+name: Restaurant Repository Deep Audit
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out complete repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Audit every restaurant directory
+        run: node scripts/audit-restaurants.mjs
+
+      - name: Add report to job summary
+        if: always()
+        run: cat audit-output/restaurant-audit.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload complete audit reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: restaurant-repository-audit
+          path: audit-output/
+          if-no-files-found: error
+          retention-days: 7
