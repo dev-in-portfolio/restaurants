@@ -162,5 +162,15 @@ window.portalOverrides = [
     href: "burial-beer-co-charlotte/index.html",
     gradient: "linear-gradient(135deg,#c5a059,#7f1d1d 52%,#070708)",
     status: "premium"
+  },
+  {
+    name: "Burtons Grill and Bar",
+    area: "Blakeney",
+    cuisine: "American Grill & Bar",
+    description: "Polished casual steaks, seafood, and burgers served in a boardroom bistro environment. Market leader in certified allergen-safe dining. Features an interactive wood-grill planner and allergen menu builder.",
+    emoji: "🥩",
+    href: "burtons-grill-and-bar/index.html",
+    gradient: "linear-gradient(135deg,#d97706,#0e1013 52%,#050608)",
+    status: "premium"
   }
 ];
