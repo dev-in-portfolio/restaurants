@@ -41,7 +41,7 @@ window.portalOverrides = [
     emoji: "🌮",
     href: "1900-mexican-grill/index.html",
     gradient: "linear-gradient(135deg,#c4862b,#1a1208 52%,#0f0b06)",
-    status: "premium"
+    status: "promoted"
   },
   {
     name: "Brooks' Sandwich House",
@@ -231,7 +231,7 @@ window.portalOverrides = [
     emoji: "🏡",
     href: "caswell-station/index.html",
     gradient: "linear-gradient(135deg,#065f46,#1e293b 52%,#0f172a)",
-    status: "premium"
+    status: "promoted"
   },
   {
     name: "Cornerstone Pub & Grill",
@@ -261,7 +261,7 @@ window.portalOverrides = [
     emoji: "🥖",
     href: "crispy-banh-mi/index.html",
     gradient: "linear-gradient(135deg,#f59e0b,#84cc16 52%,#7c2d12)",
-    status: "premium"
+    status: "promoted"
   },
   {
     name: "Curry Gate",
@@ -271,7 +271,7 @@ window.portalOverrides = [
     emoji: "🌶️",
     href: "curry-gate/index.html",
     gradient: "linear-gradient(135deg,#ea580c,#d97706 52%,#1c1917)",
-    status: "premium"
+    status: "promoted"
   },
   {
     name: "Customshop",
@@ -301,7 +301,7 @@ window.portalOverrides = [
     emoji: "🍜",
     href: "deejai-thai/index.html",
     gradient: "linear-gradient(135deg,#8b1a1a,#e8b830 52%,#1a1a1a)",
-    status: "premium"
+    status: "promoted"
   },
   {
     name: "Devil's Logic Brewing",
@@ -311,7 +311,7 @@ window.portalOverrides = [
     emoji: "🍺",
     href: "devils-logic-brewing/index.html",
     gradient: "linear-gradient(135deg,#cc2222,#0a0a0a 52%,#121212)",
-    status: "premium"
+    status: "promoted"
   },
   {
     name: "Dish",
@@ -321,7 +321,7 @@ window.portalOverrides = [
     emoji: "🍳",
     href: "dish/index.html",
     gradient: "linear-gradient(135deg,#1e6570,#d56754 52%,#d8aa46)",
-    status: "premium"
+    status: "promoted"
   },
   {
     name: "Divine Barrel Brewing",
@@ -351,7 +351,7 @@ window.portalOverrides = [
     emoji: "🍝",
     href: "dolce-osteria/index.html",
     gradient: "linear-gradient(135deg,#4a6b3a,#8b3a2a 52%,#1a1a1a)",
-    status: "premium"
+    status: "promoted"
   },
   {
     name: "Dom's Dive Bar",
@@ -381,7 +381,7 @@ window.portalOverrides = [
     emoji: "🍛",
     href: "dozo-japanese-american-kitchen/index.html",
     gradient: "linear-gradient(135deg,#2a1a12,#e63946 52%,#1a1a1a)",
-    status: "premium"
+    status: "promoted"
   },
   {
     name: "Dressler's",
@@ -481,7 +481,7 @@ window.portalOverrides = [
     emoji: "☕",
     href: "enderly-coffee-co/index.html",
     gradient: "linear-gradient(135deg,#2d5a3d,#8b6f47 52%,#faf8f5)",
-    status: "premium"
+    status: "promoted"
   },
   {
     name: "Euro Grill & Cafe",
@@ -521,7 +521,7 @@ window.portalOverrides = [
     emoji: "🐐",
     href: "giddy-goat-coffee-roasters/index.html",
     gradient: "linear-gradient(135deg,#e8b830,#2a1f10 52%,#1a1a1a)",
-    status: "premium"
+    status: "promoted"
   },
   {
     name: "Good Food on Montford",
@@ -561,7 +561,7 @@ window.portalOverrides = [
     emoji: "🍺",
     href: "growlers-pourhouse/index.html",
     gradient: "linear-gradient(135deg,#d4a34a,#a04a2a 52%,#1a1510)",
-    status: "premium"
+    status: "promoted"
   },
   {
     name: "Gus' Family Restaurant",
