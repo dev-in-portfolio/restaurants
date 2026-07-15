@@ -512,5 +512,15 @@ window.portalOverrides = [
     href: "geno-ds-pizza/index.html",
     gradient: "linear-gradient(135deg,#c1121f,#e8b830 52%,#faf3e0)",
     status: "premium"
+  },
+  {
+    name: "Giddy Goat Coffee Roasters",
+    area: "Plaza Midwood",
+    cuisine: "Coffee Roastery & Cafe",
+    description: "Plaza Midwood zero-waste local roastery and cafe preparing house-roasted beans, nitro cold brew, and fresh baked artisanal empanadas daily. Features an interactive empanada box planner.",
+    emoji: "🐐",
+    href: "giddy-goat-coffee-roasters/index.html",
+    gradient: "linear-gradient(135deg,#e8b830,#2a1f10 52%,#1a1a1a)",
+    status: "premium"
   }
 ];
