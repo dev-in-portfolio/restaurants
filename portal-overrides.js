@@ -722,5 +722,15 @@ window.portalOverrides = [
     href: "free-range-brewing/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
     status: "qa"
+  },
+  {
+    name: "Futo Buta",
+    area: "Charlotte area",
+    cuisine: "Six-Page Restaurant Experience",
+    description: "Six-page concept upgraded with a custom flight planner and interactive planner. Static validation passed; desktop/mobile browser QA remains pending.",
+    emoji: "🍺",
+    href: "futo-buta/index.html",
+    gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
+    status: "qa"
   }
 ];
