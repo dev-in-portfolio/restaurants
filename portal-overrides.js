@@ -1322,5 +1322,135 @@ window.portalOverrides = [
     href: "waldhorn-restaurant/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
     status: "promoted_secondary"
+  },
+  {
+    name: "Comet Grill",
+    area: "Charlotte",
+    cuisine: "Neighborhood Grill & Live Music",
+    description: "A music-first premium redesign connecting current events, burgers, Charlottean Shake wings, and community fundraisers. Six-page build with live calendar, menu, story, wings feature, event inquiry, and contact.",
+    emoji: "🎸",
+    href: "comet-grill/index.html",
+    gradient: "linear-gradient(135deg,#07141a,#2aa9b0 52%,#e1aa3d)",
+    status: "promoted"
+  },
+  {
+    name: "House of Pizza",
+    area: "Charlotte",
+    cuisine: "New York Style Pizza",
+    description: "Six-page build featuring interactive pizza builder, menu, about, locations, catering, and contact. Desktop and mobile QA passed.",
+    emoji: "🍕",
+    href: "house-of-pizza/index.html",
+    gradient: "linear-gradient(135deg,#8b0000,#ff6b35 52%,#f7931e)",
+    status: "promoted"
+  },
+  {
+    name: "Kristophers Sports Bar",
+    area: "Charlotte",
+    cuisine: "Sports Bar & Grill",
+    description: "Six-page build with game schedule, menu, about, reservations, specials, and contact. All pages browser-tested.",
+    emoji: "🏀",
+    href: "kristophers-sports-bar/index.html",
+    gradient: "linear-gradient(135deg,#1a365d,#2563eb 52%,#3b82f6)",
+    status: "promoted"
+  },
+  {
+    name: "Mad Greek Café",
+    area: "Charlotte",
+    cuisine: "Greek & Mediterranean",
+    description: "Six-page build with family story, menu, dish wheel, ordering, catering, and contact. Complete QA passed.",
+    emoji: "🇬🇷",
+    href: "mad-greek-cafe/index.html",
+    gradient: "linear-gradient(135deg,#0d68a8,#62b6cb 52%,#f6cf55)",
+    status: "promoted"
+  },
+  {
+    name: "Moosehead Grill",
+    area: "Charlotte",
+    cuisine: "Canadian Pub & Grill",
+    description: "Six-page build with Canadian classics, menu, story, events, reservations, and contact. QA verified.",
+    emoji: "🍁",
+    href: "moosehead-grill/index.html",
+    gradient: "linear-gradient(135deg,#8b0000,#ff8c00 52%,#ffd700)",
+    status: "promoted"
+  },
+  {
+    name: "New Zealand Café",
+    area: "Charlotte",
+    cuisine: "Kiwi Café & Bakery",
+    description: "Six-page build featuring Kiwi favorites, menu, about, specials, catering, and contact pages. All interactions working.",
+    emoji: "🇳🇿",
+    href: "new-zealand-cafe/index.html",
+    gradient: "linear-gradient(135deg,#006666,#009999 52%,#00cccc)",
+    status: "promoted"
+  },
+  {
+    name: "Sir Edmond Halley's",
+    area: "Charlotte",
+    cuisine: "Historic Pub & Tavern",
+    description: "Six-page build with historical theme, menu, about, events, private dining, and contact. QA complete.",
+    emoji: "🔭",
+    href: "sir-edmond-halleys/index.html",
+    gradient: "linear-gradient(135deg,#2c3e50,#34495e 52%,#7f8c8d)",
+    status: "promoted"
+  },
+  {
+    name: "The Diamond Restaurant",
+    area: "Charlotte",
+    cuisine: "Classic American Diner",
+    description: "Six-page build with diner classics, menu, story, daily specials, reservations, and contact. All pages tested.",
+    emoji: "💎",
+    href: "diamond-restaurant/index.html",
+    gradient: "linear-gradient(135deg,#c0c0c0,#808080 52%,#404040)",
+    status: "promoted"
+  },
+  {
+    name: "The Thirsty Beaver Saloon",
+    area: "Charlotte",
+    cuisine: "Western Saloon & Bar",
+    description: "Six-page build with saloon theme, menu, about, events, drinks, and contact. Complete QA passed.",
+    emoji: "🦫",
+    href: "thirsty-beaver-saloon/index.html",
+    gradient: "linear-gradient(135deg,#8b4513,#a0522d 52%,#cd853f)",
+    status: "promoted"
+  },
+  {
+    name: "Harriet's Hamburgers",
+    area: "Charlotte",
+    cuisine: "Classic Burgers & Shakes",
+    description: "Eight-page build with burger customizer, menu, about, history, catering, events, and contact. All interactions and QA complete.",
+    emoji: "🍔",
+    href: "harriets-hamburgers/index.html",
+    gradient: "linear-gradient(135deg,#8b0000,#ff4500 52%,#ffd700)",
+    status: "promoted_secondary"
+  },
+  {
+    name: "Margaux's Wine, Pizza & Market",
+    area: "Charlotte",
+    cuisine: "Wine Bar & Artisan Pizza",
+    description: "Six-page build with wine list, pizza menu, market, about, reservations, and contact. Complete QA passed.",
+    emoji: "🍷",
+    href: "margauxs-wine-pizza-market/index.html",
+    gradient: "linear-gradient(135deg,#800020,#ff1493 52%,#ffd700)",
+    status: "promoted_secondary"
+  },
+  {
+    name: "South 21 Drive-In",
+    area: "Charlotte",
+    cuisine: "Classic Drive-In & Diner",
+    description: "Six-page build with drive-in menu, about, car-hop service, events, specials, and contact. All pages tested.",
+    emoji: "🚗",
+    href: "south-21-drive-in/index.html",
+    gradient: "linear-gradient(135deg,#ff0000,#ff8c00 52%,#ffff00)",
+    status: "promoted_secondary"
+  },
+  {
+    name: "The Garrison",
+    area: "Charlotte",
+    cuisine: "Modern American Tavern",
+    description: "Six-page build with tavern menu, about, chef's table, events, reservations, and contact. Complete QA passed.",
+    emoji: "🏰",
+    href: "the-garrison/index.html",
+    gradient: "linear-gradient(135deg,#4682b4,#5f9ea0 52%,#20b2aa)",
+    status: "promoted_secondary"
   }
 ];
