@@ -1,6 +1,6 @@
 // Shared portal overrides.
 // Add or replace one restaurant entry here after re-fetching the latest main branch.
-// Allowed statuses: lead, incomplete, qa, premium, promoted.
+// Allowed statuses: lead, incomplete, qa, premium, promoted, promoted_secondary.
 // qa requires six separate substantive pages. premium also requires completed desktop/mobile browser QA.
 window.portalOverrides = [
   {
@@ -41,7 +41,7 @@ window.portalOverrides = [
     emoji: "🌮",
     href: "1900-mexican-grill/index.html",
     gradient: "linear-gradient(135deg,#c4862b,#1a1208 52%,#0f0b06)",
-    status: "promoted"
+    status: "promoted_secondary"
   },
   {
     name: "Brooks' Sandwich House",
@@ -261,7 +261,7 @@ window.portalOverrides = [
     emoji: "🥖",
     href: "crispy-banh-mi/index.html",
     gradient: "linear-gradient(135deg,#f59e0b,#84cc16 52%,#7c2d12)",
-    status: "promoted"
+    status: "promoted_secondary"
   },
   {
     name: "Curry Gate",
@@ -561,7 +561,7 @@ window.portalOverrides = [
     emoji: "🍺",
     href: "growlers-pourhouse/index.html",
     gradient: "linear-gradient(135deg,#d4a34a,#a04a2a 52%,#1a1510)",
-    status: "promoted"
+    status: "promoted_secondary"
   },
   {
     name: "Gus' Family Restaurant",
@@ -601,7 +601,7 @@ window.portalOverrides = [
     emoji: "🍺",
     href: "alexander-michaels/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
-    status: "qa"
+    status: "promoted_secondary"
   },
   {
     name: "Alice Jules Coffee House",
@@ -681,7 +681,7 @@ window.portalOverrides = [
     emoji: "🥢",
     href: "flame-asian-bistro-and-bar/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
-    status: "qa"
+    status: "promoted_secondary"
   },
   {
     name: "Flour Shop",
@@ -721,7 +721,7 @@ window.portalOverrides = [
     emoji: "🍺",
     href: "free-range-brewing/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
-    status: "qa"
+    status: "promoted_secondary"
   },
   {
     name: "Futo Buta",
@@ -831,7 +831,7 @@ window.portalOverrides = [
     emoji: "🍺",
     href: "humbug/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
-    status: "qa"
+    status: "promoted_secondary"
   },
   {
     name: "Idlewild",
@@ -841,7 +841,7 @@ window.portalOverrides = [
     emoji: "🍺",
     href: "idlewild/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
-    status: "qa"
+    status: "promoted_secondary"
   },
   {
     name: "Ink N Ivy",
@@ -861,7 +861,7 @@ window.portalOverrides = [
     emoji: "🍕",
     href: "intermezzo-pizzeria/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
-    status: "qa"
+    status: "promoted_secondary"
   },
   {
     name: "Kabab-Je",
@@ -871,7 +871,7 @@ window.portalOverrides = [
     emoji: "🥢",
     href: "kabab-je/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
-    status: "qa"
+    status: "promoted_secondary"
   },
   {
     name: "Kid Cashew",
@@ -921,7 +921,7 @@ window.portalOverrides = [
     emoji: "🥢",
     href: "la-shish-kabob/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
-    status: "qa"
+    status: "promoted_secondary"
   },
   {
     name: "Lang Van",
@@ -1021,7 +1021,7 @@ window.portalOverrides = [
     emoji: "🍽️",
     href: "local-loaf/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
-    status: "qa"
+    status: "promoted_secondary"
   },
   {
     name: "L'Ostrica",
@@ -1041,7 +1041,7 @@ window.portalOverrides = [
     emoji: "🍺",
     href: "loyalist-market/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
-    status: "qa"
+    status: "promoted_secondary"
   },
   {
     name: "Luisa's Brick Oven Pizzeria",
@@ -1051,7 +1051,7 @@ window.portalOverrides = [
     emoji: "🍕",
     href: "luisas-brick-oven-pizzeria/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
-    status: "qa"
+    status: "promoted_secondary"
   },
   {
     name: "Lula Bánh Mì + Bakery",
@@ -1071,7 +1071,7 @@ window.portalOverrides = [
     emoji: "🍳",
     href: "lupies-cafe/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
-    status: "qa"
+    status: "promoted_secondary"
   },
   {
     name: "Machu Picchu Peruvian Cuisine",
@@ -1121,7 +1121,7 @@ window.portalOverrides = [
     emoji: "🔥",
     href: "mckoys-smokehouse-and-saloon/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
-    status: "qa"
+    status: "promoted_secondary"
   },
   {
     name: "Menya Daruma",
@@ -1131,7 +1131,7 @@ window.portalOverrides = [
     emoji: "🥢",
     href: "menya-daruma/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
-    status: "qa"
+    status: "promoted_secondary"
   },
   {
     name: "Miguel's Restaurant",
@@ -1161,7 +1161,7 @@ window.portalOverrides = [
     emoji: "🍝",
     href: "open-kitchen/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
-    status: "qa"
+    status: "promoted_secondary"
   },
   {
     name: "Paco's Tacos & Tequila",
@@ -1241,7 +1241,7 @@ window.portalOverrides = [
     emoji: "🍩",
     href: "royal-cafe/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
-    status: "qa"
+    status: "promoted_secondary"
   },
   {
     name: "Santé",
@@ -1251,7 +1251,7 @@ window.portalOverrides = [
     emoji: "🍽️",
     href: "sante/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
-    status: "qa"
+    status: "promoted_secondary"
   },
   {
     name: "Seaboard Brewing",
@@ -1261,7 +1261,7 @@ window.portalOverrides = [
     emoji: "🍺",
     href: "seaboard-brewing/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
-    status: "qa"
+    status: "promoted_secondary"
   },
   {
     name: "Tacos El Nevado",
@@ -1281,7 +1281,7 @@ window.portalOverrides = [
     emoji: "🥢",
     href: "thai-taste/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
-    status: "qa"
+    status: "promoted_secondary"
   },
   {
     name: "The Dive N",
@@ -1311,7 +1311,7 @@ window.portalOverrides = [
     emoji: "🍣",
     href: "umami-sushi-grill/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
-    status: "qa"
+    status: "promoted_secondary"
   },
   {
     name: "Waldhorn Restaurant",
@@ -1321,6 +1321,6 @@ window.portalOverrides = [
     emoji: "🍺",
     href: "waldhorn-restaurant/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
-    status: "qa"
+    status: "promoted_secondary"
   }
 ];

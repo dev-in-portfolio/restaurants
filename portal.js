@@ -61,7 +61,7 @@
 
   function normalizeItem(item, sourceType) {
     const isLead = item.status === 'lead' || sourceType === 'lead';
-    const allowedOverride = sourceType === 'override' && ['lead', 'incomplete', 'qa', 'premium', 'promoted'].includes(item.status);
+    const allowedOverride = sourceType === 'override' && ['lead', 'incomplete', 'qa', 'premium', 'promoted', 'promoted_secondary'].includes(item.status);
     const status = allowedOverride ? item.status : (isLead ? 'lead' : 'incomplete');
 
     return {
@@ -77,7 +77,7 @@
   }
 
   function mergeItems(groups) {
-    const priority = { lead: 0, incomplete: 1, qa: 2, premium: 3, promoted: 4 };
+    const priority = { lead: 0, incomplete: 1, qa: 2, premium: 3, promoted: 4, promoted_secondary: 5 };
     const byName = new Map();
 
     for (const group of groups) {
@@ -99,9 +99,10 @@
     const sorted = [...items].sort((a, b) => sortName(a.name).localeCompare(sortName(b.name), undefined, { sensitivity: 'base' }));
     const letterFor = item => (sortName(item.name).charAt(0).toUpperCase() || '#');
     
-    // Separate promoted items from regular items
+    // Separate items into categories
     const promotedItems = sorted.filter(item => item.status === 'promoted');
-    const regularItems = sorted.filter(item => item.status !== 'promoted');
+    const promotedSecondaryItems = sorted.filter(item => item.status === 'promoted_secondary');
+    const regularItems = sorted.filter(item => !['promoted', 'promoted_secondary'].includes(item.status));
     
     // Get letters for regular items only
     const letters = [...new Set(regularItems.map(letterFor))];
@@ -111,6 +112,7 @@
     let lastLetter = '';
     let regularHtml = '';
     let promotedHtml = '';
+    let meaningfulUpgradesHtml = '';
 
     // Render regular items (alphabetical with letter headings)
     regularHtml = regularItems.map(item => {
@@ -147,7 +149,7 @@
       return `${heading}<article class="portal-card glass-panel ${cardClass}"><div class="card-image-wrapper"><span class="card-rating-badge">${badge}</span><div class="card-img-placeholder" style="background:${item.gradient}">${item.emoji}</div></div><div class="card-content"><span class="card-cuisine">${item.cuisine}</span><h2 class="card-title">${item.name}</h2><p class="card-description">${item.description}</p><div class="card-footer"><span class="card-price">Area: <span>${item.area}</span></span>${action}</div></div></article>`;
     }).join('');
 
-    // Render promoted items (alphabetical in their own section)
+    // Render promoted items (main promoted section)
     if (promotedItems.length > 0) {
       const promotedSorted = [...promotedItems].sort((a, b) => sortName(a.name).localeCompare(sortName(b.name), undefined, { sensitivity: 'base' }));
       
@@ -164,15 +166,32 @@
         }).join('');
     }
 
-    // Combine regular and promoted HTML
-    grid.innerHTML = regularHtml + promotedHtml;
+    // Render promoted_secondary items (Meaningful Upgrades section)
+    if (promotedSecondaryItems.length > 0) {
+      const secondarySorted = [...promotedSecondaryItems].sort((a, b) => sortName(a.name).localeCompare(sortName(b.name), undefined, { sensitivity: 'base' }));
+      
+      meaningfulUpgradesHtml = '<h2 class="letter-heading" id="letter-MEANINGFUL-UPGRADES">Meaningful Upgrades</h2>' + 
+        secondarySorted.map(item => {
+          const badge = 'MEANINGFUL UPGRADE';
+          const label = 'View Upgraded Build';
+          const cardClass = 'premium-card';
+          const action = item.href
+            ? `<a href="${item.href}" class="visit-btn">${label} →</a>`
+            : `<span class="visit-btn disabled" aria-disabled="true">${label}</span>`;
+
+          return `<article class="portal-card glass-panel ${cardClass}"><div class="card-image-wrapper"><span class="card-rating-badge">${badge}</span><div class="card-img-placeholder" style="background:${item.gradient}">${item.emoji}</div></div><div class="card-content"><span class="card-cuisine">${item.cuisine}</span><h2 class="card-title">${item.name}</h2><p class="card-description">${item.description}</p><div class="card-footer"><span class="card-price">Area: <span>${item.area}</span></span>${action}</div></div></article>`;
+        }).join('');
+    }
+
+    // Combine all HTML: regular + promoted + meaningful upgrades
+    grid.innerHTML = regularHtml + promotedHtml + meaningfulUpgradesHtml;
 
     const counts = sorted.reduce((acc, item) => {
       acc[item.status] = (acc[item.status] || 0) + 1;
       return acc;
     }, {});
 
-    stats.textContent = `${sorted.length} restaurants • ${counts.lead || 0} queued leads • ${counts.incomplete || 0} existing builds awaiting the six-page standard • ${counts.qa || 0} six-page builds awaiting QA • ${counts.premium || 0} premium • ${counts.promoted || 0} promoted`;
+    stats.textContent = `${sorted.length} restaurants • ${counts.lead || 0} queued leads • ${counts.incomplete || 0} existing builds awaiting the six-page standard • ${counts.qa || 0} six-page builds awaiting QA • ${counts.premium || 0} premium • ${counts.promoted || 0} promoted • ${counts.promoted_secondary || 0} meaningful upgrades`;
 
     if (parseErrors > 0) {
       errorBox.hidden = false;
