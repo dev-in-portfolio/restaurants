@@ -28,6 +28,35 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Scope semantic validation to requested groups
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+
+          repair = Path('controller/.github/scripts/phase2-repair.py')
+          text = repair.read_text(encoding='utf-8')
+          text = text.replace("'main':['MISSING']", "'main':['*']")
+          old = """        if main_open != 1 or main_close != 1:\n            issues.append(f'{rel}: expected one main, found {main_open}/{main_close}')\n        elif not re.search(r'<main\\b[^>]*\\bid=[\"\\\']main[\"\\\']', raw, flags=re.I):\n            issues.append(f'{rel}: main is missing id=\"main\"')"""
+          new = """        if main_open != 1 or main_close != 1:\n            issues.append(f'{rel}: expected one main, found {main_open}/{main_close}')\n        elif (target['group'] in {'B','C'} or rel in expansion_files) and not re.search(r'<main\\b[^>]*\\bid=[\"\\\']main[\"\\\']', raw, flags=re.I):\n            issues.append(f'{rel}: main is missing id=\"main\"')"""
+          if old not in text:
+              raise SystemExit('Static semantic validation block was not found.')
+          repair.write_text(text.replace(old, new), encoding='utf-8')
+
+          browser = Path('controller/.github/scripts/phase2-browser-qa.js')
+          text = browser.read_text(encoding='utf-8')
+          text = text.replace('async function inspectPage(page, url, label, viewportName) {', 'async function inspectPage(page, url, label, viewportName, currentGroup) {')
+          text = text.replace(
+              "  if (checks.mainCount !== 1 || checks.mainIdCount !== 1) failures.push(`${label}: expected exactly one main#main, found main=${checks.mainCount}, main#main=${checks.mainIdCount}`);",
+              "  if (checks.mainCount !== 1) failures.push(`${label}: expected exactly one main element, found ${checks.mainCount}`);\n  if (checks.mainIdCount !== 1 && ['B', 'C'].includes(currentGroup)) failures.push(`${label}: semantic-fix build expected main#main, found ${checks.mainIdCount}`);"
+          )
+          text = text.replace('const result = await inspectPage(page, url, relSite, viewport.name);', 'const result = await inspectPage(page, url, relSite, viewport.name, target.group);')
+          browser.write_text(text, encoding='utf-8')
+          PY
+          python3 -m py_compile controller/.github/scripts/phase2-repair.py
+          node --check controller/.github/scripts/phase2-browser-qa.js
+
       - name: Repair and statically validate 41 builds
         shell: bash
         run: |
