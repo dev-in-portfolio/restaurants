@@ -87,14 +87,13 @@ jobs:
               for file in site.rglob('*.html'):
                   text = file.read_text(encoding='utf-8')
                   original = text
-                  legacy_counter = 0
+                  legacy_counter = [0]
                   tag_pattern = re.compile(r'<([A-Za-z][\w:-]*)([^>]*\bid=["\']main["\'][^>]*)>', re.I)
                   def replace_legacy(match):
-                      nonlocal legacy_counter
                       if match.group(1).lower() == 'main':
                           return match.group(0)
-                      legacy_counter += 1
-                      return re.sub(r'\bid=["\']main["\']', f'id="phase2-legacy-main-{legacy_counter}"', match.group(0), count=1, flags=re.I)
+                      legacy_counter[0] += 1
+                      return re.sub(r'\bid=["\']main["\']', f'id="phase2-legacy-main-{legacy_counter[0]}"', match.group(0), count=1, flags=re.I)
                   text = tag_pattern.sub(replace_legacy, text)
                   if 'data-phase2-responsive' not in text:
                       if re.search(r'</head\s*>', text, flags=re.I):
