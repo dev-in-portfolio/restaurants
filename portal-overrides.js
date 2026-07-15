@@ -372,5 +372,15 @@ window.portalOverrides = [
     href: "dot-dot-dot/index.html",
     gradient: "linear-gradient(135deg,#c9a84c,#0d0d0d 52%,#1a1a1a)",
     status: "premium"
+  },
+  {
+    name: "DŌZO Japanese-American Kitchen",
+    area: "Dilworth & Wesley Heights",
+    cuisine: "Japanese-American Kitchen",
+    description: "Modern Japanese-American izakaya and Katsu specialty restaurant from the team behind Katsu Kart, serving crispy Sandos, curries, and ramen. Features an interactive Katsu platter builder.",
+    emoji: "🍛",
+    href: "dozo-japanese-american-kitchen/index.html",
+    gradient: "linear-gradient(135deg,#2a1a12,#e63946 52%,#1a1a1a)",
+    status: "premium"
   }
 ];
