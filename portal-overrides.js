@@ -442,5 +442,15 @@ window.portalOverrides = [
     href: "eddies-place/index.html",
     gradient: "linear-gradient(135deg,#c43a21,#e8b830 52%,#faf5ee)",
     status: "premium"
+  },
+  {
+    name: "El Puro Cuban Restaurant",
+    area: "South Charlotte",
+    cuisine: "Authentic Cuban Cuisine",
+    description: "Madison Park Cuban destination capturing 1950s Havana with live music, gold chandeliers, family-recipe ropa vieja, and craft mojitos. Features an interactive Havana cocktail builder.",
+    emoji: "🇨🇺",
+    href: "el-puro-cuban-restaurant/index.html",
+    gradient: "linear-gradient(135deg,#6b1d28,#c4862b 52%,#faf6f0)",
+    status: "premium"
   }
 ];
