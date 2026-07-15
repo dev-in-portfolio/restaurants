@@ -142,5 +142,15 @@ window.portalOverrides = [
     href: "bossy-beulahs/index.html",
     gradient: "linear-gradient(135deg,#dc2626,#fef08a 52%,#fafaf6)",
     status: "premium"
+  },
+  {
+    name: "Brazwells Pub",
+    area: "Montford",
+    cuisine: "Neighborhood Tavern",
+    description: "Classic burgers, golden fries, and cold draft beers served on Montford's largest outdoor patio since 1999. Features an interactive burger stacker and custom brunch Bloody Mary mixer.",
+    emoji: "🍺",
+    href: "brazwells-pub/index.html",
+    gradient: "linear-gradient(135deg,#d97706,#0b0705 52%,#050302)",
+    status: "premium"
   }
 ];
