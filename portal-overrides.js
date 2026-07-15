@@ -42,5 +42,15 @@ window.portalOverrides = [
     href: "1900-mexican-grill/index.html",
     gradient: "linear-gradient(135deg,#c4862b,#1a1208 52%,#0f0b06)",
     status: "premium"
+  },
+  {
+    name: "Brooks' Sandwich House",
+    area: "NoDa",
+    cuisine: "Classic Burger Stand",
+    description: "Charlotte's legendary cash-only walk-up stand since 1973. Famous for double cheeseburgers and hot dogs topped with signature house beef chili. Features an interactive chili and quarts planner.",
+    emoji: "🍔",
+    href: "brooks-sandwich-house/index.html",
+    gradient: "linear-gradient(135deg,#e11d48,#18181b 52%,#09090b)",
+    status: "premium"
   }
 ];
