@@ -1,0 +1,101 @@
+name: Audit portal count
+
+on:
+  pull_request:
+    branches:
+      - audit/portal-count-base
+
+permissions:
+  contents: read
+
+jobs:
+  count:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Count portal restaurants and six-page builds
+        shell: bash
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+          const path = require('path');
+          const vm = require('vm');
+
+          const normalizeName = (name = '') => name
+            .normalize('NFKD')
+            .replace(/[\u0300-\u036f]/g, '')
+            .toLowerCase()
+            .replace(/&/g, 'and')
+            .replace(/[^a-z0-9]+/g, '')
+            .replace(/^(the|an|a)/, '')
+            .replace(/(restaurant|cafe|company|co)$/, '');
+
+          function parseLegacy(sourceText) {
+            const startMarker = 'const concepts = [';
+            const start = sourceText.indexOf(startMarker);
+            const end = sourceText.indexOf('\n    ];', start);
+            if (start < 0 || end < 0) throw new Error('Legacy concepts block not found');
+            const items = [];
+            let errors = 0;
+            for (const rawLine of sourceText.slice(start + startMarker.length, end).split(/\r?\n/)) {
+              let line = rawLine.trim();
+              if (!line.startsWith('{name:')) continue;
+              line = line.replace(/,$/, '');
+              try { items.push(vm.runInNewContext(`(${line})`)); } catch { errors += 1; }
+            }
+            return { items, errors };
+          }
+
+          function loadWindowArray(filename, property) {
+            const context = { window: {} };
+            vm.createContext(context);
+            vm.runInContext(fs.readFileSync(filename, 'utf8'), context, { filename });
+            return Array.from(context.window[property] || []);
+          }
+
+          const legacy = parseLegacy(fs.readFileSync('portal-concepts-source.html', 'utf8'));
+          const message2 = loadWindowArray('portal-leads-message2-original.js', 'restaurantLeadsMessage2');
+          const message3 = loadWindowArray('portal-leads-message3.js', 'restaurantLeadsMessage3');
+          const overrides = loadWindowArray('portal-overrides.js', 'portalOverrides');
+
+          const priority = { lead: 0, incomplete: 1, qa: 2, premium: 3 };
+          const merged = new Map();
+          const groups = [
+            ['legacy', legacy.items],
+            ['lead', message2],
+            ['lead', message3],
+            ['override', overrides],
+          ];
+          for (const [type, items] of groups) {
+            for (const item of items) {
+              const isLead = item.status === 'lead' || type === 'lead';
+              const allowedOverride = type === 'override' && ['lead','incomplete','qa','premium'].includes(item.status);
+              const status = allowedOverride ? item.status : (isLead ? 'lead' : 'incomplete');
+              const key = normalizeName(String(item.name || ''));
+              if (!key) continue;
+              const current = merged.get(key);
+              if (!current || priority[status] >= priority[current.status]) merged.set(key, { ...item, status });
+            }
+          }
+
+          const statusCounts = {};
+          for (const item of merged.values()) statusCounts[item.status] = (statusCounts[item.status] || 0) + 1;
+
+          const excluded = new Set(['.git','.github','docs','scripts','node_modules','assets','images','img','css','js','_build-reports','.migration']);
+          const sixPageFolders = fs.readdirSync('.', { withFileTypes: true })
+            .filter(entry => entry.isDirectory() && !excluded.has(entry.name))
+            .filter(entry => fs.existsSync(path.join(entry.name, 'index.html')))
+            .filter(entry => fs.readdirSync(entry.name).filter(file => file.endsWith('.html')).length >= 6)
+            .map(entry => entry.name);
+
+          const result = {
+            portal_total_unique: merged.size,
+            six_page_restaurant_folders: sixPageFolders.length,
+            source_counts: { legacy: legacy.items.length, message2: message2.length, message3: message3.length, overrides: overrides.length },
+            portal_status_counts: statusCounts,
+            legacy_parse_errors: legacy.errors,
+          };
+          console.log('PORTAL_COUNT_RESULT=' + JSON.stringify(result));
+          NODE
