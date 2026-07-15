@@ -32,5 +32,15 @@ window.portalOverrides = [
     href: "beef-n-bottle/index.html",
     gradient: "linear-gradient(135deg,#991b1b,#22120b 52%,#0a0a0a)",
     status: "premium"
+  },
+  {
+    name: "1900 Mexican Grill",
+    area: "Charlotte",
+    cuisine: "Modern Mexican Cantina",
+    description: "Mexico City taqueria favorites in Midtown and South Park. Famous for table-side guacamole fresco, birria tacos, and artisanal mezcal reserves. Features an interactive taco platter builder and mezcal flight mixer.",
+    emoji: "🌮",
+    href: "1900-mexican-grill/index.html",
+    gradient: "linear-gradient(135deg,#c4862b,#1a1208 52%,#0f0b06)",
+    status: "premium"
   }
 ];
