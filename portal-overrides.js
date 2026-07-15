@@ -1282,5 +1282,15 @@ window.portalOverrides = [
     href: "thai-taste/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
     status: "qa"
+  },
+  {
+    name: "The Dive N",
+    area: "Charlotte area",
+    cuisine: "Six-Page Restaurant Experience",
+    description: "Six-page concept upgraded with a custom comfort plate and interactive planner. Static validation passed; desktop/mobile browser QA remains pending.",
+    emoji: "🍳",
+    href: "the-dive-n/index.html",
+    gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
+    status: "qa"
   }
 ];
