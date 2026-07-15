@@ -72,5 +72,15 @@ window.portalOverrides = [
     href: "banh-mi-brothers/index.html",
     gradient: "linear-gradient(135deg,#84cc16,#ea580c 52%,#0c0e0a)",
     status: "premium"
+  },
+  {
+    name: "Bao & Broth",
+    area: "Optimist Hall",
+    cuisine: "Asian Street Food",
+    description: "Fluffy steamed bao buns and rich slow-simmered ramen broths by Chef Larry Schreiber inside Optimist Hall. Features an interactive steamed bao builder and ramen customizer.",
+    emoji: "🍜",
+    href: "bao-and-broth/index.html",
+    gradient: "linear-gradient(135deg,#f97316,#ea580c 52%,#0c0a0a)",
+    status: "premium"
   }
 ];
