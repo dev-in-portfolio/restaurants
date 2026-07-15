@@ -192,5 +192,15 @@ window.portalOverrides = [
     href: "cajun-queen/index.html",
     gradient: "linear-gradient(135deg,#991b1b,#eab308 52%,#1e1b4b)",
     status: "premium"
+  },
+  {
+    name: "Calle Sol Latin Café & Cevicheria",
+    area: "Plaza Midwood",
+    cuisine: "Latin American & Ceviche",
+    description: "Vibrant tropical Cuban to Peruvian café serving pressed Cubanos, tallarin saltado, and fresh ceviches. Locations in Plaza Midwood and SouthPark. Features an interactive Peruvian ceviche builder.",
+    emoji: "☀️",
+    href: "calle-sol-latin-cafe-cevicheria/index.html",
+    gradient: "linear-gradient(135deg,#eab308,#06b6d4 52%,#0f172a)",
+    status: "premium"
   }
 ];
