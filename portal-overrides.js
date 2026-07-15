@@ -542,5 +542,15 @@ window.portalOverrides = [
     href: "gotcha-matcha-espresso/index.html",
     gradient: "linear-gradient(135deg,#2d5a3d,#c9a84c 52%,#faf8f4)",
     status: "premium"
+  },
+  {
+    name: "Grey's Diner",
+    area: "Plaza Midwood",
+    cuisine: "Farm-to-Table Diner",
+    description: "James Beard nominated Chef Sam Diminich's diner operating in a historic 1948 Fodero Dining Car, serving scratch-made farm-to-table breakfast classics, local beef, and artisan coffee. Features an interactive farmhouse skillet planner.",
+    emoji: "🍳",
+    href: "greys-diner/index.html",
+    gradient: "linear-gradient(135deg,#1a2a3a,#c41e3a 52%,#faf6f0)",
+    status: "premium"
   }
 ];
