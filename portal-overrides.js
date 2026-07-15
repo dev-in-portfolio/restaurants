@@ -432,5 +432,15 @@ window.portalOverrides = [
     href: "eddie-vs-prime-seafood/index.html",
     gradient: "linear-gradient(135deg,#c9a84c,#0d0a07 52%,#1a1208)",
     status: "premium"
+  },
+  {
+    name: "Eddie's Place",
+    area: "Cotswold",
+    cuisine: "Cajun & Southern Comfort",
+    description: "Beloved Cotswold neighborhood restaurant and bar serving legendary She-Crab soup, muffulettas, shrimp & grits, and all-day breakfast since 1997. Features an interactive Cajun cookhouse planner.",
+    emoji: "🍲",
+    href: "eddies-place/index.html",
+    gradient: "linear-gradient(135deg,#c43a21,#e8b830 52%,#faf5ee)",
+    status: "premium"
   }
 ];
