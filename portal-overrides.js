@@ -552,5 +552,15 @@ window.portalOverrides = [
     href: "greys-diner/index.html",
     gradient: "linear-gradient(135deg,#1a2a3a,#c41e3a 52%,#faf6f0)",
     status: "premium"
+  },
+  {
+    name: "Growlers Pourhouse",
+    area: "NoDa",
+    cuisine: "Craft Beer & Beer Food",
+    description: "NoDa neighborhood spot by Certified Cicerone Jeff Tonidandel serving rare hand-pumped cask ales, fresh shucked oysters, craft burgers, and wings. Features an interactive cask ale pairing assistant.",
+    emoji: "🍺",
+    href: "growlers-pourhouse/index.html",
+    gradient: "linear-gradient(135deg,#d4a34a,#a04a2a 52%,#1a1510)",
+    status: "premium"
   }
 ];
