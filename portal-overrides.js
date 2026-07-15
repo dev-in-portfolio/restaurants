@@ -1022,5 +1022,15 @@ window.portalOverrides = [
     href: "local-loaf/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
     status: "qa"
+  },
+  {
+    name: "L' Ostrica",
+    area: "Charlotte area",
+    cuisine: "Six-Page Restaurant Experience",
+    description: "Six-page concept upgraded with a custom flight planner and interactive planner. Static validation passed; desktop/mobile browser QA remains pending.",
+    emoji: "🍺",
+    href: "lostrica/index.html",
+    gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
+    status: "qa"
   }
 ];
