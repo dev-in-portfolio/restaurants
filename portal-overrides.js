@@ -762,5 +762,15 @@ window.portalOverrides = [
     href: "hathaways-fried-chicken/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
     status: "qa"
+  },
+  {
+    name: "Hawthorne's NY Pizza & Bar",
+    area: "Charlotte area",
+    cuisine: "Six-Page Restaurant Experience",
+    description: "Six-page concept upgraded with a custom pizza studio and interactive planner. Static validation passed; desktop/mobile browser QA remains pending.",
+    emoji: "🍕",
+    href: "hawthornes-ny-pizza-and-bar/index.html",
+    gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
+    status: "qa"
   }
 ];
