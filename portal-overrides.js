@@ -362,5 +362,15 @@ window.portalOverrides = [
     href: "doms-dive-bar/index.html",
     gradient: "linear-gradient(135deg,#ff3b6f,#0d0a0a 52%,#1a1a1a)",
     status: "premium"
+  },
+  {
+    name: "Dot Dot Dot",
+    area: "Park Road",
+    cuisine: "Upscale Speakeasy & Cocktails",
+    description: "Private membership cocktail lounge hidden behind an unmarked door, serving custom cocktails, rare whiskeys, and small plates. Features an interactive cocktail lab customizer.",
+    emoji: "🥃",
+    href: "dot-dot-dot/index.html",
+    gradient: "linear-gradient(135deg,#c9a84c,#0d0d0d 52%,#1a1a1a)",
+    status: "premium"
   }
 ];
