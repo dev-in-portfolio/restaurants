@@ -482,5 +482,15 @@ window.portalOverrides = [
     href: "enderly-coffee-co/index.html",
     gradient: "linear-gradient(135deg,#2d5a3d,#8b6f47 52%,#faf8f5)",
     status: "premium"
+  },
+  {
+    name: "Euro Grill & Cafe",
+    area: "Plaza Midwood",
+    cuisine: "Bosnian & Balkan Cafe",
+    description: "Plaza Midwood family-owned Bosnian destination preparing authentic grilled cevapi sausages on homemade lepinja flatbread, flaky burek pastries, and traditional coffee since 2003. Features an interactive platter builder.",
+    emoji: "🇧🇦",
+    href: "euro-grill-and-cafe/index.html",
+    gradient: "linear-gradient(135deg,#5a3e2b,#7a8c42 52%,#faf7f2)",
+    status: "premium"
   }
 ];
