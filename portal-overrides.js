@@ -62,5 +62,15 @@ window.portalOverrides = [
     href: "bahn-thai/index.html",
     gradient: "linear-gradient(135deg,#d97706,#0f3f2d 52%,#110905)",
     status: "premium"
+  },
+  {
+    name: "Banh Mi Brothers",
+    area: "University Area",
+    cuisine: "Vietnamese Street Food",
+    description: "Modern Vietnamese banh mi sandwiches, rice bowls, and bubble tea. Located near UNC Charlotte. Features an interactive baguette builder and custom bubble tea mixer.",
+    emoji: "🥖",
+    href: "banh-mi-brothers/index.html",
+    gradient: "linear-gradient(135deg,#84cc16,#ea580c 52%,#0c0e0a)",
+    status: "premium"
   }
 ];
