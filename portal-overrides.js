@@ -392,5 +392,15 @@ window.portalOverrides = [
     href: "dresslers/index.html",
     gradient: "linear-gradient(135deg,#0f172a,#c9a84c 52%,#1a1a1a)",
     status: "premium"
+  },
+  {
+    name: "Duckworth's Grill & Taphouse",
+    area: "Uptown",
+    cuisine: "American Grill & Taphouse",
+    description: "Spacious sports bar and grill in Uptown Charlotte featuring handcrafted burgers, flatbreads, and a massive rotating selection of over 150 craft beers on tap. Features an interactive beer flight builder.",
+    emoji: "🍺",
+    href: "duckworths-grill-taphouse/index.html",
+    gradient: "linear-gradient(135deg,#0f1a2e,#c99c3b 52%,#1a1a1a)",
+    status: "premium"
   }
 ];
