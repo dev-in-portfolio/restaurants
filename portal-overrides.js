@@ -102,5 +102,15 @@ window.portalOverrides = [
     href: "barringtons-restaurant/index.html",
     gradient: "linear-gradient(135deg,#c5a059,#7c2d12 52%,#120e0c)",
     status: "premium"
+  },
+  {
+    name: "Bart's Mart",
+    area: "Eastway",
+    cuisine: "Bottle Shop & Arcade",
+    description: "An eclectic neighborhood draft bar, massive craft beer & wine bottle shop, retro video game lounge, and community patio. Features an interactive draft pint mixer and arcade machine selector.",
+    emoji: "🕹️",
+    href: "barts-mart/index.html",
+    gradient: "linear-gradient(135deg,#ec4899,#06b6d4 52%,#0e0914)",
+    status: "premium"
   }
 ];
