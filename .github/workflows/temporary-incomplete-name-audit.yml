@@ -1,0 +1,90 @@
+name: Temporary incomplete name audit
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/temporary-incomplete-name-audit.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Resolve incomplete portal entries
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+          const vm = require('vm');
+
+          const normalizeName = (name = '') => name
+            .normalize('NFKD')
+            .replace(/[\u0300-\u036f]/g, '')
+            .toLowerCase()
+            .replace(/&/g, 'and')
+            .replace(/[^a-z0-9]+/g, '')
+            .replace(/^(the|an|a)/, '')
+            .replace(/(restaurant|cafe|company|co)$/, '');
+
+          const cleanText = (value = '') => String(value)
+            .replace(/([A-Za-z])�s\b/g, '$1’s')
+            .replace(/\s�\s/g, ' • ')
+            .replace(/�/g, '')
+            .replace(/\s{2,}/g, ' ')
+            .trim();
+
+          function parseLegacyConcepts(sourceText) {
+            const startMarker = 'const concepts = [';
+            const start = sourceText.indexOf(startMarker);
+            const end = sourceText.indexOf('\n    ];', start);
+            const block = sourceText.slice(start + startMarker.length, end);
+            const items = [];
+            for (const rawLine of block.split(/\r?\n/)) {
+              let line = rawLine.trim();
+              if (!line.startsWith('{name:')) continue;
+              line = line.replace(/,$/, '');
+              try { items.push(Function(`"use strict"; return (${line});`)()); } catch {}
+            }
+            return items;
+          }
+
+          function loadOverrides() {
+            const sandbox = { window: {} };
+            vm.createContext(sandbox);
+            vm.runInContext(fs.readFileSync('portal-overrides.js', 'utf8'), sandbox);
+            return sandbox.window.portalOverrides || [];
+          }
+
+          function normalizeItem(item, sourceType) {
+            const isLead = item.status === 'lead' || sourceType === 'lead';
+            const allowedOverride = sourceType === 'override' && ['lead','incomplete','qa','premium','promoted','promoted_secondary'].includes(item.status);
+            return {
+              ...item,
+              name: cleanText(item.name || 'Unnamed restaurant'),
+              status: allowedOverride ? item.status : (isLead ? 'lead' : 'incomplete')
+            };
+          }
+
+          const groups = [
+            { type: 'legacy', items: parseLegacyConcepts(fs.readFileSync('portal-concepts-source.html', 'utf8')) },
+            { type: 'override', items: loadOverrides() }
+          ];
+          const priority = { lead: 0, incomplete: 1, qa: 2, premium: 3, promoted_secondary: 4, promoted: 5 };
+          const byName = new Map();
+          for (const group of groups) {
+            for (const item of group.items) {
+              const normalized = normalizeItem(item, group.type);
+              const key = normalizeName(normalized.name);
+              if (!key) continue;
+              const current = byName.get(key);
+              if (!current || priority[normalized.status] >= priority[current.status]) byName.set(key, normalized);
+            }
+          }
+          const incomplete = [...byName.values()]
+            .filter(item => item.status === 'incomplete')
+            .sort((a,b) => a.name.localeCompare(b.name));
+          console.log('INCOMPLETE_COUNT=' + incomplete.length);
+          console.log('INCOMPLETE_JSON=' + JSON.stringify(incomplete.map(({name,href,area,cuisine}) => ({name,href,area,cuisine}))));
+          NODE
