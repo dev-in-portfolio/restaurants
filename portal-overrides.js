@@ -1,6 +1,6 @@
 // Shared portal overrides.
 // Add or replace one restaurant entry here after re-fetching the latest main branch.
-// Allowed statuses: lead, incomplete, qa, premium.
+// Allowed statuses: lead, incomplete, qa, premium, promoted.
 // qa requires six separate substantive pages. premium also requires completed desktop/mobile browser QA.
 window.portalOverrides = [
   {
@@ -11,7 +11,7 @@ window.portalOverrides = [
     emoji: "🐊",
     href: "boudreauxs/index.html",
     gradient: "linear-gradient(135deg,#0d1010,#a5432d 52%,#f2b643)",
-    status: "premium"
+    status: "promoted"
   },
   {
     name: "131 MAIN Restaurant",
@@ -31,7 +31,7 @@ window.portalOverrides = [
     emoji: "🥩",
     href: "beef-n-bottle/index.html",
     gradient: "linear-gradient(135deg,#991b1b,#22120b 52%,#0a0a0a)",
-    status: "premium"
+    status: "promoted"
   },
   {
     name: "1900 Mexican Grill",
@@ -51,7 +51,7 @@ window.portalOverrides = [
     emoji: "🍔",
     href: "brooks-sandwich-house/index.html",
     gradient: "linear-gradient(135deg,#e11d48,#18181b 52%,#09090b)",
-    status: "premium"
+    status: "promoted"
   },
   {
     name: "Bahn Thai",
@@ -61,7 +61,7 @@ window.portalOverrides = [
     emoji: "🍲",
     href: "bahn-thai/index.html",
     gradient: "linear-gradient(135deg,#d97706,#0f3f2d 52%,#110905)",
-    status: "premium"
+    status: "promoted"
   },
   {
     name: "Banh Mi Brothers",
@@ -81,7 +81,7 @@ window.portalOverrides = [
     emoji: "🍜",
     href: "bao-and-broth/index.html",
     gradient: "linear-gradient(135deg,#f97316,#ea580c 52%,#0c0a0a)",
-    status: "premium"
+    status: "promoted"
   },
   {
     name: "Barcelona Wine Bar",
@@ -111,7 +111,7 @@ window.portalOverrides = [
     emoji: "🕹️",
     href: "barts-mart/index.html",
     gradient: "linear-gradient(135deg,#ec4899,#06b6d4 52%,#0e0914)",
-    status: "premium"
+    status: "promoted"
   },
   {
     name: "Birdsong Brewing Company",
@@ -181,7 +181,7 @@ window.portalOverrides = [
     emoji: "☕",
     href: "cafe-south/index.html",
     gradient: "linear-gradient(135deg,#c4613a,#e8d5b4 52%,#faf5eb)",
-    status: "premium"
+    status: "promoted"
   },
   {
     name: "Cajun Queen",
@@ -221,7 +221,7 @@ window.portalOverrides = [
     emoji: "🍦",
     href: "carolina-scoops/index.html",
     gradient: "linear-gradient(135deg,#b83c68,#f3bd48 52%,#2f806e)",
-    status: "premium"
+    status: "promoted"
   },
   {
     name: "Caswell Station",
@@ -241,7 +241,7 @@ window.portalOverrides = [
     emoji: "🍔",
     href: "cornerstone-pub-grill/index.html",
     gradient: "linear-gradient(135deg,#244b38,#8f3e2c 52%,#f8fafc)",
-    status: "premium"
+    status: "promoted"
   },
   {
     name: "counter-",
@@ -291,7 +291,7 @@ window.portalOverrides = [
     emoji: "🍗",
     href: "dbs-tavern/index.html",
     gradient: "linear-gradient(135deg,#1a2a3a,#c0392b 52%,#1a1a1a)",
-    status: "premium"
+    status: "promoted"
   },
   {
     name: "Deejai Thai",
@@ -341,7 +341,7 @@ window.portalOverrides = [
     emoji: "🍜",
     href: "doans-vietnamese-cuisine/index.html",
     gradient: "linear-gradient(135deg,#a32020,#d4a017 52%,#1a1a1a)",
-    status: "premium"
+    status: "promoted"
   },
   {
     name: "Dolce Osteria",
@@ -361,7 +361,7 @@ window.portalOverrides = [
     emoji: "🎱",
     href: "doms-dive-bar/index.html",
     gradient: "linear-gradient(135deg,#ff3b6f,#0d0a0a 52%,#1a1a1a)",
-    status: "premium"
+    status: "promoted"
   },
   {
     name: "Dot Dot Dot",
@@ -411,7 +411,7 @@ window.portalOverrides = [
     emoji: "🥤",
     href: "dukes-grill/index.html",
     gradient: "linear-gradient(135deg,#b31b1b,#e8b830 52%,#1a1a1a)",
-    status: "premium"
+    status: "promoted"
   },
   {
     name: "East 74 Restaurant",
@@ -421,7 +421,7 @@ window.portalOverrides = [
     emoji: "🥙",
     href: "east-74-restaurant/index.html",
     gradient: "linear-gradient(135deg,#1a3a5c,#c4862b 52%,#faf6f0)",
-    status: "premium"
+    status: "promoted"
   },
   {
     name: "Eddie V's Prime Seafood",
@@ -461,7 +461,7 @@ window.portalOverrides = [
     emoji: "🌮",
     href: "el-valle-mexican-restaurant/index.html",
     gradient: "linear-gradient(135deg,#5c2c10,#faf5ee 52%,#1a0b04)",
-    status: "premium"
+    status: "promoted"
   },
   {
     name: "E.L.K. Tavern",
@@ -471,7 +471,7 @@ window.portalOverrides = [
     emoji: "🦌",
     href: "elk-monroe/index.html",
     gradient: "linear-gradient(135deg,#f59e0b,#0d0f12 52%,#12151c)",
-    status: "premium"
+    status: "promoted"
   },
   {
     name: "Enderly Coffee Co.",
@@ -491,7 +491,7 @@ window.portalOverrides = [
     emoji: "🇧🇦",
     href: "euro-grill-and-cafe/index.html",
     gradient: "linear-gradient(135deg,#5a3e2b,#7a8c42 52%,#faf7f2)",
-    status: "premium"
+    status: "promoted"
   },
   {
     name: "Ever Andalo",
@@ -511,7 +511,7 @@ window.portalOverrides = [
     emoji: "🍕",
     href: "geno-ds-pizza/index.html",
     gradient: "linear-gradient(135deg,#c1121f,#e8b830 52%,#faf3e0)",
-    status: "premium"
+    status: "promoted"
   },
   {
     name: "Giddy Goat Coffee Roasters",
@@ -541,7 +541,7 @@ window.portalOverrides = [
     emoji: "🍵",
     href: "gotcha-matcha-espresso/index.html",
     gradient: "linear-gradient(135deg,#2d5a3d,#c9a84c 52%,#faf8f4)",
-    status: "premium"
+    status: "promoted"
   },
   {
     name: "Grey's Diner",
@@ -551,7 +551,7 @@ window.portalOverrides = [
     emoji: "🍳",
     href: "greys-diner/index.html",
     gradient: "linear-gradient(135deg,#1a2a3a,#c41e3a 52%,#faf6f0)",
-    status: "premium"
+    status: "promoted"
   },
   {
     name: "Growlers Pourhouse",
@@ -571,7 +571,7 @@ window.portalOverrides = [
     emoji: "🇬🇷",
     href: "gus-restaurant/index.html",
     gradient: "linear-gradient(135deg,#0284c7,#84cc16 52%,#07090e)",
-    status: "premium"
+    status: "promoted"
   },
   {
     name: "ACE No. 3",
