@@ -472,5 +472,15 @@ window.portalOverrides = [
     href: "elk-monroe/index.html",
     gradient: "linear-gradient(135deg,#f59e0b,#0d0f12 52%,#12151c)",
     status: "premium"
+  },
+  {
+    name: "Enderly Coffee Co.",
+    area: "West Charlotte",
+    cuisine: "Specialty Coffee Roaster",
+    description: "Specialty small-batch coffee roaster and friendly neighborhood cafe serving direct-trade single-origin coffees, espresso, and wholesale roasts since 2012. Features an interactive coffee drink lab customizer.",
+    emoji: "☕",
+    href: "enderly-coffee-co/index.html",
+    gradient: "linear-gradient(135deg,#2d5a3d,#8b6f47 52%,#faf8f5)",
+    status: "premium"
   }
 ];
