@@ -412,5 +412,15 @@ window.portalOverrides = [
     href: "dukes-grill/index.html",
     gradient: "linear-gradient(135deg,#b31b1b,#e8b830 52%,#1a1a1a)",
     status: "premium"
+  },
+  {
+    name: "East 74 Restaurant",
+    area: "Matthews",
+    cuisine: "Greek & American Diner",
+    description: "Matthews family diner serving homestyle American favorites and Greek classics since 2013, featuring gyros, breakfast all morning, and homemade baklava. Features an interactive Greek & American platter customizer.",
+    emoji: "🥙",
+    href: "east-74-restaurant/index.html",
+    gradient: "linear-gradient(135deg,#1a3a5c,#c4862b 52%,#faf6f0)",
+    status: "premium"
   }
 ];
