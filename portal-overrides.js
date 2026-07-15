@@ -462,5 +462,15 @@ window.portalOverrides = [
     href: "el-valle-mexican-restaurant/index.html",
     gradient: "linear-gradient(135deg,#5c2c10,#faf5ee 52%,#1a0b04)",
     status: "premium"
+  },
+  {
+    name: "E.L.K. Tavern",
+    area: "Monroe",
+    cuisine: "Modern Southern Tavern",
+    description: "Modern Southern tavern in historic downtown Monroe serving scratch-made pub classics like deviled eggs, crispy wings, and local NC craft keg drafts. Features an interactive pairing assistant.",
+    emoji: "🦌",
+    href: "elk-monroe/index.html",
+    gradient: "linear-gradient(135deg,#f59e0b,#0d0f12 52%,#12151c)",
+    status: "premium"
   }
 ];
