@@ -352,5 +352,15 @@ window.portalOverrides = [
     href: "dolce-osteria/index.html",
     gradient: "linear-gradient(135deg,#4a6b3a,#8b3a2a 52%,#1a1a1a)",
     status: "premium"
+  },
+  {
+    name: "Dom's Dive Bar",
+    area: "Sedgefield",
+    cuisine: "Neighborhood Dive Bar",
+    description: "Sedgefield neighborhood dive bar offering free pool tables, steel-tip dart boards, daily drink specials, and classic pub grub. Features an interactive tournament planner.",
+    emoji: "🎱",
+    href: "doms-dive-bar/index.html",
+    gradient: "linear-gradient(135deg,#ff3b6f,#0d0a0a 52%,#1a1a1a)",
+    status: "premium"
   }
 ];
