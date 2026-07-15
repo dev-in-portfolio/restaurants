@@ -242,5 +242,15 @@ window.portalOverrides = [
     href: "cornerstone-pub-grill/index.html",
     gradient: "linear-gradient(135deg,#244b38,#8f3e2c 52%,#f8fafc)",
     status: "premium"
+  },
+  {
+    name: "counter-",
+    area: "Wesley Heights",
+    cuisine: "Immersive Fine Dining",
+    description: "Michelin-starred sensory tasting menu matching music, lighting projections, and scents to 10-14 seasonal courses. Only 16 seats. Features an interactive sensory course & music pairings assistant.",
+    emoji: "🕯️",
+    href: "counter/index.html",
+    gradient: "linear-gradient(135deg,#7c3aed,#000000 52%,#0f172a)",
+    status: "premium"
   }
 ];
