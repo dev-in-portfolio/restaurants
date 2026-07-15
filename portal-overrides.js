@@ -52,5 +52,15 @@ window.portalOverrides = [
     href: "brooks-sandwich-house/index.html",
     gradient: "linear-gradient(135deg,#e11d48,#18181b 52%,#09090b)",
     status: "premium"
+  },
+  {
+    name: "Bahn Thai",
+    area: "Ballantyne",
+    cuisine: "Traditional Thai & Sushi",
+    description: "Vibrant and balanced Thai classics alongside a fresh sushi bar. Dim, copper-lit interior. Features an interactive curry spice selector and custom sushi roll planner.",
+    emoji: "🍲",
+    href: "bahn-thai/index.html",
+    gradient: "linear-gradient(135deg,#d97706,#0f3f2d 52%,#110905)",
+    status: "premium"
   }
 ];
