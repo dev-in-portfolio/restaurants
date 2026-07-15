@@ -262,5 +262,15 @@ window.portalOverrides = [
     href: "crispy-banh-mi/index.html",
     gradient: "linear-gradient(135deg,#f59e0b,#84cc16 52%,#7c2d12)",
     status: "premium"
+  },
+  {
+    name: "Curry Gate",
+    area: "Charlotte Area",
+    cuisine: "Indian & Nepalese Cuisine",
+    description: "Critically-acclaimed Butter Chicken, Biryani, and Nepalese momo dumplings with customizable spice levels from 1 to 10+. Features an interactive curry spice customizer.",
+    emoji: "🌶️",
+    href: "curry-gate/index.html",
+    gradient: "linear-gradient(135deg,#ea580c,#d97706 52%,#1c1917)",
+    status: "premium"
   }
 ];
