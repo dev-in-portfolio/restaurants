@@ -332,5 +332,15 @@ window.portalOverrides = [
     href: "divine-barrel-brewing/index.html",
     gradient: "linear-gradient(135deg,#2d1b4e,#d4a847 52%,#1a1a1a)",
     status: "premium"
+  },
+  {
+    name: "Doan's Vietnamese Cuisine",
+    area: "South Charlotte",
+    cuisine: "Vietnamese Cuisine",
+    description: "Family-owned South Charlotte hidden gem preparing authentic Phở noodle soups with 24-hour beef bone broth, vermicelli bowls, and spring rolls. Features an interactive Pho bowl builder.",
+    emoji: "🍜",
+    href: "doans-vietnamese-cuisine/index.html",
+    gradient: "linear-gradient(135deg,#a32020,#d4a017 52%,#1a1a1a)",
+    status: "premium"
   }
 ];
