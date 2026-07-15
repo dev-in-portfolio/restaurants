@@ -402,5 +402,15 @@ window.portalOverrides = [
     href: "duckworths-grill-taphouse/index.html",
     gradient: "linear-gradient(135deg,#0f1a2e,#c99c3b 52%,#1a1a1a)",
     status: "premium"
+  },
+  {
+    name: "Duke's Grill",
+    area: "Monroe",
+    cuisine: "Classic American Diner",
+    description: "Nostalgic Monroe diner landmark since 1951 serving daily ground chuck burgers, hand-battered giant onion rings, and classic breakfast biscuits. Features an interactive milkshake builder.",
+    emoji: "🥤",
+    href: "dukes-grill/index.html",
+    gradient: "linear-gradient(135deg,#b31b1b,#e8b830 52%,#1a1a1a)",
+    status: "premium"
   }
 ];
