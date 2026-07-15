@@ -5,20 +5,38 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   audit:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
-      - name: Check out complete repository
+      - name: Check out complete repository branch
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
+          fetch-depth: 0
 
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
           node-version: '22'
+
+      - name: Remove unsupported completion claims
+        run: node scripts/normalize-incomplete-statuses.mjs --write
+
+      - name: Commit targeted cleanup when needed
+        run: |
+          if git diff --quiet; then
+            echo "No status cleanup changes remain."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Normalize restaurant statuses to incomplete six-page standard"
+          git push origin "HEAD:${{ github.head_ref || github.ref_name }}"
 
       - name: Audit every restaurant directory
         run: node scripts/audit-restaurants.mjs
