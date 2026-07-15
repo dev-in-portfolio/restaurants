@@ -522,5 +522,15 @@ window.portalOverrides = [
     href: "giddy-goat-coffee-roasters/index.html",
     gradient: "linear-gradient(135deg,#e8b830,#2a1f10 52%,#1a1a1a)",
     status: "premium"
+  },
+  {
+    name: "Good Food on Montford",
+    area: "South Charlotte",
+    cuisine: "Creative American Tapas",
+    description: "Montford Drive neighborhood icon by Chef Bruce Moffett serving creative shareable small plates, steamed buns, house pastas, and eclectic wines since 2005. Features an interactive tapas tour planner.",
+    emoji: "🍽",
+    href: "good-food-on-montford/index.html",
+    gradient: "linear-gradient(135deg,#4a3728,#c9a84c 52%,#faf6f0)",
+    status: "premium"
   }
 ];
