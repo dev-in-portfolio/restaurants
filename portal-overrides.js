@@ -1192,5 +1192,15 @@ window.portalOverrides = [
     href: "picadelis-pub-in-deli/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
     status: "qa"
+  },
+  {
+    name: "Start with the right location, then choose pizza, pasta or express.",
+    area: "Charlotte area",
+    cuisine: "Six-Page Restaurant Experience",
+    description: "Six-page concept upgraded with a custom pizza studio and interactive planner. Static validation passed; desktop/mobile browser QA remains pending.",
+    emoji: "🍕",
+    href: "portofinos/index.html",
+    gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
+    status: "qa"
   }
 ];
