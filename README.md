@@ -2,13 +2,13 @@
 
 Repository: **https://github.com/dev-in-portfolio/restaurants**
 
-This repo is Devin’s restaurant lead portal and portfolio of unofficial restaurant-specific website rebuilds.
+This repo is Devin's restaurant lead portal and portfolio of unofficial restaurant-specific website rebuilds.
 
 ## Current truth
 
 No restaurant is currently marked complete or premium.
 
-The project now requires **six separate substantive pages**. Existing five-page builds—including Boudreaux’s—remain useful work, but they are incomplete under the current standard until a sixth page is added and the full site passes verification.
+The project now requires **six separate substantive pages**. Existing five-page builds—including Boudreaux's—remain useful work, but they are incomplete under the current standard until a sixth page is added and the full site passes verification.
 
 The portal therefore uses these statuses:
 
@@ -19,13 +19,40 @@ The portal therefore uses these statuses:
 
 Do not use `full`, `complete`, `finished`, or `premium` merely because a folder, homepage, card, or five-page site exists.
 
-## First response for a model
+## First response and automatic continuation
 
-Read the latest `README.md` and latest `main`, then ask exactly:
+Do not ask Devin which letter to begin with.
 
-> **Which letter should I start building?**
+Fetch the latest `main`, inspect the current portal records and automatically select the next eligible restaurant that needs an upgrade.
 
-After Devin gives a letter, choose the first eligible queued restaurant under that letter, ignoring leading **The**, **A**, and **An** for alphabetization.
+Prioritize existing incomplete builds before unbuilt leads. Within each category, select alphabetically while ignoring leading **The**, **A** and **An**.
+
+Begin the selected restaurant immediately.
+
+After completing, validating, committing and publishing it to `main`, automatically select the next eligible restaurant and continue. Do not wait for Devin to say `continue`.
+
+Skip restaurants that are already promoted, meaningful upgrades, premium, QA pending, placed in At a Later Time, inactive, duplicated, awaiting verification or already being handled by another model.
+
+## Selection priority
+
+Choose restaurants in this order:
+
+1. Existing `incomplete` builds that do not meet the six-page standard.
+2. Eligible `lead` restaurants that do not yet have a usable rebuild.
+
+Do not automatically select restaurants classified as:
+
+- `promoted`
+- `promoted_secondary`
+- `premium`
+- `qa`
+- `later` or `portalSection: "later"`
+- closed
+- inactive
+- duplicate legacy records
+- awaiting business-status verification
+
+Before starting, verify that another active model or recent commit is not already working on that restaurant. If it is, skip it and select the next eligible restaurant.
 
 ## Six-page deliverable
 
@@ -44,7 +71,7 @@ Each page must have its own purpose, composition, useful content, responsive sta
 
 ## Research and accuracy
 
-Use current official sources and recent reliable coverage. Verify the restaurant’s identity, location, menu structure, hours, ordering/reservation paths, social accounts, story, visual character, and actual website weaknesses.
+Use current official sources and recent reliable coverage. Verify the restaurant's identity, location, menu structure, hours, ordering/reservation paths, social accounts, story, visual character, and actual website weaknesses.
 
 Do not invent prices, menu items, owners, history, awards, policies, hours, integrations, availability, or contact details.
 
@@ -56,7 +83,7 @@ Each restaurant must have its own visual identity, information architecture, pag
 
 Do not reuse one shared restaurant shell with different names and colors. Shared resets, accessibility helpers, navigation utilities, and safe demo-form behavior are allowed; repeated restaurant layouts are not.
 
-Boudreaux’s demonstrates restaurant-specific visual thinking, but it is currently a five-page incomplete build—not a complete or premium status reference.
+Boudreaux's demonstrates restaurant-specific visual thinking, but it is currently a five-page incomplete build—not a complete or premium status reference.
 
 ## Required interactions
 
@@ -119,9 +146,9 @@ For each restaurant:
 8. Update `portal-overrides.js` with the honest status.
 9. Commit, push and merge to `main`.
 10. Confirm the folder, portal route and status are present on `main`.
-11. Automatically begin the next eligible queued restaurant under the assigned letter.
+11. Automatically select the next eligible restaurant and begin work immediately.
 
-Do not leave completed work on an unmerged branch. Do not wait for Devin to say **continue**.
+Do not leave completed work on an unmerged branch.
 
 ## Completion rule
 
