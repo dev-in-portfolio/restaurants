@@ -1002,5 +1002,15 @@ window.portalOverrides = [
     href: "link-and-pin/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
     status: "qa"
+  },
+  {
+    name: "Little Mama's",
+    area: "Charlotte area",
+    cuisine: "Six-Page Restaurant Experience",
+    description: "Six-page concept upgraded with a custom flavor table and interactive planner. Static validation passed; desktop/mobile browser QA remains pending.",
+    emoji: "🌮",
+    href: "little-mamas-italian/index.html",
+    gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
+    status: "qa"
   }
 ];
