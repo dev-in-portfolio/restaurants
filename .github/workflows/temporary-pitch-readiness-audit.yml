@@ -1,0 +1,178 @@
+name: Temporary promoted pitch-readiness audit
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/temporary-pitch-readiness-audit.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Audit promoted builds
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+          const path = require('path');
+          const vm = require('vm');
+
+          const sandbox = { window: {} };
+          vm.createContext(sandbox);
+          vm.runInContext(fs.readFileSync('portal-overrides.js', 'utf8'), sandbox);
+          const promoted = (sandbox.window.portalOverrides || [])
+            .filter(x => x.status === 'promoted' && x.portalSection !== 'later')
+            .sort((a,b) => a.name.localeCompare(b.name));
+
+          const placeholderPatterns = [
+            /concept content for/i,
+            /illustrative examples only/i,
+            /actual restaurant information should be verified/i,
+            /lorem ipsum/i,
+            /\bTODO\b/i,
+            /replace (this|with|me)/i,
+            /sample (content|text|menu)/i,
+            /placeholder (content|text|image)/i,
+            /coming soon[^<]{0,80}(menu|content|details)/i
+          ];
+
+          const stripHtml = html => html
+            .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, ' ')
+            .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, ' ')
+            .replace(/<!--([\s\S]*?)-->/g, ' ')
+            .replace(/<[^>]+>/g, ' ')
+            .replace(/&[a-z0-9#]+;/gi, ' ')
+            .replace(/\s+/g, ' ')
+            .trim();
+
+          const words = text => stripHtml(text).split(/\s+/).filter(Boolean);
+          const refsFrom = html => {
+            const refs = [];
+            const re = /\b(?:href|src)\s*=\s*["']([^"']+)["']/gi;
+            let m;
+            while ((m = re.exec(html))) refs.push(m[1]);
+            return refs;
+          };
+          const isLocal = ref => ref && !/^(?:https?:|mailto:|tel:|javascript:|data:|#|\/\/)/i.test(ref);
+          const cleanRef = ref => decodeURIComponent(ref.split('#')[0].split('?')[0]);
+
+          const results = [];
+          for (const item of promoted) {
+            const folder = path.dirname(item.href || '');
+            const hard = [];
+            const warnings = [];
+            const detail = {};
+
+            if (!folder || folder === '.' || !fs.existsSync(folder) || !fs.statSync(folder).isDirectory()) {
+              hard.push('missing-folder');
+              results.push({name:item.name, folder, category:'not-ready', hard, warnings, detail});
+              continue;
+            }
+
+            const htmlFiles = fs.readdirSync(folder).filter(f => f.toLowerCase().endsWith('.html')).sort();
+            detail.htmlFiles = htmlFiles;
+            detail.pageCount = htmlFiles.length;
+            if (htmlFiles.length < 6) hard.push(`fewer-than-6-pages:${htmlFiles.length}`);
+            if (!htmlFiles.includes('index.html')) hard.push('missing-index');
+
+            const pageStats = [];
+            const titles = new Set();
+            let brokenRefs = [];
+            let placeholderHits = [];
+            let shortPages = [];
+            let veryShortPages = [];
+            let pagesWithoutNav = [];
+            let pagesWithoutMain = [];
+
+            for (const file of htmlFiles) {
+              const full = path.join(folder, file);
+              const html = fs.readFileSync(full, 'utf8');
+              const text = stripHtml(html);
+              const wc = words(html).length;
+              const title = (html.match(/<title[^>]*>([\s\S]*?)<\/title>/i) || [,''])[1].replace(/\s+/g,' ').trim();
+              if (title) titles.add(title.toLowerCase());
+              if (wc < 120) shortPages.push(`${file}:${wc}`);
+              if (wc < 70) veryShortPages.push(`${file}:${wc}`);
+              if (!/<nav\b/i.test(html)) pagesWithoutNav.push(file);
+              if (!/<main\b/i.test(html)) pagesWithoutMain.push(file);
+
+              for (const pattern of placeholderPatterns) {
+                if (pattern.test(html)) placeholderHits.push(`${file}:${pattern.source}`);
+              }
+
+              for (const ref of refsFrom(html).filter(isLocal)) {
+                const clean = cleanRef(ref);
+                if (!clean) continue;
+                const resolved = path.normalize(path.resolve(folder, path.dirname(file), clean));
+                if (!resolved.startsWith(path.resolve('.'))) continue;
+                if (!fs.existsSync(resolved)) brokenRefs.push(`${file}->${ref}`);
+              }
+              pageStats.push({file, words:wc, title, textSample:text.slice(0,180)});
+            }
+
+            detail.pageStats = pageStats;
+            detail.uniqueTitles = titles.size;
+            detail.shortPages = shortPages;
+            detail.veryShortPages = veryShortPages;
+            detail.placeholderHits = placeholderHits;
+            detail.brokenRefs = brokenRefs;
+            detail.pagesWithoutNav = pagesWithoutNav;
+            detail.pagesWithoutMain = pagesWithoutMain;
+
+            if (placeholderHits.length) hard.push(`placeholder-copy:${placeholderHits.length}`);
+            if (brokenRefs.length) hard.push(`broken-local-references:${brokenRefs.length}`);
+            if (veryShortPages.length >= 2) hard.push(`multiple-very-short-pages:${veryShortPages.length}`);
+            if (titles.size < Math.min(5, htmlFiles.length)) hard.push(`insufficient-unique-page-titles:${titles.size}`);
+            if (shortPages.length) warnings.push(`short-pages:${shortPages.length}`);
+            if (pagesWithoutNav.length) warnings.push(`pages-without-nav:${pagesWithoutNav.length}`);
+            if (pagesWithoutMain.length) warnings.push(`pages-without-main:${pagesWithoutMain.length}`);
+
+            // Detect near-identical visible copy among pages using token-set Jaccard similarity.
+            const tokenSets = pageStats.map(p => ({file:p.file, set:new Set(stripHtml(fs.readFileSync(path.join(folder,p.file),'utf8')).toLowerCase().split(/[^a-z0-9]+/).filter(x => x.length > 3))}));
+            const nearDuplicates = [];
+            for (let i=0;i<tokenSets.length;i++) for (let j=i+1;j<tokenSets.length;j++) {
+              const a = tokenSets[i].set, b = tokenSets[j].set;
+              if (!a.size || !b.size) continue;
+              let inter = 0;
+              for (const x of a) if (b.has(x)) inter++;
+              const union = a.size + b.size - inter;
+              const score = inter / union;
+              if (score >= 0.82) nearDuplicates.push(`${tokenSets[i].file}~${tokenSets[j].file}:${score.toFixed(2)}`);
+            }
+            detail.nearDuplicates = nearDuplicates;
+            if (nearDuplicates.length >= 2) hard.push(`near-duplicate-pages:${nearDuplicates.length}`);
+            else if (nearDuplicates.length) warnings.push('possible-near-duplicate-page');
+
+            let category;
+            if (hard.length) category = 'not-ready';
+            else if (warnings.length) category = 'review-first';
+            else category = 'pitchable-as-is';
+            results.push({name:item.name, folder, category, hard, warnings, detail});
+          }
+
+          const counts = results.reduce((acc,r) => (acc[r.category]=(acc[r.category]||0)+1,acc),{});
+          const report = { generatedAt:new Date().toISOString(), promotedCount:promoted.length, counts, results };
+          fs.writeFileSync('pitch-readiness-audit.json', JSON.stringify(report,null,2));
+          fs.writeFileSync('pitch-readiness-summary.txt', [
+            `PROMOTED_COUNT=${promoted.length}`,
+            `PITCHABLE_AS_IS=${counts['pitchable-as-is']||0}`,
+            `REVIEW_FIRST=${counts['review-first']||0}`,
+            `NOT_READY=${counts['not-ready']||0}`,
+            '',
+            'NOT_READY_NAMES=',
+            ...results.filter(r=>r.category==='not-ready').map(r=>`- ${r.name}: ${r.hard.join(', ')}`),
+            '',
+            'REVIEW_FIRST_NAMES=',
+            ...results.filter(r=>r.category==='review-first').map(r=>`- ${r.name}: ${r.warnings.join(', ')}`)
+          ].join('\n'));
+          console.log(fs.readFileSync('pitch-readiness-summary.txt','utf8'));
+          NODE
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pitch-readiness-audit
+          path: |
+            pitch-readiness-audit.json
+            pitch-readiness-summary.txt
