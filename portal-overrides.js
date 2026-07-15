@@ -152,5 +152,15 @@ window.portalOverrides = [
     href: "brazwells-pub/index.html",
     gradient: "linear-gradient(135deg,#d97706,#0b0705 52%,#050302)",
     status: "premium"
+  },
+  {
+    name: "Burial Beer Co. Charlotte",
+    area: "Plaza Midwood",
+    cuisine: "Gothic Craft Brewery",
+    description: "An Asheville-born sanctuary serving 36 draft lines of Burial beer, custom cocktails, and natural VISUALS wine in a gothic gravel garden. Features an interactive tap pourer and botanical cider mixer.",
+    emoji: "✝",
+    href: "burial-beer-co-charlotte/index.html",
+    gradient: "linear-gradient(135deg,#c5a059,#7f1d1d 52%,#070708)",
+    status: "premium"
   }
 ];
