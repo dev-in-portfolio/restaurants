@@ -252,5 +252,15 @@ window.portalOverrides = [
     href: "counter/index.html",
     gradient: "linear-gradient(135deg,#7c3aed,#000000 52%,#0f172a)",
     status: "premium"
+  },
+  {
+    name: "Crispy Banh Mi",
+    area: "Charlotte Area",
+    cuisine: "Vietnamese Street Food",
+    description: "Authentic crispy banh mi sandwiches, spring rolls, and bubble teas served at three Charlotte locations. Est. 2016. Features an interactive bubble milk tea builder.",
+    emoji: "🥖",
+    href: "crispy-banh-mi/index.html",
+    gradient: "linear-gradient(135deg,#f59e0b,#84cc16 52%,#7c2d12)",
+    status: "premium"
   }
 ];
