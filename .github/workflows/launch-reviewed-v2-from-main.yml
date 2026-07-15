@@ -1,22 +1,24 @@
-name: Launch reviewed restaurant upgrades v2 from main
+name: Launch reviewed restaurant upgrades v2 from PR
 
 on:
-  push:
+  pull_request:
     branches:
       - main
-    paths:
-      - .github/workflows/launch-reviewed-v2-from-main.yml
+    types:
+      - opened
+      - synchronize
 
 permissions:
   contents: write
+  pull-requests: read
 
 concurrency:
-  group: launch-reviewed-restaurant-upgrades-v2-from-main
+  group: launch-reviewed-restaurant-upgrades-v2-from-pr
   cancel-in-progress: false
 
 jobs:
   launch:
-    if: github.actor != 'github-actions[bot]'
+    if: github.head_ref == 'agent/continue-restaurant-upgrades-v2' && github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -32,14 +34,3 @@ jobs:
 
       - name: Push only the clean v2 branch
         run: git push origin HEAD:agent/continue-restaurant-upgrades-v2
-
-      - name: Remove temporary launcher from main
-        shell: bash
-        run: |
-          git fetch origin main
-          git switch --force-create main origin/main
-          git config user.name 'restaurant-upgrade-bot'
-          git config user.email 'actions@users.noreply.github.com'
-          git rm .github/workflows/launch-reviewed-v2-from-main.yml
-          git commit -m 'Remove temporary reviewed-upgrade launcher'
-          git push origin main
