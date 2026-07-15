@@ -4,6 +4,8 @@
 from __future__ import annotations
 
 import subprocess
+import sys
+import types
 from pathlib import Path
 
 BASE_COMMIT = "6f98f3c62cf8bacd18391f0faf846d768147c87d"
@@ -114,11 +116,12 @@ def load_base_source() -> str:
 def main() -> None:
     root = Path(__file__).resolve().parents[1]
     source = load_base_source()
-    namespace = {
-        "__name__": "validated_base_generator",
-        "__file__": str(root / BASE_PATH),
-    }
-    exec(compile(source, BASE_PATH, "exec"), namespace)
+    module_name = "validated_base_generator"
+    module = types.ModuleType(module_name)
+    module.__file__ = str(root / BASE_PATH)
+    sys.modules[module_name] = module
+    exec(compile(source, BASE_PATH, "exec"), module.__dict__)
+    namespace = module.__dict__
 
     base_choose = namespace["choose_experience"]
     name_to_kind = {name: kind for name, kind in TARGETS.values()}
