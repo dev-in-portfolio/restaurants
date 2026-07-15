@@ -78,13 +78,33 @@
 
   function mergeItems(groups) {
     const priority = { lead: 0, incomplete: 1, qa: 2, premium: 3, promoted: 4, promoted_secondary: 5 };
+    
+    // Name alias map: legacy corrupted names -> canonical names
+    const nameAliases = {
+      'mliesfrenchbakeryandcaf': 'ameliesfrenchbakeryand',
+      'callesollatincafandcevicheria': 'callesollatincafeandcevicheria',
+      'elkofmonroe': 'elktavern',
+      'greysdinerandcommunitykitchen': 'greysdiner',
+      'lessandwichesandcaf': 'lessandwichesand',
+      'machupicchucuisine': 'machupicchuperuviancuisine',
+      'repblicarestaurantandlounge': 'republicarestaurantandlounge',
+      'sant': 'sante'
+    };
+    
     const byName = new Map();
 
     for (const group of groups) {
       for (const item of group.items) {
         const normalized = normalizeItem(item, group.type);
-        const key = normalizeName(normalized.name);
+        let key = normalizeName(normalized.name);
         if (!key) continue;
+        
+        // Apply name alias if available
+        const aliasedKey = nameAliases[key];
+        if (aliasedKey && aliasedKey !== key) {
+          key = aliasedKey;
+        }
+        
         const current = byName.get(key);
         if (!current || priority[normalized.status] >= priority[current.status]) {
           byName.set(key, normalized);
