@@ -872,5 +872,15 @@ window.portalOverrides = [
     href: "kabab-je/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
     status: "qa"
+  },
+  {
+    name: "Sharing Flavors & Laughter",
+    area: "Charlotte area",
+    cuisine: "Six-Page Restaurant Experience",
+    description: "Six-page concept upgraded with a custom flight planner and interactive planner. Static validation passed; desktop/mobile browser QA remains pending.",
+    emoji: "🍺",
+    href: "kid-cashew/index.html",
+    gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
+    status: "qa"
   }
 ];
