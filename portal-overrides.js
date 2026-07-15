@@ -1102,5 +1102,15 @@ window.portalOverrides = [
     href: "marias-mexican-restaurant/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
     status: "qa"
+  },
+  {
+    name: "Help the group decide what kind of night this is.",
+    area: "Charlotte area",
+    cuisine: "Six-Page Restaurant Experience",
+    description: "Six-page concept upgraded with a custom flight planner and interactive planner. Static validation passed; desktop/mobile browser QA remains pending.",
+    emoji: "🍺",
+    href: "matthews-social-house/index.html",
+    gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
+    status: "qa"
   }
 ];
