@@ -122,5 +122,15 @@ window.portalOverrides = [
     href: "birdsong-brewing-company/index.html",
     gradient: "linear-gradient(135deg,#f59e0b,#08100b 52%,#040806)",
     status: "premium"
+  },
+  {
+    name: "Blinders Sports Lounge",
+    area: "South End",
+    cuisine: "Gourmet Sports Lounge",
+    description: "Upscale sports watch destination serving gourmet duck fat wings, smash burgers, and cocktails in an high-energy viewing arena. Features an interactive wings builder and seating planner.",
+    emoji: "⚽",
+    href: "blinders-sports-lounge/index.html",
+    gradient: "linear-gradient(135deg,#10b981,#070a09 52%,#030504)",
+    status: "premium"
   }
 ];
