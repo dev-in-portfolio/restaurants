@@ -202,5 +202,15 @@ window.portalOverrides = [
     href: "calle-sol-latin-cafe-cevicheria/index.html",
     gradient: "linear-gradient(135deg,#eab308,#06b6d4 52%,#0f172a)",
     status: "premium"
+  },
+  {
+    name: "Carolina Beer Temple",
+    area: "Matthews",
+    cuisine: "Craft Beer Taproom & Bottle Shop",
+    description: "Belgian craft beer bar and retail store inside Matthews town center. Official St. Bernardus taproom. Features an interactive draft flight builder and rotating tap list guide.",
+    emoji: "⚔️",
+    href: "carolina-beer-temple/index.html",
+    gradient: "linear-gradient(135deg,#f59e0b,#7c2d12 52%,#0f172a)",
+    status: "premium"
   }
 ];
