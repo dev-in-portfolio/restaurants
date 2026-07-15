@@ -272,5 +272,25 @@ window.portalOverrides = [
     href: "curry-gate/index.html",
     gradient: "linear-gradient(135deg,#ea580c,#d97706 52%,#1c1917)",
     status: "premium"
+  },
+  {
+    name: "Customshop",
+    area: "Elizabeth",
+    cuisine: "Contemporary New American",
+    description: "Michelin-selected contemporary New American dining inside Elizabeth since 2007. Handcrafted pastas, crudo, and wood-fired hearth cooking. Features an interactive sommelier wine pairing assistant.",
+    emoji: "🍷",
+    href: "customshop/index.html",
+    gradient: "linear-gradient(135deg,#7f1d1d,#18181b 52%,#09090b)",
+    status: "premium"
+  },
+  {
+    name: "DB's Tavern",
+    area: "Ballantyne",
+    cuisine: "Neighborhood Sports Bar",
+    description: "Ballantyne sports bar and wing destination serving crispy wings with 18 custom sauces, pizza rolls, and craft pints since 2014. Features an interactive wing order planner.",
+    emoji: "🍗",
+    href: "dbs-tavern/index.html",
+    gradient: "linear-gradient(135deg,#1a2a3a,#c0392b 52%,#1a1a1a)",
+    status: "premium"
   }
 ];
