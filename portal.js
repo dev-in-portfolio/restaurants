@@ -64,6 +64,9 @@
     const allowedOverride = sourceType === 'override' && ['lead', 'incomplete', 'qa', 'premium', 'promoted', 'promoted_secondary'].includes(item.status);
     const status = allowedOverride ? item.status : (isLead ? 'lead' : 'incomplete');
 
+    // Preserve portalSection if it exists in override
+    const portalSection = sourceType === 'override' ? item.portalSection : undefined;
+
     return {
       name: cleanText(item.name || 'Unnamed restaurant'),
       area: cleanText(item.area || 'Charlotte area'),
@@ -72,12 +75,15 @@
       emoji: cleanEmoji(item.emoji),
       href: item.href || '',
       gradient: item.gradient || 'linear-gradient(135deg,#172033,#334155 52%,#0f172a)',
-      status
+      status,
+      portalSection
     };
+
   }
 
   function mergeItems(groups) {
-    const priority = { lead: 0, incomplete: 1, qa: 2, premium: 3, promoted: 4, promoted_secondary: 5 };
+    // Priority for deduplication: later > promoted_secondary > promoted > premium > qa > lead > incomplete
+    const priority = { lead: 0, incomplete: 1, qa: 2, premium: 3, promoted: 4, promoted_secondary: 5, later: 6 };
     
     // Name alias map: legacy corrupted names -> canonical names
     const nameAliases = {
@@ -106,7 +112,11 @@
         }
         
         const current = byName.get(key);
-        if (!current || priority[normalized.status] >= priority[current.status]) {
+        // Give priority to items with portalSection: "later" 
+        const currentPriority = current ? (current.portalSection === 'later' ? 99 : priority[current.status] || 0) : -1;
+        const newPriority = normalized.portalSection === 'later' ? 99 : priority[normalized.status] || 0;
+        
+        if (!current || newPriority >= currentPriority) {
           byName.set(key, normalized);
         }
       }
@@ -120,9 +130,10 @@
     const letterFor = item => (sortName(item.name).charAt(0).toUpperCase() || '#');
     
     // Separate items into categories
-    const promotedItems = sorted.filter(item => item.status === 'promoted');
-    const promotedSecondaryItems = sorted.filter(item => item.status === 'promoted_secondary');
-    const regularItems = sorted.filter(item => !['promoted', 'promoted_secondary'].includes(item.status));
+    const laterItems = sorted.filter(item => item.portalSection === 'later');
+    const promotedItems = sorted.filter(item => item.portalSection !== 'later' && item.status === 'promoted');
+    const promotedSecondaryItems = sorted.filter(item => item.portalSection !== 'later' && item.status === 'promoted_secondary');
+    const regularItems = sorted.filter(item => item.portalSection !== 'later' && !['promoted', 'promoted_secondary'].includes(item.status));
     
     // Get letters for regular items only
     const letters = [...new Set(regularItems.map(letterFor))];
@@ -133,6 +144,7 @@
     let regularHtml = '';
     let promotedHtml = '';
     let meaningfulUpgradesHtml = '';
+    let laterHtml = '';
 
     // Render regular items (alphabetical with letter headings)
     regularHtml = regularItems.map(item => {
@@ -204,14 +216,43 @@
     }
 
     // Combine all HTML: regular + promoted + meaningful upgrades
-    grid.innerHTML = regularHtml + promotedHtml + meaningfulUpgradesHtml;
+    // Render later items (At a Later Time section)
+    if (laterItems.length > 0) {
+      const laterSorted = [...laterItems].sort((a, b) => sortName(a.name).localeCompare(sortName(b.name), undefined, { sensitivity: 'base' }));
+      
+      laterHtml = '<h2 class="letter-heading" id="letter-LATER">At a Later Time</h2>' + 
+        laterSorted.map(item => {
+          const badge = 'AT A LATER TIME';
+          const label = 'View Current Build';
+          const cardClass = 'later-card';
+          const action = item.href
+            ? '<a href="' + item.href + '" class="visit-btn">' + label + ' →</a>'
+            : '<span class="visit-btn disabled" aria-disabled="true">' + label + '</span>';
 
+          return '<article class="portal-card glass-panel ' + cardClass + '">' +
+            '<div class="card-image-wrapper"><span class="card-rating-badge">' + badge + '</span>' +
+            '<div class="card-img-placeholder" style="background:' + item.gradient + '">' + item.emoji + '</div></div>' +
+            '<div class="card-content"><span class="card-cuisine">' + item.cuisine + '</span>' +
+            '<h2 class="card-title">' + item.name + '</h2>' +
+            '<p class="card-description">' + item.description + '</p>' +
+            '<div class="card-footer"><span class="card-price">Area: <span>' + item.area + '</span></span>' + action + '</div></div></article>';
+        }).join('');
+    }
+
+    // Combine all HTML: regular + promoted + meaningful upgrades + later
+    grid.innerHTML = regularHtml + promotedHtml + meaningfulUpgradesHtml + laterHtml;
+
+    // Count items for statistics
     const counts = sorted.reduce((acc, item) => {
-      acc[item.status] = (acc[item.status] || 0) + 1;
+      if (item.portalSection === 'later') {
+        acc.later = (acc.later || 0) + 1;
+      } else {
+        acc[item.status] = (acc[item.status] || 0) + 1;
+      }
       return acc;
     }, {});
 
-    stats.textContent = `${sorted.length} restaurants • ${counts.lead || 0} queued leads • ${counts.incomplete || 0} existing builds awaiting the six-page standard • ${counts.qa || 0} six-page builds awaiting QA • ${counts.premium || 0} premium • ${counts.promoted || 0} promoted • ${counts.promoted_secondary || 0} meaningful upgrades`;
+    stats.textContent = `${sorted.length} restaurants • ${counts.lead || 0} queued leads • ${counts.incomplete || 0} existing builds awaiting the six-page standard • ${counts.qa || 0} six-page builds awaiting QA • ${counts.premium || 0} premium • ${counts.promoted || 0} promoted • ${counts.promoted_secondary || 0} meaningful upgrades • ${counts.later || 0} At a Later Time`;
 
     if (parseErrors > 0) {
       errorBox.hidden = false;
