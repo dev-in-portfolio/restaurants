@@ -54,6 +54,50 @@ Do not automatically select restaurants classified as:
 
 Before starting, verify that another active model or recent commit is not already working on that restaurant. If it is, skip it and select the next eligible restaurant.
 
+## Hard exclusion: At a Later Time
+
+Any restaurant assigned to the **At a Later Time** section is not eligible for automatic work.
+
+A restaurant must be excluded whenever its canonical portal record contains `portalSection: "later"` or an equivalent field used by the portal to place it in the later section. This placement exclusion overrides the restaurant's technical build status.
+
+Therefore, a restaurant in **At a Later Time** must be ignored even when its technical status is `incomplete`, `lead`, `qa`, `premium`, or any other status.
+
+### Automatic workflow behavior
+
+Before constructing the next-work queue, the model must:
+
+1. Resolve restaurants through their canonical records and alias mappings.
+2. Remove every restaurant assigned to **At a Later Time**.
+3. Remove promoted, meaningful-upgrade, premium and QA-pending restaurants.
+4. Remove closed, inactive, duplicate and business-verification-pending restaurants.
+5. Remove restaurants already being handled by another active model.
+6. Prioritize the remaining `incomplete` builds.
+7. If no eligible incomplete builds remain, select the next eligible `lead`.
+8. Sort eligible restaurants alphabetically while ignoring leading **The**, **A** and **An**.
+9. Begin the next eligible restaurant automatically.
+
+### Prohibited actions
+
+The autonomous workflow must never automatically:
+
+- rebuild an At a Later Time restaurant;
+- upgrade it;
+- perform QA on it;
+- promote it;
+- copy it into staging;
+- change its status;
+- remove its later placement;
+- return it to the normal alphabetical work queue;
+- select it as the next restaurant needing work.
+
+Later-section restaurants must be skipped silently while the workflow continues to the next eligible restaurant.
+
+### Canonical-name handling
+
+The exclusion must use the canonical restaurant record and existing aliases.
+
+A later-section restaurant must not bypass the exclusion because of accented versus unaccented characters, apostrophe differences, punctuation differences, capitalization differences, corrupted legacy text, alternate names, renamed records, or duplicate legacy cards.
+
 ## Six-page deliverable
 
 Every completed restaurant rebuild must have at least six separate, substantive HTML pages:
