@@ -382,5 +382,15 @@ window.portalOverrides = [
     href: "dozo-japanese-american-kitchen/index.html",
     gradient: "linear-gradient(135deg,#2a1a12,#e63946 52%,#1a1a1a)",
     status: "premium"
+  },
+  {
+    name: "Dressler's",
+    area: "Midtown",
+    cuisine: "Contemporary Steakhouse",
+    description: "Upscale metropolitan steakhouse serving prime hand-cut steaks, creative seafood platters, and table-side wine tastings on an expansive skyline-view patio. Features an interactive steak & wine pairing assistant.",
+    emoji: "🥩",
+    href: "dresslers/index.html",
+    gradient: "linear-gradient(135deg,#0f172a,#c9a84c 52%,#1a1a1a)",
+    status: "premium"
   }
 ];
