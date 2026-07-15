@@ -702,5 +702,15 @@ window.portalOverrides = [
     href: "flower-child/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
     status: "qa"
+  },
+  {
+    name: "Food For Your Soul CLT Kitchen",
+    area: "Charlotte area",
+    cuisine: "Six-Page Restaurant Experience",
+    description: "Six-page concept upgraded with a custom box builder and interactive planner. Static validation passed; desktop/mobile browser QA remains pending.",
+    emoji: "🍩",
+    href: "food-soul/index.html",
+    gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
+    status: "qa"
   }
 ];
