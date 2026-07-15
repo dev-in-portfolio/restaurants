@@ -322,5 +322,15 @@ window.portalOverrides = [
     href: "dish/index.html",
     gradient: "linear-gradient(135deg,#1e6570,#d56754 52%,#d8aa46)",
     status: "premium"
+  },
+  {
+    name: "Divine Barrel Brewing",
+    area: "NoDa",
+    cuisine: "Wild Sour Brewery",
+    description: "Award-winning craft brewery in NoDa specializing in foudre-fermented sours, barrel-aged wild ales, and hazy IPAs inside a welcoming neighborhood taproom. Features an interactive wild sour visualizer.",
+    emoji: "🍷",
+    href: "divine-barrel-brewing/index.html",
+    gradient: "linear-gradient(135deg,#2d1b4e,#d4a847 52%,#1a1a1a)",
+    status: "premium"
   }
 ];
