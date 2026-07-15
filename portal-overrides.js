@@ -312,5 +312,15 @@ window.portalOverrides = [
     href: "devils-logic-brewing/index.html",
     gradient: "linear-gradient(135deg,#cc2222,#0a0a0a 52%,#121212)",
     status: "premium"
+  },
+  {
+    name: "Dish",
+    area: "Plaza Midwood",
+    cuisine: "Southern Comfort Food",
+    description: "Famous Southern comfort classic diner inside Plaza Midwood, serving legendary chicken & dumplings, meatloaf, and deviled eggs since 2002. Features an interactive Southern plate builder.",
+    emoji: "🍳",
+    href: "dish/index.html",
+    gradient: "linear-gradient(135deg,#1e6570,#d56754 52%,#d8aa46)",
+    status: "premium"
   }
 ];
