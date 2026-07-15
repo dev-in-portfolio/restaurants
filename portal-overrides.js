@@ -562,5 +562,15 @@ window.portalOverrides = [
     href: "growlers-pourhouse/index.html",
     gradient: "linear-gradient(135deg,#d4a34a,#a04a2a 52%,#1a1510)",
     status: "premium"
+  },
+  {
+    name: "Gus' Family Restaurant",
+    area: "Monroe",
+    cuisine: "American & Greek Diner",
+    description: "Monroe family comfort diner since 1998, serving generous dinner specials, hamburger steaks with gravy, Mediterranean gyros, and baked pastas. Features an interactive Mediterranean plate planner.",
+    emoji: "🇬🇷",
+    href: "gus-restaurant/index.html",
+    gradient: "linear-gradient(135deg,#0284c7,#84cc16 52%,#07090e)",
+    status: "premium"
   }
 ];
