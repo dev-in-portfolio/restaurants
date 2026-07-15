@@ -782,5 +782,15 @@ window.portalOverrides = [
     href: "heist-brewery/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
     status: "qa"
+  },
+  {
+    name: "Hello, Sailor",
+    area: "Charlotte area",
+    cuisine: "Six-Page Restaurant Experience",
+    description: "Six-page concept upgraded with a custom chef selection and interactive planner. Static validation passed; desktop/mobile browser QA remains pending.",
+    emoji: "🍣",
+    href: "hello-sailor/index.html",
+    gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
+    status: "qa"
   }
 ];
