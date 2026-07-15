@@ -502,5 +502,15 @@ window.portalOverrides = [
     href: "ever-andalo/index.html",
     gradient: "linear-gradient(135deg,#2c3e2d,#b85c38 52%,#faf6f0)",
     status: "premium"
+  },
+  {
+    name: "Geno D's Pizza",
+    area: "Uptown",
+    cuisine: "Jersey Shore Style Pizza",
+    description: "The Market at 7th Street family-owned pizzeria serving Jersey Shore style pizza made from 35 years of perfected family recipes. Features an interactive pizza customizer.",
+    emoji: "🍕",
+    href: "geno-ds-pizza/index.html",
+    gradient: "linear-gradient(135deg,#c1121f,#e8b830 52%,#faf3e0)",
+    status: "premium"
   }
 ];
