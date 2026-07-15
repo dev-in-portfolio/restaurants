@@ -182,5 +182,15 @@ window.portalOverrides = [
     href: "cafe-south/index.html",
     gradient: "linear-gradient(135deg,#c4613a,#e8d5b4 52%,#faf5eb)",
     status: "premium"
+  },
+  {
+    name: "Cajun Queen",
+    area: "Elizabeth",
+    cuisine: "Cajun & Creole Kitchen",
+    description: "Authentic NOLA flavors and live Dixieland jazz served inside a historic 100-year-old home since 1985. Features an interactive cocktail flight mixer and live music schedule.",
+    emoji: "🎷",
+    href: "cajun-queen/index.html",
+    gradient: "linear-gradient(135deg,#991b1b,#eab308 52%,#1e1b4b)",
+    status: "premium"
   }
 ];
