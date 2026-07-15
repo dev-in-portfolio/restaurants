@@ -1,0 +1,111 @@
+name: Temporary Phase 2 repair 41
+
+on:
+  pull_request:
+
+permissions:
+  contents: write
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out controller branch
+        uses: actions/checkout@v4
+        with:
+          path: controller
+
+      - name: Check out latest restaurants main
+        uses: actions/checkout@v4
+        with:
+          repository: dev-in-portfolio/restaurants
+          ref: main
+          fetch-depth: 0
+          path: work
+
+      - name: Set up runtimes
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Repair and statically validate 41 builds
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p out
+          WORK_ROOT="$GITHUB_WORKSPACE/work" OUT_DIR="$GITHUB_WORKSPACE/out" \
+            python3 controller/.github/scripts/phase2-repair.py 2>&1 | tee out/phase2-static.log
+
+          python3 - <<'PY'
+          import json
+          import subprocess
+          from pathlib import Path
+          report = json.loads(Path('out/phase2-static-report.json').read_text(encoding='utf-8'))
+          expected = sorted(report['changedFiles'])
+          actual = sorted(subprocess.check_output(['git','-C','work','diff','--name-only'], text=True).splitlines())
+          if actual != expected:
+              raise SystemExit(f'Changed-file safety mismatch. expected={expected} actual={actual}')
+          print(f'Changed-file safety check passed for {len(actual)} files.')
+          PY
+
+      - name: Install browser QA runtime
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/phase2-qa
+          cd /tmp/phase2-qa
+          npm init -y >/dev/null
+          npm install --no-audit --no-fund playwright@1.55.0 >/dev/null
+          npx playwright install --with-deps chromium >/dev/null
+
+      - name: Run desktop tablet and mobile QA
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m http.server 4173 --directory work >/tmp/phase2-server.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill $SERVER_PID 2>/dev/null || true' EXIT
+          sleep 2
+          NODE_PATH=/tmp/phase2-qa/node_modules WORK_ROOT="$GITHUB_WORKSPACE/work" OUT_DIR="$GITHUB_WORKSPACE/out" BASE_URL=http://127.0.0.1:4173 \
+            node controller/.github/scripts/phase2-browser-qa.js 2>&1 | tee out/phase2-browser.log
+
+      - name: Run available repository tests
+        shell: bash
+        working-directory: work
+        run: |
+          set -euo pipefail
+          if [ -f package.json ]; then
+            npm install --ignore-scripts --no-audit --no-fund
+            npm test --if-present
+            npm run validate --if-present
+            npm run validate:all --if-present
+          else
+            echo 'No package.json; static and browser QA are the repository validation.'
+          fi
+
+      - name: Commit and push repairs to main
+        shell: bash
+        working-directory: work
+        run: |
+          set -euo pipefail
+          git config user.name 'OpenAI'
+          git config user.email 'noreply@openai.com'
+          git add -A
+          if git diff --cached --quiet; then
+            echo 'No Phase 2 changes were needed.' | tee ../out/commit.txt
+            exit 0
+          fi
+          git commit -m 'Repair 41 promoted restaurant builds for pitch readiness'
+          git fetch origin main
+          git rebase origin/main
+          WORK_ROOT="$GITHUB_WORKSPACE/work" OUT_DIR="$GITHUB_WORKSPACE/out-recheck" \
+            python3 ../controller/.github/scripts/phase2-repair.py --validate-only
+          git push origin HEAD:main
+          git rev-parse HEAD | tee ../out/commit.txt
+
+      - name: Upload Phase 2 report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase2-repair-41-report
+          path: out
