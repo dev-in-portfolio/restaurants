@@ -822,5 +822,15 @@ window.portalOverrides = [
     href: "house-of-leng/index.html",
     gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
     status: "qa"
+  },
+  {
+    name: "Humbug",
+    area: "Charlotte area",
+    cuisine: "Six-Page Restaurant Experience",
+    description: "Six-page concept upgraded with a custom drink lab and interactive planner. Static validation passed; desktop/mobile browser QA remains pending.",
+    emoji: "☕",
+    href: "humbug/index.html",
+    gradient: "linear-gradient(135deg,#172033,#334155 52%,#0f172a)",
+    status: "qa"
   }
 ];
