@@ -172,5 +172,15 @@ window.portalOverrides = [
     href: "burtons-grill-and-bar/index.html",
     gradient: "linear-gradient(135deg,#d97706,#0e1013 52%,#050608)",
     status: "premium"
+  },
+  {
+    name: "Cafe South",
+    area: "South Charlotte",
+    cuisine: "Southern Diner",
+    description: "Family-owned breakfast and lunch hub serving home-cooked Southern comfort classics since 2012. Cozy family diner environment. Features an interactive daily specials and meal planner.",
+    emoji: "☕",
+    href: "cafe-south/index.html",
+    gradient: "linear-gradient(135deg,#c4613a,#e8d5b4 52%,#faf5eb)",
+    status: "premium"
   }
 ];
