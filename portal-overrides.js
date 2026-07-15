@@ -492,5 +492,15 @@ window.portalOverrides = [
     href: "euro-grill-and-cafe/index.html",
     gradient: "linear-gradient(135deg,#5a3e2b,#7a8c42 52%,#faf7f2)",
     status: "premium"
+  },
+  {
+    name: "Ever Andalo",
+    area: "NoDa",
+    cuisine: "Italian Trattoria",
+    description: "Cozy neighborhood NoDa trattoria recognized by MICHELIN, serving homemade pastas, fresh house burrata, and olive oil flights with all-Italian wines. Features an interactive artisan olive oil flight selector.",
+    emoji: "🫒",
+    href: "ever-andalo/index.html",
+    gradient: "linear-gradient(135deg,#2c3e2d,#b85c38 52%,#faf6f0)",
+    status: "premium"
   }
 ];
