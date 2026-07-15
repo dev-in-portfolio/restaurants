@@ -82,5 +82,15 @@ window.portalOverrides = [
     href: "bao-and-broth/index.html",
     gradient: "linear-gradient(135deg,#f97316,#ea580c 52%,#0c0a0a)",
     status: "premium"
+  },
+  {
+    name: "Barcelona Wine Bar",
+    area: "South End",
+    cuisine: "Spanish Tapas & Wine",
+    description: "Rustic Spanish small plates and one of the largest Spanish wine programs in the US. Camden Road terrace. Features an interactive tapas board builder and sommelier pairing finder.",
+    emoji: "🍷",
+    href: "barcelona-wine-bar/index.html",
+    gradient: "linear-gradient(135deg,#991b1b,#120d0b 52%,#080605)",
+    status: "premium"
   }
 ];
