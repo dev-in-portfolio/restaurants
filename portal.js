@@ -125,6 +125,17 @@
     return [...byName.values()];
   }
 
+  const getBaseDir = () => {
+    let path = window.location.pathname;
+    if (/\.[a-zA-Z0-9]+$/.test(path)) {
+      return path.substring(0, path.lastIndexOf('/') + 1);
+    }
+    if (!path.endsWith('/')) {
+      return path + '/';
+    }
+    return path;
+  };
+
   function render(items, parseErrors) {
     const sorted = [...items].sort((a, b) => sortName(a.name).localeCompare(sortName(b.name), undefined, { sensitivity: 'base' }));
     const letterFor = item => (sortName(item.name).charAt(0).toUpperCase() || '#');
@@ -139,6 +150,8 @@
     const letters = [...new Set(regularItems.map(letterFor))];
 
     alphaNav.innerHTML = letters.map(letter => `<a href="#letter-${letter}">${letter}</a>`).join('');
+
+    const baseDir = getBaseDir();
 
     let lastLetter = '';
     let regularHtml = '';
@@ -170,15 +183,27 @@
             : 'View Existing Build';
 
       const cardClass = premium ? 'premium-card' : qa ? 'qa-card' : lead ? 'lead-card' : 'incomplete-card';
-      const action = lead || !item.href
+      
+      let targetUrl = '';
+      if (!lead && item.href) {
+        if (item.href.startsWith('http://') || item.href.startsWith('https://') || item.href.startsWith('/')) {
+          targetUrl = item.href;
+        } else {
+          targetUrl = baseDir + item.href;
+        }
+      }
+
+      const action = lead || !targetUrl
         ? `<span class="visit-btn disabled" aria-disabled="true">${label}</span>`
-        : `<a href="${item.href}" class="visit-btn">${label} →</a>`;
+        : `<a href="${targetUrl}" class="visit-btn">${label} →</a>`;
 
       const letter = letterFor(item);
       const heading = letter !== lastLetter ? `<h2 class="letter-heading" id="letter-${letter}">${letter}</h2>` : '';
       lastLetter = letter;
 
-      return `${heading}<article class="portal-card glass-panel ${cardClass}"><div class="card-image-wrapper"><span class="card-rating-badge">${badge}</span><div class="card-img-placeholder" style="background:${item.gradient}">${item.emoji}</div></div><div class="card-content"><span class="card-cuisine">${item.cuisine}</span><h2 class="card-title">${item.name}</h2><p class="card-description">${item.description}</p><div class="card-footer"><span class="card-price">Area: <span>${item.area}</span></span>${action}</div></div></article>`;
+      const dataAttr = targetUrl ? `data-href="${targetUrl}"` : '';
+
+      return `${heading}<article class="portal-card glass-panel ${cardClass}" ${dataAttr}><div class="card-image-wrapper"><span class="card-rating-badge">${badge}</span><div class="card-img-placeholder" style="background:${item.gradient}">${item.emoji}</div></div><div class="card-content"><span class="card-cuisine">${item.cuisine}</span><h2 class="card-title">${item.name}</h2><p class="card-description">${item.description}</p><div class="card-footer"><span class="card-price">Area: <span>${item.area}</span></span>${action}</div></div></article>`;
     }).join('');
 
     // Render promoted items (main promoted section)
@@ -259,6 +284,15 @@
       errorBox.textContent = `${parseErrors} legacy portal entr${parseErrors === 1 ? 'y was' : 'ies were'} malformed and skipped. The rest of the portal loaded safely.`;
     }
   }
+
+  grid.addEventListener('click', (e) => {
+    const card = e.target.closest('.portal-card[data-href]');
+    if (!card) return;
+    const href = card.getAttribute('data-href');
+    if (!href) return;
+    if (e.target.closest('a')) return;
+    window.location.href = href;
+  });
 
   async function start() {
     let legacy = { items: [], errors: 0 };

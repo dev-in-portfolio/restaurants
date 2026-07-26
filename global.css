@@ -112,6 +112,10 @@ a {
   transition: var(--transition-smooth);
 }
 
+.portal-card[data-href] {
+  cursor: pointer;
+}
+
 .portal-card::before {
   content: '';
   position: absolute;
