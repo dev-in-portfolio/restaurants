@@ -1391,11 +1391,11 @@ window.portalOverrides = [
   {
     name: "Comet Grill",
     area: "Charlotte",
-    cuisine: "Neighborhood Grill & Live Music",
-    description: "A music-first premium redesign connecting current events, burgers, Charlottean Shake wings, and community fundraisers. Six-page build with live calendar, menu, story, wings feature, event inquiry, and contact.",
+    cuisine: "Neighborhood Bar & Live Music Venue",
+    description: "Charlotte's favorite neighborhood bar and free live music venue since 1996. Bespoke 6-page redesign featuring griddled burgers, Charlottean Shake wings, daily specials, stage spotlight, and community events.",
     emoji: "🎸",
     href: "comet-grill/index.html",
-    gradient: "linear-gradient(135deg,#07141a,#2aa9b0 52%,#e1aa3d)",
+    gradient: "linear-gradient(135deg, #1f0c0e 0%, #ef4444 50%, #f59e0b 100%)",
     status: "promoted"
   },
   {

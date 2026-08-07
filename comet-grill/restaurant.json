@@ -1,0 +1,22 @@
+{
+  "slug": "comet-grill",
+  "name": "Comet Grill",
+  "area": "Charlotte, NC",
+  "cuisine": "Neighborhood Bar & Live Music Venue",
+  "description": "Charlotte's favorite neighborhood bar and free live music venue since 1996. Bespoke redesign highlighting award-winning burgers, signature wings, daily specials, and local music culture.",
+  "emoji": "🎸",
+  "gradient": "linear-gradient(135deg, #1f0c0e 0%, #ef4444 50%, #f59e0b 100%)",
+  "href": "restaurants/comet-grill/index.html",
+  "stage": "showcase",
+  "status": "presentation-ready",
+  "desktopReviewed": true,
+  "mobileReviewed": true,
+  "linksVerified": true,
+  "contentVerified": true,
+  "performanceReviewed": true,
+  "accessibilityReviewed": true,
+  "productionBuildPassed": true,
+  "approvedForPresentation": true,
+  "currentWebsiteUrl": "https://www.cometgrillcharlotte.com",
+  "comparisonButtonAdded": true
+}
