@@ -1,323 +1,197 @@
 (() => {
   'use strict';
 
-  const SOURCE_PATH = 'portal-concepts-source.html';
   const grid = document.getElementById('restaurant-grid');
   const alphaNav = document.getElementById('alpha-nav');
   const stats = document.getElementById('portal-stats');
   const errorBox = document.getElementById('portal-error');
 
-  const normalizeName = (name = '') => name
+  const ALLOWED_STATUSES = new Set(['lead', 'incomplete', 'qa', 'premium', 'promoted', 'promoted_secondary']);
+
+  const normalizeKey = (name = '') => name
     .normalize('NFKD')
     .replace(/[\u0300-\u036f]/g, '')
     .toLowerCase()
     .replace(/&/g, 'and')
-    .replace(/[^a-z0-9]+/g, '')
-    .replace(/^(the|an|a)/, '')
-    .replace(/(restaurant|cafe|company|co)$/, '');
+    .replace(/[^a-z0-9]+/g, '');
 
   const sortName = (name = '') => name
     .replace(/^(the|a|an)\s+/i, '')
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '');
 
-  const cleanText = (value = '') => String(value)
-    .replace(/([A-Za-z])�s\b/g, '$1’s')
-    .replace(/\s�\s/g, ' • ')
-    .replace(/�/g, '')
-    .replace(/\s{2,}/g, ' ')
-    .trim();
+  const clean = (value = '') => String(value).replace(/\s{2,}/g, ' ').trim();
 
-  const cleanEmoji = (value) => {
-    const text = String(value || '');
-    return /\?|�|ðŸ|â/.test(text) || !text.trim() ? '🍽️' : text;
-  };
-
-  function parseLegacyConcepts(sourceText) {
-    const startMarker = 'const concepts = [';
-    const start = sourceText.indexOf(startMarker);
-    if (start < 0) return { items: [], errors: 1 };
-    const end = sourceText.indexOf('\n    ];', start);
-    if (end < 0) return { items: [], errors: 1 };
-
-    const block = sourceText.slice(start + startMarker.length, end);
-    const items = [];
-    let errors = 0;
-
-    for (const rawLine of block.split(/\r?\n/)) {
-      let line = rawLine.trim();
-      if (!line.startsWith('{name:')) continue;
-      line = line.replace(/,$/, '');
-      try {
-        const item = Function(`"use strict"; return (${line});`)();
-        if (item && item.name) items.push(item);
-      } catch {
-        errors += 1;
-      }
-    }
-
-    return { items, errors };
+  function queueRows() {
+    return [
+      ...(window.restaurantAuditQueue_A_YES_1 || []),
+      ...(window.restaurantAuditQueue_A_YES_2 || []),
+      ...(window.restaurantAuditQueue_B_YES || []),
+      ...(window.restaurantAuditQueue_B_COND || [])
+    ];
   }
 
-  function normalizeItem(item, sourceType) {
-    const isLead = item.status === 'lead' || sourceType === 'lead';
-    const allowedOverride = sourceType === 'override' && ['lead', 'incomplete', 'qa', 'premium', 'promoted', 'promoted_secondary'].includes(item.status);
-    const status = allowedOverride ? item.status : (isLead ? 'lead' : 'incomplete');
-
-    // Preserve portalSection if it exists in override
-    const portalSection = sourceType === 'override' ? item.portalSection : undefined;
-
+  function baseRecord(row) {
+    const [name, slug, grade, disposition, score, auditBatch] = row;
     return {
-      name: cleanText(item.name || 'Unnamed restaurant'),
-      area: cleanText(item.area || 'Charlotte area'),
-      cuisine: cleanText(item.cuisine || (status === 'lead' ? 'Website Lead • Not Built Yet' : 'Existing Website Build')),
-      description: cleanText(item.description || ''),
-      emoji: cleanEmoji(item.emoji),
-      href: item.href || '',
-      gradient: item.gradient || 'linear-gradient(135deg,#172033,#334155 52%,#0f172a)',
-      status,
-      portalSection
+      name: clean(name),
+      slug: clean(slug),
+      grade: clean(grade),
+      disposition: clean(disposition),
+      score: Number(score),
+      auditBatch: Number(auditBatch),
+      status: 'lead',
+      area: 'Charlotte area',
+      cuisine: `${grade} • ${disposition} • ${score}/100`,
+      description: `Final Rada-depth audit Batch ${auditBatch}. ${grade}-grade ${disposition} prospect, score ${score}/100. Re-verify current public facts before building the six-page premium concept.`,
+      emoji: '🍽️',
+      gradient: grade === 'A'
+        ? 'linear-gradient(135deg,#1f2937,#7c3aed 52%,#111827)'
+        : 'linear-gradient(135deg,#1e293b,#0f766e 52%,#0f172a)',
+      href: '',
+      portalSection: undefined
     };
-
   }
 
-  function mergeItems(groups) {
-    // Priority for deduplication: later > promoted_secondary > promoted > premium > qa > lead > incomplete
-    const priority = { lead: 0, incomplete: 1, qa: 2, premium: 3, promoted: 4, promoted_secondary: 5, later: 6 };
-    
-    // Name alias map: legacy corrupted names -> canonical names
-    const nameAliases = {
-      'mliesfrenchbakeryandcaf': 'ameliesfrenchbakeryand',
-      'callesollatincafandcevicheria': 'callesollatincafeandcevicheria',
-      'elkofmonroe': 'elktavern',
-      'greysdinerandcommunitykitchen': 'greysdiner',
-      'lessandwichesandcaf': 'lessandwichesand',
-      'machupicchucuisine': 'machupicchuperuviancuisine',
-      'repblicarestaurantandlounge': 'republicarestaurantandlounge',
-      'sant': 'sante'
-    };
-    
+  function buildRecords() {
+    const rows = queueRows();
     const byName = new Map();
+    const duplicateNames = [];
 
-    for (const group of groups) {
-      for (const item of group.items) {
-        const normalized = normalizeItem(item, group.type);
-        let key = normalizeName(normalized.name);
-        if (!key) continue;
-        
-        // Apply name alias if available
-        const aliasedKey = nameAliases[key];
-        if (aliasedKey && aliasedKey !== key) {
-          key = aliasedKey;
-        }
-        
-        const current = byName.get(key);
-        // Give priority to items with portalSection: "later" 
-        const currentPriority = current ? (current.portalSection === 'later' ? 99 : priority[current.status] || 0) : -1;
-        const newPriority = normalized.portalSection === 'later' ? 99 : priority[normalized.status] || 0;
-        
-        if (!current || newPriority >= currentPriority) {
-          byName.set(key, normalized);
-        }
-      }
+    for (const row of rows) {
+      const record = baseRecord(row);
+      const key = normalizeKey(record.name);
+      if (byName.has(key)) duplicateNames.push(record.name);
+      byName.set(key, record);
     }
 
-    return [...byName.values()];
+    const unknownOverrides = [];
+    for (const patch of (window.portalOverrides || [])) {
+      if (!patch || !patch.name) continue;
+      const key = normalizeKey(patch.name);
+      const current = byName.get(key);
+      if (!current) {
+        unknownOverrides.push(patch.name);
+        continue;
+      }
+      const status = ALLOWED_STATUSES.has(patch.status) ? patch.status : current.status;
+      const merged = {
+        ...current,
+        ...patch,
+        status,
+        grade: current.grade,
+        disposition: current.disposition,
+        score: current.score,
+        auditBatch: current.auditBatch,
+        slug: current.slug
+      };
+      if (status !== 'lead' && !merged.href) merged.href = `${current.slug}/index.html`;
+      byName.set(key, merged);
+    }
+
+    return { items: [...byName.values()], duplicateNames, unknownOverrides, rawCount: rows.length };
   }
 
   const getBaseDir = () => {
     let path = window.location.pathname;
-    if (/\.[a-zA-Z0-9]+$/.test(path)) {
-      return path.substring(0, path.lastIndexOf('/') + 1);
-    }
-    if (!path.endsWith('/')) {
-      return path + '/';
-    }
+    if (/\.[a-zA-Z0-9]+$/.test(path)) path = path.substring(0, path.lastIndexOf('/') + 1);
+    if (!path.endsWith('/')) path += '/';
     return path;
   };
 
-  function render(items, parseErrors) {
-    const sorted = [...items].sort((a, b) => sortName(a.name).localeCompare(sortName(b.name), undefined, { sensitivity: 'base' }));
-    const letterFor = item => (sortName(item.name).charAt(0).toUpperCase() || '#');
-    
-    // Separate items into categories
-    const laterItems = sorted.filter(item => item.portalSection === 'later');
-    const promotedItems = sorted.filter(item => item.portalSection !== 'later' && item.status === 'promoted');
-    const promotedSecondaryItems = sorted.filter(item => item.portalSection !== 'later' && item.status === 'promoted_secondary');
-    const regularItems = sorted.filter(item => item.portalSection !== 'later' && !['promoted', 'promoted_secondary'].includes(item.status));
-    
-    // Get letters for regular items only
-    const letters = [...new Set(regularItems.map(letterFor))];
+  function renderCard(item, baseDir) {
+    const isLead = item.status === 'lead';
+    const isPremium = ['premium', 'promoted', 'promoted_secondary'].includes(item.status);
+    const isQa = item.status === 'qa';
+    const isLater = item.portalSection === 'later';
 
+    let badge = `${item.grade} • ${item.disposition} • ${item.score}/100`;
+    let label = 'Queued for Premium Rebuild';
+    let cardClass = 'lead-card';
+
+    if (isLater) {
+      badge = `${item.grade} • RECHECK / LATER`;
+      label = 'Not in Active Build Rotation';
+      cardClass = 'incomplete-card';
+    } else if (isPremium) {
+      badge = `${item.grade} • PREMIUM • 6-PAGE QA PASSED`;
+      label = 'View Premium Build';
+      cardClass = 'premium-card';
+    } else if (isQa) {
+      badge = `${item.grade} • 6/6 PAGES • QA PENDING`;
+      label = 'View Six-Page Build';
+      cardClass = 'qa-card';
+    } else if (!isLead) {
+      badge = `${item.grade} • INCOMPLETE`;
+      label = 'View Existing Build';
+      cardClass = 'incomplete-card';
+    }
+
+    let targetUrl = '';
+    if (!isLead && !isLater && item.href) {
+      targetUrl = /^(https?:|\/)/.test(item.href) ? item.href : baseDir + item.href;
+    }
+
+    const action = targetUrl
+      ? `<a href="${targetUrl}" class="visit-btn">${label} →</a>`
+      : `<span class="visit-btn disabled" aria-disabled="true">${label}</span>`;
+
+    const dataHref = targetUrl ? ` data-href="${targetUrl}"` : '';
+    const cuisine = item.cuisine || `${item.grade} • ${item.disposition} • ${item.score}/100`;
+    const description = item.description || `Final Rada-depth audit Batch ${item.auditBatch}. Re-verify current facts before implementation.`;
+
+    return `<article class="portal-card glass-panel ${cardClass}"${dataHref}><div class="card-image-wrapper"><span class="card-rating-badge">${badge}</span><div class="card-img-placeholder" style="background:${item.gradient}">${item.emoji || '🍽️'}</div></div><div class="card-content"><span class="card-cuisine">${cuisine}</span><h2 class="card-title">${item.name}</h2><p class="card-description">${description}</p><div class="card-footer"><span class="card-price">Area: <span>${item.area || 'Charlotte area'}</span></span>${action}</div></div></article>`;
+  }
+
+  function render(result) {
+    const items = result.items.sort((a, b) => sortName(a.name).localeCompare(sortName(b.name), undefined, { sensitivity: 'base' }));
+    const baseDir = getBaseDir();
+    const active = items.filter(item => item.portalSection !== 'later');
+    const letters = [...new Set(active.map(item => (sortName(item.name).charAt(0).toUpperCase() || '#')))];
     alphaNav.innerHTML = letters.map(letter => `<a href="#letter-${letter}">${letter}</a>`).join('');
 
-    const baseDir = getBaseDir();
-
     let lastLetter = '';
-    let regularHtml = '';
-    let promotedHtml = '';
-    let meaningfulUpgradesHtml = '';
-    let laterHtml = '';
-
-    // Render regular items (alphabetical with letter headings)
-    regularHtml = regularItems.map(item => {
-      const lead = item.status === 'lead';
-      const qa = item.status === 'qa';
-      const premium = item.status === 'premium';
-      const incomplete = !lead && !qa && !premium;
-
-      const badge = premium
-        ? 'PREMIUM • 6-PAGE IDENTITY REBUILD'
-        : qa
-          ? '6/6 PAGES • QA PENDING'
-          : lead
-            ? 'LEAD • NOT BUILT YET'
-            : 'INCOMPLETE • 6-PAGE STANDARD NOT MET';
-
-      const label = premium
-        ? 'View Premium Build'
-        : qa
-          ? 'View Six-Page Build'
-          : lead
-            ? 'Queued for Rebuild'
-            : 'View Existing Build';
-
-      const cardClass = premium ? 'premium-card' : qa ? 'qa-card' : lead ? 'lead-card' : 'incomplete-card';
-      
-      let targetUrl = '';
-      if (!lead && item.href) {
-        if (item.href.startsWith('http://') || item.href.startsWith('https://') || item.href.startsWith('/')) {
-          targetUrl = item.href;
-        } else {
-          targetUrl = baseDir + item.href;
-        }
+    let html = '';
+    for (const item of active) {
+      const letter = sortName(item.name).charAt(0).toUpperCase() || '#';
+      if (letter !== lastLetter) {
+        html += `<h2 class="letter-heading" id="letter-${letter}">${letter}</h2>`;
+        lastLetter = letter;
       }
-
-      const action = lead || !targetUrl
-        ? `<span class="visit-btn disabled" aria-disabled="true">${label}</span>`
-        : `<a href="${targetUrl}" class="visit-btn">${label} →</a>`;
-
-      const letter = letterFor(item);
-      const heading = letter !== lastLetter ? `<h2 class="letter-heading" id="letter-${letter}">${letter}</h2>` : '';
-      lastLetter = letter;
-
-      const dataAttr = targetUrl ? `data-href="${targetUrl}"` : '';
-
-      return `${heading}<article class="portal-card glass-panel ${cardClass}" ${dataAttr}><div class="card-image-wrapper"><span class="card-rating-badge">${badge}</span><div class="card-img-placeholder" style="background:${item.gradient}">${item.emoji}</div></div><div class="card-content"><span class="card-cuisine">${item.cuisine}</span><h2 class="card-title">${item.name}</h2><p class="card-description">${item.description}</p><div class="card-footer"><span class="card-price">Area: <span>${item.area}</span></span>${action}</div></div></article>`;
-    }).join('');
-
-    // Render promoted items (main promoted section)
-    if (promotedItems.length > 0) {
-      const promotedSorted = [...promotedItems].sort((a, b) => sortName(a.name).localeCompare(sortName(b.name), undefined, { sensitivity: 'base' }));
-      
-      promotedHtml = '<h2 class="letter-heading" id="letter-PROMOTED">Promoted</h2>' + 
-        promotedSorted.map(item => {
-          const badge = 'PROMOTED';
-          const label = 'View Promoted Build';
-          const cardClass = 'premium-card';
-          const action = item.href
-            ? `<a href="${item.href}" class="visit-btn">${label} →</a>`
-            : `<span class="visit-btn disabled" aria-disabled="true">${label}</span>`;
-
-          return `<article class="portal-card glass-panel ${cardClass}"><div class="card-image-wrapper"><span class="card-rating-badge">${badge}</span><div class="card-img-placeholder" style="background:${item.gradient}">${item.emoji}</div></div><div class="card-content"><span class="card-cuisine">${item.cuisine}</span><h2 class="card-title">${item.name}</h2><p class="card-description">${item.description}</p><div class="card-footer"><span class="card-price">Area: <span>${item.area}</span></span>${action}</div></div></article>`;
-        }).join('');
+      html += renderCard(item, baseDir);
     }
 
-    // Render promoted_secondary items (Meaningful Upgrades section)
-    if (promotedSecondaryItems.length > 0) {
-      const secondarySorted = [...promotedSecondaryItems].sort((a, b) => sortName(a.name).localeCompare(sortName(b.name), undefined, { sensitivity: 'base' }));
-      
-      meaningfulUpgradesHtml = '<h2 class="letter-heading" id="letter-MEANINGFUL-UPGRADES">Meaningful Upgrades</h2>' + 
-        secondarySorted.map(item => {
-          const badge = 'MEANINGFUL UPGRADE';
-          const label = 'View Upgraded Build';
-          const cardClass = 'premium-card';
-          const action = item.href
-            ? `<a href="${item.href}" class="visit-btn">${label} →</a>`
-            : `<span class="visit-btn disabled" aria-disabled="true">${label}</span>`;
-
-          return `<article class="portal-card glass-panel ${cardClass}"><div class="card-image-wrapper"><span class="card-rating-badge">${badge}</span><div class="card-img-placeholder" style="background:${item.gradient}">${item.emoji}</div></div><div class="card-content"><span class="card-cuisine">${item.cuisine}</span><h2 class="card-title">${item.name}</h2><p class="card-description">${item.description}</p><div class="card-footer"><span class="card-price">Area: <span>${item.area}</span></span>${action}</div></div></article>`;
-        }).join('');
+    const later = items.filter(item => item.portalSection === 'later');
+    if (later.length) {
+      html += '<h2 class="letter-heading" id="letter-LATER">Recheck / Later</h2>';
+      html += later.map(item => renderCard(item, baseDir)).join('');
     }
+    grid.innerHTML = html;
 
-    // Combine all HTML: regular + promoted + meaningful upgrades
-    // Render later items (At a Later Time section)
-    if (laterItems.length > 0) {
-      const laterSorted = [...laterItems].sort((a, b) => sortName(a.name).localeCompare(sortName(b.name), undefined, { sensitivity: 'base' }));
-      
-      laterHtml = '<h2 class="letter-heading" id="letter-LATER">At a Later Time</h2>' + 
-        laterSorted.map(item => {
-          const badge = 'AT A LATER TIME';
-          const label = 'View Current Build';
-          const cardClass = 'later-card';
-          const action = item.href
-            ? '<a href="' + item.href + '" class="visit-btn">' + label + ' →</a>'
-            : '<span class="visit-btn disabled" aria-disabled="true">' + label + '</span>';
-
-          return '<article class="portal-card glass-panel ' + cardClass + '">' +
-            '<div class="card-image-wrapper"><span class="card-rating-badge">' + badge + '</span>' +
-            '<div class="card-img-placeholder" style="background:' + item.gradient + '">' + item.emoji + '</div></div>' +
-            '<div class="card-content"><span class="card-cuisine">' + item.cuisine + '</span>' +
-            '<h2 class="card-title">' + item.name + '</h2>' +
-            '<p class="card-description">' + item.description + '</p>' +
-            '<div class="card-footer"><span class="card-price">Area: <span>' + item.area + '</span></span>' + action + '</div></div></article>';
-        }).join('');
-    }
-
-    // Combine all HTML: regular + promoted + meaningful upgrades + later
-    grid.innerHTML = regularHtml + promotedHtml + meaningfulUpgradesHtml + laterHtml;
-
-    // Count items for statistics
-    const counts = sorted.reduce((acc, item) => {
-      if (item.portalSection === 'later') {
-        acc.later = (acc.later || 0) + 1;
-      } else {
-        acc[item.status] = (acc[item.status] || 0) + 1;
-      }
+    const counts = items.reduce((acc, item) => {
+      const key = item.portalSection === 'later' ? 'later' : item.status;
+      acc[key] = (acc[key] || 0) + 1;
       return acc;
     }, {});
+    const gradeA = items.filter(item => item.grade === 'A').length;
+    const gradeB = items.filter(item => item.grade === 'B').length;
+    stats.textContent = `${items.length} canonical A/B prospects • ${gradeA} A-grade • ${gradeB} B-grade • ${counts.lead || 0} queued • ${counts.incomplete || 0} incomplete • ${counts.qa || 0} QA pending • ${(counts.premium || 0) + (counts.promoted || 0) + (counts.promoted_secondary || 0)} premium/promoted • ${counts.later || 0} recheck/later`;
 
-    stats.textContent = `${sorted.length} restaurants • ${counts.lead || 0} queued leads • ${counts.incomplete || 0} existing builds awaiting the six-page standard • ${counts.qa || 0} six-page builds awaiting QA • ${counts.premium || 0} premium • ${counts.promoted || 0} promoted • ${counts.promoted_secondary || 0} meaningful upgrades • ${counts.later || 0} At a Later Time`;
-
-    if (parseErrors > 0) {
+    const problems = [];
+    if (result.rawCount !== 407) problems.push(`Expected 407 audited queue rows; loaded ${result.rawCount}.`);
+    if (result.duplicateNames.length) problems.push(`Duplicate canonical queue names: ${result.duplicateNames.join(', ')}.`);
+    if (result.unknownOverrides.length) problems.push(`Ignored overrides outside the audited queue: ${result.unknownOverrides.join(', ')}.`);
+    if (problems.length) {
       errorBox.hidden = false;
-      errorBox.textContent = `${parseErrors} legacy portal entr${parseErrors === 1 ? 'y was' : 'ies were'} malformed and skipped. The rest of the portal loaded safely.`;
+      errorBox.textContent = problems.join(' ');
     }
   }
 
-  grid.addEventListener('click', (e) => {
-    const card = e.target.closest('.portal-card[data-href]');
-    if (!card) return;
-    const href = card.getAttribute('data-href');
-    if (!href) return;
-    if (e.target.closest('a')) return;
-    window.location.href = href;
+  grid.addEventListener('click', event => {
+    const card = event.target.closest('.portal-card[data-href]');
+    if (!card || event.target.closest('a')) return;
+    window.location.href = card.getAttribute('data-href');
   });
 
-  async function start() {
-    let legacy = { items: [], errors: 0 };
-    try {
-      const response = await fetch(`${SOURCE_PATH}?v=${Date.now()}`, { cache: 'no-store' });
-      if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      legacy = parseLegacyConcepts(await response.text());
-    } catch (error) {
-      errorBox.hidden = false;
-      errorBox.textContent = `The archived portal source could not be loaded (${error.message}). Lead data is still available.`;
-    }
-
-    const message2 = Array.from(window.restaurantLeadsMessage2 || []);
-    const message3 = Array.from(window.restaurantLeadsMessage3 || []);
-    const overrides = Array.from(window.portalOverrides || []);
-
-    const items = mergeItems([
-      { type: 'legacy', items: legacy.items },
-      { type: 'lead', items: message2 },
-      { type: 'lead', items: message3 },
-      { type: 'override', items: overrides }
-    ]);
-
-    render(items, legacy.errors);
-  }
-
-  start();
+  render(buildRecords());
 })();
