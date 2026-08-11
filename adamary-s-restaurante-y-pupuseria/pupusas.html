@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Art of the Pupusa | Craft & Tradition at Adamary’s</title>
+  <meta name="description" content="Discover the craft of authentic Salvadoran pupusas at Adamary’s in Charlotte. From hand-patted corn masa and loroco flowers to fermented curtido and salsa roja.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="site.css">
+  <style>
+    .craft-step {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      margin-bottom: 3.5rem;
+    }
+    .craft-step:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+    .craft-number {
+      font-family: var(--font-display);
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: var(--color-primary-light);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    @media (max-width: 768px) {
+      .craft-step, .craft-step:nth-child(even) {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div class="demo-banner">
+    <strong>UNOFFICIAL SALES DEMO CONCEPT</strong> — Created strictly for portfolio demonstration. Not Adamary’s production website.
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo" aria-label="Adamary's Home">
+        <div>
+          <span class="brand-title">Adamary’s</span>
+          <span class="brand-subtitle">Restaurante y Pupuseria</span>
+        </div>
+      </a>
+
+      <button class="mobile-nav-toggle" aria-expanded="false" aria-label="Toggle navigation menu">
+        &#9776;
+      </button>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="menu.html" class="nav-link">Menu</a></li>
+          <li><a href="story.html" class="nav-link">Our Story</a></li>
+          <li><a href="pupusas.html" class="nav-link active">Pupusa Craft</a></li>
+          <li><a href="catering.html" class="nav-link">Catering</a></li>
+          <li><a href="visit.html" class="nav-link">Visit Us</a></li>
+          <li><a href="visit.html#order" class="btn-nav">Order Online</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-header" style="background-color: var(--color-dark-surface);">
+      <h1 class="page-title" style="color: #FFF8EE;">El Arte de la Pupusa</h1>
+      <p class="page-subtitle" style="color: #D2C6B6;">Understanding the 5-step artisanal process behind El Salvador's national dish at Adamary’s.</p>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        
+        <!-- Step 1 -->
+        <div class="craft-step">
+          <div style="flex: 1;">
+            <div class="craft-number">01</div>
+            <h2 class="section-title" style="font-size: 1.75rem; margin-bottom: 1rem;">Hand-Patted Masa</h2>
+            <p style="color: var(--color-text-muted); margin-bottom: 1rem;">
+              The foundation of a perfect pupusa is masa de maíz—ground corn dough prepared with just the right amount of moisture. Our pupuseras pat each portion by hand, forming a smooth, elastic pocket ready for filling.
+            </p>
+          </div>
+          <div style="flex: 1;">
+            <img src="images/pupusa_craft.jpg" alt="Hands shaping masa dough" style="border-radius: var(--radius-md); box-shadow: var(--shadow-sm);">
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="craft-step">
+          <div style="flex: 1;">
+            <div class="craft-number">02</div>
+            <h2 class="section-title" style="font-size: 1.75rem; margin-bottom: 1rem;">Traditional Fillings & Loroco</h2>
+            <p style="color: var(--color-text-muted); margin-bottom: 1rem;">
+              The masa pocket is sealed around authentic fillings: creamy Salvadoran quesillo, tender edible loroco vine flower buds, slow-simmered chicharrón (seasoned pork), or velvety refried red beans.
+            </p>
+          </div>
+          <div style="flex: 1;">
+            <img src="images/hero_pupusas.jpg" alt="Melted cheese and loroco inside pupusas" style="border-radius: var(--radius-md); box-shadow: var(--shadow-sm);">
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="craft-step">
+          <div style="flex: 1;">
+            <div class="craft-number">03</div>
+            <h2 class="section-title" style="font-size: 1.75rem; margin-bottom: 1rem;">High-Heat Comal Griddling</h2>
+            <p style="color: var(--color-text-muted); margin-bottom: 1rem;">
+              The filled disc is gently flattened and placed directly onto a seasoned iron comal griddle. Cooked over steady high heat until golden-blistered on the surface while melted cheese oozes from the sides.
+            </p>
+          </div>
+          <div style="flex: 1;">
+            <div class="card card-body" style="background-color: var(--color-light-surface);">
+              <h3 class="card-title" style="font-size: 1.2rem; color: var(--color-primary);">Griddle Science</h3>
+              <p class="card-text">Cooking on a hot comal creates the signature crisp exterior while trapping steam inside to melt the cheese thoroughly without breaking the delicate masa skin.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="craft-step">
+          <div style="flex: 1;">
+            <div class="craft-number">04</div>
+            <h2 class="section-title" style="font-size: 1.75rem; margin-bottom: 1rem;">House Curtido Slaw</h2>
+            <p style="color: var(--color-text-muted); margin-bottom: 1rem;">
+              A pupusa is incomplete without Curtido—lightly fermented shredded cabbage, carrots, sliced onions, Mexican oregano, and mild red pepper steeped in tangy spiced vinegar to cut through the rich cheese.
+            </p>
+          </div>
+          <div style="flex: 1;">
+            <div class="card card-body" style="background-color: var(--color-light-surface);">
+              <h3 class="card-title" style="font-size: 1.2rem; color: var(--color-secondary);">Tangy Balance</h3>
+              <p class="card-text">Curtido provides acidity, crunch, and brightness, creating a harmonious bite alongside the warm, savory pupusa.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="craft-step">
+          <div style="flex: 1;">
+            <div class="craft-number">05</div>
+            <h2 class="section-title" style="font-size: 1.75rem; margin-bottom: 1rem;">Warm Salsa Roja</h2>
+            <p style="color: var(--color-text-muted); margin-bottom: 1rem;">
+              Finished with a ladle of mild, warm tomato salsa cooked with onions, garlic, and sweet bell peppers. Spooned generously over the pupusa right before eating with your hands!
+            </p>
+          </div>
+          <div style="flex: 1;">
+            <div class="card card-body" style="background-color: var(--color-light-surface);">
+              <h3 class="card-title" style="font-size: 1.2rem; color: var(--color-primary);">Traditional Etiquette</h3>
+              <p class="card-text">In El Salvador, pupusas are traditionally eaten by hand! Pinch a piece of pupusa, top with curtido and a splash of salsa roja, and enjoy.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Callout -->
+        <div class="section-alt text-center" style="padding: 3rem; border-radius: var(--radius-lg); margin-top: 3rem;">
+          <h2 class="section-title" style="margin-bottom: 1rem;">Ready to Taste Fresh Pupusas?</h2>
+          <p class="section-intro" style="margin-bottom: 1.5rem;">Join us at 3100 Central Ave or call ahead for quick pickup.</p>
+          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a href="menu.html" class="btn btn-primary">Browse Pupusa Varieties</a>
+            <a href="visit.html" class="btn btn-secondary">Get Location & Directions</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3 class="footer-title">Adamary’s Pupuseria</h3>
+          <p class="footer-text">Authentic Salvadoran restaurant serving handcrafted pupusas, breakfasts, and Latin specialties on Central Ave in Charlotte, NC.</p>
+        </div>
+        <div>
+          <h3 class="footer-title">Explore Pages</h3>
+          <ul class="footer-nav">
+            <li><a href="index.html">Home Page</a></li>
+            <li><a href="menu.html">Full Restaurant Menu</a></li>
+            <li><a href="story.html">Our Salvadoran Story</a></li>
+            <li><a href="pupusas.html">The Art of the Pupusa</a></li>
+            <li><a href="catering.html">Catering & Party Trays</a></li>
+            <li><a href="visit.html">Hours, Address & Map</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-title">Direct Contact</h3>
+          <p class="footer-text">
+            3100 Central Ave<br>
+            Charlotte, NC 28205<br><br>
+            Phone: (704) 666-8986<br>
+            Hours: Daily 9:00 AM – 9:00 PM
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Adamary’s Restaurante y Pupuseria. Unofficial Sales Demo Concept for Portfolio Presentation.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="site.js"></script>
+</body>
+</html>

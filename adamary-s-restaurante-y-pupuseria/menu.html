@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu | Adamary’s Restaurante y Pupuseria Charlotte NC</title>
+  <meta name="description" content="Explore the authentic Salvadoran menu at Adamary’s Restaurante y Pupuseria in Charlotte. Hand-patted pupusas, traditional breakfasts, sopas, carne asada, and horchata.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="site.css">
+  <style>
+    .menu-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
+    .menu-tab-btn {
+      background: var(--color-light-surface);
+      border: 1px solid var(--color-border);
+      color: var(--color-dark);
+      padding: 0.5rem 1.25rem;
+      border-radius: var(--radius-full);
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+    .menu-tab-btn:hover, .menu-tab-btn.active {
+      background-color: var(--color-secondary);
+      color: var(--color-white);
+      border-color: var(--color-secondary);
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div class="demo-banner">
+    <strong>UNOFFICIAL SALES DEMO CONCEPT</strong> — Created strictly for portfolio demonstration. Not Adamary’s production website.
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo" aria-label="Adamary's Home">
+        <div>
+          <span class="brand-title">Adamary’s</span>
+          <span class="brand-subtitle">Restaurante y Pupuseria</span>
+        </div>
+      </a>
+
+      <button class="mobile-nav-toggle" aria-expanded="false" aria-label="Toggle navigation menu">
+        &#9776;
+      </button>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="menu.html" class="nav-link active">Menu</a></li>
+          <li><a href="story.html" class="nav-link">Our Story</a></li>
+          <li><a href="pupusas.html" class="nav-link">Pupusa Craft</a></li>
+          <li><a href="catering.html" class="nav-link">Catering</a></li>
+          <li><a href="visit.html" class="nav-link">Visit Us</a></li>
+          <li><a href="visit.html#order" class="btn-nav">Order Online</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Page Header -->
+    <section class="page-header">
+      <h1 class="page-title">Auténtico Menú Salvadoreño</h1>
+      <p class="page-subtitle">Hand-patted pupusas, traditional breakfasts, simmering caldos, and Latin comfort classics cooked fresh daily in East Charlotte.</p>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="section">
+      <div class="container">
+        <!-- Category Filter Tabs -->
+        <div class="menu-tabs">
+          <button class="menu-tab-btn active" data-menu-tab="all">All Items</button>
+          <button class="menu-tab-btn" data-menu-tab="pupusas">Pupusas</button>
+          <button class="menu-tab-btn" data-menu-tab="breakfast">Desayunos</button>
+          <button class="menu-tab-btn" data-menu-tab="mains">Platillos Fuertes</button>
+          <button class="menu-tab-btn" data-menu-tab="soups">Sopas & Caldos</button>
+          <button class="menu-tab-btn" data-menu-tab="drinks">Bebidas & Postres</button>
+        </div>
+
+        <!-- 1. PUPUSAS -->
+        <div class="menu-category" data-menu-section="pupusas">
+          <div class="menu-category-title">
+            <span>Pupusas Tradicionales</span>
+            <span class="badge badge-primary">Hand-Patted Corn Masa</span>
+          </div>
+          <p style="margin-bottom: 1.5rem; color: var(--color-text-muted);">
+            All pupusas are served hot off the comal with our signature house-made curtido (pickled cabbage slaw) and mild salsa roja de tomate.
+          </p>
+
+          <div class="menu-item-row">
+            <div>
+              <div class="menu-item-name">Pupusa de Loroco con Queso</div>
+              <div class="menu-item-desc">Artisanal corn masa stuffed with melted Salvadoran cheese and tender edible loroco flower buds.</div>
+            </div>
+            <div><span class="badge badge-secondary">House Specialty</span></div>
+          </div>
+
+          <div class="menu-item-row">
+            <div>
+              <div class="menu-item-name">Pupusa Revuelta</div>
+              <div class="menu-item-desc">Classic combination of seasoned pork chicharrón, creamy refried beans, and melted cheese.</div>
+            </div>
+            <div><span class="badge badge-primary">Most Popular</span></div>
+          </div>
+
+          <div class="menu-item-row">
+            <div>
+              <div class="menu-item-name">Pupusa de Chicharrón con Queso</div>
+              <div class="menu-item-desc">Slow-cooked seasoned pork chicharrón blended with rich molten cheese.</div>
+            </div>
+            <div>Traditional</div>
+          </div>
+
+          <div class="menu-item-row">
+            <div>
+              <div class="menu-item-name">Pupusa de Frijol con Queso</div>
+              <div class="menu-item-desc">Refried red Salvadoran beans folded into creamy cheese and grilled until golden brown.</div>
+            </div>
+            <div>Vegetarian</div>
+          </div>
+
+          <div class="menu-item-row">
+            <div>
+              <div class="menu-item-name">Pupusa Solo Queso</div>
+              <div class="menu-item-desc">Generously filled with authentic Salvadoran cheese blend for a classic gooey texture.</div>
+            </div>
+            <div>Vegetarian</div>
+          </div>
+
+          <div class="menu-item-row">
+            <div>
+              <div class="menu-item-name">Pupusa de Jalapeño con Queso</div>
+              <div class="menu-item-desc">Salvadoran cheese infused with diced jalapeño peppers for a subtle kick.</div>
+            </div>
+            <div>Spicy</div>
+          </div>
+        </div>
+
+        <!-- 2. DESAYUNOS -->
+        <div class="menu-category" data-menu-section="breakfast">
+          <div class="menu-category-title">
+            <span>Desayunos Salvadoreños</span>
+            <span class="badge badge-secondary">Served Daily 9 AM - 9 PM</span>
+          </div>
+
+          <div class="menu-item-row">
+            <div>
+              <div class="menu-item-name">Plato Típico Salvadoreño</div>
+              <div class="menu-item-desc">Two eggs made to order, refried Salvadoran beans, sweet fried plantains, rich Salvadoran crema, queso fresco, and handmade tortillas.</div>
+            </div>
+            <div><span class="badge badge-primary">Chef Recommended</span></div>
+          </div>
+
+          <div class="menu-item-row">
+            <div>
+              <div class="menu-item-name">Desayuno con Plátano y Crema</div>
+              <div class="menu-item-desc">Golden fried sweet plantains served with a side of refried red beans and traditional rich cultured crema.</div>
+            </div>
+            <div>Traditional</div>
+          </div>
+
+          <div class="menu-item-row">
+            <div>
+              <div class="menu-item-name">Huevos con Chorizo</div>
+              <div class="menu-item-desc">Scrambled eggs mixed with savory Latin sausage, served with beans, plantains, and warm tortillas.</div>
+            </div>
+            <div>Hearty</div>
+          </div>
+        </div>
+
+        <!-- 3. PLATILLOS FUERTES -->
+        <div class="menu-category" data-menu-section="mains">
+          <div class="menu-category-title">
+            <span>Platillos Fuertes & Entrees</span>
+          </div>
+
+          <div class="menu-item-row">
+            <div>
+              <div class="menu-item-name">Plato Teresita</div>
+              <div class="menu-item-desc">Combination platter featuring 1 pupusa of choice, 1 chicken tamal, fried plantains, beans, crema, and queso fresco.</div>
+            </div>
+            <div><span class="badge badge-primary">Sampler Favorite</span></div>
+          </div>
+
+          <div class="menu-item-row">
+            <div>
+              <div class="menu-item-name">Carne Asada a la Salvadoreña</div>
+              <div class="menu-item-desc">Grilled marinated steak served with rice, refried beans, avocado slice, fresh salad, and handmade corn tortillas.</div>
+            </div>
+            <div>Grilled</div>
+          </div>
+
+          <div class="menu-item-row">
+            <div>
+              <div class="menu-item-name">Mojarra Frita Whole Tilapia</div>
+              <div class="menu-item-desc">Whole fried tilapia seasoned with Latin spices, served with seasoned rice, house salad, and fresh lime wedges.</div>
+            </div>
+            <div>Seafood</div>
+          </div>
+
+          <div class="menu-item-row">
+            <div>
+              <div class="menu-item-name">Pollo Guisado</div>
+              <div class="menu-item-desc">Tender chicken slow-braised in a savory tomato and red pepper sauce with potatoes and carrots, served over rice.</div>
+            </div>
+            <div>Comfort Food</div>
+          </div>
+
+          <div class="menu-item-row">
+            <div>
+              <div class="menu-item-name">Tacos & Tortas Tradicionales</div>
+              <div class="menu-item-desc">Choice of steak, grilled chicken, or carnitas served on fresh tortillas or toasted bolillo bread with cilantro, onions, and salsa.</div>
+            </div>
+            <div>Antojitos</div>
+          </div>
+        </div>
+
+        <!-- 4. SOPAS & CALDOS -->
+        <div class="menu-category" data-menu-section="soups">
+          <div class="menu-category-title">
+            <span>Sopas & Caldos</span>
+          </div>
+
+          <div class="menu-item-row">
+            <div>
+              <div class="menu-item-name">Sopa de Mariscos</div>
+              <div class="menu-item-desc">Rich seafood soup with shrimp, tilapia fillet, crab, and calamari in a aromatic herb broth.</div>
+            </div>
+            <div><span class="badge badge-primary">Seafood Stew</span></div>
+          </div>
+
+          <div class="menu-item-row">
+            <div>
+              <div class="menu-item-name">Sopa de Res</div>
+              <div class="menu-item-desc">Traditional Salvadoran beef soup simmered with corn on the cob, yuca, cabbage, and zucchini, served with lime and warm tortillas.</div>
+            </div>
+            <div>Traditional Broth</div>
+          </div>
+        </div>
+
+        <!-- 5. BEBIDAS & POSTRES -->
+        <div class="menu-category" data-menu-section="drinks">
+          <div class="menu-category-title">
+            <span>Bebidas Tradicionales & Postres</span>
+          </div>
+
+          <div class="menu-item-row">
+            <div>
+              <div class="menu-item-name">Horchata de Morro</div>
+              <div class="menu-item-desc">Authentic Salvadoran horchata ground from morro seeds, rice, cinnamon, and sesame seeds for a rich roasted nut flavor.</div>
+            </div>
+            <div><span class="badge badge-secondary">Salvadoran Classic</span></div>
+          </div>
+
+          <div class="menu-item-row">
+            <div>
+              <div class="menu-item-name">Ensalada de Frutas Drink</div>
+              <div class="menu-item-desc">Refreshing fruit drink packed with finely diced fresh pineapple, apple, cashew fruit, and mango.</div>
+            </div>
+            <div>Fresh Fruit</div>
+          </div>
+
+          <div class="menu-item-row">
+            <div>
+              <div class="menu-item-name">Tamales de Pollo o Pisques</div>
+              <div class="menu-item-desc">Steamed banana-leaf wrapped tamales filled with seasoned chicken or refried beans and loroco.</div>
+            </div>
+            <div>Antojito</div>
+          </div>
+
+          <div class="menu-item-row">
+            <div>
+              <div class="menu-item-name">Plátanos Fritos con Empanadas de Leche</div>
+              <div class="menu-item-desc">Fried plantain turn-overs filled with warm custard cream, dusted lightly with sugar.</div>
+            </div>
+            <div>Dessert</div>
+          </div>
+        </div>
+
+        <!-- Callout Box -->
+        <div class="fact-box" style="margin-top: 3rem;">
+          <div class="fact-box-title">Looking to Order for Pickup or Delivery?</div>
+          <p style="font-size: 0.95rem; color: var(--color-text-muted); margin-bottom: 1rem;">
+            Order directly from Adamary’s Central Avenue kitchen or call us to place your pick-up order.
+          </p>
+          <a href="visit.html#order" class="btn btn-primary">Start Order Path</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3 class="footer-title">Adamary’s Pupuseria</h3>
+          <p class="footer-text">Authentic Salvadoran restaurant serving handcrafted pupusas, breakfasts, and Latin specialties on Central Ave in Charlotte, NC.</p>
+        </div>
+        <div>
+          <h3 class="footer-title">Explore Pages</h3>
+          <ul class="footer-nav">
+            <li><a href="index.html">Home Page</a></li>
+            <li><a href="menu.html">Full Restaurant Menu</a></li>
+            <li><a href="story.html">Our Salvadoran Story</a></li>
+            <li><a href="pupusas.html">The Art of the Pupusa</a></li>
+            <li><a href="catering.html">Catering & Party Trays</a></li>
+            <li><a href="visit.html">Hours, Address & Map</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-title">Direct Contact</h3>
+          <p class="footer-text">
+            3100 Central Ave<br>
+            Charlotte, NC 28205<br><br>
+            Phone: (704) 666-8986<br>
+            Hours: Daily 9:00 AM – 9:00 PM
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Adamary’s Restaurante y Pupuseria. Unofficial Sales Demo Concept for Portfolio Presentation.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="site.js"></script>
+</body>
+</html>
