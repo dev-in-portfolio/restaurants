@@ -21,14 +21,22 @@ jobs:
           ref: main
           fetch-depth: 0
 
-      - name: Remove Showcase demos from active Gemini queue
+      - name: Reconcile audited queue against Showcase
         run: node scripts/sync-showcase-exclusions.mjs
 
-      - name: Commit cleaned queue
+      - name: Commit cleaned queue and guardrails
         run: |
           git config user.name 'restaurant-demo-bot'
           git config user.email 'actions@users.noreply.github.com'
-          git add queue/a-yes-1.js queue/a-yes-2.js queue/b-yes.js queue/b-conditional.js queue/showcase-exclusions.json queue/meta.js
+          git add \
+            queue/audit-ab-master.json \
+            queue/a-yes-1.js \
+            queue/a-yes-2.js \
+            queue/b-yes.js \
+            queue/b-conditional.js \
+            queue/showcase-exclusions.json \
+            queue/meta.js \
+            README.md STATUS.md PORTAL_AUDIT.md index.html portal.js
           git diff --cached --quiet && exit 0
-          git commit -m 'chore: exclude existing Showcase demos from Gemini queue [skip ci]'
+          git commit -m 'chore: reconcile Gemini queue against Restaurant Showcase [skip ci]'
           git push origin main
