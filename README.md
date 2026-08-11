@@ -2,303 +2,431 @@
 
 Repository: `dev-in-portfolio/restaurants`
 
-This repository contains **unofficial, portfolio-only premium concept rebuilds** for qualified Charlotte-area restaurant prospects. These are sales demonstrations, not the restaurants’ production websites, and must never imply that they are official or already commissioned.
+This repository contains **unofficial, portfolio-only premium concept rebuilds** for qualified Charlotte-area restaurant prospects. These are sales demonstrations, not production websites, and must never imply that they are official or already commissioned.
 
-This README is the complete cold-start brief for Gemini or any other coding agent. **Do not ask the user follow-up questions.** Research what is needed, make sound design decisions from verified public information, build the demo, test it, fix it, register it, and commit it in one run.
+This README is the operating contract for Gemini or any other coding agent.
 
-## Sales strategy — read this first
+## Mandatory read order
 
-The purpose of a demo is to sell the **core website** and create appetite for additional paid DSC enhancements.
+Before selecting or building anything, read these files in full:
 
-A demo must look premium because of **art direction, typography, layout, responsive execution, factual clarity, storytelling, and overall UX quality**. It must **not** become premium by giving away separately sellable add-on packs.
+1. `README.md`
+2. `ADD_ON_BOUNDARY.md`
+3. `BUILD_QUALITY_GATE.md`
+4. `STATUS.md`
+5. `PORTAL_AUDIT.md`
 
-Before doing any design or implementation work, read `ADD_ON_BOUNDARY.md` in full.
+`ADD_ON_BOUNDARY.md` protects separately sellable DSC scope.
 
-The governing rule is:
+`BUILD_QUALITY_GATE.md` controls page architecture, factual provenance, anti-template design quality, machine validation, and browser QA.
+
+If older historical material conflicts with those files, the current README + boundary + quality gate control.
+
+## Governing sales rule
 
 > **Premium core demo, preserved upsell surface.**
->
-> Build a site the restaurant wants to own, while deliberately leaving separately sellable DSC enhancements available for the proposal and production phase.
 
-The current DSC add-on catalog includes Brand Finish, Menu Experience, Photo Story, Local Discovery, Trust & Reputation, Order & Reserve, Catering & Private Events, Guest Engagement, Menu Collections, Signature Interactive Experience, Digital Menu Concierge, and Multi-Location Growth. Those are **not automatic demo requirements**.
+The demo should make the restaurant want the core website because the **design itself is excellent**.
 
-If the audit recommends one of those capabilities, treat that recommendation as a **sales opportunity**, not a to-do list. Demonstrate the underlying problem and a strong core solution without fully implementing the paid enhancement unless the user explicitly orders that add-on to be demonstrated.
+Premium comes from:
+
+- restaurant-specific art direction;
+- typography;
+- composition;
+- information hierarchy;
+- responsive execution;
+- storytelling supported by evidence;
+- menu presentation;
+- polish;
+- usability;
+- mobile quality.
+
+Premium does **not** come from giving away separately sellable DSC add-ons.
 
 ## Default command behavior
 
-When the user says anything equivalent to **“continue,” “build the next demo,” or “do the next one,”** execute **exactly one** full premium demo from start to finish unless the user explicitly requests a larger batch.
+When the user says anything equivalent to **“continue,” “build the next demo,” or “do the next one,”** complete exactly **one** eligible premium-core demo end-to-end unless the user explicitly requests a batch.
 
-Do not stop midway to ask about colors, page choices, imagery, copy direction, menu structure, or implementation details. Those are part of the job.
+Do not stop to ask about colors, page choices, imagery, layout, or ordinary implementation decisions.
 
-If the selected restaurant cannot be confidently verified as active/current, do not invent around the uncertainty. Add a minimal `portal-overrides.js` patch with `portalSection: "later"` and a concise recheck note, then select the next eligible restaurant in the same run so the invocation still produces one completed premium demo.
+Do not stop after research or planning.
 
-## Canonical prospect queue — source of truth
+If the selected restaurant cannot be confidently verified as active/current, add a minimal `portalSection: "later"` override with a concise recheck note and continue to the next eligible restaurant so the run still produces one completed demo.
 
-The active build queue is the final reconciled A/B set from the completed 645-record Rada-depth audit **minus every restaurant that already has a demo in `dev-in-portfolio/restaurant-showcase`, including Showcase HOLD demos**.
+## Start current
 
-At the current reconciliation checkpoint:
+Work from current `main`.
 
-- **312 active net-new prospects total**
-- **218 A-grade YES**
-- **36 B-grade YES**
-- **58 B-grade CONDITIONAL**
-- **95 audited A/B prospects excluded because a Showcase demo already exists**
-- **0 HOLD audit records**
-- **0 NO audit records**
-- **0 merged aliases as separate leads**
-
-These counts may change as Showcase changes. `queue/meta.js` after a fresh sync is authoritative.
-
-The queue files are:
-
-- `queue/a-yes-1.js`
-- `queue/a-yes-2.js`
-- `queue/b-yes.js`
-- `queue/b-conditional.js`
-- `queue/meta.js` — generated net-new counts
-- `queue/showcase-exclusions.json` — exact restaurants removed because Showcase demos already exist
-- `queue/audit-ab-master.json` — immutable 407-row audited A/B source snapshot
-
-Each compact row is:
-
-```text
-[name, slug, grade, disposition, score, auditBatch]
-```
-
-The 407-row audit master is preserved in `queue/audit-ab-master.json`. The four active queue files are generated net-new build data after Showcase subtraction. **Do not manually re-add Showcase restaurants.** Build status belongs in `portal-overrides.js`.
-
-The old files `portal-leads-message2-original.js`, `portal-leads-message3.js`, and `portal-concepts-source.html` are legacy historical artifacts only. They are no longer loaded by the portal and are **not** valid prospect sources.
-
-Existing restaurant folders are also **not** proof that a restaurant is currently eligible or complete. They may be old prototypes, prior five-page builds, or historical work. The canonical queue decides eligibility; the current six-page QA standard decides completion.
-
-## Showcase exclusion is mandatory
-
-A restaurant that already has a demo in `dev-in-portfolio/restaurant-showcase` is **not a new-demo candidate**, even if that Showcase record is currently in HOLD. Do not spend a Gemini run rebuilding it unless the user explicitly orders a redo.
-
-Before selecting the next restaurant, run:
+Before selection:
 
 ```bash
 node scripts/sync-showcase-exclusions.mjs
 ```
 
-The sync reads both `restaurant-showcase/data/restaurants.json` and `restaurant-showcase/data/hold-restaurants.json`, rebuilds the net-new queue from the immutable 407-row audit source, and writes `queue/showcase-exclusions.json`. If Showcase changed, include the resulting queue housekeeping in the same commit.
+Use the generated queue after that sync. Do not rely on remembered counts.
 
-Never bypass this rule because an old folder exists here, because a Showcase demo is on HOLD, or because the audit grade is A. **Existing Showcase demo = hard exclusion from automatic new-demo rotation.**
+## Canonical prospect queue
 
-## Build-selection order
+The active build queue is:
 
-Select the next `lead` with no verified premium override in this order:
+> final reconciled A/B audit set **minus every restaurant already represented in `dev-in-portfolio/restaurant-showcase`, including Showcase HOLD demos**.
 
-1. A-grade `YES`
-2. B-grade `YES`
-3. B-grade `CONDITIONAL`
+At the current checkpoint the queue is:
 
-Within each tier, sort alphabetically while ignoring leading `The`, `A`, and `An`.
+- 312 active net-new prospects;
+- 218 A / YES;
+- 36 B / YES;
+- 58 B / CONDITIONAL;
+- 95 audited A/B prospects excluded because a Showcase demo already exists.
 
-Skip records with an override that is already `qa`, `premium`, `promoted`, or `promoted_secondary`. Skip `portalSection: "later"` records until explicitly re-verified.
+These counts can change. `queue/meta.js` after the fresh sync is authoritative.
 
-Do not lower an audited grade, promote a B to A, or change the final disposition from the queue. Fresh research may cause a recheck/later decision, but it does not rewrite the historical audit.
+Canonical data:
 
-## Required research before writing code
+- `queue/a-yes-1.js`
+- `queue/a-yes-2.js`
+- `queue/b-yes.js`
+- `queue/b-conditional.js`
+- `queue/meta.js`
+- `queue/showcase-exclusions.json`
+- `queue/audit-ab-master.json` — immutable 407-row pre-Showcase A/B audit snapshot.
 
-Research the selected restaurant using **current public sources**, prioritizing the restaurant’s current owned/official sources. Verify enough to build accurately without another prompt:
+Do not select from old restaurant folders, retired lead scripts, or `portal-concepts-source.html`.
 
-- current operating identity and whether it is open;
-- canonical domain and any competing/legacy domains;
-- current address/location structure and public hours;
-- current menu categories and service model;
-- ordering and reservation paths;
-- founder, chef, family, neighborhood, or origin story when verifiable;
-- events, private dining, catering, bar/taproom/bakery/service features where relevant;
-- the website/customer-journey weakness that makes the concept worth demonstrating;
-- visual cues that genuinely fit this restaurant rather than a generic cuisine stereotype;
-- **which DSC add-ons are natural future upsells for this restaurant and therefore must be preserved rather than bundled into the demo.**
+Existing Showcase demo = hard exclusion from automatic new-demo rotation unless the user explicitly requests a redo.
 
-Do not assume the old demo folder, old portal card, or old website data is current.
+## Selection order
 
-If a fact is uncertain, **omit it instead of asking the user**. If exact menu prices, team names, awards, policies, parking details, or hours cannot be verified, do not fabricate them.
+Choose the next eligible `lead` in this order:
 
-## Mandatory evidence file
+1. A / YES
+2. B / YES
+3. B / CONDITIONAL
 
-Every new premium demo folder must contain `evidence.md` before the build is considered complete.
+Within the highest available tier, sort alphabetically while ignoring leading `The`, `A`, and `An`.
 
-`evidence.md` must record:
+Skip:
 
-1. restaurant name and queue grade/disposition/score;
-2. date of verification;
-3. current sources used;
-4. verified operating facts used in the demo;
-5. the specific website/customer-journey problem the demo addresses;
-6. the chosen art direction and why it fits this restaurant;
-7. any facts deliberately omitted because they could not be verified;
-8. **Add-On Preservation:** relevant DSC add-on opportunities, what was intentionally not implemented, and confirmation that the demo did not accidentally bundle a separately sellable add-on;
-9. final desktop/mobile/accessibility QA results.
+- Showcase exclusions;
+- HOLD;
+- NO;
+- merged aliases;
+- closed/inactive/out-of-scope businesses;
+- legitimate `qa`, `premium`, `promoted`, or `promoted_secondary` overrides;
+- `portalSection: "later"` records.
 
-This file exists so later agents do not need another conversation to understand why the demo looks and works the way it does, and so the salesperson has a ready-made upsell map.
+Do not rewrite historical audit grade, disposition, score, or canonical identity to make a restaurant eligible.
 
-## Required deliverable — six substantive pages
+## Research before code
 
-A premium demo lives in its canonical `<slug>/` folder and contains **at least six separate linked HTML pages** with genuinely different jobs:
+Use current public sources, prioritizing owned/official sources.
 
-1. `index.html` — premium, conversion-aware home page.
-2. `menu.html` — clean, useful, readable menu presentation based on verified information; do not automatically add advanced search/filter/concierge behavior.
-3. `story.html` or `about.html` — verified restaurant identity, story, team, or concept.
-4. **Restaurant-specific experience page** — examples: drinks, brunch, bakery, taproom, chef story, listening room, neighborhood, wine program, coffee program, game-day guide, etc. This is primarily a premium editorial/presentation page unless a paid add-on is explicitly requested.
-5. **Revenue/conversion page** — examples: private dining, catering, groups, events, reservations guidance, ordering guidance, cakes/custom orders, wholesale, or venue booking. This page should demonstrate the opportunity and provide a straightforward verified CTA; it should not automatically implement a paid planner, configurator, funnel, booking system, or other add-on.
-6. `visit.html` or `contact.html` — verified practical information and a clear next action.
+Verify enough to build accurately:
 
-A long homepage with anchors does not count as six pages. Tabs, modals, repeated templates, or duplicate layouts do not count as separate substantive pages.
+- current operating identity;
+- canonical domain and competing/legacy domains;
+- address/location structure;
+- public hours;
+- current phone/contact information;
+- menu categories and service model;
+- current ordering/reservation paths;
+- founder/chef/family/history only when directly verifiable;
+- catering/private dining/events only when directly verifiable;
+- the website/customer-journey weakness that makes the demo worth showing;
+- real restaurant-specific visual/content anchors;
+- likely DSC add-on opportunities that should remain sellable.
 
-## Premium means premium
+If a fact is uncertain, omit it.
 
-The result should look like a restaurant paid a serious studio to rethink its owned digital experience.
+General cuisine knowledge may be used as clearly framed editorial context. It may **not** be rewritten as a restaurant-specific claim without a source.
 
-### The design must be restaurant-specific
+## Evidence file
 
-Create a bespoke visual system from the verified concept:
+Every new qualifying build must contain `evidence.md`.
+
+At minimum it must include:
+
+### Prospect Summary
+
+- canonical restaurant;
+- grade/disposition/score;
+- audit batch;
+- verification date.
+
+### Verification Sources
+
+Current source URLs actually used.
+
+### Original Audit Weakness
+
+The specific customer-journey/web problem being demonstrated.
+
+### Creative Brief
+
+Required by `BUILD_QUALITY_GATE.md`:
+
+- at least three verified restaurant-specific visual/content anchors;
+- three concrete **core design moves** that create restaurant-specific visual authorship without using paid add-on functionality.
+
+### Claim Ledger
+
+For meaningful restaurant-specific claims used in the pages, record:
+
+- claim;
+- page;
+- source URL.
+
+Claims such as house-made, imported, founded to, family-owned, hand-patted, most popular, chef recommended, catering packages, guest capacities, parking/accessibility, recurring events, and preparation methods require direct support.
+
+### Add-On Preservation
+
+Record:
+
+- relevant DSC add-on opportunities;
+- what was intentionally not implemented;
+- what remains available for the proposal/production phase.
+
+### QA
+
+Record actual QA performed. Do not claim checks that were not performed.
+
+## Page architecture — evidence-led, not quota-led
+
+The old fixed six-page quota is retired when the evidence does not support six genuinely different pages.
+
+An automatic premium-core demo requires **at least five substantive linked HTML pages**.
+
+Six is preferred only when current verified material genuinely supports a sixth distinct page.
+
+Normal core coverage includes:
+
+1. `index.html` — premium homepage;
+2. `menu.html` — clear verified menu presentation;
+3. `visit.html` or `contact.html` — verified practical information and current CTA path;
+4. one identity/story/concept page supported by restaurant-specific evidence;
+5. one restaurant-specific editorial or conversion page supported by an actually verified service, program, product focus, or customer need.
+
+A sixth page is welcome when it has a real independent job and enough evidence.
+
+Do **not** manufacture:
+
+- a founder/history story because a story page sounds premium;
+- catering/private-event inventory because a conversion page is expected;
+- a generic cuisine-education page written as if it documents the restaurant's actual process;
+- filler pages merely to hit a number.
+
+If verified story material is thin, use a better-supported concept/editorial page or omit that page slot.
+
+## Premium core design requirement
+
+The result should look like a serious studio rethought the restaurant's owned web presence.
+
+Premium must be visible **before** considering functionality.
+
+Create restaurant-specific:
 
 - art direction;
 - typography hierarchy;
-- color system;
+- color logic;
 - spacing/rhythm;
-- component language;
+- composition;
 - imagery treatment;
-- motion behavior;
 - menu presentation;
-- conversion journey.
+- page hierarchy;
+- motion behavior where useful.
 
-Do not clone another restaurant folder and swap the name, colors, and copy. Existing builds may be inspected for QA techniques, but **not used as a shell**.
+Do not clone another restaurant folder and swap copy/colors.
 
-Do not use lazy cuisine stereotypes when the actual restaurant gives you better material. A neighborhood dive bar, chef-driven tasting room, bakery, brewery, family diner, cocktail lounge, ramen shop, coffee roaster, and Dominican restaurant should not emerge from the same visual composition.
+Do not default to cuisine stereotypes.
 
-### The documented weakness must visibly improve
+Do not let the entire site become:
 
-The concept must solve the reason this restaurant qualified, but it must do so at the **core website level** unless an add-on was explicitly requested.
+> dark-overlay hero → centered headline → pill buttons → three cards → alternating two-column sections → generic footer
+
+That pattern may appear in part but cannot be the whole visual language.
+
+At least two substantive pages must use meaningfully different composition families.
+
+Before QA, perform the `BUILD_QUALITY_GATE.md` swap test:
+
+> If the restaurant name, food nouns, colors, and images were replaced, would this still look like the same site for another restaurant?
+
+If yes, redesign before QA.
+
+## Solve the audit weakness at core level
+
+Use the audit to understand **why the restaurant is a prospect**.
+
+Do not use the audit's Recommended Website Solution or Missed Opportunities columns as a feature checklist.
 
 Examples:
 
-- conflicting hours/location data → present one clear, authoritative verified source in the concept;
-- Facebook/Toast/directory dependency → show what a real owned website can communicate;
-- multiple live domains → demonstrate one clean canonical information architecture;
-- unreadable menu → build a strong readable responsive menu page, while preserving advanced Menu Experience/Concierge features as upsells;
-- stale events → create a polished events/private-dining presentation, while preserving automated event/engagement machinery as an upsell;
-- weak story → improve the core story page, while preserving the separately sellable Photo Story/Brand Finish depth;
-- weak catering/private dining → build a persuasive static conversion page with a normal CTA, while preserving planners, calculators, advanced forms and workflows for the paid add-on;
-- scattered ordering/reservations → route clearly to verified existing providers, while preserving enhanced Order & Reserve work for the paid add-on.
+- conflicting hours → show one clear verified hours/location system;
+- social/ordering-platform dependency → show the value of a real owned website;
+- multiple domains → demonstrate one clean canonical information architecture;
+- unreadable menu → build a strong readable menu while preserving Menu Experience/Concierge upsells;
+- weak catering/private dining → present only verified service information and a strong current CTA while preserving advanced catering/event functionality;
+- fragmented ordering/reservations → route clearly to verified existing providers while preserving Order & Reserve enhancements.
 
-Do not merely make the homepage prettier, but also **do not use the audit's Recommended Website Solution column as a feature checklist**. Audits frequently identify add-on opportunities on purpose.
+## Add-on ceiling
 
-## Add-on ceiling — mandatory
+`ADD_ON_BOUNDARY.md` is authoritative.
 
-`ADD_ON_BOUNDARY.md` is authoritative for the detailed boundary.
+Do not automatically build separately sellable DSC functionality such as:
 
-Automatic demos must **not** fully implement the separately sellable DSC packs. In particular, unless the user explicitly requests the add-on, do not build:
+- planners, builders, calculators, configurators, quizzes, recommendation engines;
+- Signature Interactive Experiences;
+- Digital Menu Concierge;
+- advanced menu search/filter/dietary/pairing systems;
+- custom ordering/reservation/waitlist/payment systems;
+- advanced catering/private-event tools;
+- loyalty/rewards/accounts;
+- newsletter/SMS/CRM/marketing automation;
+- reputation automation;
+- advanced Photo Story, Local Discovery, Menu Collections, or Multi-Location Growth implementations.
 
-- custom calculators, planners, builders, configurators, quizzes, recommendation engines, or guided decision tools;
-- mezcal/beer/wine/coffee flight builders or other Signature Interactive Experiences;
-- Digital Menu Concierge behavior;
-- advanced menu search/filter/dietary/pairing/recommendation systems;
-- custom ordering, reservation, waitlist, booking, or payment functionality;
-- advanced catering/private-event planners, package configurators, quote calculators, or lead workflows;
-- loyalty, rewards, customer accounts, points, memberships, or wallets;
-- newsletter/SMS capture systems, marketing automation, CRM-style capture, or automated follow-up;
-- review/reputation automation or advanced trust/reputation modules;
-- advanced Photo Story implementations;
-- advanced Local Discovery implementations;
-- advanced Menu Collections implementations;
-- enhanced multi-location systems covered by Multi-Location Growth;
-- any other feature whose primary value is a separately sellable enhancement rather than the core website presentation.
+### No automatic-demo forms
 
-When in doubt: **preserve the feature as an upsell instead of giving it away in the demo.**
+Automatic prospect demos do not include inquiry, catering, reservation, newsletter, contact, or lead-capture forms, even when they are non-submitting demo forms.
 
-## Baseline interaction rule
+Use verified current phone/email/order/reservation links instead.
 
-A premium demo **does not require two custom interactions** and does not require a custom conversion interaction.
+Judge the boundary by **commercial capability**, not technical complexity.
 
-Use ordinary website interactions only where they improve presentation and usability, for example:
+If something feels like a feature DSC could charge extra for, preserve it as an upsell.
+
+## No invented conversion inventory
+
+A verified service can be presented beautifully.
+
+Do not invent its commercial details.
+
+Never fabricate:
+
+- package names;
+- tray sizes;
+- serving counts;
+- guest capacities;
+- minimum orders;
+- package contents;
+- event availability;
+- lead times;
+- delivery zones;
+- booking rules.
+
+## Allowed baseline interactions
+
+Ordinary core UI is fine:
 
 - mobile navigation;
-- accordions/disclosure panels;
+- accordions;
 - ordinary content tabs;
-- simple image galleries;
-- subtle scroll/reveal motion;
-- standard anchor navigation;
-- straightforward CTA buttons to verified existing services.
+- simple galleries;
+- subtle motion;
+- anchor navigation;
+- normal links/buttons to verified current services.
 
-Do not invent a special interactive feature merely to prove the site is premium.
-
-If an interaction begins to look like something DSC could reasonably charge extra for, stop and preserve it as an add-on opportunity.
+A premium demo does not need custom interactive features.
 
 ## Demo safety and factual integrity
 
-- Do not invent menu items, prices, people, awards, dates, locations, opening hours, policies, testimonials, or availability.
-- Do not scrape or reuse protected restaurant photography, logos, illustrations, or distinctive brand assets without permission.
-- Use original CSS/graphic treatment, appropriately licensed generic imagery, or abstract visual systems when restaurant-owned media cannot be used.
-- Do not create a real payment, reservation, order, email, analytics, or form-submission integration.
-- Any form in a demo must be clearly non-submitting/demo-safe and must never claim the restaurant received the request.
-- Keep API keys, secrets, scraped private data, and customer information out of the repo.
-- Every page should make the unofficial concept nature reasonably clear without ruining the presentation.
+- No invented menu items, prices, people, awards, dates, locations, hours, policies, testimonials, events, or availability.
+- No unsupported restaurant-specific preparation/sourcing claims.
+- Do not reuse protected restaurant photography/logos/illustrations without permission.
+- Use original visual treatment, appropriately licensed/generic imagery, or abstract systems when needed.
+- Do not create real payments, orders, reservations, email delivery, analytics, or data collection.
+- Keep secrets and private data out of the repo.
+- Keep the unofficial concept nature reasonably clear without ruining the presentation.
 
 ## Technical baseline
 
-Prefer a static, dependency-light site. Do not add application architecture merely to create an upsell feature inside the demo.
+Prefer a dependency-light static site.
 
-Every new folder should normally contain:
+Typical folder:
 
 ```text
 <slug>/
   index.html
   menu.html
-  story.html or about.html
-  <experience-page>.html
-  <conversion-page>.html
+  <identity-or-concept-page>.html
+  <restaurant-specific-page>.html
   visit.html or contact.html
+  [optional sixth substantive page].html
   site.css
   site.js
   evidence.md
+  qa-report.json
 ```
 
-Use semantic HTML, responsive CSS, progressive enhancement, and plain JavaScript unless there is a real reason not to.
+Use semantic HTML, responsive CSS, progressive enhancement, and plain JavaScript unless there is a real need for something else.
 
-Required accessibility baseline:
+Accessibility baseline:
 
 - keyboard-operable controls;
 - visible focus states;
 - meaningful labels;
-- usable alt text where imagery is meaningful;
+- alt text for meaningful imagery;
 - sufficient contrast;
 - logical heading order;
 - sensible touch targets;
 - `prefers-reduced-motion` support;
-- no interaction that requires hover alone.
+- no hover-only interaction.
 
-## One-run QA loop
+## Machine QA is mandatory
 
-Do not finish the invocation with known defects. **Fix them during the same run.**
+Before `qa` or `premium`, run:
 
-Before setting `premium`:
+```bash
+node scripts/validate-demo.mjs <restaurant-slug>
+```
 
-1. confirm six substantive pages exist;
-2. verify every page is linked through navigation and can return to the home page;
-3. confirm no lorem ipsum, Wix instructions, raw shortcodes, fake `555` numbers, `email@example.com`, placeholder headings, or template residue remains;
-4. verify every restaurant fact used in the pages;
-5. test all local links and assets;
-6. test all baseline interactions that actually exist;
-7. confirm demo forms cannot submit real requests or falsely report success;
-8. render every page at desktop and mobile widths;
-9. fix horizontal overflow, clipping, broken images, dead links, console errors, unreadable text, bad touch targets, and layout collapse;
-10. keyboard-test interactive controls and visible focus;
-11. verify reduced-motion behavior;
-12. **perform an Add-On Preservation review and remove/downgrade any feature that accidentally implements a separately sellable DSC add-on;**
-13. document the result and the preserved upsell opportunities in `evidence.md`.
+The validator writes `<slug>/qa-report.json`.
 
-Code inspection is not browser QA. If browser rendering is available, use it. If the environment truly cannot browser-render, status may reach `qa` but **not `premium`**.
+A non-zero exit code means the build is **not `qa` and not `premium`**.
+
+Fix the failures and rerun.
+
+The validator checks objective defects including:
+
+- minimum page/core-file structure;
+- CSS brace balance;
+- JavaScript parse errors;
+- broken local links/assets;
+- broken fragment/deep links;
+- duplicate IDs;
+- missing image alt attributes;
+- placeholder/test residue;
+- prohibited automatic-demo forms;
+- missing home-return links;
+- missing required evidence sections.
+
+`evidence.md` may not override failed machine validation.
+
+## Browser QA
+
+Machine QA does not replace browser QA.
+
+If browser rendering is available, inspect the rendered result.
+
+At minimum:
+
+- homepage desktop + mobile;
+- menu desktop + mobile;
+- most restaurant-specific page desktop + mobile;
+- navigation on every page;
+- console output;
+- overflow/clipping;
+- keyboard/focus behavior.
+
+Do not write “zero console errors,” “tested at 360px,” or similar statements unless those checks actually happened.
+
+If browser rendering is unavailable, say so plainly. The highest honest status is `qa` after the machine validator passes.
 
 ## Portal/status workflow
 
-The portal renders only the canonical audited queue plus `portal-overrides.js`.
+The portal renders the canonical audited net-new queue plus `portal-overrides.js`.
 
-Base queue records always begin as `lead`. After the demo is created, add a **minimal patch** to `portal-overrides.js`; do not duplicate the entire queue record.
+Use minimal build-status patches only.
 
 Examples:
 
@@ -310,55 +438,58 @@ Examples:
 { name: "Restaurant Name", status: "premium", href: "restaurant-slug/index.html" }
 ```
 
-The renderer preserves the audited grade/disposition/score from the queue and applies the override only as build status/presentation metadata.
-
 Allowed statuses:
 
-- `lead` — audited and eligible; no current verified six-page build.
-- `incomplete` — a folder/build exists but the current six-page standard is not met.
-- `qa` — six substantive pages exist and implementation QA is complete enough for browser QA, but premium browser verification is not finished.
-- `premium` — six pages, premium core design, factual validation, desktop/mobile browser QA, accessibility baseline, evidence, **and Add-On Preservation review** all pass.
-- `promoted` / `promoted_secondary` — only when explicitly approved for showcase placement.
-- `portalSection: "later"` — fresh verification shows the prospect should temporarily leave automatic build rotation.
+- `lead` — eligible, no current qualifying build;
+- `incomplete` — build exists but fails current structure/facts/design/validation;
+- `qa` — machine validator passes and implementation is ready for/has partial browser QA;
+- `premium` — machine validator passes, provenance is sound, anti-template design gate passes, add-ons remain preserved, and full desktop/mobile browser QA passes;
+- `promoted` / `promoted_secondary` — only when explicitly approved for Showcase;
+- `portalSection: "later"` — fresh verification shows the prospect needs recheck before automatic selection.
 
-Never mark a record premium because a folder already exists or because an old build was previously called premium under a different standard.
+Never mark premium because a folder merely exists or because an old build used that label under an older standard.
 
 ## Existing folders
 
-Old restaurant folders are legacy working material. For a selected canonical prospect:
+For a selected eligible prospect with an old folder:
 
-- inspect its existing folder if one exists;
-- retain any accurate material worth keeping;
-- **rebuild or replace whatever is necessary** to satisfy this README and `ADD_ON_BOUNDARY.md`;
-- remove or simplify old premium-interaction features if they would now give away a sellable add-on;
-- do not preserve a weak five-page structure merely because it already exists;
-- do not let an old folder determine the new art direction.
+- inspect it;
+- retain accurate material worth keeping;
+- rebuild or replace what is necessary to meet the current README, `ADD_ON_BOUNDARY.md`, and `BUILD_QUALITY_GATE.md`;
+- do not let the old folder dictate art direction;
+- remove old add-on functionality if it would now give away sellable scope.
 
-Folders for restaurants outside the current net-new queue are historical only and must not be selected automatically. Showcase restaurants remain excluded even if a similarly named folder exists here.
+Folders outside the current net-new queue are historical only and are never selected automatically.
 
 ## Collaboration and commits
 
-- Re-fetch latest `main` before touching shared files.
+- Re-fetch latest `main` before shared-file edits.
 - Work primarily inside the selected restaurant folder.
-- Re-fetch `portal-overrides.js` immediately before updating it.
+- Re-fetch `portal-overrides.js` immediately before editing it.
 - Preserve unrelated concurrent work.
-- Do not hard-reset, force-push, or revert someone else’s changes.
-- Commit the complete demo and its status patch with a focused message.
-- Verify the selected restaurant route and portal card exist on `main` after the commit.
+- Do not hard-reset, force-push, mass-delete, or revert unrelated work.
+- Commit focused changes.
+- Verify final local HEAD matches `origin/main` after push.
 
 ## Definition of done
 
-A run is complete only when **one canonical eligible restaurant** has:
+One automatic run is complete only when one eligible restaurant has:
 
-- current facts researched without user follow-up;
-- `evidence.md` written;
-- a bespoke six-page premium core demo;
-- no requirement for custom add-on interactions;
-- accurate, safe, non-deceptive content;
-- responsive and accessible behavior;
-- desktop/mobile QA performed and defects fixed in the same run;
-- **Add-On Preservation reviewed and relevant upsells documented rather than bundled into the demo;**
-- a correct portal override (`qa` or `premium`, never an inflated claim);
-- a committed, published `main` result.
+- current facts researched;
+- required `evidence.md` sections;
+- at least five substantive evidence-supported pages;
+- premium restaurant-specific core design that passes the anti-template swap test;
+- separately sellable add-ons preserved;
+- no invented conversion inventory;
+- no automatic-demo forms;
+- `node scripts/validate-demo.mjs <slug>` passing;
+- responsive/accessibility implementation;
+- truthful browser QA status;
+- correct portal override;
+- committed/pushed final result.
 
-If any of those are missing, the build is not done.
+If any required gate is missing, the build is not done.
+
+## Regression specimen
+
+`adamary-s-restaurante-y-pupuseria/` is intentionally left unchanged as the build that exposed the previous system weaknesses. Do not silently repair it during build-system housekeeping. Use it as a regression specimen for the new validator and quality rules.
