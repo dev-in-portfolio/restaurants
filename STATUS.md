@@ -31,35 +31,55 @@ Within a tier, sort alphabetically ignoring leading `The`, `A`, and `An`. Before
 
 Premium demos sell the **core website**. They do not automatically include the separately sellable DSC add-on packs.
 
-`ADD_ON_BOUNDARY.md` is mandatory reading. The current reserved add-on catalog includes:
+`ADD_ON_BOUNDARY.md` and `BUILD_QUALITY_GATE.md` are mandatory reading.
 
-- Brand Finish Pack
-- Menu Experience Pack
-- Photo Story Pack
-- Local Discovery Pack
-- Trust & Reputation Pack
-- Order & Reserve Pack
-- Catering & Private Events Pack
-- Guest Engagement Pack
-- Menu Collections Pack
-- Signature Interactive Experience
-- Digital Menu Concierge
-- Multi-Location Growth Pack
+The former rule requiring two useful custom interactions is retired. The former fixed six-page quota is also retired when verified material does not support six distinct substantive pages.
 
-A demo should look premium through bespoke design, responsive execution, strong information architecture, verified content, and polish. Do **not** invent custom planners, builders, configurators, concierge tools, loyalty systems, advanced ordering/reservation flows, catering/event systems, or other sellable enhancements just to make the demo feel premium.
+The current target is **at least five substantive pages, with a sixth only when current evidence supports a genuinely different page job**.
 
-The former rule requiring two useful interactions including one conversion interaction is retired.
+## Build-quality correction
+
+A build is no longer allowed to self-certify QA in `evidence.md`.
+
+Before `qa` or `premium`, run:
+
+```bash
+node scripts/validate-demo.mjs <restaurant-slug>
+```
+
+The generated `<slug>/qa-report.json` must pass.
+
+The validator checks objective defects such as CSS balance, JavaScript parse errors, broken local links/assets, broken fragment links, duplicate IDs, missing alt text, placeholder residue, prohibited automatic-demo forms, missing core pages, and missing evidence sections.
+
+`evidence.md` must now contain:
+
+- `## Creative Brief`
+- `## Claim Ledger`
+- `## Add-On Preservation`
+
+The claim ledger maps meaningful restaurant-specific claims to source URLs. General cuisine knowledge may not be presented as an unsupported fact about how the restaurant operates.
+
+## Premium design gate
+
+Premium must be visible in the **core design**, not in add-on functionality.
+
+A site that is essentially a reusable hero/cards/grid template fails even if it has enough pages and clean code. `BUILD_QUALITY_GATE.md` contains the anti-template and swap tests.
 
 ## Completion standard
 
 A restaurant may be marked `premium` only after:
 
-- the current README six-page standard passes;
-- factual evidence is documented;
+- at least five substantive evidence-supported pages exist;
+- `node scripts/validate-demo.mjs <slug>` passes;
+- factual provenance is documented in the Claim Ledger;
+- the anti-template design gate passes;
 - desktop/mobile browser QA passes;
+- console and responsive checks were actually performed, not merely claimed;
 - accessibility baseline passes;
-- ordinary interactions that actually exist are tested;
-- an **Add-On Preservation review** confirms separately sellable DSC enhancements were not accidentally bundled into the demo;
-- `evidence.md` records relevant upsell opportunities intentionally preserved for the proposal.
+- an **Add-On Preservation review** confirms separately sellable DSC enhancements were not accidentally bundled into the demo.
 
-If browser QA is unavailable, the highest honest status is `qa`.
+If browser QA is unavailable, the highest honest status is `qa` after machine validation passes.
+
+## Regression specimen
+
+`adamary-s-restaurante-y-pupuseria/` remains untouched as the build that exposed the prior system weaknesses. Do not repair it during build-system housekeeping; use it to verify that the validator and new rules catch the failure modes.
