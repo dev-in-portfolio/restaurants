@@ -2,6 +2,13 @@
 
 This file is mandatory reading before building any restaurant demo in `dev-in-portfolio/restaurants`.
 
+Also read `BUILD_QUALITY_GATE.md` in full. The two files work together:
+
+- `ADD_ON_BOUNDARY.md` protects separately sellable DSC scope;
+- `BUILD_QUALITY_GATE.md` protects visual quality, factual provenance, flexible page architecture, and proof-based QA.
+
+If older repository wording still describes a fixed six-page quota or allows self-certified QA, `BUILD_QUALITY_GATE.md` controls the build-quality decision.
+
 ## Purpose
 
 The demo is a **sales demonstration for the core website**, not a free implementation of every feature Dark Star Consulting can sell after the restaurant says yes.
@@ -45,31 +52,47 @@ The restaurant audit may describe missed opportunities or recommend features tha
 
 Use the audit to identify the business problem and sales angle. Demonstrate that the core site can solve the underlying presentation/trust/customer-journey problem, while preserving separately sellable enhancements for the proposal.
 
-For example:
+Examples:
 
-- If the audit says catering is weak, build an excellent static catering/private-events page with clear verified information and a normal CTA. Do **not** build a party planner, quote calculator, package configurator, lead workflow, or advanced inquiry funnel.
-- If ordering/reservations are fragmented, make the core site clearly route guests to the verified existing services. Do **not** build a new ordering/reservation system or advanced decision flow.
+- If the audit says catering is weak, present verified catering availability and a strong static CTA. Do **not** invent catering packages, tray sizes, guest counts, capacities, planners, quote tools, forms, or lead workflows.
+- If ordering/reservations are fragmented, make the core site clearly route guests to verified existing services. Do **not** build a new ordering/reservation system or advanced decision flow.
 - If the menu is hard to use, create a clean, readable, responsive menu page. Do **not** automatically add menu search, dietary filtering, pairing logic, guided recommendations, or a concierge.
 - If the restaurant has multiple locations, present verified locations clearly. Do **not** automatically build the enhanced multi-location experience sold separately.
-- If the restaurant needs better guest engagement, use strong calls to action and clear content. Do **not** add loyalty, rewards, newsletter/SMS capture, customer accounts, automated campaigns, or similar engagement machinery.
+- If the restaurant needs better guest engagement, use strong calls to action and clear content. Do **not** add loyalty, rewards, newsletter/SMS capture, customer accounts, forms, automated campaigns, or similar engagement machinery.
+
+## Commercial-scope rule
+
+Judge the add-on boundary by **what business capability is being delivered**, not by whether the code is technically simple.
+
+A feature does not become core merely because it is easy to code.
+
+Examples:
+
+- a non-submitting catering inquiry form is still the beginning of a catering/lead workflow;
+- a simple preference quiz is still guided menu functionality;
+- a lightweight loyalty card is still guest engagement;
+- a simple location switcher may still be part of Multi-Location Growth if it creates the paid multi-location experience.
+
+For automatic demos, preserve the sellable capability even when a simplified implementation would be easy.
 
 ## What the baseline premium demo MAY include
 
-These are normal core-demo elements when appropriate:
+These are normal core-demo elements when appropriate and factually supported:
 
 - bespoke restaurant-specific art direction;
-- premium typography, spacing, layout, responsive composition, and motion polish;
-- six substantive linked pages required by the repository README;
+- premium typography, spacing, composition, responsive behavior, and motion polish;
+- **five or more substantive linked pages, with a sixth page only when verified material supports a genuinely different job**;
 - accurate verified restaurant copy and story content;
+- general cultural/editorial context when clearly framed as general rather than as an unsupported restaurant-specific claim;
 - a clean readable menu organized into normal sections;
 - standard navigation, mobile navigation, accordions, disclosure panels, simple galleries, and other ordinary presentation UI;
-- verified address, hours, phone, service notes, and location cards;
+- verified address, hours, phone, service notes, and location information;
 - clear buttons linking to the restaurant's existing verified ordering or reservation provider;
-- a static catering/private-events overview when that page is appropriate;
-- a static drinks, brunch, bakery, taproom, coffee, neighborhood, or other restaurant-specific experience page;
+- a static catering/private-events overview **only when that service is verified**;
+- a static drinks, brunch, bakery, taproom, coffee, neighborhood, or other restaurant-specific editorial page when current evidence supports it;
 - normal accessibility behavior, keyboard support, focus states, responsive design, and reduced-motion handling;
-- standard SEO/page metadata needed for a competent static concept, without turning the demo into a separately scoped Local Discovery implementation;
-- concept-safe CTAs that do not pretend a real transaction or submission occurred.
+- standard page metadata needed for a competent static concept, without turning the demo into a separately scoped Local Discovery implementation;
+- concept-safe CTAs that route to verified current public paths.
 
 The baseline may **visually preview the value** of an area that could later be upgraded. It should not contain the full pack implementation.
 
@@ -83,6 +106,7 @@ Unless the user explicitly orders otherwise, do not build:
 - menu search, advanced filtering, dietary recommendation logic, pairing engines, or personalized menu results;
 - custom ordering flows, reservation logic, waitlist systems, booking engines, or payment functionality;
 - advanced catering/private-event package builders, quote calculators, event planners, lead workflows, or booking tools;
+- **automatic-demo forms of any kind**, including non-submitting catering, inquiry, contact, newsletter, reservation, or lead-capture forms;
 - loyalty/rewards systems, customer accounts, points, memberships, or wallets;
 - newsletter/SMS capture systems, marketing automation, drip campaigns, CRM-style capture, or automated follow-up;
 - review/reputation feeds, review-request automation, reputation dashboards, or other Trust & Reputation pack machinery;
@@ -92,44 +116,57 @@ Unless the user explicitly orders otherwise, do not build:
 - enhanced multi-location selectors, location-aware experiences, cross-location comparison, or other Multi-Location Growth functionality;
 - any other feature whose primary value is a separately sellable DSC enhancement rather than the core website presentation.
 
+## No invented service inventory
+
+If a restaurant publicly verifies catering, private dining, events, wholesale, custom cakes, or another revenue service, the demo may present that service.
+
+It may not invent the service's commercial details.
+
+Do not fabricate:
+
+- package names;
+- tray sizes;
+- serving counts;
+- guest capacities;
+- minimum orders;
+- lead times;
+- delivery zones;
+- package contents;
+- booking rules;
+- event availability.
+
+Use only current verified details. Otherwise keep the page high-level and route to the current public contact path.
+
 ## Simple interaction ceiling
 
-A demo does **not** need two custom interactions to qualify as premium.
+A demo does **not** need custom interactions to qualify as premium.
 
-Ordinary website interactions are allowed and encouraged when useful: mobile navigation, accordions, tabs used for ordinary content presentation, a simple image gallery, subtle animation, and straightforward links/buttons.
+Ordinary website interactions are allowed when useful: mobile navigation, accordions, tabs used for ordinary content presentation, a simple image gallery, subtle animation, and straightforward links/buttons.
 
 Do not invent a custom interactive feature merely to prove that the site is premium.
 
 If an interaction starts to feel like a feature the restaurant could reasonably pay extra for, **stop and preserve it as an upsell**.
 
-## Conversion-page rule
-
-The required revenue/conversion page still exists, but it should normally demonstrate **presentation and opportunity**, not deliver a full add-on.
-
-Examples:
-
-- Catering page: packages/categories or service overview + contact/official CTA, not a custom catering planner.
-- Private dining page: room/event overview + verified capacity/details when available + contact/official CTA, not an event configurator.
-- Reservations page: service explanation + link to verified provider, not a custom booking system.
-- Ordering page: clear path to the verified provider, not a custom ordering engine.
-- Groups/events page: persuasive static page + safe CTA, not an automated lead funnel.
-
 ## Evidence requirement
 
-Every new `evidence.md` must contain an **Add-On Preservation** section that records:
+Every new `evidence.md` must contain:
 
-1. which DSC add-on opportunities are relevant to this restaurant;
-2. which of those opportunities were intentionally **not** implemented in the demo;
-3. any baseline element that merely previews an area that could later receive a paid add-on;
-4. confirmation that no separately sellable add-on was accidentally bundled into the demo.
+- `## Creative Brief` — verified restaurant-specific anchors and three core design moves;
+- `## Claim Ledger` — meaningful restaurant-specific claims mapped to source URLs;
+- `## Add-On Preservation` — relevant DSC add-on opportunities, what was intentionally not implemented, and what remains sellable.
 
-This gives the salesperson a ready-made upsell map after the prospect reacts to the core concept.
+The claim ledger prevents general cuisine knowledge from being rewritten as unsupported facts about the restaurant.
 
 ## QA requirement
 
-Before a demo can be marked `premium`, QA must explicitly check both:
+Before a demo can receive `qa` or `premium`, run:
 
-- **Core quality:** the six-page concept is polished, accurate, responsive, accessible, and presentation-ready.
-- **Add-on preservation:** the demo has not accidentally implemented separately sellable DSC add-on functionality.
+```bash
+node scripts/validate-demo.mjs <restaurant-slug>
+```
 
-A beautiful demo that gives away the add-on catalog is **not** complete under this repository's sales strategy.
+The generated `qa-report.json` is the objective implementation gate. A failing validator means the build is not `qa` and not `premium`.
+
+Browser QA is still required for `premium` as defined in `BUILD_QUALITY_GATE.md`.
+
+A polished `evidence.md` does not override failed machine checks, unsupported facts, generic-template design, or missing browser verification.
