@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mezcal & Tequila Cantina — 1900 Mexican Grill</title>
+  <meta name="description" content="Explore North Carolina's largest Mezcal collection (80+ varieties), craft margaritas, and interactive 3-pour tasting flight builder at 1900 Mexican Grill in Charlotte.">
+  <link rel="stylesheet" href="styles.css">
+  <script src="site.js" defer></script>
+  <script src="../scripts/shared/comparison-button.js" defer></script>
+  <script src="../scripts/shared/darkstar-footer.js" defer></script>
+</head>
+<body>
+
+  <!-- Site Navigation -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="1900 Mexican Grill Homepage">
+        <span class="brand-badge">1900 <span>GRILL</span></span>
+        <span class="brand-tagline">Mexico City Cantina</span>
+      </a>
+
+      <button class="mobile-toggle" aria-label="Toggle mobile navigation menu" aria-expanded="false">
+        ☰
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="menu.html" class="nav-link">Menu</a></li>
+        <li><a href="story.html" class="nav-link">Story</a></li>
+        <li><a href="cantina.html" class="nav-link active">Mezcal Cantina</a></li>
+        <li><a href="catering.html" class="nav-link">Fiesta Catering</a></li>
+        <li><a href="visit.html" class="nav-link">Visit Us</a></li>
+        <li><a href="visit.html#reservations" class="nav-cta-btn">Book Table</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <header class="page-header" style="background-image: radial-gradient(circle at 50% 0%, rgba(217, 160, 54, 0.25) 0%, transparent 70%);">
+    <div class="container">
+      <span class="hero-pill" style="margin-bottom: 1rem;">🌵 NC’S LARGEST AGAVE RESERVE</span>
+      <h1>Mezcal & Tequila Cantina</h1>
+      <p>Over 80 artisanal mezcals, 25+ scratch-crafted margaritas, and custom Private Reserve tequila barrels.</p>
+    </div>
+  </header>
+
+  <!-- Agave Philosophy -->
+  <section class="section dark-section">
+    <div class="container">
+      <div class="hero-grid" style="align-items: center;">
+        <div>
+          <span class="section-label" style="color: var(--sunlit-gold);">Agave Heritage</span>
+          <h2 class="section-title" style="color: #ffffff;">“Mezcal is to Tequila what Scotch is to Whiskey.”</h2>
+          <p style="font-size: 1.1rem; color: rgba(255,255,255,0.85); margin-bottom: 1.25rem;">
+            While Tequila is crafted exclusively from Blue Weber agave roasted in ovens, Mezcal represents a 500-year-old artisanal tradition where wild agaves mature up to 25 years before being roasted in underground pit ovens lined with volcanic rock.
+          </p>
+          <p style="font-size: 1.05rem; color: rgba(255,255,255,0.75);">
+            At 1900’s Cantina, we serve every mezcal in traditional clay copitas or veladora glasses accompanied by fresh orange wheels and hand-ground <em>Sal de Gusano</em> (oaxacan agave salt).
+          </p>
+        </div>
+
+        <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(217,160,54,0.3); border-radius: var(--radius-lg); padding: 2rem; text-align: center;">
+          <span style="font-size: 3rem; display: block; margin-bottom: 1rem;">🥃</span>
+          <h3 style="font-family: var(--font-heading); color: var(--sunlit-gold); font-size: 1.5rem; margin-bottom: 0.75rem;">1900 Private Reserve</h3>
+          <p style="font-size: 0.95rem; color: rgba(255,255,255,0.8); margin-bottom: 1.5rem;">
+            Hand-selected single barrel Reposado and Añejo tequilas aged in toasted French oak barrels in Arandas, Jalisco.
+          </p>
+          <a href="#flight-builder-section" class="btn btn-primary" style="width: 100%;">Build Custom Tasting Flight</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Flight Builder Section (Interaction 1) -->
+  <section class="section dark-section" id="flight-builder-section" style="border-top: 1px solid rgba(255,255,255,0.1);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label" style="color: var(--sunlit-gold);">Interactive Experience</span>
+        <h2 class="section-title" style="color: #ffffff;">Custom 3-Pour Mezcal Flight Builder</h2>
+        <p class="section-subtitle" style="color: rgba(255,255,255,0.7);">Select your three agave pours, choose your pairing salt, and preview your tasting flight before arriving at the cantina.</p>
+      </div>
+
+      <div class="flight-builder">
+        <div class="flight-grid">
+
+          <!-- Left Display Platter -->
+          <div class="flight-tray-display">
+            <span style="color: var(--sunlit-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.15em; font-weight: 700;">Agave Wood Platter</span>
+            
+            <div class="flight-glasses" role="group" aria-label="3-pour tasting flight glasses">
+              <button class="flight-glass-item active" data-glass="0" aria-label="Select Pour 1">
+                <span class="glass-tag">Pour #1</span>
+                <span class="glass-name">Espadín</span>
+              </button>
+              <button class="flight-glass-item" data-glass="1" aria-label="Select Pour 2">
+                <span class="glass-tag">Pour #2</span>
+                <span class="glass-name">Tobalá</span>
+              </button>
+              <button class="flight-glass-item" data-glass="2" aria-label="Select Pour 3">
+                <span class="glass-tag">Pour #3</span>
+                <span class="glass-name">Tepeztate</span>
+              </button>
+            </div>
+
+            <h3 id="flight-title-display" style="font-family: var(--font-heading); color: #ffffff; font-size: 1.4rem; margin-bottom: 0.5rem;">Espadín • Tobalá • Tepeztate</h3>
+            <div id="flight-price-display" style="font-family: var(--font-heading); color: var(--sunlit-gold); font-size: 2.25rem; font-weight: 700; margin-bottom: 1rem;">$24.00</div>
+            <p id="flight-desc-display" style="font-size: 0.95rem; color: rgba(255,255,255,0.75); line-height: 1.6; max-width: 480px; margin: 0 auto;"></p>
+          </div>
+
+          <!-- Right Controls -->
+          <div>
+            <div class="option-group">
+              <span class="option-group-label" id="current-glass-label">1. Choose Agave for Selected Pour (#1 Active)</span>
+              <div class="chip-grid" role="radiogroup" aria-label="Agave varieties">
+                <button class="chip-btn agave-chip active" data-name="Espadín (Oaxaca)" data-price="10.00" data-abv="45%" data-notes="Wood smoke, roasted agave & citrus">
+                  <strong>Espadín</strong><br><span style="opacity: 0.8; font-size: 0.8rem;">Cultivated ($10)</span>
+                </button>
+
+                <button class="chip-btn agave-chip" data-name="Tobalá (Highland Wild)" data-price="14.00" data-abv="47%" data-notes="Floral, sweet oak & delicate smoke">
+                  <strong>Tobalá</strong><br><span style="opacity: 0.8; font-size: 0.8rem;">Wild High ($14)</span>
+                </button>
+
+                <button class="chip-btn agave-chip" data-name="Tepeztate (25-Yr Wild)" data-price="15.00" data-abv="48%" data-notes="Herbal, peppery, mineral & complex">
+                  <strong>Tepeztate</strong><br><span style="opacity: 0.8; font-size: 0.8rem;">25-Yr Cliff ($15)</span>
+                </button>
+
+                <button class="chip-btn agave-chip" data-name="Arroqueño (Giant Wild)" data-price="16.00" data-abv="49%" data-notes="Spicy, rich vegetal smoke & fruit">
+                  <strong>Arroqueño</strong><br><span style="opacity: 0.8; font-size: 0.8rem;">Giant Wild ($16)</span>
+                </button>
+
+                <button class="chip-btn agave-chip" data-name="Cuishe (Karwinskii)" data-price="13.00" data-abv="46%" data-notes="High mineral citrus & tropical fruit">
+                  <strong>Cuishe</strong><br><span style="opacity: 0.8; font-size: 0.8rem;">Tree Agave ($13)</span>
+                </button>
+
+                <button class="chip-btn agave-chip" data-name="Barril (Karwinskii)" data-price="12.00" data-abv="46%" data-notes="Earthy sweetness & dark cocoa">
+                  <strong>Barril</strong><br><span style="opacity: 0.8; font-size: 0.8rem;">Cultivated ($12)</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="option-group">
+              <span class="option-group-label">2. Select Hand-Ground Artisanal Salt</span>
+              <div class="chip-grid" role="radiogroup" aria-label="Pairing salt selection">
+                <button class="chip-btn salt-chip active" data-name="Sal de Gusano (Artisanal Worm Salt)" data-price="2.00">
+                  <strong>Sal de Gusano</strong><br><span style="opacity: 0.8; font-size: 0.8rem;">Traditional (+$2)</span>
+                </button>
+
+                <button class="chip-btn salt-chip" data-name="Chili Lime Citrus Salt" data-price="0.00">
+                  <strong>Chili Lime Salt</strong><br><span style="opacity: 0.8; font-size: 0.8rem;">Tangy Zest (+$0)</span>
+                </button>
+
+                <button class="chip-btn salt-chip" data-name="Smoked Sea Salt" data-price="0.00">
+                  <strong>Smoked Sea Salt</strong><br><span style="opacity: 0.8; font-size: 0.8rem;">Pure Mineral (+$0)</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Margaritas Grid -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Scratch Bar Program</span>
+        <h2 class="section-title">25+ Fresh-Crafted Margaritas</h2>
+        <p class="section-subtitle">Squeezed daily with 100% blue agave tequila and natural fruit juices.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3 class="card-title">Watermelon Jalapeño</h3>
+          <span style="color: var(--terracotta); font-weight: 700; display: block; margin-bottom: 0.5rem;">$13.50 Glass · $48 Pitcher</span>
+          <p class="card-text">Muddled fresh jalapeños, pure watermelon juice, 100% blue agave reposado tequila, lime, Tajín chili rim.</p>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">Smoked Hibiscus Mezcalita</h3>
+          <span style="color: var(--terracotta); font-weight: 700; display: block; margin-bottom: 0.5rem;">$14.50 Glass · $52 Pitcher</span>
+          <p class="card-text">Oaxacan Espadín mezcal, wild hibiscus blossom tea reduction, fresh lime, organic agave, Sal de Gusano rim.</p>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">Mango Habanero Fuego</h3>
+          <span style="color: var(--terracotta); font-weight: 700; display: block; margin-bottom: 0.5rem;">$13.95 Glass · $50 Pitcher</span>
+          <p class="card-text">Fresh mango nectar infused with roasted habanero chili, reposado tequila, Triple Sec, fresh lime juice.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Non-submitting Demo Modal -->
+  <div class="modal-overlay" id="demo-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Close modal">&times;</button>
+      <h3 class="modal-title" id="modal-title" style="font-family: var(--font-heading); color: var(--terracotta); margin-bottom: 1rem;">Demo System Notice</h3>
+      <p class="modal-body-text" style="margin-bottom: 1.5rem; color: var(--text-muted);"></p>
+      <button class="btn btn-primary modal-dismiss">Understand & Close</button>
+    </div>
+  </div>
+
+  <!-- Standard Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <h3>1900 Mexican Grill & Cantina</h3>
+        <p>The Mexican restaurant where Charlotte meets. Scratch cooking inspired by Mexico City and NC's largest Mezcal collection.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Full Menu</a></li>
+          <li><a href="story.html">Our Story</a></li>
+          <li><a href="cantina.html">Mezcal Cantina</a></li>
+          <li><a href="catering.html">Catering</a></li>
+          <li><a href="visit.html">Locations & Hours</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Midtown Elizabeth</h4>
+        <p style="font-size: 0.9rem;">1523 Elizabeth Ave<br>Charlotte, NC 28204<br>(704) 334-4677</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>South Park</h4>
+        <p style="font-size: 0.9rem;">5110 Park Rd #1e<br>Charlotte, NC 28209<br>(704) 523-1554</p>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 1900 Mexican Grill. Unofficial portfolio concept redesign for demonstration purposes.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

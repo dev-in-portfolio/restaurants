@@ -3,140 +3,191 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Locations — 1900 Mexican Grill</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="site.css">
+  <title>Locations & Hours — 1900 Mexican Grill & Cantina</title>
+  <meta name="description" content="Find operating hours, addresses, phone numbers, Google Maps directions, and Yelp reservation links for 1900 Mexican Grill in Midtown Elizabeth and South Park Charlotte, NC.">
+  <link rel="stylesheet" href="styles.css">
+  <script src="site.js" defer></script>
+  <script src="../scripts/shared/comparison-button.js" defer></script>
+  <script src="../scripts/shared/darkstar-footer.js" defer></script>
 </head>
 <body>
-  <nav class="navbar">
-    <div class="container nav-container">
-      <a href="index.html" class="nav-logo">1900</a>
-      <button class="nav-toggle" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="menu.html">Menu</a></li>
-        <li><a href="mezcal.html">Mezcal</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="visit.html" class="active">Locations</a></li>
-        <li><a href="reserve.html" class="nav-cta">Reserve</a></li>
-      </ul>
-    </div>
-  </nav>
 
-  <header class="page-header">
-    <div class="container">
-      <h1>Visit Us</h1>
-      <p>Two locations, one mission — serve Charlotte the best Mexican food it's ever had.</p>
+  <!-- Site Navigation -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="1900 Mexican Grill Homepage">
+        <span class="brand-badge">1900 <span>GRILL</span></span>
+        <span class="brand-tagline">Mexico City Cantina</span>
+      </a>
+
+      <button class="mobile-toggle" aria-label="Toggle mobile navigation menu" aria-expanded="false">
+        ☰
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="menu.html" class="nav-link">Menu</a></li>
+        <li><a href="story.html" class="nav-link">Story</a></li>
+        <li><a href="cantina.html" class="nav-link">Mezcal Cantina</a></li>
+        <li><a href="catering.html" class="nav-link">Fiesta Catering</a></li>
+        <li><a href="visit.html" class="nav-link active">Visit Us</a></li>
+        <li><a href="visit.html#reservations" class="nav-cta-btn">Book Table</a></li>
+      </ul>
     </div>
   </header>
 
-  <section class="locations-full">
+  <!-- Page Header -->
+  <header class="page-header">
     <div class="container">
-      <div class="loc-full-grid">
+      <h1>Two Queen City Hubs</h1>
+      <p>Whether you're in Elizabeth or South Park, authentic Mexico City cooking is minutes away.</p>
+    </div>
+  </header>
 
-        <div class="loc-full-card">
-          <div class="loc-badge">Midtown</div>
-          <h2>Midtown Charlotte</h2>
-          <div class="loc-detail">
-            <h3>Address</h3>
-            <p>1523 Elizabeth Ave<br>Charlotte, NC 28204</p>
+  <!-- Main Locations Hub -->
+  <main class="section">
+    <div class="container">
+
+      <!-- Location Filter Switcher -->
+      <div class="location-switcher">
+        <div class="switch-group" role="tablist" aria-label="Location filter">
+          <button class="switch-btn active" data-location="all" role="tab" aria-selected="true">All Locations</button>
+          <button class="switch-btn" data-location="midtown" role="tab" aria-selected="false">Midtown Elizabeth</button>
+          <button class="switch-btn" data-location="southpark" role="tab" aria-selected="false">South Park</button>
+        </div>
+      </div>
+
+      <!-- Location Cards Grid -->
+      <div class="grid-2">
+        
+        <!-- Midtown Card -->
+        <div class="card location-card-hub" data-location="midtown" style="border-top: 4px solid var(--terracotta);">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+            <div>
+              <h2 style="font-family: var(--font-heading); font-size: 1.75rem; color: var(--terracotta); margin-bottom: 4px;">Midtown — Elizabeth Ave</h2>
+              <p style="font-weight: 600; color: var(--obsidian);">1523 Elizabeth Ave, Charlotte, NC 28204</p>
+            </div>
+            <span class="loc-badge">Flagship</span>
           </div>
-          <div class="loc-detail">
-            <h3>Phone</h3>
-            <p><a href="tel:7043344677">(704) 334-4677</a></p>
+
+          <p class="card-text" style="margin-bottom: 1.5rem;">
+            Our original 2009 location in Elizabeth, steps from CPCC Central Campus and Novant Presbyterian Medical Center. Cozy indoor cantina booths and vibrant patio seating.
+          </p>
+
+          <div style="background: var(--sandstone); padding: 1.25rem; border-radius: var(--radius-sm); margin-bottom: 1.5rem; font-size: 0.95rem;">
+            <h4 style="font-family: var(--font-heading); color: var(--obsidian); margin-bottom: 0.5rem;">Hours of Operation</h4>
+            <p><strong>Monday – Thursday:</strong> 11:00 AM – 10:00 PM</p>
+            <p><strong>Friday – Saturday:</strong> 11:00 AM – 11:00 PM</p>
+            <p><strong>Sunday:</strong> 12:00 PM – 9:00 PM</p>
           </div>
-          <div class="loc-detail">
-            <h3>Hours</h3>
-            <table class="hours-table">
-              <tr><td>Tuesday – Thursday</td><td>11am – 9pm</td></tr>
-              <tr><td>Friday – Saturday</td><td>11am – 11pm</td></tr>
-              <tr><td>Sunday</td><td>12pm – 9pm</td></tr>
-              <tr class="closed"><td>Monday</td><td>Closed</td></tr>
-            </table>
+
+          <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 1.5rem;">
+            <a href="tel:7043344677" class="btn btn-secondary" style="padding: 10px 18px; font-size: 0.9rem;">📞 (704) 334-4677</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=1523+Elizabeth+Ave+Charlotte+NC+28204" target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark" style="padding: 10px 18px; font-size: 0.9rem;">Google Maps ↗</a>
           </div>
-          <div class="loc-amenities">
-            <span>Outdoor Patio</span>
-            <span>Dog Friendly</span>
-            <span>Groups Welcome</span>
-            <span>Kid Friendly</span>
+
+          <div style="border-top: 1px solid rgba(0,0,0,0.08); padding-top: 1.25rem; display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 0.85rem; color: var(--text-muted);">Yelp Reservations</span>
+            <a href="https://www.yelp.com/reservations/1900-mexican-grill-charlotte-2" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 8px 16px; font-size: 0.85rem;">Reserve Table ↗</a>
           </div>
-          <a href="https://maps.google.com/?q=1523+Elizabeth+Ave+Charlotte+NC+28204" class="btn btn-primary" target="_blank" rel="noopener">Get Directions</a>
         </div>
 
-        <div class="loc-full-card">
-          <div class="loc-badge">South Park</div>
-          <h2>South Park</h2>
-          <div class="loc-detail">
-            <h3>Address</h3>
-            <p>5110 Park Rd #1E<br>Charlotte, NC 28209</p>
+        <!-- South Park Card -->
+        <div class="card location-card-hub" data-location="southpark" style="border-top: 4px solid var(--agave-teal);">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+            <div>
+              <h2 style="font-family: var(--font-heading); font-size: 1.75rem; color: var(--agave-teal); margin-bottom: 4px;">South Park — Park Rd</h2>
+              <p style="font-weight: 600; color: var(--obsidian);">5110 Park Rd #1e, Charlotte, NC 28209</p>
+            </div>
+            <span class="loc-badge" style="background: var(--agave-teal);">Expanded Patio</span>
           </div>
-          <div class="loc-detail">
-            <h3>Phone</h3>
-            <p><a href="tel:7045231554">(704) 523-1554</a></p>
+
+          <p class="card-text" style="margin-bottom: 1.5rem;">
+            Located at Park Road Shopping Center. Featuring our dedicated agave spirit tasting bar, expansive outdoor covered patio, and private event space for celebrations.
+          </p>
+
+          <div style="background: var(--sandstone); padding: 1.25rem; border-radius: var(--radius-sm); margin-bottom: 1.5rem; font-size: 0.95rem;">
+            <h4 style="font-family: var(--font-heading); color: var(--obsidian); margin-bottom: 0.5rem;">Hours of Operation</h4>
+            <p><strong>Monday – Thursday:</strong> 11:00 AM – 10:00 PM</p>
+            <p><strong>Friday – Saturday:</strong> 11:00 AM – 11:00 PM</p>
+            <p><strong>Sunday:</strong> 12:00 PM – 9:00 PM</p>
           </div>
-          <div class="loc-detail">
-            <h3>Hours</h3>
-            <table class="hours-table">
-              <tr><td>Monday – Thursday</td><td>11am – 10pm</td></tr>
-              <tr><td>Friday – Saturday</td><td>11am – 11pm</td></tr>
-              <tr><td>Sunday</td><td>12pm – 9pm</td></tr>
-            </table>
+
+          <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 1.5rem;">
+            <a href="tel:7045231554" class="btn btn-secondary" style="padding: 10px 18px; font-size: 0.9rem;">📞 (704) 523-1554</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=5110+Park+Rd+1e+Charlotte+NC+28209" target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark" style="padding: 10px 18px; font-size: 0.9rem;">Google Maps ↗</a>
           </div>
-          <div class="loc-amenities">
-            <span>Outdoor Patio</span>
-            <span>Dog Friendly</span>
-            <span>Groups Welcome</span>
-            <span>Kid Friendly</span>
+
+          <div style="border-top: 1px solid rgba(0,0,0,0.08); padding-top: 1.25rem; display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 0.85rem; color: var(--text-muted);">Yelp Reservations</span>
+            <a href="https://www.yelp.com/reservations/1900-mexican-grill-charlotte" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 8px 16px; font-size: 0.85rem;">Reserve Table ↗</a>
           </div>
-          <a href="https://maps.google.com/?q=5110+Park+Rd+Charlotte+NC+28209" class="btn btn-primary" target="_blank" rel="noopener">Get Directions</a>
         </div>
 
       </div>
-    </div>
-  </section>
 
-  <section class="visit-info">
-    <div class="container">
-      <div class="info-grid">
-        <div class="info-card">
-          <h3>Reservations</h3>
-          <p>Both locations accept reservations. Walk-ins always welcome, but we recommend booking for groups and special occasions.</p>
-          <a href="reserve.html" class="btn btn-outline">Reserve Now</a>
-        </div>
-        <div class="info-card">
-          <h3>Delivery</h3>
-          <p>Can't make it in? Delivery is available at both locations through our partners.</p>
-        </div>
-        <div class="info-card">
-          <h3>Parking</h3>
-          <p>Midtown: Street parking + free lot. South Park: Surface lot parking available.</p>
+      <!-- Reservations Guidance Box -->
+      <div id="reservations" style="margin-top: 4rem; background: var(--parchment); border: 1.5px solid var(--sunlit-gold); border-radius: var(--radius-lg); padding: 3rem; text-align: center;">
+        <span style="font-size: 2.5rem; display: block; margin-bottom: 1rem;">🗓️</span>
+        <h2 style="font-family: var(--font-serif); font-size: 2.25rem; color: var(--obsidian); margin-bottom: 1rem;">Reservations & Walk-Ins Policy</h2>
+        <p style="max-width: 650px; margin: 0 auto 2rem; color: var(--text-muted); font-size: 1.05rem;">
+          Walk-ins are always welcomed at both cantinas! For weekend parties or group dining of 6 or more guests, we strongly recommend reserving ahead via Yelp Reservations or calling your preferred location directly.
+        </p>
+
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="https://www.yelp.com/reservations/1900-mexican-grill-charlotte-2" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Book Midtown Elizabeth ↗</a>
+          <a href="https://www.yelp.com/reservations/1900-mexican-grill-charlotte" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Book South Park ↗</a>
         </div>
       </div>
-    </div>
-  </section>
 
-  <footer class="footer">
-    <div class="container footer-content">
+    </div>
+  </main>
+
+  <!-- Non-submitting Demo Modal -->
+  <div class="modal-overlay" id="demo-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Close modal">&times;</button>
+      <h3 class="modal-title" id="modal-title" style="font-family: var(--font-heading); color: var(--terracotta); margin-bottom: 1rem;">Demo System Notice</h3>
+      <p class="modal-body-text" style="margin-bottom: 1.5rem; color: var(--text-muted);"></p>
+      <button class="btn btn-primary modal-dismiss">Understand & Close</button>
+    </div>
+  </div>
+
+  <!-- Standard Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
       <div class="footer-brand">
-        <span class="footer-logo">1900</span>
-        <p>The Mexican Restaurant Where Charlotte Meets</p>
+        <h3>1900 Mexican Grill & Cantina</h3>
+        <p>The Mexican restaurant where Charlotte meets. Scratch cooking inspired by Mexico City and NC's largest Mezcal collection.</p>
       </div>
-      <div class="footer-links">
-        <a href="menu.html">Menu</a>
-        <a href="about.html">About</a>
-        <a href="visit.html">Locations</a>
-        <a href="reserve.html">Reserve</a>
+
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Full Menu</a></li>
+          <li><a href="story.html">Our Story</a></li>
+          <li><a href="cantina.html">Mezcal Cantina</a></li>
+          <li><a href="catering.html">Catering</a></li>
+          <li><a href="visit.html">Locations & Hours</a></li>
+        </ul>
       </div>
-      <div class="footer-legal">
-        <p>&copy; 2025 1900 Mexican Grill. All rights reserved.</p>
+
+      <div class="footer-col">
+        <h4>Midtown Elizabeth</h4>
+        <p style="font-size: 0.9rem;">1523 Elizabeth Ave<br>Charlotte, NC 28204<br>(704) 334-4677</p>
       </div>
+
+      <div class="footer-col">
+        <h4>South Park</h4>
+        <p style="font-size: 0.9rem;">5110 Park Rd #1e<br>Charlotte, NC 28209<br>(704) 523-1554</p>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 1900 Mexican Grill. Unofficial portfolio concept redesign for demonstration purposes.</p>
     </div>
   </footer>
 
-  <script src="site.js"></script>
 </body>
 </html>

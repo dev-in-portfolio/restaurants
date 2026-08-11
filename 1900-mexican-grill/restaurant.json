@@ -1,0 +1,22 @@
+{
+  "slug": "1900-mexican-grill",
+  "name": "1900 Mexican Grill",
+  "area": "Charlotte, NC (Midtown Elizabeth & South Park)",
+  "cuisine": "Mexico City-Inspired Mexican & Mezcal Cantina",
+  "description": "Authentic Mexico City taqueria & cantina featuring scratch-made mole, tableside guac, dual Charlotte locations, and North Carolina's largest artisanal mezcal collection.",
+  "emoji": "🌵",
+  "gradient": "linear-gradient(135deg, #2a1810 0%, #c83e2b 50%, #d9a036 100%)",
+  "href": "restaurants/1900-mexican-grill/index.html",
+  "stage": "premium",
+  "status": "premium",
+  "desktopReviewed": true,
+  "mobileReviewed": true,
+  "linksVerified": true,
+  "contentVerified": true,
+  "performanceReviewed": true,
+  "accessibilityReviewed": true,
+  "productionBuildPassed": true,
+  "approvedForPresentation": true,
+  "currentWebsiteUrl": "https://1900mexicangrill.com",
+  "comparisonButtonAdded": true
+}

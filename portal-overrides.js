@@ -4,4 +4,6 @@
 // Minimal completed-build patch example:
 // { name: "Restaurant Name", status: "premium", href: "restaurant-slug/index.html" }
 // Use portalSection: "later" only when fresh verification shows the audited lead needs a recheck.
-window.portalOverrides = [];
+window.portalOverrides = [
+  { name: "1900 Mexican Grill", status: "premium", href: "1900-mexican-grill/index.html" }
+];

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fiesta Catering & Event Estimator — 1900 Mexican Grill</title>
+  <meta name="description" content="Corporate and social Mexican catering in Charlotte, NC. Interactive taco bar party estimator, scratch meats, fresh chips & salsas for groups of 15 to 200+.">
+  <link rel="stylesheet" href="styles.css">
+  <script src="site.js" defer></script>
+  <script src="../scripts/shared/comparison-button.js" defer></script>
+  <script src="../scripts/shared/darkstar-footer.js" defer></script>
+</head>
+<body>
+
+  <!-- Site Navigation -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="1900 Mexican Grill Homepage">
+        <span class="brand-badge">1900 <span>GRILL</span></span>
+        <span class="brand-tagline">Mexico City Cantina</span>
+      </a>
+
+      <button class="mobile-toggle" aria-label="Toggle mobile navigation menu" aria-expanded="false">
+        ☰
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="menu.html" class="nav-link">Menu</a></li>
+        <li><a href="story.html" class="nav-link">Story</a></li>
+        <li><a href="cantina.html" class="nav-link">Mezcal Cantina</a></li>
+        <li><a href="catering.html" class="nav-link active">Fiesta Catering</a></li>
+        <li><a href="visit.html" class="nav-link">Visit Us</a></li>
+        <li><a href="visit.html#reservations" class="nav-cta-btn">Book Table</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <div class="container">
+      <span class="hero-pill" style="margin-bottom: 1rem;">🎉 CORPORATE & SOCIAL CATERING</span>
+      <h1>Fiesta Catering & Party Packages</h1>
+      <p>Bring 1900’s Mexico City scratch kitchen directly to your office, home, or event venue in Charlotte.</p>
+    </div>
+  </header>
+
+  <!-- Packages Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Popular Group Solutions</span>
+        <h2 class="section-title">Scratch Taco Bar Packages</h2>
+        <p class="section-subtitle">Delivered hot & fresh with chafing dishes, serving utensils, plates, and napkins.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card" style="border-top: 4px solid var(--terracotta);">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+            <h3 class="card-title" style="margin-bottom: 0;">Traditional Taco Bar</h3>
+            <span style="font-family: var(--font-heading); color: var(--terracotta); font-weight: 700; font-size: 1.5rem;">$17.50 / person</span>
+          </div>
+          <p class="card-text" style="margin-bottom: 1rem;">Choice of 2 proteins (Al Pastor, Carne Asada, Pollo, Carnitas, or Veggie), warm corn & flour tortillas, fresh salsas (Verde & Rojo), chips, guacamole, Mexican rice, and refried beans.</p>
+          <ul style="list-style: circle; padding-left: 1.25rem; font-size: 0.9rem; color: var(--text-muted);">
+            <li>Includes 3 tacos per guest</li>
+            <li>Serving utensils, disposable chafing racks & sternos included</li>
+            <li>Minimum order: 15 guests</li>
+          </ul>
+        </div>
+
+        <div class="card" style="border-top: 4px solid var(--agave-teal);">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+            <h3 class="card-title" style="margin-bottom: 0;">Fiesta Suprema Package</h3>
+            <span style="font-family: var(--font-heading); color: var(--agave-teal); font-weight: 700; font-size: 1.5rem;">$22.50 / person</span>
+          </div>
+          <p class="card-text" style="margin-bottom: 1rem;">Choice of 3 proteins, Queso Fundido with warm tortillas, tableside-style guacamole, chips & salsa bar, Mexican rice, black beans, and warm cinnamon churros for dessert.</p>
+          <ul style="list-style: circle; padding-left: 1.25rem; font-size: 0.9rem; color: var(--text-muted);">
+            <li>Includes 3 tacos + starter appetizers + dessert per guest</li>
+            <li>Optional add-on: Gallon Margaritas ($45/gal)</li>
+            <li>Minimum order: 20 guests</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Catering Estimator (Interaction 2) -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Conversion Estimator</span>
+        <h2 class="section-title">Interactive Catering Party Estimator</h2>
+        <p class="section-subtitle">Calculate quantities, platter trays, and estimated total cost instantly for your group size.</p>
+      </div>
+
+      <div class="catering-calc">
+        <form id="catering-calc-form">
+          <div class="calc-grid">
+            
+            <!-- Left Inputs -->
+            <div>
+              <div class="form-group">
+                <label for="guest-count" class="form-label">Number of Guests (15 to 200+)</label>
+                <input type="number" id="guest-count" class="form-control" value="25" min="15" max="300" required>
+              </div>
+
+              <div class="form-group">
+                <label for="event-type" class="form-label">Event Type</label>
+                <select id="event-type" class="form-control">
+                  <option value="office">Corporate / Office Lunch</option>
+                  <option value="birthday">Birthday Party Fiesta</option>
+                  <option value="wedding">Rehearsal Dinner / Celebration</option>
+                  <option value="tailgate">Game Day / Tailgate</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Select Preferred Proteins (Included)</label>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                  <label style="font-size: 0.9rem;"><input type="checkbox" class="protein-check" checked> Tacos al Pastor</label>
+                  <label style="font-size: 0.9rem;"><input type="checkbox" class="protein-check" checked> Carne Asada</label>
+                  <label style="font-size: 0.9rem;"><input type="checkbox" class="protein-check"> Pollo Asado</label>
+                  <label style="font-size: 0.9rem;"><input type="checkbox" class="protein-check"> Carnitas Michoacán</label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="event-notes" class="form-label">Delivery Location / Special Instructions</label>
+                <textarea id="event-notes" class="form-control" rows="3" placeholder="Dietary allergies, delivery address, preferred setup time..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">Calculate & Request Catering Inquiry</button>
+            </div>
+
+            <!-- Right Live Summary -->
+            <div>
+              <div class="summary-box">
+                <h3 class="summary-title">Taco Bar Quote Summary</h3>
+                
+                <div class="summary-item">
+                  <span>Calculated Food:</span>
+                  <strong id="calc-tacos">75 Tacos (8 Platter Trays)</strong>
+                </div>
+
+                <div class="summary-item">
+                  <span>Sides (Rice & Beans):</span>
+                  <strong id="calc-sides">3 Rice & 3 Beans Trays</strong>
+                </div>
+
+                <div class="summary-item">
+                  <span>Chips & Salsas:</span>
+                  <strong id="calc-chips">4 Gallons Chips & Salsas</strong>
+                </div>
+
+                <div class="summary-item">
+                  <span>Pricing Rate:</span>
+                  <span>$17.50 / guest</span>
+                </div>
+
+                <div class="summary-item total">
+                  <span>Estimated Total:</span>
+                  <span id="calc-total">$437.50</span>
+                </div>
+
+                <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 1rem; text-align: center;">
+                  Includes plates, napkins, serving tongs, and chafing warmer units.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Non-submitting Demo Modal -->
+  <div class="modal-overlay" id="demo-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Close modal">&times;</button>
+      <h3 class="modal-title" id="modal-title" style="font-family: var(--font-heading); color: var(--terracotta); margin-bottom: 1rem;">Demo System Notice</h3>
+      <p class="modal-body-text" style="margin-bottom: 1.5rem; color: var(--text-muted);"></p>
+      <button class="btn btn-primary modal-dismiss">Understand & Close</button>
+    </div>
+  </div>
+
+  <!-- Standard Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <h3>1900 Mexican Grill & Cantina</h3>
+        <p>The Mexican restaurant where Charlotte meets. Scratch cooking inspired by Mexico City and NC's largest Mezcal collection.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Full Menu</a></li>
+          <li><a href="story.html">Our Story</a></li>
+          <li><a href="cantina.html">Mezcal Cantina</a></li>
+          <li><a href="catering.html">Catering</a></li>
+          <li><a href="visit.html">Locations & Hours</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Midtown Elizabeth</h4>
+        <p style="font-size: 0.9rem;">1523 Elizabeth Ave<br>Charlotte, NC 28204<br>(704) 334-4677</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>South Park</h4>
+        <p style="font-size: 0.9rem;">5110 Park Rd #1e<br>Charlotte, NC 28209<br>(704) 523-1554</p>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 1900 Mexican Grill. Unofficial portfolio concept redesign for demonstration purposes.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

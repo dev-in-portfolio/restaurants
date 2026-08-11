@@ -3,140 +3,258 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>1900 Mexican Grill — The Mexican Restaurant Where Charlotte Meets</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="site.css">
+  <title>1900 Mexican Grill & Cantina — Mexico City Inspired Dining in Charlotte, NC</title>
+  <meta name="description" content="Official concept website for 1900 Mexican Grill & Cantina. Scratch-made mole, tableside guac, dual Charlotte locations in Elizabeth Midtown & South Park, and NC's largest Mezcal collection.">
+  <link rel="stylesheet" href="styles.css">
+  <script src="site.js" defer></script>
+  <script src="../scripts/shared/comparison-button.js" defer></script>
+  <script src="../scripts/shared/darkstar-footer.js" defer></script>
 </head>
 <body>
-  <nav class="navbar">
+
+  <!-- Site Navigation -->
+  <header class="site-header">
     <div class="container nav-container">
-      <a href="index.html" class="nav-logo">1900</a>
-      <button class="nav-toggle" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
+      <a href="index.html" class="brand-logo" aria-label="1900 Mexican Grill Homepage">
+        <span class="brand-badge">1900 <span>GRILL</span></span>
+        <span class="brand-tagline">Mexico City Cantina</span>
+      </a>
+
+      <button class="mobile-toggle" aria-label="Toggle mobile navigation menu" aria-expanded="false">
+        ☰
       </button>
+
       <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="menu.html">Menu</a></li>
-        <li><a href="mezcal.html">Mezcal</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="visit.html">Locations</a></li>
-        <li><a href="reserve.html" class="nav-cta">Reserve</a></li>
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="menu.html" class="nav-link">Menu</a></li>
+        <li><a href="story.html" class="nav-link">Story</a></li>
+        <li><a href="cantina.html" class="nav-link">Mezcal Cantina</a></li>
+        <li><a href="catering.html" class="nav-link">Fiesta Catering</a></li>
+        <li><a href="visit.html" class="nav-link">Visit Us</a></li>
+        <li><a href="visit.html#reservations" class="nav-cta-btn">Book Table</a></li>
       </ul>
     </div>
-  </nav>
-
-  <header class="hero">
-    <div class="hero-content">
-      <p class="hero-tag">Est. 2009 · Charlotte, NC</p>
-      <h1 class="hero-title">1900<br><span>Mexican Grill</span></h1>
-      <p class="hero-subtitle">The Mexican Restaurant Where Charlotte Meets</p>
-      <p class="hero-desc">Mexico City-inspired scratch Mexican, a legendary mezcal collection, and 25+ craft margaritas — two locations serving the Queen City for 16 years.</p>
-      <div class="hero-actions">
-        <a href="menu.html" class="btn btn-primary">View Menu</a>
-        <a href="reserve.html" class="btn btn-outline">Make a Reservation</a>
-      </div>
-    </div>
-    <div class="hero-overlay"></div>
   </header>
 
-  <section class="features">
-    <div class="container">
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">🌵</div>
-          <h3>Mezcal Collection</h3>
-          <p>The largest collection of Mezcal in North Carolina — over 80 varieties, from smoky village mezcals to rare artisanal pours.</p>
+  <!-- Hero Section -->
+  <section class="hero-banner">
+    <div class="container hero-grid">
+      <div class="hero-text-col">
+        <div class="hero-pill">
+          <span>🌵 EST. 2009 · CHARLOTTE, NORTH CAROLINA</span>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">🍹</div>
-          <h3>25+ Margaritas</h3>
-          <p>Original craft margaritas made fresh daily. Watermelon Jalapeño, Hibiscus, Classic, and seasonal creations you won't find anywhere else.</p>
+        <h1 class="hero-title">
+          Where Charlotte Meets <span>Mexico City</span>
+        </h1>
+        <p class="hero-lead">
+          Authentic taquería street tacos, rich scratch-made mole poblano, tableside guacamole fresco, and North Carolina’s largest collection of artisanal agave mezcal.
+        </p>
+        <div class="hero-actions">
+          <a href="menu.html" class="btn btn-primary">Explore Full Menu</a>
+          <a href="cantina.html" class="btn btn-secondary">Mezcal Tasting Reserve</a>
+          <a href="visit.html" class="btn btn-outline-light">Locations & Hours</a>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">🥑</div>
-          <h3>Tableside Guac</h3>
-          <p>Guacamole Fresco prepared tableside — ripe avocados, fresh lime, cilantro, and whatever heat level you dare to choose.</p>
+      </div>
+
+      <div class="hero-card-col">
+        <div class="hero-card-preview">
+          <div class="hero-card-header">
+            <span class="hero-card-title">Dual Charlotte Cantinas</span>
+            <span class="loc-badge">Open Today</span>
+          </div>
+          <div style="margin-bottom: 1.5rem;">
+            <h4 style="color: var(--sunlit-gold); font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 4px;">Midtown — Elizabeth Ave</h4>
+            <p style="font-size: 0.9rem; color: rgba(255,255,255,0.75);">1523 Elizabeth Ave · (704) 334-4677</p>
+          </div>
+          <div style="margin-bottom: 1.5rem;">
+            <h4 style="color: var(--sunlit-gold); font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 4px;">South Park — Park Rd</h4>
+            <p style="font-size: 0.9rem; color: rgba(255,255,255,0.75);">5110 Park Rd #1e · (704) 523-1554</p>
+          </div>
+          <a href="catering.html" class="btn btn-primary" style="width: 100%; justify-content: center;">Plan Office or Social Catering</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="signature-menu">
+  <!-- Core Pillars Section -->
+  <section class="section">
     <div class="container">
-      <h2 class="section-title">Signature Favorites</h2>
-      <p class="section-sub">From our scratch kitchen to your table — bold flavors, authentic techniques.</p>
-      <div class="sig-grid">
-        <div class="sig-card">
-          <h4>Guacamole Fresco</h4>
-          <p>$7 · Tableside, made to order with ripe avocados, lime, cilantro, and serrano peppers.</p>
-        </div>
-        <div class="sig-card">
-          <h4>Birria Tacos</h4>
-          <p>Slow-braised beef in rich consommé, melted cheese, corn tortillas — served with dipping broth.</p>
-        </div>
-        <div class="sig-card">
-          <h4>Carne Asada</h4>
-          <p>Grilled marinated steak, charred to perfection, served with rice, beans, and fresh tortillas.</p>
-        </div>
+      <div class="section-header">
+        <span class="section-label">The 1900 Experience</span>
+        <h2 class="section-title">Scratch Craftsmanship & Agave Heritage</h2>
+        <p class="section-subtitle">Bringing the vibrant sights, aromas, and community warmth of Mexico City taquerias and cantinas to Queen City diners since 2009.</p>
       </div>
-      <div class="cta-center">
-        <a href="menu.html" class="btn btn-primary">See Full Menu</a>
-      </div>
-    </div>
-  </section>
 
-  <section class="locations-preview">
-    <div class="container">
-      <h2 class="section-title">Two Locations</h2>
-      <p class="section-sub">Serving Charlotte from Midtown and South Park.</p>
-      <div class="locations-grid">
-        <div class="loc-card">
-          <h3>Midtown</h3>
-          <p>1523 Elizabeth Ave, Charlotte, NC 28204</p>
-          <p class="loc-hours">Tue–Thu 11am–9pm · Fri–Sat 11am–11pm · Sun 12pm–9pm</p>
-          <a href="tel:7043344677" class="loc-phone">(704) 334-4677</a>
+      <div class="grid-4">
+        <div class="card">
+          <div class="card-icon">🥑</div>
+          <h3 class="card-title">Tableside Guac</h3>
+          <p class="card-text">Prepared at your table with ripe hass avocados, fresh lime juice, cilantro, red onion, and serrano peppers crushed to your exact spice level.</p>
         </div>
-        <div class="loc-card">
-          <h3>South Park</h3>
-          <p>5110 Park Rd #1E, Charlotte, NC 28209</p>
-          <p class="loc-hours">Mon–Thu 11am–10pm · Fri–Sat 11am–11pm · Sun 12pm–9pm</p>
-          <a href="tel:7045231554" class="loc-phone">(704) 523-1554</a>
+
+        <div class="card">
+          <div class="card-icon">🌵</div>
+          <h3 class="card-title">80+ Mezcal Reserve</h3>
+          <p class="card-text">North Carolina’s largest collection of wild & cultivated mezcals, paired with hand-ground Sal de Gusano and fresh citrus wheels.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🌮</div>
+          <h3 class="card-title">Street Taquería</h3>
+          <p class="card-text">Al Pastor carved with pineapple, slow-braised Birria de Res dipped in consommé, and crisp Modelo-battered coastal fish tacos.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🍹</div>
+          <h3 class="card-title">25+ Margaritas</h3>
+          <p class="card-text">Crafted daily with 100% blue agave tequila, organic agave nectar, and fresh juices — from Watermelon Jalapeño to Smoked Hibiscus.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="cta-section">
+  <!-- Signature Menu Highlights -->
+  <section class="section section-alt">
     <div class="container">
-      <h2>Grab a Seat</h2>
-      <p>Walk-ins always welcome. Reservations recommended for parties and special occasions.</p>
-      <div class="hero-actions">
-        <a href="reserve.html" class="btn btn-primary">Reserve a Table</a>
-        <a href="visit.html" class="btn btn-outline">Get Directions</a>
+      <div class="section-header">
+        <span class="section-label">Mexico City Traditions</span>
+        <h2 class="section-title">Signature House Dishes</h2>
+        <p class="section-subtitle">Every mole, salsa, and tortilla is crafted from scratch using verified heritage recipes.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem;">
+            <h3 class="card-title" style="margin-bottom: 0;">Mole Poblano</h3>
+            <span style="color: var(--terracotta); font-family: var(--font-heading); font-weight: 700; font-size: 1.25rem;">$18.95</span>
+          </div>
+          <span class="diet-badge badge-fav" style="display: inline-block; margin-bottom: 0.75rem;">House Specialty</span>
+          <p class="card-text">Traditional house-made rich chocolate-chili mole sauce slow-simmered with 24 ingredients over roasted chicken, sprinkled with toasted sesame seeds.</p>
+        </div>
+
+        <div class="card">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem;">
+            <h3 class="card-title" style="margin-bottom: 0;">Birria de Res</h3>
+            <span style="color: var(--terracotta); font-family: var(--font-heading); font-weight: 700; font-size: 1.25rem;">$18.50</span>
+          </div>
+          <span class="diet-badge badge-gf" style="display: inline-block; margin-bottom: 0.75rem;">Gluten-Free</span>
+          <p class="card-text">Slow-braised beef brisket wrapped in warm corn tortillas with melted Oaxaca cheese, served with a savory guajillo consommé dipping broth.</p>
+        </div>
+
+        <div class="card">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem;">
+            <h3 class="card-title" style="margin-bottom: 0;">Tacos al Pastor</h3>
+            <span style="color: var(--terracotta); font-family: var(--font-heading); font-weight: 700; font-size: 1.25rem;">$15.95</span>
+          </div>
+          <span class="diet-badge badge-fav" style="display: inline-block; margin-bottom: 0.75rem;">CDMX Classic</span>
+          <p class="card-text">Marinated achiote pork shoulder roasted on the spit, topped with roasted pineapple, diced onions, fresh cilantro, and salsa verde.</p>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="menu.html" class="btn btn-primary">View Complete Verified Menu</a>
       </div>
     </div>
   </section>
 
-  <footer class="footer">
-    <div class="container footer-content">
+  <!-- Dual Location Feature -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Serving Charlotte</span>
+        <h2 class="section-title">Two Convenient Queen City Locations</h2>
+        <p class="section-subtitle">Whether you are near Novant Elizabeth or Park Road Shopping Center, 1900 is ready for your table.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card" style="border-top: 4px solid var(--terracotta);">
+          <h3 class="card-title" style="font-size: 1.6rem; color: var(--terracotta);">Midtown / Elizabeth Flagship</h3>
+          <p style="font-weight: 600; margin-bottom: 0.5rem; color: var(--obsidian);">1523 Elizabeth Ave, Charlotte, NC 28204</p>
+          <p class="card-text" style="margin-bottom: 1rem;">Located right in Elizabeth near CPCC and Novant Presbyterian Medical Center. Ideal for lunch gatherings, after-work drinks, and family dinners.</p>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+            <strong>Hours:</strong> Mon–Thu 11am–10pm · Fri–Sat 11am–11pm · Sun 12pm–9pm<br>
+            <strong>Phone:</strong> (704) 334-4677
+          </p>
+          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <a href="visit.html?loc=midtown" class="btn btn-secondary" style="padding: 10px 18px; font-size: 0.85rem;">Directions & Hours</a>
+            <a href="https://www.yelp.com/reservations/1900-mexican-grill-charlotte-2" target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark" style="padding: 10px 18px; font-size: 0.85rem;">Book Table on Yelp ↗</a>
+          </div>
+        </div>
+
+        <div class="card" style="border-top: 4px solid var(--agave-teal);">
+          <h3 class="card-title" style="font-size: 1.6rem; color: var(--agave-teal);">South Park Cantina</h3>
+          <p style="font-weight: 600; margin-bottom: 0.5rem; color: var(--obsidian);">5110 Park Rd #1e, Charlotte, NC 28209</p>
+          <p class="card-text" style="margin-bottom: 1rem;">Located at Park Road Shopping Center. Featuring our expanded patio, full agave spirit tasting bar, and group dining spaces.</p>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+            <strong>Hours:</strong> Mon–Thu 11am–10pm · Fri–Sat 11am–11pm · Sun 12pm–9pm<br>
+            <strong>Phone:</strong> (704) 523-1554
+          </p>
+          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <a href="visit.html?loc=southpark" class="btn btn-secondary" style="padding: 10px 18px; font-size: 0.85rem;">Directions & Hours</a>
+            <a href="https://www.yelp.com/reservations/1900-mexican-grill-charlotte" target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark" style="padding: 10px 18px; font-size: 0.85rem;">Book Table on Yelp ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Catering CTA Banner -->
+  <section class="section dark-section" style="background-image: radial-gradient(circle at 10% 90%, rgba(200,62,43,0.3) 0%, transparent 60%);">
+    <div class="container" style="text-align: center;">
+      <span class="section-label" style="color: var(--sunlit-gold);">Fiesta & Event Solutions</span>
+      <h2 class="section-title" style="color: #ffffff;">Planning an Office Lunch or Private Party?</h2>
+      <p style="max-width: 650px; margin: 0 auto 2.5rem; color: rgba(255,255,255,0.8); font-size: 1.15rem;">
+        From 15 to 200+ guests, our Taco Bar catering packages bring 1900’s scratch meats, fresh salsas, chips, and sides directly to your venue.
+      </p>
+      <a href="catering.html" class="btn btn-primary">Try Interactive Catering Estimator</a>
+    </div>
+  </section>
+
+  <!-- Non-submitting Demo Modal -->
+  <div class="modal-overlay" id="demo-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Close modal">&times;</button>
+      <h3 class="modal-title" id="modal-title" style="font-family: var(--font-heading); color: var(--terracotta); margin-bottom: 1rem;">Demo System Notice</h3>
+      <p class="modal-body-text" style="margin-bottom: 1.5rem; color: var(--text-muted);"></p>
+      <button class="btn btn-primary modal-dismiss">Understand & Close</button>
+    </div>
+  </div>
+
+  <!-- Standard Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
       <div class="footer-brand">
-        <span class="footer-logo">1900</span>
-        <p>The Mexican Restaurant Where Charlotte Meets</p>
+        <h3>1900 Mexican Grill & Cantina</h3>
+        <p>The Mexican restaurant where Charlotte meets. Scratch cooking inspired by Mexico City and NC's largest Mezcal collection.</p>
       </div>
-      <div class="footer-links">
-        <a href="menu.html">Menu</a>
-        <a href="about.html">About</a>
-        <a href="visit.html">Locations</a>
-        <a href="reserve.html">Reserve</a>
+
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Full Menu</a></li>
+          <li><a href="story.html">Our Story</a></li>
+          <li><a href="cantina.html">Mezcal Cantina</a></li>
+          <li><a href="catering.html">Catering</a></li>
+          <li><a href="visit.html">Locations & Hours</a></li>
+        </ul>
       </div>
-      <div class="footer-legal">
-        <p>&copy; 2025 1900 Mexican Grill. All rights reserved.</p>
+
+      <div class="footer-col">
+        <h4>Midtown Elizabeth</h4>
+        <p style="font-size: 0.9rem;">1523 Elizabeth Ave<br>Charlotte, NC 28204<br>(704) 334-4677</p>
       </div>
+
+      <div class="footer-col">
+        <h4>South Park</h4>
+        <p style="font-size: 0.9rem;">5110 Park Rd #1e<br>Charlotte, NC 28209<br>(704) 523-1554</p>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 1900 Mexican Grill. Unofficial portfolio concept redesign for demonstration purposes.</p>
     </div>
   </footer>
 
-  <script src="site.js"></script>
 </body>
 </html>
