@@ -6,5 +6,6 @@
 // Use portalSection: "later" only when fresh verification shows the audited lead needs a recheck.
 window.portalOverrides = [
   { name: "1900 Mexican Grill", status: "premium", href: "1900-mexican-grill/index.html" },
-  { name: "Adamary’s Restaurante y Pupuseria", status: "qa", href: "adamary-s-restaurante-y-pupuseria/index.html" }
+  { name: "Adamary’s Restaurante y Pupuseria", status: "qa", href: "adamary-s-restaurante-y-pupuseria/index.html" },
+  { name: "All Purpose Bar", status: "premium", href: "all-purpose-bar/index.html" }
 ];
