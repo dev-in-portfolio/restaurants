@@ -1,199 +1,146 @@
-# Charlotte-Area Restaurant Website Rebuild Portal
+# Premium Restaurant Demo Factory
 
-Repository: **https://github.com/dev-in-portfolio/restaurants**
+Repository: `dev-in-portfolio/restaurants`
 
-This repo is Devin's restaurant lead portal and portfolio of unofficial restaurant-specific website rebuilds.
+This repository contains **unofficial, portfolio-only concept rebuilds** for qualified Charlotte-area restaurant prospects. A concept demonstrates what a better owned web experience could be; it is not the restaurant's production website and must never imply that it is.
 
-## Current truth
+This document is a cold-start instruction set. Treat it as the complete brief: inspect the repository and current prospect record, make the next eligible demo, validate it, and publish the result. Do not ask follow-up questions unless a required fact cannot be verified from official sources.
 
-No restaurant is currently marked complete or premium.
+## Non-negotiable outcome
 
-The project now requires **six separate substantive pages**. Existing five-page builds—including Boudreaux's—remain useful work, but they are incomplete under the current standard until a sixth page is added and the full site passes verification.
+Build a genuinely restaurant-specific, premium six-page experience that a restaurant owner could recognize as made for their business—not a recolored template or a generic food site. Ship it only when it is accurate, polished, accessible, and registered in the portal with an honest status.
 
-The portal therefore uses these statuses:
+## Scope and safety
 
-- **LEAD • NOT BUILT YET** — queued prospect with no usable rebuild.
-- **INCOMPLETE • 6-PAGE STANDARD NOT MET** — an existing build that has not been verified as six separate substantive pages.
-- **6/6 PAGES • QA PENDING** — six pages exist, but premium browser QA is not finished.
-- **PREMIUM • 6-PAGE IDENTITY REBUILD** — six pages, restaurant-specific interactions, and desktop/mobile browser QA all pass.
+- Use only current, public, verifiable business information from official restaurant sources and reputable current coverage.
+- Do not invent menu items, prices, people, awards, dates, hours, locations, policies, integrations, availability, or customer testimonials.
+- Do not copy protected restaurant photography, logos, or distinctive brand assets without permission. Use original/appropriately licensed visual treatment, CSS art, abstract imagery, or clearly generic imagery.
+- Do not add real payment, order, reservation, email, analytics, or form-submission integrations unless they already exist in the repository and have been approved. A demo form must clearly behave as a demo and must not claim a message or booking was received.
+- Keep secrets, API keys, customer data, and scraped private data out of the repository.
+- Do not modify, delete, or overwrite an existing restaurant build merely because it is incomplete. Existing folders, shared assets, scripts, templates, and archived lead sources are retained unless a task explicitly says otherwise.
 
-Do not use `full`, `complete`, `finished`, or `premium` merely because a folder, homepage, card, or five-page site exists.
+## The canonical queue
 
-## First response and automatic continuation
+The active queue must contain only reconciled records from the final restaurant audit. A record is eligible only when all of the following are true:
 
-Do not ask Devin which letter to begin with.
+1. It has final disposition `YES` or `CONDITIONAL`.
+2. Its final grade is `A` or `B`.
+3. It is an active, in-scope business—not `HOLD`, `NO`, closed, inactive, out of scope, or awaiting operating-status verification.
+4. It is the canonical identity after aliases, duplicate rows, and rebrands are merged.
 
-Fetch the latest `main`, inspect the current portal records and automatically select the next eligible restaurant that needs an upgrade.
+Never infer eligibility from an old portal card, a folder name, or a preliminary research note. The final reconciled audit is the source of truth. In particular, do not re-add merged aliases, closed names, or businesses that require a recheck.
 
-Prioritize existing incomplete builds before unbuilt leads. Within each category, select alphabetically while ignoring leading **The**, **A** and **An**.
+When changing the queue, preserve the legacy source files as archives if useful, but ensure the rendered portal reads only the canonical audited queue. Do not expose archived or excluded records as active lead cards.
 
-Begin the selected restaurant immediately.
+Every active queue record must contain:
 
-After completing, validating, committing and publishing it to `main`, automatically select the next eligible restaurant and continue. Do not wait for Devin to say `continue`.
+- canonical restaurant name and stable slug;
+- area/location label;
+- final grade and final disposition;
+- concise, evidence-based issue summary;
+- a demo direction tied to the actual restaurant and its documented weakness;
+- status `lead` until a verified build is registered.
 
-Skip restaurants that are already promoted, meaningful upgrades, premium, QA pending, placed in At a Later Time, inactive, duplicated, awaiting verification or already being handled by another model.
+## Selecting the next build
 
-## Selection priority
+Work autonomously. First fetch the latest `main`, inspect the active audited queue, existing folders, and overrides, then select the next eligible restaurant.
 
-Choose restaurants in this order:
+Priority order:
 
-1. Existing `incomplete` builds that do not meet the six-page standard.
-2. Eligible `lead` restaurants that do not yet have a usable rebuild.
+1. an active A-grade `YES` lead without a verified six-page build;
+2. an active B-grade `YES` lead without a verified six-page build;
+3. an active A-grade `CONDITIONAL` lead;
+4. an active B-grade `CONDITIONAL` lead.
 
-Do not automatically select restaurants classified as:
+Within a tier, work alphabetically ignoring `The`, `A`, and `An`. Skip any restaurant already in active work, an archival/later section, or with an accurate `qa`, `premium`, `promoted`, or `promoted_secondary` status. Do not change an excluded record just to make it eligible.
 
-- `promoted`
-- `promoted_secondary`
-- `premium`
-- `qa`
-- `later` or `portalSection: "later"`
-- closed
-- inactive
-- duplicate legacy records
-- awaiting business-status verification
+If a current official source conflicts materially with the audit, verify before building. If the restaurant is closed, has changed identity, or cannot be confidently verified as active, mark the queue record for recheck rather than producing a speculative demo.
 
-Before starting, verify that another active model or recent commit is not already working on that restaurant. If it is, skip it and select the next eligible restaurant.
+## Research packet before implementation
 
-## Hard exclusion: At a Later Time
+Before writing pages, collect a compact, source-backed packet in the restaurant folder or its audit note:
 
-Any restaurant assigned to the **At a Later Time** section is not eligible for automatic work.
+- canonical identity, current location(s), service model, and current public hours;
+- current menu categories and at least enough verified content for a credible menu structure;
+- real story, cuisine, neighborhood context, and differentiators;
+- the exact documented website weakness this concept improves;
+- 2–3 visual/art-direction cues that fit the business;
+- the correct conversion path (for example private dining, catering, booking guidance, ordering guidance, events, or visit planning).
 
-A restaurant must be excluded whenever its canonical portal record contains `portalSection: "later"` or an equivalent field used by the portal to place it in the later section. This placement exclusion overrides the restaurant's technical build status.
+If any detail is unknown, omit it or use clearly generic demo copy. Accuracy beats density.
 
-Therefore, a restaurant in **At a Later Time** must be ignored even when its technical status is `incomplete`, `lead`, `qa`, `premium`, or any other status.
+## Required deliverable: six substantive pages
 
-### Automatic workflow behavior
+Each completed concept lives in its own `<restaurant-slug>/` directory and includes at least these six separate, linked HTML pages:
 
-Before constructing the next-work queue, the model must:
+1. `index.html` — conversion-aware home page.
+2. `menu.html` — useful menu exploration, not a screenshot wall.
+3. `story.html` or `about.html` — real restaurant story and identity.
+4. A restaurant-specific experience page — for example drinks, brunch, bakery, location guide, taproom, chef's table, or neighborhood guide.
+5. A conversion page — for example private dining, catering, groups, reservations, events, or ordering guidance.
+6. `visit.html` or `contact.html` — location, verified practical information, accessibility/parking/transit guidance where applicable, and clear next action.
 
-1. Resolve restaurants through their canonical records and alias mappings.
-2. Remove every restaurant assigned to **At a Later Time**.
-3. Remove promoted, meaningful-upgrade, premium and QA-pending restaurants.
-4. Remove closed, inactive, duplicate and business-verification-pending restaurants.
-5. Remove restaurants already being handled by another active model.
-6. Prioritize the remaining `incomplete` builds.
-7. If no eligible incomplete builds remain, select the next eligible `lead`.
-8. Sort eligible restaurants alphabetically while ignoring leading **The**, **A** and **An**.
-9. Begin the next eligible restaurant automatically.
+Anchors, tabs, modals, duplicated layouts, and homepage sections do not count as separate pages. Every page needs a distinct job, meaningful content, responsive layout, and working navigation.
 
-### Prohibited actions
+## Premium quality bar
 
-The autonomous workflow must never automatically:
+The demo must feel deliberately art-directed for this restaurant:
 
-- rebuild an At a Later Time restaurant;
-- upgrade it;
-- perform QA on it;
-- promote it;
-- copy it into staging;
-- change its status;
-- remove its later placement;
-- return it to the normal alphabetical work queue;
-- select it as the next restaurant needing work.
+- establish a distinctive visual system: typography, color, rhythm, imagery treatment, components, and motion appropriate to the concept;
+- use a page hierarchy and content flow that is specific to the restaurant's business model;
+- make the restaurant's documented problem visibly better (for example one clear source of truth for hours/locations, a readable menu, an integrated event path, or a proper owned-web home);
+- provide at least two meaningful, accessible interactions, including one conversion-oriented interaction;
+- ensure interactions change useful state or help a guest decide—decorative animation, hover states, anchor scrolling, and fake submissions do not count;
+- use semantic HTML, keyboard-operable controls, visible focus states, adequate contrast, meaningful labels/alt text, and reduced-motion support.
 
-Later-section restaurants must be skipped silently while the workflow continues to the next eligible restaurant.
+Permitted interaction examples include menu filtering/search, dietary guidance, group-planning estimator, location selector, event picker, order guide, flight builder, or reservation/party-size guidance. Build the interaction around verified restaurant needs; do not add a random feature solely to meet a quota.
 
-### Canonical-name handling
+## Reuse versus repetition
 
-The exclusion must use the canonical restaurant record and existing aliases.
+Shared primitives are encouraged: resets, accessible navigation helpers, form safeguards, QA utilities, and small generic UI components. A reused restaurant shell is not.
 
-A later-section restaurant must not bypass the exclusion because of accented versus unaccented characters, apostrophe differences, punctuation differences, capitalization differences, corrupted legacy text, alternate names, renamed records, or duplicate legacy cards.
+Do not clone a prior restaurant folder and only swap names, colors, and text. New work must have its own layout composition, visual hierarchy, interaction model, content architecture, and conversion journey. Existing folders are references for quality—not templates to duplicate.
 
-## Six-page deliverable
+## Portal data and statuses
 
-Every completed restaurant rebuild must have at least six separate, substantive HTML pages:
+The portal is data-driven. Keep the renderer and shared scripts stable; change only the canonical queue/override data needed for the restaurant you are completing. Re-fetch shared files immediately before changing them.
 
-1. **Home** — `<restaurant-slug>/index.html`
-2. **Menu**
-3. **Story / About**
-4. **Restaurant-specific experience page** — brunch, taproom, bakery, neighborhood guide, drinks, locations, entertainment, or another real need
-5. **Conversion page** — catering, reservations, private dining, events, ordering, group dining, parties, or another real conversion path
-6. **Visit / Contact**
+Use statuses honestly:
 
-Six homepage sections, anchor links, tabs, modal panels, or repeated copies of one layout do not count as six pages.
+- `lead` — audited, eligible prospect; no verified six-page concept.
+- `incomplete` — a build exists but does not meet the six-page standard.
+- `qa` — all six substantive pages exist and are linked; browser QA is still pending.
+- `premium` — six substantive pages, required interactions, and desktop/mobile browser QA all pass.
+- `promoted` / `promoted_secondary` — reserved for explicitly approved showcase work.
+- `portalSection: "later"` — excluded from automatic selection regardless of status.
 
-Each page must have its own purpose, composition, useful content, responsive state, and working navigation.
+Never label a card `qa`, `premium`, `promoted`, or complete because a folder exists, because it has five pages, or because the homepage looks good.
 
-## Research and accuracy
+## QA gate
 
-Use current official sources and recent reliable coverage. Verify the restaurant's identity, location, menu structure, hours, ordering/reservation paths, social accounts, story, visual character, and actual website weaknesses.
+Before committing:
 
-Do not invent prices, menu items, owners, history, awards, policies, hours, integrations, availability, or contact details.
+1. Confirm the six required pages exist and navigation works in both directions.
+2. Verify all facts, links, labels, and conversion paths against the research packet.
+3. Test every interaction and make sure demo forms cannot send or falsely confirm a real request.
+4. Browser-render each page at desktop and mobile widths.
+5. Check no horizontal overflow, clipping, broken assets, console errors, dead links, unreadable contrast, inaccessible controls, or touch-target failures.
+6. Check keyboard navigation, focus visibility, and reduced-motion behavior.
+7. Update the portal record only to the status actually earned.
 
-Public restaurant contact information may be used when verified. Secrets, tokens, private credentials, and private customer data must never be committed.
+Code review alone is not browser QA.
 
-## No template sludge
+## Collaboration and publishing
 
-Each restaurant must have its own visual identity, information architecture, page rhythm, interactions, and conversion journey.
+Multiple agents may work here. Preserve unrelated work.
 
-Do not reuse one shared restaurant shell with different names and colors. Shared resets, accessibility helpers, navigation utilities, and safe demo-form behavior are allowed; repeated restaurant layouts are not.
+1. Fetch latest `main` before starting and again immediately before editing a shared portal file.
+2. Work primarily within the selected restaurant folder.
+3. Do not hard-reset, force-push, revert another contributor's work, or delete unfamiliar files.
+4. If a compatible change arrives first, integrate it, re-run validation, and continue.
+5. Commit focused changes, push to `main`, and verify that the portal entry and restaurant route are present on `main`.
+6. Once one restaurant is fully published, select the next eligible record and continue without waiting for a follow-up prompt.
 
-Boudreaux's demonstrates restaurant-specific visual thinking, but it is currently a five-page incomplete build—not a complete or premium status reference.
+## Definition of done
 
-## Required interactions
-
-Include at least two useful restaurant-specific interactions, including one conversion-oriented interaction.
-
-Examples: menu search/filter, meal-time selector, catering estimator, party planner, location selector, order guide, tasting builder, pairing finder, reservation guide, event controls, dietary filter, or group-order builder.
-
-Decorative animation, hover effects, anchor scrolling, and fake form success messages do not count by themselves.
-
-Forms must not submit or claim a request was received unless a real approved integration exists.
-
-## Browser QA
-
-Before a card can reach **6/6 PAGES • QA PENDING**, confirm all six pages exist and are linked.
-
-Before a card can reach **PREMIUM • 6-PAGE IDENTITY REBUILD**, browser-render and inspect every page at desktop and mobile sizes. Check navigation, touch targets, keyboard access, contrast, clipping, overflow, assets, links, interactions, and page-to-page quality.
-
-Code inspection alone does not prove premium quality.
-
-## Portal files
-
-The portal is intentionally separated to reduce collisions:
-
-- `index.html` — clean portal shell
-- `portal.js` — loading, deduplication, status enforcement, sorting and rendering
-- `portal-concepts-source.html` — preserved legacy portal data source; do not edit
-- `portal-overrides.js` — add or replace restaurant records here
-- `portal-leads-message2-original.js` and `portal-leads-message3.js` — queued lead sources
-
-The portal automatically treats all legacy `full` and `premium` entries as **incomplete** until a current override explicitly proves a six-page status.
-
-When updating `portal-overrides.js`, re-fetch the latest file first and preserve every unrelated entry.
-
-## Play nice
-
-Multiple models may work in this repo simultaneously. New commits, comments, files, folders, branches, QA output, and portal entries are normal.
-
-- Fetch the latest `main` before starting.
-- Re-fetch shared files immediately before editing them.
-- Preserve unrelated work.
-- Work mainly inside the assigned restaurant folder.
-- Integrate compatible concurrent changes.
-- Never hard reset, force-push, move `main` backward, delete unfamiliar work, or revert a commit merely because another model made it.
-
-When another model pushes first: **okay, nice.** Take a breath, fetch the latest `main`, keep their valid work, reapply or merge yours, validate the combined result, and retry.
-
-Escalate only when two changes are genuinely incompatible and cannot both be preserved.
-
-## Publishing and continuation
-
-For each restaurant:
-
-1. Fetch latest `main`.
-2. Research and build six substantive pages.
-3. Add at least two useful interactions.
-4. Validate code, routes, links, assets and forms.
-5. Browser-test all six pages on desktop and mobile.
-6. Fetch latest `main` again.
-7. Integrate concurrent work.
-8. Update `portal-overrides.js` with the honest status.
-9. Commit, push and merge to `main`.
-10. Confirm the folder, portal route and status are present on `main`.
-11. Automatically select the next eligible restaurant and begin work immediately.
-
-Do not leave completed work on an unmerged branch.
-
-## Completion rule
-
-A restaurant is not complete until six separate substantive pages exist, required interactions work, desktop/mobile QA passes, the portal status is accurate, and everything is published on `main`.
+A restaurant concept is done only when it has an evidence-based, restaurant-specific six-page demo; two useful interactions including a conversion interaction; passing desktop and mobile browser QA; an accurate portal status; and a published `main` commit.
