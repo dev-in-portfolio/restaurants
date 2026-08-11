@@ -1,0 +1,34 @@
+name: Sync Showcase exclusions
+
+on:
+  push:
+    paths:
+      - '.housekeeping-showcase-sync'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-showcase-exclusions
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Remove Showcase demos from active Gemini queue
+        run: node scripts/sync-showcase-exclusions.mjs
+
+      - name: Commit cleaned queue
+        run: |
+          git config user.name 'restaurant-demo-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add queue/a-yes-1.js queue/a-yes-2.js queue/b-yes.js queue/b-conditional.js queue/showcase-exclusions.json queue/meta.js
+          git diff --cached --quiet && exit 0
+          git commit -m 'chore: exclude existing Showcase demos from Gemini queue [skip ci]'
+          git push origin main
