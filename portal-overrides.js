@@ -9,5 +9,6 @@ window.portalOverrides = [
   { name: "Adamary’s Restaurante y Pupuseria", status: "qa", href: "adamary-s-restaurante-y-pupuseria/index.html" },
   { name: "All Purpose Bar", status: "premium", href: "all-purpose-bar/index.html" },
   { name: "Angela’s Pizzeria & Restaurant", portalSection: "later", note: "Third-party delivery platforms report temporarily closed; needs recheck." },
-  { name: "Anita’s Mexican Grill", status: "premium", href: "anita-s-mexican-grill/index.html" }
+  { name: "Anita’s Mexican Grill", status: "premium", href: "anita-s-mexican-grill/index.html" },
+  { name: "ANJU Korean Dining & Bar", status: "premium", href: "anju-korean-dining-and-bar/index.html" }
 ];
