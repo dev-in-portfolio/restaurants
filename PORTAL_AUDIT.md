@@ -36,28 +36,52 @@ Old restaurant folders and the retired legacy lead/concept files remain historic
 
 ## Premium demo sales boundary
 
-Premium status no longer means "include as many features as possible."
+Premium status does not mean "include as many features as possible."
 
-The demo's job is to sell the **premium core website** while preserving Dark Star Consulting's separately sellable add-on packs. `ADD_ON_BOUNDARY.md` contains the detailed boundary and is mandatory for build agents.
+The demo's job is to sell the **premium core website** while preserving Dark Star Consulting's separately sellable add-on packs. `ADD_ON_BOUNDARY.md` contains the commercial boundary.
 
-The old completion requirement for **two useful interactions including one conversion interaction is retired**. That rule encouraged agents to build separately monetizable functionality, such as custom planners, builders, concierge tools, and other signature interactions, directly into prospect demos.
+The old completion requirement for two custom interactions is retired. Ordinary website interactions remain appropriate, while custom functionality that maps to a sellable DSC add-on remains reserved for the proposal unless explicitly requested.
 
-Ordinary website interactions remain appropriate: navigation, accordions, standard tabs, simple galleries, subtle motion, and straightforward links to verified existing ordering/reservation services.
+## Build-system quality correction
 
-Custom feature functionality that maps to a sellable DSC add-on must be preserved for the proposal unless the user explicitly requests that add-on in the demo.
+`BUILD_QUALITY_GATE.md` now controls premium-core build quality.
+
+The fixed six-page quota is retired when verified material does not support six genuinely distinct pages. Automatic demos require **at least five substantive evidence-supported pages**, with a sixth only when current material justifies it.
+
+The new system also requires:
+
+- a `Creative Brief` with verified restaurant-specific anchors and three core design moves;
+- a `Claim Ledger` mapping meaningful restaurant-specific claims to source URLs;
+- an anti-template swap test so a generic hero/cards/grid shell cannot qualify merely by changing colors and copy;
+- no automatic-demo forms;
+- no invented catering/event/package inventory;
+- machine validation before `qa` or `premium`.
+
+Run:
+
+```bash
+node scripts/validate-demo.mjs <restaurant-slug>
+```
+
+The validator writes `<slug>/qa-report.json` and fails on objective defects such as broken CSS balance, JavaScript parse errors, broken local links/assets, missing fragment targets, duplicate IDs, missing alt text, placeholders, prohibited forms, missing core pages, or missing evidence sections.
+
+A sentence in `evidence.md` claiming that QA passed does not override a failed validator.
 
 ## Completion rule
 
-The current six-page premium standard in `README.md` requires:
+`premium` now requires:
 
-- restaurant-specific bespoke design;
-- six substantive pages;
-- strong core information architecture and presentation;
-- verified current evidence;
-- responsive desktop/mobile browser QA;
-- accessibility checks;
+- at least five substantive evidence-supported pages;
+- restaurant-specific bespoke core design that passes the anti-template gate;
+- successful machine validation;
+- factual provenance through the Claim Ledger;
+- responsive desktop/mobile browser QA actually performed;
+- console, keyboard, focus, overflow/clipping, and accessibility checks actually performed;
 - truthful demo-safe behavior;
-- **Add-On Preservation review**;
-- `evidence.md` documentation of relevant add-ons intentionally preserved as upsell opportunities.
+- Add-On Preservation review.
 
-A demo that looks excellent but gives away separately sellable DSC add-ons does **not** qualify as complete under the current sales strategy.
+If browser rendering is unavailable, the highest honest status is `qa` after machine validation passes.
+
+## Regression specimen
+
+`adamary-s-restaurante-y-pupuseria/` is intentionally left unchanged as the build that exposed the prior system weaknesses. It is not to be silently repaired during build-system housekeeping. It should be useful for verifying that the new validator and quality rules catch the kinds of defects and unsupported-content patterns that previously slipped through.
