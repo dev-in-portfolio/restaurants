@@ -16,5 +16,6 @@ window.portalOverrides = [
   { name: "Aria Tuscan Grill", status: "premium", href: "aria-tuscan-grill/index.html" },
   { name: "Aroy Thai", status: "premium", href: "aroy-thai/index.html" },
   { name: "Assorted Table Wine & Shop", status: "premium", href: "assorted-table-wine-and-shop/index.html" },
-  { name: "Astoria Café", status: "premium", href: "astoria-cafe/index.html" }
+  { name: "Astoria Café", status: "premium", href: "astoria-cafe/index.html" },
+  { name: "Azucar Cuban Restaurant", status: "premium", href: "azucar-cuban-restaurant/index.html" }
 ];
