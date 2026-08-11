@@ -10,5 +10,6 @@ window.portalOverrides = [
   { name: "All Purpose Bar", status: "premium", href: "all-purpose-bar/index.html" },
   { name: "Angela’s Pizzeria & Restaurant", portalSection: "later", note: "Third-party delivery platforms report temporarily closed; needs recheck." },
   { name: "Anita’s Mexican Grill", status: "premium", href: "anita-s-mexican-grill/index.html" },
-  { name: "ANJU Korean Dining & Bar", status: "premium", href: "anju-korean-dining-and-bar/index.html" }
+  { name: "ANJU Korean Dining & Bar", status: "premium", href: "anju-korean-dining-and-bar/index.html" },
+  { name: "Ann Marie’s Gourmet Burgers & Fries", status: "premium", href: "ann-marie-s-gourmet-burgers-and-fries/index.html" }
 ];
