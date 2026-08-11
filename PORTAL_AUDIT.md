@@ -1,64 +1,98 @@
-# Portal Status Audit — 2026-07-15
+# Portal Architecture — Audited Queue Reset
 
-## Scope
+## Current state
 
-Audit of the live `main` portal status claims, the Boudreaux’s page structure, recent restaurant-build commits, shared portal syntax, and the repository completion rules.
+The portal no longer builds its active lead wall from the old mixed legacy sources.
 
-## Findings
+The active source of truth is now the final reconciled A/B prospect set from the completed 645-record Rada-depth audit:
 
-### 1. The portal was claiming completion under a five-page standard
+- **407 canonical active prospects**
+- **284 A-grade YES**
+- **46 B-grade YES**
+- **77 B-grade CONDITIONAL**
 
-The portal rendered legacy `status:"full"` entries as `FULL 5-PAGE • QA PENDING` and rendered Boudreaux’s `status:"premium"` as `PREMIUM • IDENTITY REBUILD`.
+HOLD, NO, closed, inactive, out-of-scope and merged alias records are excluded from the active build rotation.
 
-That conflicts with the current six-page requirement.
+## Canonical data
 
-### 2. Boudreaux’s is five pages, not six
+The queue is intentionally split into four compact files:
 
-The Boudreaux’s navigation links to:
+- `queue/a-yes-1.js`
+- `queue/a-yes-2.js`
+- `queue/b-yes.js`
+- `queue/b-conditional.js`
 
-1. `index.html`
-2. `menu.html`
-3. `story.html`
-4. `gatherings.html`
-5. `visit.html`
+Each row is:
 
-It is therefore an existing five-page identity build and is incomplete under the six-page standard.
+```text
+[name, slug, grade, disposition, score, auditBatch]
+```
 
-### 3. Models were actively publishing five-page builds as full
+These files are audit data. Build completion does not modify them.
 
-Recent commit messages repeatedly described restaurants as five-page builds and upgraded their portal records from lead to full. This was consistent with the previous README but is no longer consistent with the six-page requirement.
+## Status overlays
 
-### 4. The shared portal source had a JavaScript syntax error
+`portal-overrides.js` contains only build-status patches for names already in the canonical queue.
 
-The inline concepts array contained adjacent object records without a comma between the `ACE No. 3` and `The Royal Tot` entries. That can prevent the portal script from parsing and stop the restaurant wall from rendering.
+The renderer applies overrides on top of the audit record, preserving the final grade, disposition, score, slug and audit-batch provenance.
 
-### 5. The shared portal source contains mixed encoding damage
+This means a build agent can safely add a small patch such as:
 
-Several entries contain replacement characters, broken punctuation, and damaged emoji. This appears to have accumulated through concurrent whole-file edits using inconsistent text encoding.
+```js
+{ name: "Restaurant Name", status: "premium", href: "restaurant-slug/index.html" }
+```
 
-### 6. One giant inline array was creating avoidable merge collisions
+without rewriting the 407-record queue.
 
-Many models were editing the same `index.html` array. This increased the risk of missing commas, overwritten entries, encoding damage, and simultaneous-push conflicts.
+Overrides for names not found in the audited queue are ignored and surfaced as portal warnings.
 
-## Corrections
+## Legacy sources
 
-- Preserved the previous portal source as `portal-concepts-source.html`.
-- Replaced the fragile root portal with a clean shell and separate `portal.js` renderer.
-- Added line-by-line legacy record recovery so one malformed record cannot break every tile.
-- Added deduplication across legacy entries and both lead sources.
-- Added `portal-overrides.js` as the only shared restaurant-status override file.
-- Forced every legacy `full` or `premium` record to display as `INCOMPLETE • 6-PAGE STANDARD NOT MET`.
-- Kept queued leads labeled `LEAD • NOT BUILT YET`.
-- Added future statuses for `6/6 PAGES • QA PENDING` and `PREMIUM • 6-PAGE IDENTITY REBUILD`, but no restaurant currently receives either status.
-- Updated the README to require six separate substantive pages.
+These files are retained only as historical artifacts and are no longer loaded by `index.html`:
 
-## Current result
+- `portal-leads-message2-original.js`
+- `portal-leads-message3.js`
+- `portal-concepts-source.html`
 
-At the time of this reset:
+They must not be used to select new builds.
 
-- No restaurant is marked complete.
-- No restaurant is marked premium.
-- Boudreaux’s is marked incomplete.
-- Existing builds remain viewable.
-- Lead tiles remain queued.
-- Future models must add a verified override only after the six-page standard is met.
+The previous portal mixed legacy concepts, old lead sources and status overrides. That architecture allowed stale, closed, merged and out-of-scope records to reappear. The new portal intentionally prevents that by starting only from the 407 canonical audited records.
+
+## Existing restaurant folders
+
+Existing folders are not automatically active cards and do not establish completion status.
+
+A folder may contain:
+
+- a historical prototype;
+- an older five-page build;
+- an incomplete build;
+- work for a restaurant no longer in the active queue;
+- or useful reference material for a current audited lead.
+
+Only a canonical queue entry plus a current override determines portal state.
+
+## Completion rule
+
+The current standard is the six-page premium standard in `README.md`.
+
+No build should receive `premium` unless it has:
+
+- six substantive pages;
+- two useful interactions including one conversion interaction;
+- current factual evidence recorded in `evidence.md`;
+- responsive desktop/mobile browser QA;
+- accessibility baseline verification;
+- no deceptive real-world form/order/reservation behavior.
+
+If browser QA cannot be completed, use `qa`, not `premium`.
+
+## Integrity checks in `portal.js`
+
+The renderer now checks that:
+
+- exactly **407** queue rows loaded;
+- canonical queue names do not duplicate;
+- override records refer only to names in the audited queue.
+
+Any violation is displayed as a portal warning rather than silently expanding the active lead set.
