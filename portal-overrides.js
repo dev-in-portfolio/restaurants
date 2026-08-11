@@ -14,5 +14,6 @@ window.portalOverrides = [
   { name: "Ann Marie’s Gourmet Burgers & Fries", status: "premium", href: "ann-marie-s-gourmet-burgers-and-fries/index.html" },
   { name: "Aqua e Vino", status: "premium", href: "aqua-e-vino/index.html" },
   { name: "Aria Tuscan Grill", status: "premium", href: "aria-tuscan-grill/index.html" },
-  { name: "Aroy Thai", status: "premium", href: "aroy-thai/index.html" }
+  { name: "Aroy Thai", status: "premium", href: "aroy-thai/index.html" },
+  { name: "Assorted Table Wine & Shop", status: "premium", href: "assorted-table-wine-and-shop/index.html" }
 ];
