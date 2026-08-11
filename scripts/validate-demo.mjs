@@ -2,6 +2,7 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
+import crypto from 'node:crypto';
 import { spawnSync } from 'node:child_process';
 
 const slug = process.argv[2];
@@ -79,6 +80,10 @@ function read(file) {
   return fs.readFileSync(file, 'utf8');
 }
 
+function exactHash(text) {
+  return crypto.createHash('sha256').update(text).digest('hex');
+}
+
 if (!fs.existsSync(demoDir) || !fs.statSync(demoDir).isDirectory()) {
   console.error(`Demo folder not found: ${slug}`);
   process.exit(2);
@@ -119,10 +124,15 @@ for (const jsName of jsFiles) {
 }
 
 const htmlCache = new Map();
+const htmlHashes = new Map();
 for (const htmlName of htmlFiles) {
   const htmlPath = path.join(demoDir, htmlName);
   const html = read(htmlPath);
   htmlCache.set(htmlName, html);
+
+  const hash = exactHash(html);
+  if (!htmlHashes.has(hash)) htmlHashes.set(hash, []);
+  htmlHashes.get(hash).push(htmlName);
 
   addCheck(`${htmlName} has <title>`, /<title>[^<]+<\/title>/i.test(html));
   addCheck(`${htmlName} has viewport meta`, /<meta[^>]+name=["']viewport["']/i.test(html));
@@ -153,6 +163,13 @@ for (const htmlName of htmlFiles) {
     addCheck(`${htmlName} links back to home`, hasHome);
   }
 }
+
+const exactDuplicatePages = [...htmlHashes.values()].filter(group => group.length > 1);
+addCheck(
+  'No exact duplicate HTML pages',
+  exactDuplicatePages.length === 0,
+  exactDuplicatePages.map(group => group.join(' = ')).join('; ')
+);
 
 function resolveTarget(currentHtml, rawValue) {
   const [beforeHash, fragment = ''] = rawValue.split('#', 2);
@@ -193,9 +210,18 @@ for (const htmlName of htmlFiles) {
 
 if (fs.existsSync(path.join(demoDir, 'evidence.md'))) {
   const evidence = read(path.join(demoDir, 'evidence.md'));
-  for (const heading of ['## Creative Brief', '## Claim Ledger', '## Add-On Preservation']) {
+  for (const heading of ['## Creative Brief', '## Claim Ledger', '## Add-On Preservation', '## Cross-Demo Diversity']) {
     addCheck(`evidence.md contains ${heading}`, evidence.includes(heading));
   }
+}
+
+const diversityScript = path.join(repoRoot, 'scripts', 'check-design-diversity.mjs');
+if (fs.existsSync(diversityScript)) {
+  const diversity = spawnSync(process.execPath, [diversityScript, slug], { cwd: repoRoot, encoding: 'utf8' });
+  const detail = (diversity.stderr || diversity.stdout || '').trim();
+  addCheck('Cross-demo design diversity', diversity.status === 0, detail);
+} else {
+  addCheck('Cross-demo design diversity', false, 'scripts/check-design-diversity.mjs is missing');
 }
 
 const report = {
@@ -213,7 +239,7 @@ const report = {
 fs.writeFileSync(path.join(demoDir, 'qa-report.json'), `${JSON.stringify(report, null, 2)}\n`, 'utf8');
 
 if (report.passed) {
-  console.log(`PASS ${slug}: ${htmlFiles.length} HTML pages; qa-report.json written.`);
+  console.log(`PASS ${slug}: ${htmlFiles.length} HTML pages; qa-report.json and design-diversity.json written.`);
   process.exit(0);
 }
 
