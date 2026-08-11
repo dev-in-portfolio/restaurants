@@ -1,13 +1,20 @@
 {
-  "generatedAt": "2026-08-11T20:19:00.741Z",
+  "generatedAt": "2026-08-11T20:22:40.335Z",
   "source": {
     "repository": "dev-in-portfolio/restaurant-showcase",
     "activeRecords": 114,
     "holdRecords": 31,
     "rule": "Any existing Showcase demo, whether active or hold, is excluded from automatic Gemini build rotation."
   },
+  "canonicalAuditSource": {
+    "repository": "dev-in-portfolio/restaurants",
+    "immutableRef": "99d7e3b4c809a367d230db0fc285ea44a802f662",
+    "reason": "Preserves the original 407 audited A/B rows so Showcase subtraction is reproducible on every sync."
+  },
   "originalQueueCount": 407,
   "excludedCount": 95,
+  "excludedActiveCount": 89,
+  "excludedHoldCount": 6,
   "netQueueCount": 312,
   "excluded": [
     {

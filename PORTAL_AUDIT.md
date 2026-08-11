@@ -1,98 +1,37 @@
-# Portal Architecture — Audited Queue Reset
+# Portal Architecture — Audited Net-New Queue
 
 ## Current state
 
-The portal no longer builds its active lead wall from the old mixed legacy sources.
+The portal starts from the completed audit's A/B prospect universe, then subtracts every restaurant that already has a demo in `dev-in-portfolio/restaurant-showcase`. Showcase HOLD demos are excluded too: HOLD means not currently presented there, not "needs another demo here."
 
-The active source of truth is now the final reconciled A/B prospect set from the completed 645-record Rada-depth audit:
+Current reconciliation:
 
-- **407 canonical active prospects**
-- **284 A-grade YES**
-- **46 B-grade YES**
-- **77 B-grade CONDITIONAL**
-
-HOLD, NO, closed, inactive, out-of-scope and merged alias records are excluded from the active build rotation.
+- Audit A/B universe: **407**
+- Showcase inventory checked: **114 active + 31 hold = 145 demos**
+- Audit A/B restaurants with an existing Showcase demo: **95**
+- Net-new Gemini queue: **312**
+- Remaining tiers: **218 A YES / 36 B YES / 58 B CONDITIONAL**
 
 ## Canonical data
 
-The queue is intentionally split into four compact files:
+- `queue/audit-ab-master.json` preserves the original 407 audited A/B rows.
+- `scripts/sync-showcase-exclusions.mjs` compares that immutable source against both Showcase data files.
+- The generated active queue lives in the four `queue/*.js` bucket files.
+- `queue/showcase-exclusions.json` records every removed overlap and how it matched.
+- `queue/meta.js` supplies the portal's expected live count.
 
-- `queue/a-yes-1.js`
-- `queue/a-yes-2.js`
-- `queue/b-yes.js`
-- `queue/b-conditional.js`
+## Hard rule
 
-Each row is:
+If a restaurant exists in Showcase active **or Showcase HOLD**, it is excluded from automatic Gemini new-demo selection. A redo requires explicit user intent.
 
-```text
-[name, slug, grade, disposition, score, auditBatch]
-```
+## Integrity checks
 
-These files are audit data. Build completion does not modify them.
+The portal no longer hardcodes 407 as its rendered queue size. It reads `queue/meta.js` and verifies that the number of loaded rows equals the latest generated net-new count. It also warns on duplicate canonical names or overrides for names outside the net-new queue.
 
-## Status overlays
+## Legacy folders and sources
 
-`portal-overrides.js` contains only build-status patches for names already in the canonical queue.
-
-The renderer applies overrides on top of the audit record, preserving the final grade, disposition, score, slug and audit-batch provenance.
-
-This means a build agent can safely add a small patch such as:
-
-```js
-{ name: "Restaurant Name", status: "premium", href: "restaurant-slug/index.html" }
-```
-
-without rewriting the 407-record queue.
-
-Overrides for names not found in the audited queue are ignored and surfaced as portal warnings.
-
-## Legacy sources
-
-These files are retained only as historical artifacts and are no longer loaded by `index.html`:
-
-- `portal-leads-message2-original.js`
-- `portal-leads-message3.js`
-- `portal-concepts-source.html`
-
-They must not be used to select new builds.
-
-The previous portal mixed legacy concepts, old lead sources and status overrides. That architecture allowed stale, closed, merged and out-of-scope records to reappear. The new portal intentionally prevents that by starting only from the 407 canonical audited records.
-
-## Existing restaurant folders
-
-Existing folders are not automatically active cards and do not establish completion status.
-
-A folder may contain:
-
-- a historical prototype;
-- an older five-page build;
-- an incomplete build;
-- work for a restaurant no longer in the active queue;
-- or useful reference material for a current audited lead.
-
-Only a canonical queue entry plus a current override determines portal state.
+Old restaurant folders and the retired legacy lead/concept files remain historical/reference material only. They cannot make a restaurant eligible. Build selection comes only from the generated net-new queue.
 
 ## Completion rule
 
-The current standard is the six-page premium standard in `README.md`.
-
-No build should receive `premium` unless it has:
-
-- six substantive pages;
-- two useful interactions including one conversion interaction;
-- current factual evidence recorded in `evidence.md`;
-- responsive desktop/mobile browser QA;
-- accessibility baseline verification;
-- no deceptive real-world form/order/reservation behavior.
-
-If browser QA cannot be completed, use `qa`, not `premium`.
-
-## Integrity checks in `portal.js`
-
-The renderer now checks that:
-
-- exactly **407** queue rows loaded;
-- canonical queue names do not duplicate;
-- override records refer only to names in the audited queue.
-
-Any violation is displayed as a portal warning rather than silently expanding the active lead set.
+The current six-page premium standard in `README.md` remains unchanged: restaurant-specific design, six substantive pages, two useful interactions including one conversion interaction, current evidence, responsive/browser QA, accessibility checks, and truthful demo-safe behavior.

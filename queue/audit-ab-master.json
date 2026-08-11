@@ -1,0 +1,3270 @@
+{
+  "sourceRef": "99d7e3b4c809a367d230db0fc285ea44a802f662",
+  "total": 407,
+  "buckets": {
+    "restaurantAuditQueue_A_YES_1": [
+      [
+        "1900 Mexican Grill",
+        "1900-mexican-grill",
+        "A",
+        "YES",
+        84,
+        1
+      ],
+      [
+        "Adamary’s Restaurante y Pupuseria",
+        "adamary-s-restaurante-y-pupuseria",
+        "A",
+        "YES",
+        91,
+        1
+      ],
+      [
+        "AJ Family Restaurant",
+        "aj-family-restaurant",
+        "A",
+        "YES",
+        91,
+        1
+      ],
+      [
+        "Alexander Michael's",
+        "alexander-michael-s",
+        "A",
+        "YES",
+        82,
+        1
+      ],
+      [
+        "All Purpose Bar",
+        "all-purpose-bar",
+        "A",
+        "YES",
+        96,
+        1
+      ],
+      [
+        "Americana Restaurant",
+        "americana-restaurant",
+        "A",
+        "YES",
+        89,
+        1
+      ],
+      [
+        "Anatolia Cafe & Cuisine",
+        "anatolia-cafe-and-cuisine",
+        "A",
+        "YES",
+        97,
+        1
+      ],
+      [
+        "Angela’s Pizzeria & Restaurant",
+        "angela-s-pizzeria-and-restaurant",
+        "A",
+        "YES",
+        87,
+        1
+      ],
+      [
+        "Anita’s Mexican Grill",
+        "anita-s-mexican-grill",
+        "A",
+        "YES",
+        94,
+        1
+      ],
+      [
+        "ANJU Korean Dining & Bar",
+        "anju-korean-dining-and-bar",
+        "A",
+        "YES",
+        95,
+        1
+      ],
+      [
+        "Ann Marie’s Gourmet Burgers & Fries",
+        "ann-marie-s-gourmet-burgers-and-fries",
+        "A",
+        "YES",
+        99,
+        1
+      ],
+      [
+        "Aqua e Vino",
+        "aqua-e-vino",
+        "A",
+        "YES",
+        88,
+        1
+      ],
+      [
+        "Aria Tuscan Grill",
+        "aria-tuscan-grill",
+        "A",
+        "YES",
+        96,
+        1
+      ],
+      [
+        "Aroy Thai",
+        "aroy-thai",
+        "A",
+        "YES",
+        90,
+        2
+      ],
+      [
+        "Assorted Table Wine & Shop",
+        "assorted-table-wine-and-shop",
+        "A",
+        "YES",
+        95,
+        2
+      ],
+      [
+        "Astoria Café",
+        "astoria-cafe",
+        "A",
+        "YES",
+        97,
+        2
+      ],
+      [
+        "Azucar Cuban Restaurant",
+        "azucar-cuban-restaurant",
+        "A",
+        "YES",
+        93,
+        2
+      ],
+      [
+        "Azul Tequileria & Cocina",
+        "azul-tequileria-and-cocina",
+        "A",
+        "YES",
+        99,
+        2
+      ],
+      [
+        "DeepCuts HiFi",
+        "deepcuts-hifi",
+        "A",
+        "YES",
+        99,
+        2
+      ],
+      [
+        "Babaloo Coffee Club",
+        "babaloo-coffee-club",
+        "A",
+        "YES",
+        90,
+        2
+      ],
+      [
+        "Backyard Brew",
+        "backyard-brew",
+        "A",
+        "YES",
+        91,
+        2
+      ],
+      [
+        "Bahn Thai",
+        "bahn-thai",
+        "A",
+        "YES",
+        94,
+        2
+      ],
+      [
+        "Bao & Broth",
+        "bao-and-broth",
+        "A",
+        "YES",
+        88,
+        2
+      ],
+      [
+        "Bar à Vins",
+        "bar-a-vins",
+        "A",
+        "YES",
+        86,
+        2
+      ],
+      [
+        "Barrington's Restaurant",
+        "barrington-s-restaurant",
+        "A",
+        "YES",
+        87,
+        2
+      ],
+      [
+        "Blue Orchid Sushi & Asian Bistro",
+        "blue-orchid-sushi-and-asian-bistro",
+        "A",
+        "YES",
+        96,
+        3
+      ],
+      [
+        "Bonzai Thai Cuisine",
+        "bonzai-thai-cuisine",
+        "A",
+        "YES",
+        98,
+        3
+      ],
+      [
+        "Boudreaux’s Kitchen & Tavern",
+        "boudreaux-s-kitchen-and-tavern",
+        "A",
+        "YES",
+        96,
+        3
+      ],
+      [
+        "Brawley’s Beverage",
+        "brawley-s-beverage",
+        "A",
+        "YES",
+        97,
+        3
+      ],
+      [
+        "Brooks’ Sandwich House",
+        "brooks-sandwich-house",
+        "A",
+        "YES",
+        99,
+        3
+      ],
+      [
+        "Buona Vita Pub & Pizzeria",
+        "buona-vita-pub-and-pizzeria",
+        "A",
+        "YES",
+        94,
+        3
+      ],
+      [
+        "Caffeto Specialty Coffee",
+        "caffeto-specialty-coffee",
+        "A",
+        "YES",
+        93,
+        3
+      ],
+      [
+        "Café Audire",
+        "cafe-audire",
+        "A",
+        "YES",
+        99,
+        3
+      ],
+      [
+        "Caribbean Hut",
+        "caribbean-hut",
+        "A",
+        "YES",
+        96,
+        4
+      ],
+      [
+        "Carmella’s Pizza Grill",
+        "carmella-s-pizza-grill",
+        "A",
+        "YES",
+        96,
+        4
+      ],
+      [
+        "Carolina Beer Temple",
+        "carolina-beer-temple",
+        "A",
+        "YES",
+        99,
+        4
+      ],
+      [
+        "Caswell Station",
+        "caswell-station",
+        "A",
+        "YES",
+        93,
+        4
+      ],
+      [
+        "Chaat ’N’ Dosa",
+        "chaat-n-dosa",
+        "A",
+        "YES",
+        98,
+        4
+      ],
+      [
+        "Cheat’s Cheesesteaks",
+        "cheat-s-cheesesteaks",
+        "A",
+        "YES",
+        91,
+        4
+      ],
+      [
+        "Chez Marie Pâtisserie",
+        "chez-marie-patisserie",
+        "A",
+        "YES",
+        92,
+        4
+      ],
+      [
+        "CHNO Coffee Co.",
+        "chno-coffee-co",
+        "A",
+        "YES",
+        99,
+        4
+      ],
+      [
+        "Choi’s Korea & Wing",
+        "choi-s-korea-and-wing",
+        "A",
+        "YES",
+        89,
+        4
+      ],
+      [
+        "Chop Chop Red Pot",
+        "chop-chop-red-pot",
+        "A",
+        "YES",
+        99,
+        4
+      ],
+      [
+        "Cilantro Noodle + Kitchen",
+        "cilantro-noodle-plus-kitchen",
+        "A",
+        "YES",
+        96,
+        4
+      ],
+      [
+        "Circle G Restaurant",
+        "circle-g-restaurant",
+        "A",
+        "YES",
+        98,
+        4
+      ],
+      [
+        "Clark’s Snack Bar",
+        "clark-s-snack-bar",
+        "A",
+        "YES",
+        92,
+        4
+      ],
+      [
+        "Club West Brewing",
+        "club-west-brewing",
+        "A",
+        "YES",
+        100,
+        4
+      ],
+      [
+        "Coffey Creek Café",
+        "coffey-creek-cafe",
+        "A",
+        "YES",
+        97,
+        5
+      ],
+      [
+        "Comal Taco Co.",
+        "comal-taco-co",
+        "A",
+        "YES",
+        90,
+        5
+      ],
+      [
+        "Comet Grill",
+        "comet-grill",
+        "A",
+        "YES",
+        94,
+        5
+      ],
+      [
+        "Cool Idiot Coffee",
+        "cool-idiot-coffee",
+        "A",
+        "YES",
+        91,
+        5
+      ],
+      [
+        "Copperhead Social Club",
+        "copperhead-social-club",
+        "A",
+        "YES",
+        90,
+        5
+      ],
+      [
+        "Coquette",
+        "coquette",
+        "A",
+        "YES",
+        100,
+        5
+      ],
+      [
+        "Corkscrew Wine Pub",
+        "corkscrew-wine-pub",
+        "A",
+        "YES",
+        99,
+        5
+      ],
+      [
+        "Cornerstone Pub & Grill",
+        "cornerstone-pub-and-grill",
+        "A",
+        "YES",
+        95,
+        5
+      ],
+      [
+        "Costa del Sol",
+        "costa-del-sol",
+        "A",
+        "YES",
+        100,
+        5
+      ],
+      [
+        "Courtyard Hooligans",
+        "courtyard-hooligans",
+        "A",
+        "YES",
+        98,
+        5
+      ],
+      [
+        "Crisp Kitchen & Cocktails",
+        "crisp-kitchen-and-cocktails",
+        "A",
+        "YES",
+        99,
+        5
+      ],
+      [
+        "Crispy Banh Mi",
+        "crispy-banh-mi",
+        "A",
+        "YES",
+        92,
+        5
+      ],
+      [
+        "CupLux Coffee Drive-Thru",
+        "cuplux-coffee-drive-thru",
+        "A",
+        "YES",
+        96,
+        5
+      ],
+      [
+        "Curry Gate",
+        "curry-gate",
+        "A",
+        "YES",
+        99,
+        5
+      ],
+      [
+        "Curry Junction",
+        "curry-junction",
+        "A",
+        "YES",
+        100,
+        5
+      ],
+      [
+        "Curry n Cake",
+        "curry-n-cake",
+        "A",
+        "YES",
+        100,
+        5
+      ],
+      [
+        "Deejai Thai",
+        "deejai-thai",
+        "A",
+        "YES",
+        99,
+        6
+      ],
+      [
+        "Dee’s Vegan To Go",
+        "dee-s-vegan-to-go",
+        "A",
+        "YES",
+        97,
+        6
+      ],
+      [
+        "Deli St",
+        "deli-st",
+        "A",
+        "YES",
+        94,
+        6
+      ],
+      [
+        "Deluxe Fun Dining",
+        "deluxe-fun-dining",
+        "A",
+        "YES",
+        99,
+        6
+      ],
+      [
+        "Dish",
+        "dish",
+        "A",
+        "YES",
+        98,
+        6
+      ],
+      [
+        "Distro Beer Hub",
+        "distro-beer-hub",
+        "A",
+        "YES",
+        93,
+        6
+      ],
+      [
+        "Doan's Vietnamese Cuisine",
+        "doan-s-vietnamese-cuisine",
+        "A",
+        "YES",
+        92,
+        6
+      ],
+      [
+        "Dom's Dive Bar",
+        "dom-s-dive-bar",
+        "A",
+        "YES",
+        99,
+        6
+      ],
+      [
+        "Duke's Grill",
+        "duke-s-grill",
+        "A",
+        "YES",
+        99,
+        6
+      ],
+      [
+        "DŌZO Japanese-American Kitchen",
+        "dozo-japanese-american-kitchen",
+        "A",
+        "YES",
+        100,
+        6
+      ],
+      [
+        "East 74 Restaurant",
+        "east-74-restaurant",
+        "A",
+        "YES",
+        87,
+        7
+      ],
+      [
+        "Eddie's Place",
+        "eddie-s-place",
+        "A",
+        "YES",
+        88,
+        7
+      ],
+      [
+        "El Puro Cuban Restaurant",
+        "el-puro-cuban-restaurant",
+        "A",
+        "YES",
+        92,
+        7
+      ],
+      [
+        "El Valle Mexican Restaurant",
+        "el-valle-mexican-restaurant",
+        "A",
+        "YES",
+        97,
+        7
+      ],
+      [
+        "El Veneno",
+        "el-veneno",
+        "A",
+        "YES",
+        99,
+        7
+      ],
+      [
+        "Elizabeth Creamery",
+        "elizabeth-creamery",
+        "A",
+        "YES",
+        99,
+        7
+      ],
+      [
+        "Emmy Lou's Wine Bar",
+        "emmy-lou-s-wine-bar",
+        "A",
+        "YES",
+        88,
+        7
+      ],
+      [
+        "Euro Grill & Cafe",
+        "euro-grill-and-cafe",
+        "A",
+        "YES",
+        90,
+        7
+      ],
+      [
+        "Ever Andalo",
+        "ever-andalo",
+        "A",
+        "YES",
+        91,
+        7
+      ],
+      [
+        "Everybody Eatz",
+        "everybody-eatz",
+        "A",
+        "YES",
+        99,
+        7
+      ],
+      [
+        "Exotica Indian Kitchen & Bar",
+        "exotica-indian-kitchen-and-bar",
+        "A",
+        "YES",
+        95,
+        7
+      ],
+      [
+        "Felix Empanadas",
+        "felix-empanadas",
+        "A",
+        "YES",
+        94,
+        7
+      ],
+      [
+        "Fenian's Keep",
+        "fenian-s-keep",
+        "A",
+        "YES",
+        100,
+        7
+      ],
+      [
+        "Fiesta Maya Mexican Restaurant",
+        "fiesta-maya-mexican-restaurant",
+        "A",
+        "YES",
+        94,
+        7
+      ],
+      [
+        "Flame Asian Bistro & Bar",
+        "flame-asian-bistro-and-bar",
+        "A",
+        "YES",
+        99,
+        8
+      ],
+      [
+        "Flip-a-Lo’s",
+        "flip-a-lo-s",
+        "A",
+        "YES",
+        88,
+        8
+      ],
+      [
+        "Fonda Las Cazuelas",
+        "fonda-las-cazuelas",
+        "A",
+        "YES",
+        99,
+        8
+      ],
+      [
+        "Food For Your Soul CLT",
+        "food-for-your-soul-clt",
+        "A",
+        "YES",
+        99,
+        8
+      ],
+      [
+        "Free Range Brewing",
+        "free-range-brewing",
+        "A",
+        "YES",
+        99,
+        8
+      ],
+      [
+        "Fumée Kitchen & Cocktails",
+        "fumee-kitchen-and-cocktails",
+        "A",
+        "YES",
+        99,
+        8
+      ],
+      [
+        "Geno D's Pizza",
+        "geno-d-s-pizza",
+        "A",
+        "YES",
+        94,
+        8
+      ],
+      [
+        "Gotcha Matcha & Espresso",
+        "gotcha-matcha-and-espresso",
+        "A",
+        "YES",
+        99,
+        8
+      ],
+      [
+        "Great Wagon Road Distilling Co.",
+        "great-wagon-road-distilling-co",
+        "A",
+        "YES",
+        98,
+        8
+      ],
+      [
+        "Great Wall of China South",
+        "great-wall-of-china-south",
+        "A",
+        "YES",
+        100,
+        9
+      ],
+      [
+        "Grey's Diner",
+        "grey-s-diner",
+        "A",
+        "YES",
+        93,
+        9
+      ],
+      [
+        "Halal Street Food",
+        "halal-street-food",
+        "A",
+        "YES",
+        94,
+        9
+      ],
+      [
+        "Hathaway’s Fried Chicken",
+        "hathaway-s-fried-chicken",
+        "A",
+        "YES",
+        99,
+        9
+      ],
+      [
+        "Hello, Sailor",
+        "hello-sailor",
+        "A",
+        "YES",
+        90,
+        9
+      ],
+      [
+        "Henrietta’s",
+        "henrietta-s",
+        "A",
+        "YES",
+        95,
+        9
+      ],
+      [
+        "Hickory & Heart",
+        "hickory-and-heart",
+        "A",
+        "YES",
+        98,
+        9
+      ],
+      [
+        "Ho Ho Cherry House",
+        "ho-ho-cherry-house",
+        "A",
+        "YES",
+        88,
+        9
+      ],
+      [
+        "Home Brew Taproom & Tunes",
+        "home-brew-taproom-and-tunes",
+        "A",
+        "YES",
+        99,
+        9
+      ],
+      [
+        "Home Style Kitchn",
+        "home-style-kitchn",
+        "A",
+        "YES",
+        99,
+        9
+      ],
+      [
+        "Honeybear Bake Shop",
+        "honeybear-bake-shop",
+        "A",
+        "YES",
+        90,
+        9
+      ],
+      [
+        "House of Pizza",
+        "house-of-pizza",
+        "A",
+        "YES",
+        88,
+        10
+      ],
+      [
+        "Ilios Crafted Greek",
+        "ilios-crafted-greek",
+        "A",
+        "YES",
+        90,
+        10
+      ],
+      [
+        "Ink N Ivy",
+        "ink-n-ivy",
+        "A",
+        "YES",
+        92,
+        10
+      ],
+      [
+        "Italo",
+        "italo",
+        "A",
+        "YES",
+        96,
+        10
+      ],
+      [
+        "Jaipur Indian Restaurant",
+        "jaipur-indian-restaurant",
+        "A",
+        "YES",
+        99,
+        10
+      ],
+      [
+        "Jazzy Cheesecakes",
+        "jazzy-cheesecakes",
+        "A",
+        "YES",
+        99,
+        10
+      ],
+      [
+        "Jeff’s Bucket Shop",
+        "jeff-s-bucket-shop",
+        "A",
+        "YES",
+        96,
+        10
+      ],
+      [
+        "Jimmy Pearls",
+        "jimmy-pearls",
+        "A",
+        "YES",
+        91,
+        10
+      ],
+      [
+        "Jyuuni",
+        "jyuuni",
+        "A",
+        "YES",
+        99,
+        10
+      ],
+      [
+        "Kabab-Je",
+        "kabab-je",
+        "A",
+        "YES",
+        88,
+        10
+      ],
+      [
+        "Kid Cashew",
+        "kid-cashew",
+        "A",
+        "YES",
+        98,
+        10
+      ],
+      [
+        "King Fish Poke",
+        "king-fish-poke",
+        "A",
+        "YES",
+        100,
+        10
+      ],
+      [
+        "Kristophers Sports Bar",
+        "kristophers-sports-bar",
+        "A",
+        "YES",
+        99,
+        11
+      ],
+      [
+        "La Bonbonniere Bakery",
+        "la-bonbonniere-bakery",
+        "A",
+        "YES",
+        98,
+        11
+      ],
+      [
+        "La Lima Sangucheria",
+        "la-lima-sangucheria",
+        "A",
+        "YES",
+        99,
+        11
+      ],
+      [
+        "La Poblanita Mexican Restaurant",
+        "la-poblanita-mexican-restaurant",
+        "A",
+        "YES",
+        95,
+        11
+      ],
+      [
+        "La Unica Bar & Grill",
+        "la-unica-bar-and-grill",
+        "A",
+        "YES",
+        94,
+        11
+      ],
+      [
+        "La Victoria Cocina Mexicana & Bar",
+        "la-victoria-cocina-mexicana-and-bar",
+        "A",
+        "YES",
+        98,
+        11
+      ],
+      [
+        "Laurel Park",
+        "laurel-park",
+        "A",
+        "YES",
+        100,
+        11
+      ],
+      [
+        "Le Kebab Grill",
+        "le-kebab-grill",
+        "A",
+        "YES",
+        88,
+        11
+      ],
+      [
+        "Lempira Restaurant",
+        "lempira-restaurant",
+        "A",
+        "YES",
+        100,
+        11
+      ],
+      [
+        "Let’s Meat KBBQ",
+        "let-s-meat-kbbq",
+        "A",
+        "YES",
+        99,
+        12
+      ],
+      [
+        "Libretto’s Pizzeria",
+        "libretto-s-pizzeria",
+        "A",
+        "YES",
+        94,
+        12
+      ],
+      [
+        "LILA Restaurant & Lounge",
+        "lila-restaurant-and-lounge",
+        "A",
+        "YES",
+        100,
+        12
+      ],
+      [
+        "Littl Madeleine",
+        "littl-madeleine",
+        "A",
+        "YES",
+        96,
+        12
+      ],
+      [
+        "Lorem Ipsum Listening Bar",
+        "lorem-ipsum-listening-bar",
+        "A",
+        "YES",
+        100,
+        12
+      ],
+      [
+        "Lorenzo’s Pizzeria",
+        "lorenzo-s-pizzeria",
+        "A",
+        "YES",
+        94,
+        12
+      ],
+      [
+        "Lula Bánh Mì + Bakery",
+        "lula-banh-mi-plus-bakery",
+        "A",
+        "YES",
+        100,
+        12
+      ],
+      [
+        "Lupie’s Cafe",
+        "lupie-s-cafe",
+        "A",
+        "YES",
+        98,
+        12
+      ],
+      [
+        "Machu Picchu Peruvian Cuisine",
+        "machu-picchu-peruvian-cuisine",
+        "A",
+        "YES",
+        100,
+        12
+      ],
+      [
+        "Mad Greek Café",
+        "mad-greek-cafe",
+        "A",
+        "YES",
+        100,
+        12
+      ],
+      [
+        "Manolo's Latin Bakery",
+        "manolo-s-latin-bakery",
+        "A",
+        "YES",
+        94,
+        12
+      ],
+      [
+        "Margaux’s Wine, Pizza & Market",
+        "margaux-s-wine-pizza-and-market",
+        "A",
+        "YES",
+        96,
+        12
+      ],
+      [
+        "MAS Tortilleria",
+        "mas-tortilleria",
+        "A",
+        "YES",
+        91,
+        13
+      ],
+      [
+        "Matthews Social House",
+        "matthews-social-house",
+        "A",
+        "YES",
+        96,
+        13
+      ]
+    ],
+    "restaurantAuditQueue_A_YES_2": [
+      [
+        "Medellín Colombian Restaurant",
+        "medellin-colombian-restaurant",
+        "A",
+        "YES",
+        100,
+        13
+      ],
+      [
+        "Medusa Lounge",
+        "medusa-lounge",
+        "A",
+        "YES",
+        99,
+        13
+      ],
+      [
+        "Mert’s Heart & Soul",
+        "mert-s-heart-and-soul",
+        "A",
+        "YES",
+        100,
+        13
+      ],
+      [
+        "Midtown Tavern",
+        "midtown-tavern",
+        "A",
+        "YES",
+        98,
+        13
+      ],
+      [
+        "Midwood Country Club",
+        "midwood-country-club",
+        "A",
+        "YES",
+        99,
+        13
+      ],
+      [
+        "Milkbread",
+        "milkbread",
+        "A",
+        "YES",
+        96,
+        13
+      ],
+      [
+        "Mily & Lalo Peruvian Restaurant",
+        "mily-and-lalo-peruvian-restaurant",
+        "A",
+        "YES",
+        100,
+        13
+      ],
+      [
+        "Miro Spanish Grille",
+        "miro-spanish-grille",
+        "A",
+        "YES",
+        89,
+        13
+      ],
+      [
+        "MJ Donuts",
+        "mj-donuts",
+        "A",
+        "YES",
+        99,
+        13
+      ],
+      [
+        "Moosehead Grill",
+        "moosehead-grill",
+        "A",
+        "YES",
+        96,
+        14
+      ],
+      [
+        "Mother of Dragons",
+        "mother-of-dragons",
+        "A",
+        "YES",
+        100,
+        14
+      ],
+      [
+        "Must Be Nice",
+        "must-be-nice",
+        "A",
+        "YES",
+        99,
+        14
+      ],
+      [
+        "Nalan Indian Cuisine",
+        "nalan-indian-cuisine",
+        "A",
+        "YES",
+        95,
+        14
+      ],
+      [
+        "New Zealand Café",
+        "new-zealand-cafe",
+        "A",
+        "YES",
+        100,
+        14
+      ],
+      [
+        "Nickyo’s Rodeo",
+        "nickyo-s-rodeo",
+        "A",
+        "YES",
+        100,
+        14
+      ],
+      [
+        "Night Swim Coffee",
+        "night-swim-coffee",
+        "A",
+        "YES",
+        100,
+        14
+      ],
+      [
+        "Niki’s Food Shop",
+        "niki-s-food-shop",
+        "A",
+        "YES",
+        99,
+        14
+      ],
+      [
+        "Ninety’s Dessert Bar",
+        "ninety-s-dessert-bar",
+        "A",
+        "YES",
+        100,
+        14
+      ],
+      [
+        "No Proof",
+        "no-proof",
+        "A",
+        "YES",
+        98,
+        14
+      ],
+      [
+        "NoDa Bodega",
+        "noda-bodega",
+        "A",
+        "YES",
+        99,
+        14
+      ],
+      [
+        "Nora Mac’s Traditional Irish Pub",
+        "nora-mac-s-traditional-irish-pub",
+        "A",
+        "YES",
+        100,
+        14
+      ],
+      [
+        "Oaklore Bar & Bottle Shop",
+        "oaklore-bar-and-bottle-shop",
+        "A",
+        "YES",
+        97,
+        14
+      ],
+      [
+        "Oh My Ganache, The Cheesecake Bar",
+        "oh-my-ganache-the-cheesecake-bar",
+        "A",
+        "YES",
+        99,
+        15
+      ],
+      [
+        "Oh My Soul",
+        "oh-my-soul",
+        "A",
+        "YES",
+        98,
+        15
+      ],
+      [
+        "Olivelli Deli",
+        "olivelli-deli",
+        "A",
+        "YES",
+        100,
+        15
+      ],
+      [
+        "Open Kitchen",
+        "open-kitchen",
+        "A",
+        "YES",
+        98,
+        15
+      ],
+      [
+        "Panda’s Den",
+        "panda-s-den",
+        "A",
+        "YES",
+        99,
+        15
+      ],
+      [
+        "Papi Queso",
+        "papi-queso",
+        "A",
+        "YES",
+        95,
+        15
+      ],
+      [
+        "Papi Ricko Latin Kitchen & Lounge",
+        "papi-ricko-latin-kitchen-and-lounge",
+        "A",
+        "YES",
+        99,
+        15
+      ],
+      [
+        "Parkway House Family Restaurant",
+        "parkway-house-family-restaurant",
+        "A",
+        "YES",
+        96,
+        15
+      ],
+      [
+        "Passage to India Indian Cuisine",
+        "passage-to-india-indian-cuisine",
+        "A",
+        "YES",
+        100,
+        15
+      ],
+      [
+        "Pasuta",
+        "pasuta",
+        "A",
+        "YES",
+        98,
+        15
+      ],
+      [
+        "Persuasian Restaurant",
+        "persuasian-restaurant",
+        "A",
+        "YES",
+        100,
+        15
+      ],
+      [
+        "Pertinacious Coffee",
+        "pertinacious-coffee",
+        "A",
+        "YES",
+        94,
+        15
+      ],
+      [
+        "Pho Huong Que",
+        "pho-huong-que",
+        "A",
+        "YES",
+        99,
+        15
+      ],
+      [
+        "Pho Quynh",
+        "pho-quynh",
+        "A",
+        "YES",
+        99,
+        16
+      ],
+      [
+        "Pho Real",
+        "pho-real",
+        "A",
+        "YES",
+        100,
+        16
+      ],
+      [
+        "Picasso’s Sports Café",
+        "picasso-s-sports-cafe",
+        "A",
+        "YES",
+        100,
+        16
+      ],
+      [
+        "Platform Coffee + Kitchen",
+        "platform-coffee-plus-kitchen",
+        "A",
+        "YES",
+        100,
+        16
+      ],
+      [
+        "Plot Twist",
+        "plot-twist",
+        "A",
+        "YES",
+        99,
+        16
+      ],
+      [
+        "Pokebowl Ramen",
+        "pokebowl-ramen",
+        "A",
+        "YES",
+        100,
+        16
+      ],
+      [
+        "Poppy’s Bagels & More",
+        "poppy-s-bagels-and-more",
+        "A",
+        "YES",
+        100,
+        16
+      ],
+      [
+        "Prohibition",
+        "prohibition",
+        "A",
+        "YES",
+        96,
+        16
+      ],
+      [
+        "Provided Coffee",
+        "provided-coffee",
+        "A",
+        "YES",
+        98,
+        16
+      ],
+      [
+        "Puerta",
+        "puerta",
+        "A",
+        "YES",
+        98,
+        17
+      ],
+      [
+        "Punta Cana Caribbean Grill & Bar",
+        "punta-cana-caribbean-grill-and-bar",
+        "A",
+        "YES",
+        90,
+        17
+      ],
+      [
+        "QC Social Lounge",
+        "qc-social-lounge",
+        "A",
+        "YES",
+        100,
+        17
+      ],
+      [
+        "Queen City Bites & Crafts",
+        "queen-city-bites-and-crafts",
+        "A",
+        "YES",
+        98,
+        17
+      ],
+      [
+        "Queen Park Social",
+        "queen-park-social",
+        "A",
+        "YES",
+        100,
+        17
+      ],
+      [
+        "Queen's Soul Food",
+        "queen-s-soul-food",
+        "A",
+        "YES",
+        99,
+        17
+      ],
+      [
+        "R+D Bar",
+        "r-plus-d-bar",
+        "A",
+        "YES",
+        91,
+        17
+      ],
+      [
+        "Rai Lay Thai Cuisine",
+        "rai-lay-thai-cuisine",
+        "A",
+        "YES",
+        100,
+        17
+      ],
+      [
+        "Ramen Bar Kazoku",
+        "ramen-bar-kazoku",
+        "A",
+        "YES",
+        98,
+        17
+      ],
+      [
+        "Red Sea Restaurant & Bar",
+        "red-sea-restaurant-and-bar",
+        "A",
+        "YES",
+        100,
+        17
+      ],
+      [
+        "Red@28th",
+        "red-28th",
+        "A",
+        "YES",
+        100,
+        17
+      ],
+      [
+        "República Restaurant & Lounge",
+        "republica-restaurant-and-lounge",
+        "A",
+        "YES",
+        99,
+        17
+      ],
+      [
+        "Rhino Market & Deli",
+        "rhino-market-and-deli",
+        "A",
+        "YES",
+        96,
+        18
+      ],
+      [
+        "Riceblossom",
+        "riceblossom",
+        "A",
+        "YES",
+        100,
+        18
+      ],
+      [
+        "Ricko’s Churro Bar",
+        "ricko-s-churro-bar",
+        "A",
+        "YES",
+        96,
+        18
+      ],
+      [
+        "Room Service",
+        "room-service",
+        "A",
+        "YES",
+        98,
+        18
+      ],
+      [
+        "Roppongi Ramen Bar",
+        "roppongi-ramen-bar",
+        "A",
+        "YES",
+        94,
+        18
+      ],
+      [
+        "Royal Cafe & Creperie",
+        "royal-cafe-and-creperie",
+        "A",
+        "YES",
+        92,
+        18
+      ],
+      [
+        "Roz Grill",
+        "roz-grill",
+        "A",
+        "YES",
+        100,
+        18
+      ],
+      [
+        "RuRu’s Tacos + Tequila",
+        "ruru-s-tacos-plus-tequila",
+        "A",
+        "YES",
+        96,
+        18
+      ],
+      [
+        "Sabores de Oaxaca",
+        "sabores-de-oaxaca",
+        "A",
+        "YES",
+        99,
+        18
+      ],
+      [
+        "Saffron Indian Cuisine",
+        "saffron-indian-cuisine",
+        "A",
+        "YES",
+        100,
+        18
+      ],
+      [
+        "Salted Melon Market & Eatery",
+        "salted-melon-market-and-eatery",
+        "A",
+        "YES",
+        100,
+        18
+      ],
+      [
+        "Salud Cerveceria",
+        "salud-cerveceria",
+        "A",
+        "YES",
+        96,
+        18
+      ],
+      [
+        "Sanctuary Pub",
+        "sanctuary-pub",
+        "A",
+        "YES",
+        99,
+        19
+      ],
+      [
+        "Sea Level NC",
+        "sea-level-nc",
+        "A",
+        "YES",
+        100,
+        19
+      ],
+      [
+        "Seoul Food Meat Company",
+        "seoul-food-meat-company",
+        "A",
+        "YES",
+        100,
+        19
+      ],
+      [
+        "Sharigato",
+        "sharigato",
+        "A",
+        "YES",
+        94,
+        19
+      ],
+      [
+        "Sheng Ramen",
+        "sheng-ramen",
+        "A",
+        "YES",
+        90,
+        19
+      ],
+      [
+        "Sidelines Sports Bar & Billiards",
+        "sidelines-sports-bar-and-billiards",
+        "A",
+        "YES",
+        93,
+        19
+      ],
+      [
+        "Sir Edmond Halley’s",
+        "sir-edmond-halley-s",
+        "A",
+        "YES",
+        90,
+        19
+      ],
+      [
+        "Somewhere CLT",
+        "somewhere-clt",
+        "A",
+        "YES",
+        95,
+        19
+      ],
+      [
+        "South End Hideaway",
+        "south-end-hideaway",
+        "A",
+        "YES",
+        100,
+        19
+      ],
+      [
+        "Southern Pecan Gulf Coast Kitchen",
+        "southern-pecan-gulf-coast-kitchen",
+        "A",
+        "YES",
+        88,
+        19
+      ],
+      [
+        "Southern Range Brewing",
+        "southern-range-brewing",
+        "A",
+        "YES",
+        95,
+        20
+      ],
+      [
+        "Spaghett",
+        "spaghett",
+        "A",
+        "YES",
+        100,
+        20
+      ],
+      [
+        "Stable Hand",
+        "stable-hand",
+        "A",
+        "YES",
+        100,
+        20
+      ],
+      [
+        "Substrate",
+        "substrate",
+        "A",
+        "YES",
+        94,
+        20
+      ],
+      [
+        "Suffolk Punch Brewing",
+        "suffolk-punch-brewing",
+        "A",
+        "YES",
+        100,
+        20
+      ],
+      [
+        "Sweet Boutique Bakery",
+        "sweet-boutique-bakery",
+        "A",
+        "YES",
+        99,
+        20
+      ],
+      [
+        "Sweet Lew’s BBQ",
+        "sweet-lew-s-bbq",
+        "A",
+        "YES",
+        99,
+        20
+      ],
+      [
+        "SWIRL Dessert Bar",
+        "swirl-dessert-bar",
+        "A",
+        "YES",
+        92,
+        20
+      ],
+      [
+        "Tabla Indian Restaurant",
+        "tabla-indian-restaurant",
+        "A",
+        "YES",
+        94,
+        21
+      ],
+      [
+        "Tacos Rick-O",
+        "tacos-rick-o",
+        "A",
+        "YES",
+        95,
+        21
+      ],
+      [
+        "Taipei Express",
+        "taipei-express",
+        "A",
+        "YES",
+        98,
+        21
+      ],
+      [
+        "Taipei South",
+        "taipei-south",
+        "A",
+        "YES",
+        98,
+        21
+      ],
+      [
+        "Tap & Vine",
+        "tap-and-vine",
+        "A",
+        "YES",
+        100,
+        21
+      ],
+      [
+        "Taqueria Los Altos",
+        "taqueria-los-altos",
+        "A",
+        "YES",
+        100,
+        21
+      ],
+      [
+        "Tavern on the Tracks",
+        "tavern-on-the-tracks",
+        "A",
+        "YES",
+        90,
+        21
+      ],
+      [
+        "Thai House",
+        "thai-house",
+        "A",
+        "YES",
+        100,
+        21
+      ],
+      [
+        "Thai Taste",
+        "thai-taste",
+        "A",
+        "YES",
+        92,
+        21
+      ],
+      [
+        "Thai Taste Matthews",
+        "thai-taste-matthews",
+        "A",
+        "YES",
+        100,
+        21
+      ],
+      [
+        "The Brickyard",
+        "the-brickyard",
+        "A",
+        "YES",
+        99,
+        22
+      ],
+      [
+        "The ChangeBaker Place",
+        "the-changebaker-place",
+        "A",
+        "YES",
+        99,
+        22
+      ],
+      [
+        "The Corner Pub",
+        "the-corner-pub",
+        "A",
+        "YES",
+        99,
+        22
+      ],
+      [
+        "The Craic",
+        "the-craic",
+        "A",
+        "YES",
+        90,
+        22
+      ],
+      [
+        "The Diamond Restaurant",
+        "the-diamond-restaurant",
+        "A",
+        "YES",
+        98,
+        22
+      ],
+      [
+        "The Dive N",
+        "the-dive-n",
+        "A",
+        "YES",
+        100,
+        22
+      ],
+      [
+        "The Exchange Uptown",
+        "the-exchange-uptown",
+        "A",
+        "YES",
+        100,
+        22
+      ],
+      [
+        "The Garrison",
+        "the-garrison",
+        "A",
+        "YES",
+        100,
+        22
+      ],
+      [
+        "The Gin Mill South End",
+        "the-gin-mill-south-end",
+        "A",
+        "YES",
+        90,
+        23
+      ],
+      [
+        "The Hobbyist",
+        "the-hobbyist",
+        "A",
+        "YES",
+        100,
+        23
+      ],
+      [
+        "The Lodge: A Sportsman’s Grill",
+        "the-lodge-a-sportsman-s-grill",
+        "A",
+        "YES",
+        94,
+        23
+      ],
+      [
+        "The Olde Mecklenburg Brewery",
+        "the-olde-mecklenburg-brewery",
+        "A",
+        "YES",
+        100,
+        23
+      ],
+      [
+        "The One Tapas & Bar",
+        "the-one-tapas-and-bar",
+        "A",
+        "YES",
+        96,
+        23
+      ],
+      [
+        "The Public House",
+        "the-public-house",
+        "A",
+        "YES",
+        100,
+        23
+      ],
+      [
+        "The Royal Tot",
+        "the-royal-tot",
+        "A",
+        "YES",
+        98,
+        23
+      ],
+      [
+        "The Story of Mi Cariño",
+        "the-story-of-mi-carino",
+        "A",
+        "YES",
+        100,
+        23
+      ],
+      [
+        "The Teal Turnip",
+        "the-teal-turnip",
+        "A",
+        "YES",
+        100,
+        23
+      ],
+      [
+        "The Thirsty Beaver Saloon",
+        "the-thirsty-beaver-saloon",
+        "A",
+        "YES",
+        99,
+        24
+      ],
+      [
+        "The Wafflery",
+        "the-wafflery",
+        "A",
+        "YES",
+        98,
+        24
+      ],
+      [
+        "The Waterman Fish Bar",
+        "the-waterman-fish-bar",
+        "A",
+        "YES",
+        100,
+        24
+      ],
+      [
+        "The Wine Shop at Rivergate",
+        "the-wine-shop-at-rivergate",
+        "A",
+        "YES",
+        100,
+        24
+      ],
+      [
+        "The Wine Vault",
+        "the-wine-vault",
+        "A",
+        "YES",
+        96,
+        24
+      ],
+      [
+        "Three Amigos Mexican Grill",
+        "three-amigos-mexican-grill",
+        "A",
+        "YES",
+        94,
+        24
+      ],
+      [
+        "Tin Tin Café",
+        "tin-tin-cafe",
+        "A",
+        "YES",
+        100,
+        24
+      ],
+      [
+        "Tommy’s Pub",
+        "tommy-s-pub",
+        "A",
+        "YES",
+        99,
+        24
+      ],
+      [
+        "Town Brewing Company",
+        "town-brewing-company",
+        "A",
+        "YES",
+        96,
+        24
+      ],
+      [
+        "Tropical Goodies",
+        "tropical-goodies",
+        "A",
+        "YES",
+        100,
+        24
+      ],
+      [
+        "Tryon House Restaurant — Woodlawn",
+        "tryon-house-restaurant-woodlawn",
+        "A",
+        "YES",
+        100,
+        24
+      ],
+      [
+        "Two Buck Saloon",
+        "two-buck-saloon",
+        "A",
+        "YES",
+        100,
+        24
+      ],
+      [
+        "Tyber Creek Pub",
+        "tyber-creek-pub",
+        "A",
+        "YES",
+        100,
+        24
+      ],
+      [
+        "Umami Sushi & Grill",
+        "umami-sushi-and-grill",
+        "A",
+        "YES",
+        100,
+        25
+      ],
+      [
+        "Verdant Bread",
+        "verdant-bread",
+        "A",
+        "YES",
+        96,
+        25
+      ],
+      [
+        "Vibe Café & Wine Bar",
+        "vibe-cafe-and-wine-bar",
+        "A",
+        "YES",
+        100,
+        25
+      ],
+      [
+        "Vin Master",
+        "vin-master",
+        "A",
+        "YES",
+        94,
+        25
+      ],
+      [
+        "VINYL",
+        "vinyl",
+        "A",
+        "YES",
+        100,
+        25
+      ],
+      [
+        "Waldhorn Restaurant",
+        "waldhorn-restaurant",
+        "A",
+        "YES",
+        100,
+        25
+      ],
+      [
+        "XOXO Cocktail Lounge",
+        "xoxo-cocktail-lounge",
+        "A",
+        "YES",
+        99,
+        26
+      ],
+      [
+        "YUGENN",
+        "yugenn",
+        "A",
+        "YES",
+        96,
+        26
+      ],
+      [
+        "YUME Ramen Sushi & Bar",
+        "yume-ramen-sushi-and-bar",
+        "A",
+        "YES",
+        100,
+        26
+      ],
+      [
+        "Yummm Donuts",
+        "yummm-donuts",
+        "A",
+        "YES",
+        99,
+        26
+      ],
+      [
+        "Zafran Kabab Palace",
+        "zafran-kabab-palace",
+        "A",
+        "YES",
+        98,
+        26
+      ],
+      [
+        "Zamindar’s Club House",
+        "zamindar-s-club-house",
+        "A",
+        "YES",
+        94,
+        26
+      ],
+      [
+        "Zapata’s Mexican Restaurant",
+        "zapata-s-mexican-restaurant",
+        "A",
+        "YES",
+        100,
+        26
+      ],
+      [
+        "Zinicola",
+        "zinicola",
+        "A",
+        "YES",
+        96,
+        26
+      ],
+      [
+        "Zio Casual Italian",
+        "zio-casual-italian",
+        "A",
+        "YES",
+        100,
+        26
+      ],
+      [
+        "Zona Rosa Charlotte",
+        "zona-rosa-charlotte",
+        "A",
+        "YES",
+        96,
+        26
+      ]
+    ],
+    "restaurantAuditQueue_B_YES": [
+      [
+        "All American Pub",
+        "all-american-pub",
+        "B",
+        "YES",
+        74,
+        1
+      ],
+      [
+        "Angry Ale’s",
+        "angry-ale-s",
+        "B",
+        "YES",
+        76,
+        1
+      ],
+      [
+        "Antagonist",
+        "antagonist",
+        "B",
+        "YES",
+        72,
+        1
+      ],
+      [
+        "Asian Buffet & Grill",
+        "asian-buffet-and-grill",
+        "B",
+        "YES",
+        79,
+        2
+      ],
+      [
+        "Banh Mi Brothers",
+        "banh-mi-brothers",
+        "B",
+        "YES",
+        76,
+        2
+      ],
+      [
+        "Bart’s Mart",
+        "bart-s-mart",
+        "B",
+        "YES",
+        77,
+        2
+      ],
+      [
+        "Big View Diner",
+        "big-view-diner",
+        "B",
+        "YES",
+        74,
+        2
+      ],
+      [
+        "Black Cat Coffee Co.",
+        "black-cat-coffee-co",
+        "B",
+        "YES",
+        82,
+        2
+      ],
+      [
+        "Borderline Bar & Billiards",
+        "borderline-bar-and-billiards",
+        "B",
+        "YES",
+        74,
+        3
+      ],
+      [
+        "Brigid’s Irish Pub",
+        "brigid-s-irish-pub",
+        "B",
+        "YES",
+        78,
+        3
+      ],
+      [
+        "Bé-Em Asian Kitchen",
+        "be-em-asian-kitchen",
+        "B",
+        "YES",
+        76,
+        3
+      ],
+      [
+        "Carolina Scoops",
+        "carolina-scoops",
+        "B",
+        "YES",
+        79,
+        4
+      ],
+      [
+        "Charlotte Coffee Company",
+        "charlotte-coffee-company",
+        "B",
+        "YES",
+        82,
+        4
+      ],
+      [
+        "China Express II",
+        "china-express-ii",
+        "B",
+        "YES",
+        75,
+        4
+      ],
+      [
+        "Coco Express",
+        "coco-express",
+        "B",
+        "YES",
+        82,
+        4
+      ],
+      [
+        "Connolly’s on Fifth",
+        "connolly-s-on-fifth",
+        "B",
+        "YES",
+        78,
+        5
+      ],
+      [
+        "Da Vinci’s Pizza",
+        "da-vinci-s-pizza",
+        "B",
+        "YES",
+        82,
+        6
+      ],
+      [
+        "DB's Tavern",
+        "db-s-tavern",
+        "B",
+        "YES",
+        78,
+        6
+      ],
+      [
+        "Dolce Osteria",
+        "dolce-osteria",
+        "B",
+        "YES",
+        77,
+        6
+      ],
+      [
+        "Eighty Eights",
+        "eighty-eights",
+        "B",
+        "YES",
+        79,
+        7
+      ],
+      [
+        "El Pulgarcito de America",
+        "el-pulgarcito-de-america",
+        "B",
+        "YES",
+        80,
+        7
+      ],
+      [
+        "El Veracruz Mexican Restaurant",
+        "el-veracruz-mexican-restaurant",
+        "B",
+        "YES",
+        78,
+        7
+      ],
+      [
+        "Enrico's Ristorante Pizzeria & Bar",
+        "enrico-s-ristorante-pizzeria-and-bar",
+        "B",
+        "YES",
+        74,
+        7
+      ],
+      [
+        "Fly Kid Fly",
+        "fly-kid-fly",
+        "B",
+        "YES",
+        78,
+        8
+      ],
+      [
+        "Ginbu 401",
+        "ginbu-401",
+        "B",
+        "YES",
+        82,
+        8
+      ],
+      [
+        "Goldie’s",
+        "goldie-s",
+        "B",
+        "YES",
+        79,
+        8
+      ],
+      [
+        "Gus’ Family Restaurant",
+        "gus-family-restaurant",
+        "B",
+        "YES",
+        78,
+        9
+      ],
+      [
+        "House of Leng",
+        "house-of-leng",
+        "B",
+        "YES",
+        84,
+        9
+      ],
+      [
+        "Koishi Restaurant & Sushi Bar",
+        "koishi-restaurant-and-sushi-bar",
+        "B",
+        "YES",
+        84,
+        10
+      ],
+      [
+        "La Shish Kabob",
+        "la-shish-kabob",
+        "B",
+        "YES",
+        84,
+        11
+      ],
+      [
+        "Li’s Noodles Asian Kitchen",
+        "li-s-noodles-asian-kitchen",
+        "B",
+        "YES",
+        84,
+        12
+      ],
+      [
+        "Middle James Brewing",
+        "middle-james-brewing",
+        "B",
+        "YES",
+        80,
+        13
+      ],
+      [
+        "Midnight Diner",
+        "midnight-diner",
+        "B",
+        "YES",
+        82,
+        13
+      ],
+      [
+        "Miguel's Restaurant",
+        "miguel-s-restaurant",
+        "B",
+        "YES",
+        82,
+        13
+      ],
+      [
+        "Ohana Poké",
+        "ohana-poke",
+        "B",
+        "YES",
+        82,
+        15
+      ],
+      [
+        "Pho Ngon",
+        "pho-ngon",
+        "B",
+        "YES",
+        84,
+        16
+      ],
+      [
+        "Pizzeria Omaggio",
+        "pizzeria-omaggio",
+        "B",
+        "YES",
+        84,
+        16
+      ],
+      [
+        "Revival Coffee & Ice Cream",
+        "revival-coffee-and-ice-cream",
+        "B",
+        "YES",
+        82,
+        18
+      ],
+      [
+        "Santé",
+        "sante",
+        "B",
+        "YES",
+        82,
+        19
+      ],
+      [
+        "Snug Harbor",
+        "snug-harbor",
+        "B",
+        "YES",
+        82,
+        19
+      ],
+      [
+        "Stockyard Restaurant",
+        "stockyard-restaurant",
+        "B",
+        "YES",
+        84,
+        20
+      ],
+      [
+        "Sunrise Restaurant",
+        "sunrise-restaurant",
+        "B",
+        "YES",
+        84,
+        20
+      ],
+      [
+        "Tacos El Nevado",
+        "tacos-el-nevado",
+        "B",
+        "YES",
+        86,
+        21
+      ],
+      [
+        "Tacos El Regio",
+        "tacos-el-regio",
+        "B",
+        "YES",
+        84,
+        21
+      ],
+      [
+        "YaMe Asian Noodles",
+        "yame-asian-noodles",
+        "B",
+        "YES",
+        84,
+        26
+      ],
+      [
+        "Your Mom’s Donuts",
+        "your-mom-s-donuts",
+        "B",
+        "YES",
+        86,
+        26
+      ]
+    ],
+    "restaurantAuditQueue_B_COND": [
+      [
+        "131 MAIN Restaurant",
+        "131-main-restaurant",
+        "B",
+        "CONDITIONAL",
+        63,
+        1
+      ],
+      [
+        "Alice Jules Coffee House",
+        "alice-jules-coffee-house",
+        "B",
+        "CONDITIONAL",
+        62,
+        1
+      ],
+      [
+        "Amina",
+        "amina",
+        "B",
+        "CONDITIONAL",
+        65,
+        1
+      ],
+      [
+        "Beef ’N Bottle",
+        "beef-n-bottle",
+        "B",
+        "CONDITIONAL",
+        60,
+        2
+      ],
+      [
+        "Blinders Sports Lounge",
+        "blinders-sports-lounge",
+        "B",
+        "CONDITIONAL",
+        62,
+        2
+      ],
+      [
+        "Bobbee O's BBQ",
+        "bobbee-o-s-bbq",
+        "B",
+        "CONDITIONAL",
+        63,
+        3
+      ],
+      [
+        "Bruno",
+        "bruno",
+        "B",
+        "CONDITIONAL",
+        64,
+        3
+      ],
+      [
+        "Cafe South",
+        "cafe-south",
+        "B",
+        "CONDITIONAL",
+        61,
+        3
+      ],
+      [
+        "Cajun Queen",
+        "cajun-queen",
+        "B",
+        "CONDITIONAL",
+        64,
+        3
+      ],
+      [
+        "Cellar & Ale",
+        "cellar-and-ale",
+        "B",
+        "CONDITIONAL",
+        62,
+        4
+      ],
+      [
+        "Chicken King — Yorkmont",
+        "chicken-king-yorkmont",
+        "B",
+        "CONDITIONAL",
+        61,
+        4
+      ],
+      [
+        "Clutch Kitchen & Pour House",
+        "clutch-kitchen-and-pour-house",
+        "B",
+        "CONDITIONAL",
+        63,
+        4
+      ],
+      [
+        "Common Market",
+        "common-market",
+        "B",
+        "CONDITIONAL",
+        64,
+        5
+      ],
+      [
+        "Craft Tasting Room & Growler Shop",
+        "craft-tasting-room-and-growler-shop",
+        "B",
+        "CONDITIONAL",
+        63,
+        5
+      ],
+      [
+        "Dilworth Tasting Room",
+        "dilworth-tasting-room",
+        "B",
+        "CONDITIONAL",
+        60,
+        6
+      ],
+      [
+        "Divine Barrel Brewing",
+        "divine-barrel-brewing",
+        "B",
+        "CONDITIONAL",
+        58,
+        6
+      ],
+      [
+        "E.L.K. Tavern",
+        "e-l-k-tavern",
+        "B",
+        "CONDITIONAL",
+        62,
+        6
+      ],
+      [
+        "Easy Like Sunday",
+        "easy-like-sunday",
+        "B",
+        "CONDITIONAL",
+        62,
+        7
+      ],
+      [
+        "El Malo Tacos",
+        "el-malo-tacos",
+        "B",
+        "CONDITIONAL",
+        64,
+        7
+      ],
+      [
+        "Elsewhere Cocktail Bar",
+        "elsewhere-cocktail-bar",
+        "B",
+        "CONDITIONAL",
+        58,
+        7
+      ],
+      [
+        "Flour Shop",
+        "flour-shop",
+        "B",
+        "CONDITIONAL",
+        62,
+        8
+      ],
+      [
+        "FreeMore Tavern",
+        "freemore-tavern",
+        "B",
+        "CONDITIONAL",
+        60,
+        8
+      ],
+      [
+        "Frenchy’s Sip and Shop",
+        "frenchy-s-sip-and-shop",
+        "B",
+        "CONDITIONAL",
+        58,
+        8
+      ],
+      [
+        "Giddy Goat Coffee Roasters",
+        "giddy-goat-coffee-roasters",
+        "B",
+        "CONDITIONAL",
+        60,
+        8
+      ],
+      [
+        "Half Shell Raw Bar",
+        "half-shell-raw-bar",
+        "B",
+        "CONDITIONAL",
+        58,
+        9
+      ],
+      [
+        "Hattie’s Tap & Tavern",
+        "hattie-s-tap-and-tavern",
+        "B",
+        "CONDITIONAL",
+        61,
+        9
+      ],
+      [
+        "Humbug",
+        "humbug",
+        "B",
+        "CONDITIONAL",
+        58,
+        10
+      ],
+      [
+        "Idlewild",
+        "idlewild",
+        "B",
+        "CONDITIONAL",
+        62,
+        10
+      ],
+      [
+        "Ilios Noche",
+        "ilios-noche",
+        "B",
+        "CONDITIONAL",
+        60,
+        10
+      ],
+      [
+        "International Food European Delights",
+        "international-food-european-delights",
+        "B",
+        "CONDITIONAL",
+        62,
+        10
+      ],
+      [
+        "Kilted Buffalo",
+        "kilted-buffalo",
+        "B",
+        "CONDITIONAL",
+        62,
+        10
+      ],
+      [
+        "Kindred",
+        "kindred",
+        "B",
+        "CONDITIONAL",
+        60,
+        10
+      ],
+      [
+        "Kit's Trackside Crafts",
+        "kit-s-trackside-crafts",
+        "B",
+        "CONDITIONAL",
+        64,
+        10
+      ],
+      [
+        "L'Ostrica",
+        "l-ostrica",
+        "B",
+        "CONDITIONAL",
+        62,
+        11
+      ],
+      [
+        "Lang Van",
+        "lang-van",
+        "B",
+        "CONDITIONAL",
+        65,
+        11
+      ],
+      [
+        "Laurel Market",
+        "laurel-market",
+        "B",
+        "CONDITIONAL",
+        65,
+        11
+      ],
+      [
+        "Local Loaf",
+        "local-loaf",
+        "B",
+        "CONDITIONAL",
+        62,
+        12
+      ],
+      [
+        "Los Chamos",
+        "los-chamos",
+        "B",
+        "CONDITIONAL",
+        62,
+        12
+      ],
+      [
+        "Maria's Mexican Restaurant",
+        "maria-s-mexican-restaurant",
+        "B",
+        "CONDITIONAL",
+        66,
+        13
+      ],
+      [
+        "Mazali",
+        "mazali",
+        "B",
+        "CONDITIONAL",
+        60,
+        13
+      ],
+      [
+        "MOA Korean BBQ & Bar",
+        "moa-korean-bbq-and-bar",
+        "B",
+        "CONDITIONAL",
+        60,
+        13
+      ],
+      [
+        "Morazan Restaurant",
+        "morazan-restaurant",
+        "B",
+        "CONDITIONAL",
+        62,
+        14
+      ],
+      [
+        "NoDa Brewing Company",
+        "noda-brewing-company",
+        "B",
+        "CONDITIONAL",
+        65,
+        14
+      ],
+      [
+        "NoDa Company Store",
+        "noda-company-store",
+        "B",
+        "CONDITIONAL",
+        60,
+        14
+      ],
+      [
+        "Novelty House Rooftop",
+        "novelty-house-rooftop",
+        "B",
+        "CONDITIONAL",
+        62,
+        14
+      ],
+      [
+        "Open Rice",
+        "open-rice",
+        "B",
+        "CONDITIONAL",
+        63,
+        15
+      ],
+      [
+        "Panko Peruvian",
+        "panko-peruvian",
+        "B",
+        "CONDITIONAL",
+        62,
+        15
+      ],
+      [
+        "Picadeli's Pub-In-Deli",
+        "picadeli-s-pub-in-deli",
+        "B",
+        "CONDITIONAL",
+        62,
+        16
+      ],
+      [
+        "Pisces Sushi Bar & Lounge",
+        "pisces-sushi-bar-and-lounge",
+        "B",
+        "CONDITIONAL",
+        62,
+        16
+      ],
+      [
+        "Pizzeria Sapienza CLT",
+        "pizzeria-sapienza-clt",
+        "B",
+        "CONDITIONAL",
+        60,
+        16
+      ],
+      [
+        "Reid’s Fine Foods",
+        "reid-s-fine-foods",
+        "B",
+        "CONDITIONAL",
+        65,
+        17
+      ],
+      [
+        "Rosemont Market & Wine Bar",
+        "rosemont-market-and-wine-bar",
+        "B",
+        "CONDITIONAL",
+        62,
+        18
+      ],
+      [
+        "Saku Yakitori & Sushi Bar",
+        "saku-yakitori-and-sushi-bar",
+        "B",
+        "CONDITIONAL",
+        65,
+        18
+      ],
+      [
+        "Seemingly Overzealous Ice Cream",
+        "seemingly-overzealous-ice-cream",
+        "B",
+        "CONDITIONAL",
+        62,
+        19
+      ],
+      [
+        "Smokey Joe’s Cafe",
+        "smokey-joe-s-cafe",
+        "B",
+        "CONDITIONAL",
+        62,
+        19
+      ],
+      [
+        "SORA",
+        "sora",
+        "B",
+        "CONDITIONAL",
+        62,
+        19
+      ],
+      [
+        "Soul Gastrolounge",
+        "soul-gastrolounge",
+        "B",
+        "CONDITIONAL",
+        60,
+        19
+      ],
+      [
+        "Spurs Up Saloon",
+        "spurs-up-saloon",
+        "B",
+        "CONDITIONAL",
+        60,
+        20
+      ],
+      [
+        "Stallings Rockstore Bar-B-Q",
+        "stallings-rockstore-bar-b-q",
+        "B",
+        "CONDITIONAL",
+        62,
+        20
+      ],
+      [
+        "SUGAR Handmade Gourmet Donuts",
+        "sugar-handmade-gourmet-donuts",
+        "B",
+        "CONDITIONAL",
+        60,
+        20
+      ],
+      [
+        "Syn",
+        "syn",
+        "B",
+        "CONDITIONAL",
+        62,
+        21
+      ],
+      [
+        "Taste of India CLT",
+        "taste-of-india-clt",
+        "B",
+        "CONDITIONAL",
+        65,
+        21
+      ],
+      [
+        "Tea Fusion Café",
+        "tea-fusion-cafe",
+        "B",
+        "CONDITIONAL",
+        62,
+        21
+      ],
+      [
+        "Thai Orchid Restaurant",
+        "thai-orchid-restaurant",
+        "B",
+        "CONDITIONAL",
+        60,
+        21
+      ],
+      [
+        "The Artisan’s Palate",
+        "the-artisan-s-palate",
+        "B",
+        "CONDITIONAL",
+        62,
+        21
+      ],
+      [
+        "The Chai Window",
+        "the-chai-window",
+        "B",
+        "CONDITIONAL",
+        62,
+        22
+      ],
+      [
+        "The Cotton Room",
+        "the-cotton-room",
+        "B",
+        "CONDITIONAL",
+        64,
+        22
+      ],
+      [
+        "The Crust Pizza",
+        "the-crust-pizza",
+        "B",
+        "CONDITIONAL",
+        62,
+        22
+      ],
+      [
+        "The Exchange Pizza Depot",
+        "the-exchange-pizza-depot",
+        "B",
+        "CONDITIONAL",
+        64,
+        22
+      ],
+      [
+        "The Music Yard",
+        "the-music-yard",
+        "B",
+        "CONDITIONAL",
+        62,
+        23
+      ],
+      [
+        "The Pauline Tea-Bar Apothecary",
+        "the-pauline-tea-bar-apothecary",
+        "B",
+        "CONDITIONAL",
+        65,
+        23
+      ],
+      [
+        "The Vintage Whiskey & Cigar Bar",
+        "the-vintage-whiskey-and-cigar-bar",
+        "B",
+        "CONDITIONAL",
+        62,
+        24
+      ],
+      [
+        "Tiny Bar",
+        "tiny-bar",
+        "B",
+        "CONDITIONAL",
+        64,
+        24
+      ],
+      [
+        "Tip Top Daily Market",
+        "tip-top-daily-market",
+        "B",
+        "CONDITIONAL",
+        62,
+        24
+      ],
+      [
+        "Vicente Bistro",
+        "vicente-bistro",
+        "B",
+        "CONDITIONAL",
+        62,
+        25
+      ],
+      [
+        "Wing King Cafe",
+        "wing-king-cafe",
+        "B",
+        "CONDITIONAL",
+        62,
+        25
+      ],
+      [
+        "Yunta Nikkei",
+        "yunta-nikkei",
+        "B",
+        "CONDITIONAL",
+        65,
+        26
+      ]
+    ]
+  }
+}

@@ -30,13 +30,14 @@
     <header class="portal-header">
       <h1 class="portal-title">Restaurant Premium Demo Queue</h1>
       <p class="portal-subtitle">Final reconciled A/B prospects from the 645-record Rada-depth audit.</p>
-      <div class="concept-notice"><strong>Canonical queue reset:</strong> this portal now reads only the final audited A/B prospect queue: 284 A-grade YES prospects, 46 B-grade YES prospects, and 77 B-grade CONDITIONAL prospects. HOLD, NO, closed, out-of-scope and merged alias records are not active leads. Existing restaurant folders do not count as complete unless a current override records a verified six-page QA/premium build.</div>
+      <div class="concept-notice"><strong>Net-new demo queue:</strong> the completed audit produced 407 A/B prospects, but restaurants with an existing demo in <code>restaurant-showcase</code> are hard-excluded from automatic Gemini build rotation. Current net-new queue: 312 restaurants — 218 A-grade YES, 36 B-grade YES, and 58 B-grade CONDITIONAL. 95 audited A/B prospects are excluded because a Showcase demo already exists.</div>
       <div class="portal-stats" id="portal-stats" aria-live="polite">Loading the audited queue…</div>
       <nav class="alpha-nav" id="alpha-nav" aria-label="Jump to restaurants by letter"></nav>
     </header>
     <div id="portal-error" class="portal-error" hidden></div>
     <section class="restaurant-grid" id="restaurant-grid" aria-label="Audited restaurant website prospects"></section>
   </main>
+  <script src="queue/meta.js"></script>
   <script src="queue/a-yes-1.js"></script>
   <script src="queue/a-yes-2.js"></script>
   <script src="queue/b-yes.js"></script>

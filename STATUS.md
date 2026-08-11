@@ -1,44 +1,21 @@
 # Restaurant Demo Status
 
-## Active canonical queue
+## Active net-new queue
 
-The repository has been reset to the final reconciled A/B prospect set from the completed 645-record Rada-depth audit.
+The completed 645-record Rada-depth audit produced **407 A/B prospects** before Showcase reconciliation. Existing demos in `dev-in-portfolio/restaurant-showcase` are now a hard exclusion, including Showcase HOLD entries.
 
-- **407 active audited prospects**
-- **284 A-grade YES**
-- **46 B-grade YES**
-- **77 B-grade CONDITIONAL**
-- HOLD, NO, closed/out-of-scope records, and merged aliases are excluded from automatic build selection.
+- **312 active net-new prospects**
+- **218 A-grade YES**
+- **36 B-grade YES**
+- **58 B-grade CONDITIONAL**
+- **95 audited A/B prospects removed because a Showcase demo already exists** (89 active Showcase, 6 Showcase HOLD)
+- Showcase inventory checked: **114 active + 31 hold = 145 existing demos**
 
-Queue source files:
+Exact removals are recorded in `queue/showcase-exclusions.json`. The immutable pre-subtraction audit source is `queue/audit-ab-master.json`.
 
-- `queue/a-yes-1.js`
-- `queue/a-yes-2.js`
-- `queue/b-yes.js`
-- `queue/b-conditional.js`
+## Build-status rule
 
-## Build-status reset
-
-`portal-overrides.js` was intentionally reset. Therefore every canonical prospect currently begins as `lead` unless a new six-page build is completed after this reset and receives a fresh override.
-
-Existing restaurant folders are **legacy working material**, not completion evidence. Some are one-page prototypes, some were built under an older five-page standard, and some belong to restaurants no longer in the canonical active queue.
-
-Do not automatically build a restaurant merely because its folder exists.
-
-## Current completion standard
-
-A restaurant may be marked `premium` only after the current README standard is met:
-
-- six substantive linked pages;
-- restaurant-specific premium art direction;
-- two useful accessible interactions, including one conversion interaction;
-- current factual verification and `evidence.md`;
-- desktop and mobile browser QA;
-- accessibility baseline passed;
-- no live real-world form/payment/reservation claims;
-- a fresh minimal patch in `portal-overrides.js`.
-
-If browser QA is not available, the highest honest status is `qa`.
+`portal-overrides.js` tracks build status only for restaurants still present in the net-new queue. Existing Showcase demos are not reintroduced through overrides.
 
 ## Selection order
 
@@ -46,6 +23,8 @@ If browser QA is not available, the highest honest status is `qa`.
 2. B-grade YES
 3. B-grade CONDITIONAL
 
-Within a tier, sort alphabetically ignoring leading `The`, `A`, and `An`.
+Within a tier, sort alphabetically ignoring leading `The`, `A`, and `An`. Before selecting, run `node scripts/sync-showcase-exclusions.mjs` so a newly added Showcase demo cannot be rebuilt accidentally.
 
-See `README.md` for the full one-shot build specification.
+## Completion standard
+
+A restaurant may be marked `premium` only after the current README six-page standard, useful-interaction requirement, factual evidence, desktop/mobile browser QA, and accessibility baseline all pass. If browser QA is unavailable, the highest honest status is `qa`.

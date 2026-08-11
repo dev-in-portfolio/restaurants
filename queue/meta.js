@@ -1,1 +1,1 @@
-window.restaurantAuditQueueMeta={"originalAuditAB":407,"showcaseExcluded":95,"expectedActiveQueue":312,"aYes":218,"bYes":36,"bConditional":58,"showcaseActiveDemoCount":114,"showcaseHoldDemoCount":31};
+window.restaurantAuditQueueMeta={"originalAuditAB":407,"showcaseExcluded":95,"showcaseExcludedActive":89,"showcaseExcludedHold":6,"expectedActiveQueue":312,"aYes":218,"bYes":36,"bConditional":58,"showcaseActiveDemoCount":114,"showcaseHoldDemoCount":31};

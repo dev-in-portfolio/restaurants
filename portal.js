@@ -175,10 +175,14 @@
     }, {});
     const gradeA = items.filter(item => item.grade === 'A').length;
     const gradeB = items.filter(item => item.grade === 'B').length;
-    stats.textContent = `${items.length} canonical A/B prospects • ${gradeA} A-grade • ${gradeB} B-grade • ${counts.lead || 0} queued • ${counts.incomplete || 0} incomplete • ${counts.qa || 0} QA pending • ${(counts.premium || 0) + (counts.promoted || 0) + (counts.promoted_secondary || 0)} premium/promoted • ${counts.later || 0} recheck/later`;
+    const meta = window.restaurantAuditQueueMeta || {};
+    const excludedText = meta.showcaseExcluded ? ` • ${meta.showcaseExcluded} Showcase demos excluded` : '';
+    stats.textContent = `${items.length} net-new A/B prospects • ${gradeA} A-grade • ${gradeB} B-grade • ${counts.lead || 0} queued • ${counts.incomplete || 0} incomplete • ${counts.qa || 0} QA pending • ${(counts.premium || 0) + (counts.promoted || 0) + (counts.promoted_secondary || 0)} premium/promoted • ${counts.later || 0} recheck/later${excludedText}`;
 
     const problems = [];
-    if (result.rawCount !== 407) problems.push(`Expected 407 audited queue rows; loaded ${result.rawCount}.`);
+    const expected = Number((window.restaurantAuditQueueMeta || {}).expectedActiveQueue);
+    if (!expected) problems.push('Queue metadata missing expectedActiveQueue.');
+    else if (result.rawCount !== expected) problems.push(`Expected ${expected} net-new audited queue rows; loaded ${result.rawCount}.`);
     if (result.duplicateNames.length) problems.push(`Duplicate canonical queue names: ${result.duplicateNames.join(', ')}.`);
     if (result.unknownOverrides.length) problems.push(`Ignored overrides outside the audited queue: ${result.unknownOverrides.join(', ')}.`);
     if (problems.length) {

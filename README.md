@@ -16,16 +16,17 @@ If the selected restaurant cannot be confidently verified as active/current, do 
 
 ## Canonical prospect queue — source of truth
 
-The active queue is **only** the final reconciled A/B set from the completed 645-record Rada-depth audit.
+The active build queue is the final reconciled A/B set from the completed 645-record Rada-depth audit **minus every restaurant that already has a demo in `dev-in-portfolio/restaurant-showcase`, including Showcase HOLD demos**.
 
-Current canonical queue:
+Current net-new queue after Showcase subtraction:
 
-- **407 active prospects total**
-- **284 A-grade YES**
-- **46 B-grade YES**
-- **77 B-grade CONDITIONAL**
-- **0 HOLD records**
-- **0 NO records**
+- **312 active net-new prospects total**
+- **218 A-grade YES**
+- **36 B-grade YES**
+- **58 B-grade CONDITIONAL**
+- **95 audited A/B prospects excluded because a Showcase demo already exists**
+- **0 HOLD audit records**
+- **0 NO audit records**
 - **0 merged aliases as separate leads**
 
 The queue files are:
@@ -34,6 +35,9 @@ The queue files are:
 - `queue/a-yes-2.js`
 - `queue/b-yes.js`
 - `queue/b-conditional.js`
+- `queue/meta.js` — generated net-new counts
+- `queue/showcase-exclusions.json` — exact restaurants removed because Showcase demos already exist
+- `queue/audit-ab-master.json` — immutable 407-row audited A/B source snapshot
 
 Each compact row is:
 
@@ -41,11 +45,25 @@ Each compact row is:
 [name, slug, grade, disposition, score, auditBatch]
 ```
 
-The queue files are canonical audit data. **Do not edit them merely because a demo is built.** Build status belongs in `portal-overrides.js`.
+The 407-row audit master is preserved in `queue/audit-ab-master.json`. The four active queue files are generated net-new build data after Showcase subtraction. **Do not manually re-add Showcase restaurants.** Build status belongs in `portal-overrides.js`.
 
 The old files `portal-leads-message2-original.js`, `portal-leads-message3.js`, and `portal-concepts-source.html` are legacy historical artifacts only. They are no longer loaded by the portal and are **not** valid prospect sources. Never re-add a restaurant from those files unless it is present in the canonical queue above.
 
 Existing restaurant folders are also **not** proof that a restaurant is currently eligible or complete. They may be old prototypes, prior five-page builds, or historical work. The canonical queue decides eligibility; the current six-page QA standard decides completion.
+
+## Showcase exclusion is mandatory
+
+A restaurant that already has a demo in `dev-in-portfolio/restaurant-showcase` is **not a new-demo candidate**, even if that Showcase record is currently in HOLD. Do not spend a Gemini run rebuilding it unless the user explicitly orders a redo.
+
+Before selecting the next restaurant, run:
+
+```bash
+node scripts/sync-showcase-exclusions.mjs
+```
+
+The sync reads both `restaurant-showcase/data/restaurants.json` and `restaurant-showcase/data/hold-restaurants.json`, rebuilds the net-new queue from the immutable 407-row audit source, and writes `queue/showcase-exclusions.json`. If Showcase changed, include the resulting queue housekeeping in the same commit.
+
+Never bypass this rule because an old folder exists here, because a Showcase demo is on HOLD, or because the audit grade is A. **Existing Showcase demo = hard exclusion from automatic new-demo rotation.**
 
 ## Build-selection order
 
@@ -268,7 +286,7 @@ Old restaurant folders are legacy working material. For a selected canonical pro
 - do not preserve a weak five-page structure merely because it already exists;
 - do not let an old folder determine the new art direction.
 
-Folders for restaurants outside the canonical 407 queue are historical only and must not be selected automatically.
+Folders for restaurants outside the current net-new queue are historical only and must not be selected automatically. Showcase restaurants remain excluded even if a similarly named folder exists here.
 
 ## Collaboration and commits
 
