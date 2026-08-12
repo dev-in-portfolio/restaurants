@@ -49,5 +49,6 @@ window.portalOverrides = [
   { name: "Courtyard Hooligans", status: "premium", href: "courtyard-hooligans/index.html" },
   { name: "Crisp Kitchen & Cocktails", status: "premium", href: "crisp-kitchen-and-cocktails/index.html" },
   { name: "CupLux Coffee Drive-Thru", status: "premium", href: "cuplux-coffee-drive-thru/index.html" },
+  { name: "Curry Junction", status: "premium", href: "curry-junction/index.html" },
   { name: "DeepCuts HiFi", status: "premium", href: "deepcuts-hifi/index.html" }
 ];
