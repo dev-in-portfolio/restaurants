@@ -31,5 +31,6 @@ window.portalOverrides = [
   { name: "Caribbean Hut", status: "premium", href: "caribbean-hut/index.html" },
   { name: "Carmella’s Pizza Grill", status: "premium", href: "carmella-s-pizza-grill/index.html" },
   { name: "Chaat ’N’ Dosa", status: "premium", href: "chaat-n-dosa/index.html" },
+  { name: "Cheat’s Cheesesteaks", status: "premium", href: "cheat-s-cheesesteaks/index.html" },
   { name: "DeepCuts HiFi", status: "premium", href: "deepcuts-hifi/index.html" }
 ];
