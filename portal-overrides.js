@@ -52,5 +52,6 @@ window.portalOverrides = [
   { name: "Curry Junction", status: "premium", href: "curry-junction/index.html" },
   { name: "DeepCuts HiFi", status: "premium", href: "deepcuts-hifi/index.html" },
   { name: "Deli St", status: "premium", href: "deli-st/index.html" },
-  { name: "Distro Beer Hub", status: "premium", href: "distro-beer-hub/index.html" }
+  { name: "Distro Beer Hub", status: "premium", href: "distro-beer-hub/index.html" },
+  { name: "Elizabeth Creamery", status: "premium", href: "elizabeth-creamery/index.html" }
 ];
