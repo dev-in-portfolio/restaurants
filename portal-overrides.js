@@ -47,5 +47,6 @@ window.portalOverrides = [
   { name: "Coquette", status: "premium", href: "coquette/index.html" },
   { name: "Costa del Sol", status: "premium", href: "costa-del-sol/index.html" },
   { name: "Courtyard Hooligans", status: "premium", href: "courtyard-hooligans/index.html" },
+  { name: "Crisp Kitchen & Cocktails", status: "premium", href: "crisp-kitchen-and-cocktails/index.html" },
   { name: "DeepCuts HiFi", status: "premium", href: "deepcuts-hifi/index.html" }
 ];
