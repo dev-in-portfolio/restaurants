@@ -22,5 +22,6 @@ window.portalOverrides = [
   { name: "Babaloo Coffee Club", status: "premium", href: "babaloo-coffee-club/index.html" },
   { name: "Backyard Brew", status: "premium", href: "backyard-brew/index.html" },
   { name: "Bar à Vins", status: "premium", href: "bar-a-vins/index.html" },
+  { name: "Blue Orchid Sushi & Asian Bistro", status: "premium", href: "blue-orchid-sushi-and-asian-bistro/index.html" },
   { name: "DeepCuts HiFi", status: "premium", href: "deepcuts-hifi/index.html" }
 ];
