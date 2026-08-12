@@ -34,5 +34,6 @@ window.portalOverrides = [
   { name: "Cheat’s Cheesesteaks", status: "premium", href: "cheat-s-cheesesteaks/index.html" },
   { name: "Chez Marie Pâtisserie", status: "premium", href: "chez-marie-patisserie/index.html" },
   { name: "CHNO Coffee Co.", status: "premium", href: "chno-coffee-co/index.html" },
+  { name: "Choi’s Korea & Wing", status: "premium", href: "choi-s-korea-and-wing/index.html" },
   { name: "DeepCuts HiFi", status: "premium", href: "deepcuts-hifi/index.html" }
 ];
