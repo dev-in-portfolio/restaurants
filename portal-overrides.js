@@ -37,5 +37,6 @@ window.portalOverrides = [
   { name: "Choi’s Korea & Wing", status: "premium", href: "choi-s-korea-and-wing/index.html" },
   { name: "Chop Chop Red Pot", status: "premium", href: "chop-chop-red-pot/index.html" },
   { name: "Cilantro Noodle + Kitchen", status: "premium", href: "cilantro-noodle-plus-kitchen/index.html" },
+  { name: "Circle G Restaurant", status: "premium", href: "circle-g-restaurant/index.html" },
   { name: "DeepCuts HiFi", status: "premium", href: "deepcuts-hifi/index.html" }
 ];
