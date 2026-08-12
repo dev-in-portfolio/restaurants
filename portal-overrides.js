@@ -45,5 +45,6 @@ window.portalOverrides = [
   { name: "Cool Idiot Coffee", status: "premium", href: "cool-idiot-coffee/index.html" },
   { name: "Copperhead Social Club", status: "premium", href: "copperhead-social-club/index.html" },
   { name: "Coquette", status: "premium", href: "coquette/index.html" },
+  { name: "Costa del Sol", status: "premium", href: "costa-del-sol/index.html" },
   { name: "DeepCuts HiFi", status: "premium", href: "deepcuts-hifi/index.html" }
 ];
