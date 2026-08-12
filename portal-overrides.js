@@ -43,5 +43,6 @@ window.portalOverrides = [
   { name: "Coffey Creek Café", status: "premium", href: "coffey-creek-cafe/index.html" },
   { name: "Comal Taco Co.", status: "premium", href: "comal-taco-co/index.html" },
   { name: "Cool Idiot Coffee", status: "premium", href: "cool-idiot-coffee/index.html" },
+  { name: "Copperhead Social Club", status: "premium", href: "copperhead-social-club/index.html" },
   { name: "DeepCuts HiFi", status: "premium", href: "deepcuts-hifi/index.html" }
 ];
