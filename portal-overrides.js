@@ -21,5 +21,6 @@ window.portalOverrides = [
   { name: "Azul Tequileria & Cocina", status: "premium", href: "azul-tequileria-and-cocina/index.html" },
   { name: "Babaloo Coffee Club", status: "premium", href: "babaloo-coffee-club/index.html" },
   { name: "Backyard Brew", status: "premium", href: "backyard-brew/index.html" },
+  { name: "Bar à Vins", status: "premium", href: "bar-a-vins/index.html" },
   { name: "DeepCuts HiFi", status: "premium", href: "deepcuts-hifi/index.html" }
 ];
