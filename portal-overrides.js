@@ -28,5 +28,6 @@ window.portalOverrides = [
   { name: "Buona Vita Pub & Pizzeria", status: "premium", href: "buona-vita-pub-and-pizzeria/index.html" },
   { name: "Café Audire", status: "premium", href: "cafe-audire/index.html" },
   { name: "Caffeto Specialty Coffee", status: "premium", href: "caffeto-specialty-coffee/index.html" },
+  { name: "Caribbean Hut", status: "premium", href: "caribbean-hut/index.html" },
   { name: "DeepCuts HiFi", status: "premium", href: "deepcuts-hifi/index.html" }
 ];
