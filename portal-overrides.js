@@ -20,5 +20,6 @@ window.portalOverrides = [
   { name: "Azucar Cuban Restaurant", status: "premium", href: "azucar-cuban-restaurant/index.html" },
   { name: "Azul Tequileria & Cocina", status: "premium", href: "azul-tequileria-and-cocina/index.html" },
   { name: "Babaloo Coffee Club", status: "premium", href: "babaloo-coffee-club/index.html" },
+  { name: "Backyard Brew", status: "premium", href: "backyard-brew/index.html" },
   { name: "DeepCuts HiFi", status: "premium", href: "deepcuts-hifi/index.html" }
 ];
