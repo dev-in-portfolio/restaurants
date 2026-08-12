@@ -26,5 +26,6 @@ window.portalOverrides = [
   { name: "Bonzai Thai Cuisine", status: "premium", href: "bonzai-thai-cuisine/index.html" },
   { name: "Brawley’s Beverage", status: "premium", href: "brawley-s-beverage/index.html" },
   { name: "Buona Vita Pub & Pizzeria", status: "premium", href: "buona-vita-pub-and-pizzeria/index.html" },
+  { name: "Caffeto Specialty Coffee", status: "premium", href: "caffeto-specialty-coffee/index.html" },
   { name: "DeepCuts HiFi", status: "premium", href: "deepcuts-hifi/index.html" }
 ];
