@@ -38,5 +38,6 @@ window.portalOverrides = [
   { name: "Chop Chop Red Pot", status: "premium", href: "chop-chop-red-pot/index.html" },
   { name: "Cilantro Noodle + Kitchen", status: "premium", href: "cilantro-noodle-plus-kitchen/index.html" },
   { name: "Circle G Restaurant", status: "premium", href: "circle-g-restaurant/index.html" },
+  { name: "Clark’s Snack Bar", status: "premium", href: "clark-s-snack-bar/index.html" },
   { name: "DeepCuts HiFi", status: "premium", href: "deepcuts-hifi/index.html" }
 ];
