@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cocktails — Idlewild Charlotte</title>
+<title>Cocktails â€” Idlewild Charlotte</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet">
@@ -75,7 +75,7 @@
 
 <a href="#main" class="skip-link">Skip to main content</a>
 
-<div class="disclosure">Unofficial concept presentation — not operated by the restaurant</div>
+<div class="disclosure">Unofficial concept presentation â€” not operated by the restaurant</div>
 
 <nav class="nav" role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
@@ -149,7 +149,7 @@
           <div class="card-icon" style="font-size:3rem;">&#x1F942;</div>
           <h3>Your Idlewild Cocktail</h3>
           <p id="quiz-rec"></p>
-          <p style="color:var(--text-muted);font-size:0.85rem;margin-top:1.5rem;">Show this to your bartender at Idlewild — they'll make it perfect for you.</p>
+          <p style="color:var(--text-muted);font-size:0.85rem;margin-top:1.5rem;">Show this to your bartender at Idlewild â€” they'll make it perfect for you.</p>
           <button class="btn btn-outline mt-2" id="quiz-reset">Start Over</button>
         </div>
       </div>
@@ -217,36 +217,36 @@
   var answers = {};
 
   var recommendations = {
-    'vodka': { 'sweet': 'A Vanilla Pear Martini — vodka shaken with fresh pear purée, vanilla bean, and a twist of lemon.',
-      'sour': 'The Cucumber Collins — vodka, fresh lime, cucumber, a touch of agave, topped with soda.',
-      'bitter': 'A Dirty Martini reimagined — vodka, dry vermouth, olive brine, lemon zest.',
+    'vodka': { 'sweet': 'A Vanilla Pear Martini â€” vodka shaken with fresh pear purÃ©e, vanilla bean, and a twist of lemon.',
+      'sour': 'The Cucumber Collins â€” vodka, fresh lime, cucumber, a touch of agave, topped with soda.',
+      'bitter': 'A Dirty Martini reimagined â€” vodka, dry vermouth, olive brine, lemon zest.',
       'herbal': 'Vodka with rosemary-thyme syrup, fresh grapefruit, and a splash of soda.',
-      'smoky': 'Smoked Vesper — vodka, Lillet, a dash of Islay scotch rinse, lemon twist.' },
-    'gin': { 'sweet': 'Elderflower Gimlet — gin, St. Germain, fresh lime, cucumber ribbon.',
-      'sour': 'The Classic Corpse Reviver No. 2 — gin, Lillet, Cointreau, absinthe rinse, lemon.',
-      'bitter': 'A proper Negroni — gin, Campari, sweet vermouth, expressed orange oil.',
-      'herbal': 'The French 75 with thyme — gin, lemon, honey-thyme syrup, dry champagne.',
-      'smoky': 'Gin & Tonic with a twist — smoked grapefruit, rosemary sprig, pink peppercorns.' },
+      'smoky': 'Smoked Vesper â€” vodka, Lillet, a dash of Islay scotch rinse, lemon twist.' },
+    'gin': { 'sweet': 'Elderflower Gimlet â€” gin, St. Germain, fresh lime, cucumber ribbon.',
+      'sour': 'The Classic Corpse Reviver No. 2 â€” gin, Lillet, Cointreau, absinthe rinse, lemon.',
+      'bitter': 'A proper Negroni â€” gin, Campari, sweet vermouth, expressed orange oil.',
+      'herbal': 'The French 75 with thyme â€” gin, lemon, honey-thyme syrup, dry champagne.',
+      'smoky': 'Gin & Tonic with a twist â€” smoked grapefruit, rosemary sprig, pink peppercorns.' },
     'whiskey': { 'sweet': 'A Whiskey Smash with blackberries, mint, and a touch of honey.',
-      'sour': 'The Paper Plane — bourbon, Amaro Nonino, Aperol, fresh lemon.',
+      'sour': 'The Paper Plane â€” bourbon, Amaro Nonino, Aperol, fresh lemon.',
       'bitter': 'A Manhattan with black walnut bitters and a cherrywood-smoked cherry.',
       'herbal': 'A Rye Old Fashioned with demerara and orange-bitters.',
-      'smoky': 'The Penicillin — scotch, lemon, honey-ginger, float of Islay scotch.' },
-    'rum': { 'sweet': 'A Daiquiri with tropical fruit — aged rum, lime, passionfruit, simple syrup.',
-      'sour': 'The Ti\' Punch — rhum agricole, lime, cane sugar, stirred with a cinnamon stick.',
-      'bitter': 'A Kingston Negroni — pot-still rum, Campari, sweet vermouth.',
+      'smoky': 'The Penicillin â€” scotch, lemon, honey-ginger, float of Islay scotch.' },
+    'rum': { 'sweet': 'A Daiquiri with tropical fruit â€” aged rum, lime, passionfruit, simple syrup.',
+      'sour': 'The Ti\' Punch â€” rhum agricole, lime, cane sugar, stirred with a cinnamon stick.',
+      'bitter': 'A Kingston Negroni â€” pot-still rum, Campari, sweet vermouth.',
       'herbal': 'Mojito with fresh mint, lime, and a dark rum float.',
       'smoky': 'A Corn n\' Oil with blackstrap rum, falernum, lime, and angostura.' },
     'tequila': { 'sweet': 'A Paloma with fresh grapefruit, lime, agave, and a salt rim.',
-      'sour': 'The Tommy\'s Margarita — blanco tequila, fresh lime, agave nectar.',
-      'bitter': 'A Oaxaca Old Fashioned — reposado tequila, mezcal float, agave, chocolate bitters.',
-      'herbal': 'A Mexican Martini with cilantro-jalapeño brine and a salted rim.',
-      'smoky': 'Mezcal Negroni — mezcal, Campari, sweet vermouth, grapefruit twist.' },
-    'surprise': { 'sweet': 'The Bartender\'s Choice — something unexpected and delightful from our current seasonal creations.',
-      'sour': 'The Bartender\'s Choice — a bright, citrus-forward surprise using whatever looks freshest.',
-      'bitter': 'The Bartender\'s Choice — a complex, spirit-forward creation that will challenge and reward you.',
-      'herbal': 'The Bartender\'s Choice — something botanical and aromatic from our garden-shelf ingredients.',
-      'smoky': 'The Bartender\'s Choice — a deeply layered, smoky experience you won\'t find anywhere else.' }
+      'sour': 'The Tommy\'s Margarita â€” blanco tequila, fresh lime, agave nectar.',
+      'bitter': 'A Oaxaca Old Fashioned â€” reposado tequila, mezcal float, agave, chocolate bitters.',
+      'herbal': 'A Mexican Martini with cilantro-jalapeÃ±o brine and a salted rim.',
+      'smoky': 'Mezcal Negroni â€” mezcal, Campari, sweet vermouth, grapefruit twist.' },
+    'surprise': { 'sweet': 'The Bartender\'s Choice â€” something unexpected and delightful from our current seasonal creations.',
+      'sour': 'The Bartender\'s Choice â€” a bright, citrus-forward surprise using whatever looks freshest.',
+      'bitter': 'The Bartender\'s Choice â€” a complex, spirit-forward creation that will challenge and reward you.',
+      'herbal': 'The Bartender\'s Choice â€” something botanical and aromatic from our garden-shelf ingredients.',
+      'smoky': 'The Bartender\'s Choice â€” a deeply layered, smoky experience you won\'t find anywhere else.' }
   };
 
   function showStep(step) {
@@ -328,5 +328,5 @@
   showStep(1);
 })();
 </script>
-</body>
+<script src="../prospect-demo.js"></script></body>
 </html>
