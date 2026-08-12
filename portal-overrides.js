@@ -24,5 +24,6 @@ window.portalOverrides = [
   { name: "Bar à Vins", status: "premium", href: "bar-a-vins/index.html" },
   { name: "Blue Orchid Sushi & Asian Bistro", status: "premium", href: "blue-orchid-sushi-and-asian-bistro/index.html" },
   { name: "Bonzai Thai Cuisine", status: "premium", href: "bonzai-thai-cuisine/index.html" },
+  { name: "Brawley’s Beverage", status: "premium", href: "brawley-s-beverage/index.html" },
   { name: "DeepCuts HiFi", status: "premium", href: "deepcuts-hifi/index.html" }
 ];
