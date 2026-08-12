@@ -40,5 +40,6 @@ window.portalOverrides = [
   { name: "Circle G Restaurant", status: "premium", href: "circle-g-restaurant/index.html" },
   { name: "Clark’s Snack Bar", status: "premium", href: "clark-s-snack-bar/index.html" },
   { name: "Club West Brewing", status: "premium", href: "club-west-brewing/index.html" },
+  { name: "Coffey Creek Café", status: "premium", href: "coffey-creek-cafe/index.html" },
   { name: "DeepCuts HiFi", status: "premium", href: "deepcuts-hifi/index.html" }
 ];
