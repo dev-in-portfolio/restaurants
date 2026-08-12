@@ -39,5 +39,6 @@ window.portalOverrides = [
   { name: "Cilantro Noodle + Kitchen", status: "premium", href: "cilantro-noodle-plus-kitchen/index.html" },
   { name: "Circle G Restaurant", status: "premium", href: "circle-g-restaurant/index.html" },
   { name: "Clark’s Snack Bar", status: "premium", href: "clark-s-snack-bar/index.html" },
+  { name: "Club West Brewing", status: "premium", href: "club-west-brewing/index.html" },
   { name: "DeepCuts HiFi", status: "premium", href: "deepcuts-hifi/index.html" }
 ];
