@@ -41,5 +41,6 @@ window.portalOverrides = [
   { name: "Clark’s Snack Bar", status: "premium", href: "clark-s-snack-bar/index.html" },
   { name: "Club West Brewing", status: "premium", href: "club-west-brewing/index.html" },
   { name: "Coffey Creek Café", status: "premium", href: "coffey-creek-cafe/index.html" },
+  { name: "Comal Taco Co.", status: "premium", href: "comal-taco-co/index.html" },
   { name: "DeepCuts HiFi", status: "premium", href: "deepcuts-hifi/index.html" }
 ];
