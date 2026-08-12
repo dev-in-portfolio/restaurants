@@ -30,5 +30,6 @@ window.portalOverrides = [
   { name: "Caffeto Specialty Coffee", status: "premium", href: "caffeto-specialty-coffee/index.html" },
   { name: "Caribbean Hut", status: "premium", href: "caribbean-hut/index.html" },
   { name: "Carmella’s Pizza Grill", status: "premium", href: "carmella-s-pizza-grill/index.html" },
+  { name: "Chaat ’N’ Dosa", status: "premium", href: "chaat-n-dosa/index.html" },
   { name: "DeepCuts HiFi", status: "premium", href: "deepcuts-hifi/index.html" }
 ];
