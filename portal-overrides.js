@@ -18,5 +18,6 @@ window.portalOverrides = [
   { name: "Assorted Table Wine & Shop", status: "premium", href: "assorted-table-wine-and-shop/index.html" },
   { name: "Astoria Café", status: "premium", href: "astoria-cafe/index.html" },
   { name: "Azucar Cuban Restaurant", status: "premium", href: "azucar-cuban-restaurant/index.html" },
-  { name: "Azul Tequileria & Cocina", status: "premium", href: "azul-tequileria-and-cocina/index.html" }
+  { name: "Azul Tequileria & Cocina", status: "premium", href: "azul-tequileria-and-cocina/index.html" },
+  { name: "DeepCuts HiFi", status: "premium", href: "deepcuts-hifi/index.html" }
 ];
