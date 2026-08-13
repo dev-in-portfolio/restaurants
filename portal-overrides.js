@@ -74,5 +74,6 @@ window.portalOverrides = [
   { name: "Ho Ho Cherry House", status: "premium", href: "ho-ho-cherry-house/index.html" },
   { name: "Home Brew Taproom & Tunes", status: "premium", href: "home-brew-taproom-and-tunes/index.html" },
   { name: "Honeybear Bake Shop", status: "premium", href: "honeybear-bake-shop/index.html" },
-  { name: "Ilios Crafted Greek", status: "premium", href: "ilios-crafted-greek/index.html" }
+  { name: "Ilios Crafted Greek", status: "premium", href: "ilios-crafted-greek/index.html" },
+  { name: "Italo", status: "premium", href: "italo/index.html" }
 ];
