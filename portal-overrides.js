@@ -50,6 +50,7 @@ window.portalOverrides = [
   { name: "Crisp Kitchen & Cocktails", status: "premium", href: "crisp-kitchen-and-cocktails/index.html" },
   { name: "CupLux Coffee Drive-Thru", status: "premium", href: "cuplux-coffee-drive-thru/index.html" },
   { name: "Curry Junction", status: "premium", href: "curry-junction/index.html" },
+  { name: "Curry n Cake", status: "premium", href: "curry-n-cake/index.html" },
   { name: "DeepCuts HiFi", status: "premium", href: "deepcuts-hifi/index.html" },
   { name: "Deli St", status: "premium", href: "deli-st/index.html" },
   { name: "Distro Beer Hub", status: "premium", href: "distro-beer-hub/index.html" },
