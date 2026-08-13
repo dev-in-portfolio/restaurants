@@ -72,5 +72,6 @@ window.portalOverrides = [
   { name: "Henrietta’s", status: "premium", href: "henrietta-s/index.html" },
   { name: "Hickory & Heart", status: "premium", href: "hickory-and-heart/index.html" },
   { name: "Ho Ho Cherry House", status: "premium", href: "ho-ho-cherry-house/index.html" },
-  { name: "Home Brew Taproom & Tunes", status: "premium", href: "home-brew-taproom-and-tunes/index.html" }
+  { name: "Home Brew Taproom & Tunes", status: "premium", href: "home-brew-taproom-and-tunes/index.html" },
+  { name: "Honeybear Bake Shop", status: "premium", href: "honeybear-bake-shop/index.html" }
 ];
