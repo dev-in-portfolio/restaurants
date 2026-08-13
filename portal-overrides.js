@@ -55,6 +55,7 @@ window.portalOverrides = [
   { name: "Dee’s Vegan To Go", status: "premium", href: "dee-s-vegan-to-go/index.html" },
   { name: "Deli St", status: "premium", href: "deli-st/index.html" },
   { name: "Distro Beer Hub", status: "premium", href: "distro-beer-hub/index.html" },
+  { name: "El Veneno", status: "premium", href: "el-veneno/index.html" },
   { name: "Elizabeth Creamery", status: "premium", href: "elizabeth-creamery/index.html" },
   { name: "Emmy Lou's Wine Bar", status: "premium", href: "emmy-lou-s-wine-bar/index.html" },
   { name: "Everybody Eatz", status: "premium", href: "everybody-eatz/index.html" },
