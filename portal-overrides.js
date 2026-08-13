@@ -83,5 +83,6 @@ window.portalOverrides = [
   { name: "Jimmy Pearls", status: "premium", href: "jimmy-pearls/index.html" },
   { name: "King Fish Poke", status: "premium", href: "king-fish-poke/index.html" },
   { name: "La Bonbonniere Bakery", status: "premium", href: "la-bonbonniere-bakery/index.html" },
-  { name: "La Lima Sangucheria", status: "premium", href: "la-lima-sangucheria/index.html" }
+  { name: "La Lima Sangucheria", status: "premium", href: "la-lima-sangucheria/index.html" },
+  { name: "La Poblanita Mexican Restaurant", status: "premium", href: "la-poblanita-mexican-restaurant/index.html" }
 ];
