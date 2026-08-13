@@ -89,5 +89,6 @@ window.portalOverrides = [
   { name: "La Victoria Cocina Mexicana & Bar", status: "premium", href: "la-victoria-cocina-mexicana-and-bar/index.html" },
   { name: "Lempira Restaurant", status: "premium", href: "lempira-restaurant/index.html" },
   { name: "Let’s Meat KBBQ", status: "premium", href: "let-s-meat-kbbq/index.html" },
-  { name: "Libretto’s Pizzeria", status: "premium", href: "libretto-s-pizzeria/index.html" }
+  { name: "Libretto’s Pizzeria", status: "premium", href: "libretto-s-pizzeria/index.html" },
+  { name: "LILA Restaurant & Lounge", status: "premium", href: "lila-restaurant-and-lounge/index.html" }
 ];
