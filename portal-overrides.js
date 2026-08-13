@@ -86,5 +86,6 @@ window.portalOverrides = [
   { name: "La Lima Sangucheria", status: "premium", href: "la-lima-sangucheria/index.html" },
   { name: "La Poblanita Mexican Restaurant", status: "premium", href: "la-poblanita-mexican-restaurant/index.html" },
   { name: "La Unica Bar & Grill", status: "premium", href: "la-unica-bar-and-grill/index.html" },
-  { name: "La Victoria Cocina Mexicana & Bar", status: "premium", href: "la-victoria-cocina-mexicana-and-bar/index.html" }
+  { name: "La Victoria Cocina Mexicana & Bar", status: "premium", href: "la-victoria-cocina-mexicana-and-bar/index.html" },
+  { name: "Lempira Restaurant", status: "premium", href: "lempira-restaurant/index.html" }
 ];
