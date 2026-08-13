@@ -80,5 +80,6 @@ window.portalOverrides = [
   { name: "Jaipur Indian Restaurant", status: "premium", href: "jaipur-indian-restaurant/index.html" },
   { name: "Jazzy Cheesecakes", status: "premium", href: "jazzy-cheesecakes/index.html" },
   { name: "Jeff’s Bucket Shop", status: "premium", href: "jeff-s-bucket-shop/index.html" },
-  { name: "Jimmy Pearls", status: "premium", href: "jimmy-pearls/index.html" }
+  { name: "Jimmy Pearls", status: "premium", href: "jimmy-pearls/index.html" },
+  { name: "King Fish Poke", status: "premium", href: "king-fish-poke/index.html" }
 ];
