@@ -76,5 +76,6 @@ window.portalOverrides = [
   { name: "Honeybear Bake Shop", status: "premium", href: "honeybear-bake-shop/index.html" },
   { name: "Ilios Crafted Greek", status: "premium", href: "ilios-crafted-greek/index.html" },
   { name: "Italo", status: "premium", href: "italo/index.html" },
-  { name: "Jaipur Indian Restaurant", status: "premium", href: "jaipur-indian-restaurant/index.html" }
+  { name: "Jaipur Indian Restaurant", status: "premium", href: "jaipur-indian-restaurant/index.html" },
+  { name: "Jazzy Cheesecakes", status: "premium", href: "jazzy-cheesecakes/index.html" }
 ];
