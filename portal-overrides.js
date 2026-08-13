@@ -87,5 +87,6 @@ window.portalOverrides = [
   { name: "La Poblanita Mexican Restaurant", status: "premium", href: "la-poblanita-mexican-restaurant/index.html" },
   { name: "La Unica Bar & Grill", status: "premium", href: "la-unica-bar-and-grill/index.html" },
   { name: "La Victoria Cocina Mexicana & Bar", status: "premium", href: "la-victoria-cocina-mexicana-and-bar/index.html" },
-  { name: "Lempira Restaurant", status: "premium", href: "lempira-restaurant/index.html" }
+  { name: "Lempira Restaurant", status: "premium", href: "lempira-restaurant/index.html" },
+  { name: "Let’s Meat KBBQ", status: "premium", href: "let-s-meat-kbbq/index.html" }
 ];
