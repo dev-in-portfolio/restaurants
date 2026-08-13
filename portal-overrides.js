@@ -45,6 +45,7 @@ window.portalOverrides = [
   { name: "Cool Idiot Coffee", status: "premium", href: "cool-idiot-coffee/index.html" },
   { name: "Copperhead Social Club", status: "premium", href: "copperhead-social-club/index.html" },
   { name: "Coquette", status: "premium", href: "coquette/index.html" },
+  { name: "Corkscrew Wine Pub", status: "premium", href: "corkscrew-wine-pub/index.html" },
   { name: "Costa del Sol", status: "premium", href: "costa-del-sol/index.html" },
   { name: "Courtyard Hooligans", status: "premium", href: "courtyard-hooligans/index.html" },
   { name: "Crisp Kitchen & Cocktails", status: "premium", href: "crisp-kitchen-and-cocktails/index.html" },
