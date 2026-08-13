@@ -82,5 +82,6 @@ window.portalOverrides = [
   { name: "Jeff’s Bucket Shop", status: "premium", href: "jeff-s-bucket-shop/index.html" },
   { name: "Jimmy Pearls", status: "premium", href: "jimmy-pearls/index.html" },
   { name: "King Fish Poke", status: "premium", href: "king-fish-poke/index.html" },
-  { name: "La Bonbonniere Bakery", status: "premium", href: "la-bonbonniere-bakery/index.html" }
+  { name: "La Bonbonniere Bakery", status: "premium", href: "la-bonbonniere-bakery/index.html" },
+  { name: "La Lima Sangucheria", status: "premium", href: "la-lima-sangucheria/index.html" }
 ];
