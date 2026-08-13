@@ -78,5 +78,6 @@ window.portalOverrides = [
   { name: "Ilios Crafted Greek", status: "premium", href: "ilios-crafted-greek/index.html" },
   { name: "Italo", status: "premium", href: "italo/index.html" },
   { name: "Jaipur Indian Restaurant", status: "premium", href: "jaipur-indian-restaurant/index.html" },
-  { name: "Jazzy Cheesecakes", status: "premium", href: "jazzy-cheesecakes/index.html" }
+  { name: "Jazzy Cheesecakes", status: "premium", href: "jazzy-cheesecakes/index.html" },
+  { name: "Jeff’s Bucket Shop", status: "premium", href: "jeff-s-bucket-shop/index.html" }
 ];
