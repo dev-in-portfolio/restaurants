@@ -93,5 +93,6 @@ window.portalOverrides = [
   { name: "LILA Restaurant & Lounge", status: "premium", href: "lila-restaurant-and-lounge/index.html" },
   { name: "Lorem Ipsum Listening Bar", status: "closed", note: "Permanently closed in July 2026" },
   { name: "Lorenzo’s Pizzeria", status: "premium", href: "lorenzo-s-pizzeria/index.html" },
-  { name: "MAS Tortilleria", status: "premium", href: "mas-tortilleria/index.html" }
+  { name: "MAS Tortilleria", status: "premium", href: "mas-tortilleria/index.html" },
+  { name: "Medellín Colombian Restaurant", status: "premium", href: "medellin-colombian-restaurant/index.html" }
 ];
