@@ -59,5 +59,6 @@ window.portalOverrides = [
   { name: "Exotica Indian Kitchen & Bar", status: "premium", href: "exotica-indian-kitchen-and-bar/index.html" },
   { name: "Felix Empanadas", status: "premium", href: "felix-empanadas/index.html" },
   { name: "Fiesta Maya Mexican Restaurant", status: "premium", href: "fiesta-maya-mexican-restaurant/index.html" },
-  { name: "Flip-a-Lo’s", status: "premium", href: "flip-a-lo-s/index.html" }
+  { name: "Flip-a-Lo’s", status: "premium", href: "flip-a-lo-s/index.html" },
+  { name: "Fonda Las Cazuelas", status: "premium", href: "fonda-las-cazuelas/index.html" }
 ];
