@@ -68,5 +68,6 @@ window.portalOverrides = [
   { name: "Fumée Kitchen & Cocktails", status: "premium", href: "fumee-kitchen-and-cocktails/index.html" },
   { name: "Great Wagon Road Distilling Co.", status: "premium", href: "great-wagon-road-distilling-co/index.html" },
   { name: "Great Wall of China South", status: "premium", href: "great-wall-of-china-south/index.html" },
-  { name: "Halal Street Food", status: "premium", href: "halal-street-food/index.html" }
+  { name: "Halal Street Food", status: "premium", href: "halal-street-food/index.html" },
+  { name: "Henrietta’s", status: "premium", href: "henrietta-s/index.html" }
 ];
