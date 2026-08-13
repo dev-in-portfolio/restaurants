@@ -61,5 +61,6 @@ window.portalOverrides = [
   { name: "Fiesta Maya Mexican Restaurant", status: "premium", href: "fiesta-maya-mexican-restaurant/index.html" },
   { name: "Flip-a-Lo’s", status: "premium", href: "flip-a-lo-s/index.html" },
   { name: "Fonda Las Cazuelas", status: "premium", href: "fonda-las-cazuelas/index.html" },
-  { name: "Food For Your Soul CLT", status: "premium", href: "food-for-your-soul-clt/index.html" }
+  { name: "Food For Your Soul CLT", status: "premium", href: "food-for-your-soul-clt/index.html" },
+  { name: "Fumée Kitchen & Cocktails", status: "premium", href: "fumee-kitchen-and-cocktails/index.html" }
 ];
