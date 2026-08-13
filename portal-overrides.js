@@ -90,5 +90,7 @@ window.portalOverrides = [
   { name: "Lempira Restaurant", status: "premium", href: "lempira-restaurant/index.html" },
   { name: "Let’s Meat KBBQ", status: "premium", href: "let-s-meat-kbbq/index.html" },
   { name: "Libretto’s Pizzeria", status: "premium", href: "libretto-s-pizzeria/index.html" },
-  { name: "LILA Restaurant & Lounge", status: "premium", href: "lila-restaurant-and-lounge/index.html" }
+  { name: "LILA Restaurant & Lounge", status: "premium", href: "lila-restaurant-and-lounge/index.html" },
+  { name: "Lorem Ipsum Listening Bar", status: "closed", note: "Permanently closed in July 2026" },
+  { name: "Lorenzo’s Pizzeria", status: "premium", href: "lorenzo-s-pizzeria/index.html" }
 ];
