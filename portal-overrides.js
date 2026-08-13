@@ -57,5 +57,6 @@ window.portalOverrides = [
   { name: "Emmy Lou's Wine Bar", status: "premium", href: "emmy-lou-s-wine-bar/index.html" },
   { name: "Everybody Eatz", status: "premium", href: "everybody-eatz/index.html" },
   { name: "Exotica Indian Kitchen & Bar", status: "premium", href: "exotica-indian-kitchen-and-bar/index.html" },
-  { name: "Felix Empanadas", status: "premium", href: "felix-empanadas/index.html" }
+  { name: "Felix Empanadas", status: "premium", href: "felix-empanadas/index.html" },
+  { name: "Fiesta Maya Mexican Restaurant", status: "premium", href: "fiesta-maya-mexican-restaurant/index.html" }
 ];
