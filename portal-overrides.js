@@ -96,5 +96,6 @@ window.portalOverrides = [
   { name: "MAS Tortilleria", status: "premium", href: "mas-tortilleria/index.html" },
   { name: "Medellín Colombian Restaurant", status: "premium", href: "medellin-colombian-restaurant/index.html" },
   { name: "Medusa Lounge", status: "premium", href: "medusa-lounge/index.html" },
-  { name: "Mert’s Heart & Soul", status: "premium", href: "mert-s-heart-and-soul/index.html" }
+  { name: "Mert’s Heart & Soul", status: "premium", href: "mert-s-heart-and-soul/index.html" },
+  { name: "Midtown Tavern", status: "premium", href: "midtown-tavern/index.html" }
 ];
