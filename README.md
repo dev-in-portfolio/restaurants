@@ -73,11 +73,11 @@ The active build queue is:
 
 At the current checkpoint the queue is:
 
-- 312 active net-new prospects;
-- 218 A / YES;
+- 223 active net-new prospects;
+- 129 A / YES;
 - 36 B / YES;
 - 58 B / CONDITIONAL;
-- 95 audited A/B prospects excluded because a Showcase demo already exists.
+- 184 audited A/B prospects excluded because a Showcase demo already exists.
 
 These counts can change. `queue/meta.js` after the fresh sync is authoritative.
 
@@ -87,9 +87,9 @@ Canonical data:
 - `queue/a-yes-2.js`
 - `queue/b-yes.js`
 - `queue/b-conditional.js`
-- `queue/meta.js`
-- `queue/showcase-exclusions.json`
-- `queue/audit-ab-master.json` — immutable 407-row pre-Showcase A/B audit snapshot.
+- `queue/meta.js` — generated net-new counts
+- `queue/showcase-exclusions.json` — exact restaurants removed because Showcase demos already exist
+- `queue/audit-ab-master.json` — immutable 407-row audited A/B source snapshot
 
 Do not select from old restaurant folders, retired lead scripts, or `portal-concepts-source.html`.
 
