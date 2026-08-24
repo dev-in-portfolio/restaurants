@@ -11,6 +11,7 @@ window.portalOverrides = [
   { name: "The Craic", status: "premium", href: "the-craic/index.html" },
   { name: "The Diamond Restaurant", status: "premium", href: "the-diamond-restaurant/index.html" },
   { name: "Milkbread", status: "premium", href: "milkbread/index.html" },
+  { name: "Midwood Country Club", status: "premium", href: "midwood-country-club/index.html" },
   { name: "Angela’s Pizzeria & Restaurant", portalSection: "later", note: "Third-party delivery platforms report temporarily closed; needs recheck." },
   { name: "Lorem Ipsum Listening Bar", status: "closed", note: "Permanently closed in July 2026" }
 ];
