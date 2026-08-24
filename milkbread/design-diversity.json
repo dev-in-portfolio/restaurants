@@ -1,0 +1,12 @@
+{
+  "slug": "milkbread",
+  "generatedAt": "2026-08-24T19:50:03.691Z",
+  "recentCompared": 0,
+  "recentSlugs": [
+    "restaurant-slug"
+  ],
+  "rejectionThreshold": 0.72,
+  "closestMatch": null,
+  "passed": true,
+  "comparisons": []
+}
