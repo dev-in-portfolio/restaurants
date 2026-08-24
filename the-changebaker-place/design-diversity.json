@@ -1,0 +1,31 @@
+{
+  "slug": "the-changebaker-place",
+  "generatedAt": "2026-08-24T18:01:18.565Z",
+  "recentCompared": 1,
+  "recentSlugs": [
+    "restaurant-slug",
+    "the-brickyard"
+  ],
+  "rejectionThreshold": 0.72,
+  "closestMatch": {
+    "priorSlug": "the-brickyard",
+    "score": 0.11842300546780234,
+    "classSimilarity": 0.012048192771084338,
+    "cssClassSimilarity": 0.014184397163120567,
+    "domSimilarity": 0.4639175257731959,
+    "sectionSimilarity": 0,
+    "fontSimilarity": 0
+  },
+  "passed": true,
+  "comparisons": [
+    {
+      "priorSlug": "the-brickyard",
+      "score": 0.11842300546780234,
+      "classSimilarity": 0.012048192771084338,
+      "cssClassSimilarity": 0.014184397163120567,
+      "domSimilarity": 0.4639175257731959,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0
+    }
+  ]
+}
