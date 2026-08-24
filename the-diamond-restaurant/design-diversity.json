@@ -1,0 +1,61 @@
+{
+  "slug": "the-diamond-restaurant",
+  "generatedAt": "2026-08-24T19:07:59.670Z",
+  "recentCompared": 4,
+  "recentSlugs": [
+    "restaurant-slug",
+    "the-brickyard",
+    "the-changebaker-place",
+    "the-corner-pub",
+    "the-craic"
+  ],
+  "rejectionThreshold": 0.72,
+  "closestMatch": {
+    "priorSlug": "the-brickyard",
+    "score": 0.1285106691605909,
+    "classSimilarity": 0.011764705882352941,
+    "cssClassSimilarity": 0.014925373134328358,
+    "domSimilarity": 0.5054347826086957,
+    "sectionSimilarity": 0,
+    "fontSimilarity": 0
+  },
+  "passed": true,
+  "comparisons": [
+    {
+      "priorSlug": "the-brickyard",
+      "score": 0.1285106691605909,
+      "classSimilarity": 0.011764705882352941,
+      "cssClassSimilarity": 0.014925373134328358,
+      "domSimilarity": 0.5054347826086957,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0
+    },
+    {
+      "priorSlug": "the-corner-pub",
+      "score": 0.1220771481587211,
+      "classSimilarity": 0.013888888888888888,
+      "cssClassSimilarity": 0.017699115044247787,
+      "domSimilarity": 0.4731182795698925,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0
+    },
+    {
+      "priorSlug": "the-craic",
+      "score": 0.12014610389610388,
+      "classSimilarity": 0.012987012987012988,
+      "cssClassSimilarity": 0.017857142857142856,
+      "domSimilarity": 0.4659090909090909,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0
+    },
+    {
+      "priorSlug": "the-changebaker-place",
+      "score": 0.11381274839801875,
+      "classSimilarity": 0.014925373134328358,
+      "cssClassSimilarity": 0.018018018018018018,
+      "domSimilarity": 0.4371584699453552,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0
+    }
+  ]
+}
