@@ -1,0 +1,12 @@
+{
+  "slug": "the-brickyard",
+  "generatedAt": "2026-08-24T17:19:53.421Z",
+  "recentCompared": 0,
+  "recentSlugs": [
+    "restaurant-slug"
+  ],
+  "rejectionThreshold": 0.72,
+  "closestMatch": null,
+  "passed": true,
+  "comparisons": []
+}
