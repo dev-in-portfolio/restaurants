@@ -18,6 +18,7 @@ window.portalOverrides = [
   { name: "Nalan Indian Cuisine", status: "premium", href: "nalan-indian-cuisine/index.html" },
   { name: "Night Swim Coffee", status: "premium", href: "night-swim-coffee/index.html" },
   { name: "Niki’s Food Shop", status: "premium", href: "niki-s-food-shop/index.html" },
+  { name: "Ninety’s Dessert Bar", status: "premium", href: "ninety-s-dessert-bar/index.html" },
   { name: "Mily & Lalo Peruvian Restaurant", portalSection: "later", note: "Located in Columbus GA outside Charlotte market; hold for regional queue." },
   { name: "Angela’s Pizzeria & Restaurant", portalSection: "later", note: "Third-party delivery platforms report temporarily closed; needs recheck." },
   { name: "Lorem Ipsum Listening Bar", status: "closed", note: "Permanently closed in July 2026" }
