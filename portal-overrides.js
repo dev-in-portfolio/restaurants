@@ -25,6 +25,7 @@ window.portalOverrides = [
   { name: "Oaklore Bar & Bottle Shop", status: "premium", href: "oaklore-bar-and-bottle-shop/index.html" },
   { name: "Oh My Ganache, The Cheesecake Bar", status: "premium", href: "oh-my-ganache-the-cheesecake-bar/index.html" },
   { name: "Oh My Soul", status: "premium", href: "oh-my-soul/index.html" },
+  { name: "Olivelli Deli", status: "premium", href: "olivelli-deli/index.html" },
   { name: "Mily & Lalo Peruvian Restaurant", portalSection: "later", note: "Located in Columbus GA outside Charlotte market; hold for regional queue." },
   { name: "Angela’s Pizzeria & Restaurant", portalSection: "later", note: "Third-party delivery platforms report temporarily closed; needs recheck." },
   { name: "Lorem Ipsum Listening Bar", status: "closed", note: "Permanently closed in July 2026" }
