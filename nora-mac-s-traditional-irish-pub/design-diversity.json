@@ -1,0 +1,120 @@
+{
+  "slug": "nora-mac-s-traditional-irish-pub",
+  "generatedAt": "2026-08-24T21:04:56.345Z",
+  "recentCompared": 10,
+  "recentSlugs": [
+    "midwood-country-club",
+    "miro-spanish-grille",
+    "mother-of-dragons",
+    "must-be-nice",
+    "nalan-indian-cuisine",
+    "night-swim-coffee",
+    "niki-s-food-shop",
+    "ninety-s-dessert-bar",
+    "no-proof",
+    "noda-bodega"
+  ],
+  "rejectionThreshold": 0.72,
+  "closestMatch": {
+    "priorSlug": "miro-spanish-grille",
+    "score": 0.5202747252747253,
+    "classSimilarity": 0.35714285714285715,
+    "cssClassSimilarity": 0.38461538461538464,
+    "domSimilarity": 1,
+    "sectionSimilarity": 0,
+    "fontSimilarity": 1
+  },
+  "passed": true,
+  "comparisons": [
+    {
+      "priorSlug": "miro-spanish-grille",
+      "score": 0.5202747252747253,
+      "classSimilarity": 0.35714285714285715,
+      "cssClassSimilarity": 0.38461538461538464,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 1
+    },
+    {
+      "priorSlug": "mother-of-dragons",
+      "score": 0.4755424954792043,
+      "classSimilarity": 0.35714285714285715,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "must-be-nice",
+      "score": 0.4755424954792043,
+      "classSimilarity": 0.35714285714285715,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "nalan-indian-cuisine",
+      "score": 0.4755424954792043,
+      "classSimilarity": 0.35714285714285715,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "niki-s-food-shop",
+      "score": 0.4755424954792043,
+      "classSimilarity": 0.35714285714285715,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "ninety-s-dessert-bar",
+      "score": 0.4755424954792043,
+      "classSimilarity": 0.35714285714285715,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "no-proof",
+      "score": 0.4755424954792043,
+      "classSimilarity": 0.35714285714285715,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "noda-bodega",
+      "score": 0.4755424954792043,
+      "classSimilarity": 0.35714285714285715,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "midwood-country-club",
+      "score": 0.45154249547920433,
+      "classSimilarity": 0.35714285714285715,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.2
+    },
+    {
+      "priorSlug": "night-swim-coffee",
+      "score": 0.45154249547920433,
+      "classSimilarity": 0.35714285714285715,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.2
+    }
+  ]
+}

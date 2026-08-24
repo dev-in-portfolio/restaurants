@@ -21,6 +21,7 @@ window.portalOverrides = [
   { name: "Ninety’s Dessert Bar", status: "premium", href: "ninety-s-dessert-bar/index.html" },
   { name: "No Proof", status: "premium", href: "no-proof/index.html" },
   { name: "NoDa Bodega", status: "premium", href: "noda-bodega/index.html" },
+  { name: "Nora Mac’s Traditional Irish Pub", status: "premium", href: "nora-mac-s-traditional-irish-pub/index.html" },
   { name: "Mily & Lalo Peruvian Restaurant", portalSection: "later", note: "Located in Columbus GA outside Charlotte market; hold for regional queue." },
   { name: "Angela’s Pizzeria & Restaurant", portalSection: "later", note: "Third-party delivery platforms report temporarily closed; needs recheck." },
   { name: "Lorem Ipsum Listening Bar", status: "closed", note: "Permanently closed in July 2026" }
