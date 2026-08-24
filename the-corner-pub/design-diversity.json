@@ -1,0 +1,41 @@
+{
+  "slug": "the-corner-pub",
+  "generatedAt": "2026-08-24T18:34:12.284Z",
+  "recentCompared": 2,
+  "recentSlugs": [
+    "restaurant-slug",
+    "the-brickyard",
+    "the-changebaker-place"
+  ],
+  "rejectionThreshold": 0.72,
+  "closestMatch": {
+    "priorSlug": "the-brickyard",
+    "score": 0.10722902097902097,
+    "classSimilarity": 0.011363636363636364,
+    "cssClassSimilarity": 0.013986013986013986,
+    "domSimilarity": 0.4182692307692308,
+    "sectionSimilarity": 0,
+    "fontSimilarity": 0
+  },
+  "passed": true,
+  "comparisons": [
+    {
+      "priorSlug": "the-brickyard",
+      "score": 0.10722902097902097,
+      "classSimilarity": 0.011363636363636364,
+      "cssClassSimilarity": 0.013986013986013986,
+      "domSimilarity": 0.4182692307692308,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0
+    },
+    {
+      "priorSlug": "the-changebaker-place",
+      "score": 0.10555714285714286,
+      "classSimilarity": 0.014285714285714285,
+      "cssClassSimilarity": 0.016666666666666666,
+      "domSimilarity": 0.405,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0
+    }
+  ]
+}
