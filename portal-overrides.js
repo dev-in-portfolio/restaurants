@@ -6,6 +6,7 @@
 // Use portalSection: "later" only when fresh verification shows the audited lead needs a recheck.
 window.portalOverrides = [
   { name: "The Brickyard", status: "premium", href: "the-brickyard/index.html" },
+  { name: "The ChangeBaker Place", status: "premium", href: "the-changebaker-place/index.html" },
   { name: "Angela’s Pizzeria & Restaurant", portalSection: "later", note: "Third-party delivery platforms report temporarily closed; needs recheck." },
   { name: "Lorem Ipsum Listening Bar", status: "closed", note: "Permanently closed in July 2026" }
 ];
