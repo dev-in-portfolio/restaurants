@@ -13,6 +13,7 @@ window.portalOverrides = [
   { name: "Milkbread", status: "premium", href: "milkbread/index.html" },
   { name: "Midwood Country Club", status: "premium", href: "midwood-country-club/index.html" },
   { name: "Miro Spanish Grille", status: "premium", href: "miro-spanish-grille/index.html" },
+  { name: "Mother of Dragons", status: "premium", href: "mother-of-dragons/index.html" },
   { name: "Angela’s Pizzeria & Restaurant", portalSection: "later", note: "Third-party delivery platforms report temporarily closed; needs recheck." },
   { name: "Lorem Ipsum Listening Bar", status: "closed", note: "Permanently closed in July 2026" }
 ];
