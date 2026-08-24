@@ -8,6 +8,7 @@ window.portalOverrides = [
   { name: "The Brickyard", status: "premium", href: "the-brickyard/index.html" },
   { name: "The ChangeBaker Place", status: "premium", href: "the-changebaker-place/index.html" },
   { name: "The Corner Pub", status: "premium", href: "the-corner-pub/index.html" },
+  { name: "The Craic", status: "premium", href: "the-craic/index.html" },
   { name: "Angela’s Pizzeria & Restaurant", portalSection: "later", note: "Third-party delivery platforms report temporarily closed; needs recheck." },
   { name: "Lorem Ipsum Listening Bar", status: "closed", note: "Permanently closed in July 2026" }
 ];
