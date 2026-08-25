@@ -38,6 +38,7 @@ window.portalOverrides = [
   { name: "Littl Madeleine", status: "premium", href: "littl-madeleine/index.html" },
   { name: "Laurel Park", status: "premium", href: "laurel-park/index.html" },
   { name: "Pokebowl Ramen", status: "premium", href: "pokebowl-ramen/index.html" },
+  { name: "Poppy’s Bagels & More", status: "premium", href: "poppy-s-bagels-and-more/index.html" },
   { name: "Mily & Lalo Peruvian Restaurant", portalSection: "later", note: "Located in Columbus GA outside Charlotte market; hold for regional queue." },
   { name: "Angela’s Pizzeria & Restaurant", portalSection: "later", note: "Third-party delivery platforms report temporarily closed; needs recheck." },
   { name: "Lorem Ipsum Listening Bar", status: "closed", note: "Permanently closed in July 2026" }
