@@ -1,0 +1,120 @@
+{
+  "slug": "punta-cana-caribbean-grill-and-bar",
+  "generatedAt": "2026-08-25T18:58:15.298Z",
+  "recentCompared": 10,
+  "recentSlugs": [
+    "littl-madeleine",
+    "laurel-park",
+    "pokebowl-ramen",
+    "poppy-s-bagels-and-more",
+    "pho-quynh",
+    "platform-coffee-plus-kitchen",
+    "plot-twist",
+    "puerta",
+    "pho-real",
+    "prohibition"
+  ],
+  "rejectionThreshold": 0.72,
+  "closestMatch": {
+    "priorSlug": "littl-madeleine",
+    "score": 0.4785876082611592,
+    "classSimilarity": 0.3684210526315789,
+    "cssClassSimilarity": 0.3670886075949367,
+    "domSimilarity": 1,
+    "sectionSimilarity": 0,
+    "fontSimilarity": 0.5
+  },
+  "passed": true,
+  "comparisons": [
+    {
+      "priorSlug": "littl-madeleine",
+      "score": 0.4785876082611592,
+      "classSimilarity": 0.3684210526315789,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "laurel-park",
+      "score": 0.4785876082611592,
+      "classSimilarity": 0.3684210526315789,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "pokebowl-ramen",
+      "score": 0.4785876082611592,
+      "classSimilarity": 0.3684210526315789,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "pho-quynh",
+      "score": 0.4785876082611592,
+      "classSimilarity": 0.3684210526315789,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "platform-coffee-plus-kitchen",
+      "score": 0.4785876082611592,
+      "classSimilarity": 0.3684210526315789,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "plot-twist",
+      "score": 0.4785876082611592,
+      "classSimilarity": 0.3684210526315789,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "puerta",
+      "score": 0.4785876082611592,
+      "classSimilarity": 0.3684210526315789,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "pho-real",
+      "score": 0.4785876082611592,
+      "classSimilarity": 0.3684210526315789,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "prohibition",
+      "score": 0.4785876082611592,
+      "classSimilarity": 0.3684210526315789,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "poppy-s-bagels-and-more",
+      "score": 0.4670676082611592,
+      "classSimilarity": 0.3684210526315789,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 0.952,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    }
+  ]
+}

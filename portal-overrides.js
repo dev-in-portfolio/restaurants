@@ -45,7 +45,9 @@ window.portalOverrides = [
   { name: "Puerta", status: "premium", href: "puerta/index.html" },
   { name: "Pho Real", status: "premium", href: "pho-real/index.html" },
   { name: "Prohibition", status: "premium", href: "prohibition/index.html" },
+  { name: "Punta Cana Caribbean Grill & Bar", status: "premium", href: "punta-cana-caribbean-grill-and-bar/index.html" },
   { name: "Mily & Lalo Peruvian Restaurant", portalSection: "later", note: "Located in Columbus GA outside Charlotte market; hold for regional queue." },
   { name: "Angela’s Pizzeria & Restaurant", portalSection: "later", note: "Third-party delivery platforms report temporarily closed; needs recheck." },
-  { name: "Lorem Ipsum Listening Bar", status: "closed", note: "Permanently closed in July 2026" }
+  { name: "Lorem Ipsum Listening Bar", status: "closed", note: "Permanently closed in July 2026" },
+  { name: "Provided Coffee", status: "closed", note: "Charlotte locations closed in June 2026; consolidated to Concord NC flagship" }
 ];
