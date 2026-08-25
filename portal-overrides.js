@@ -44,6 +44,7 @@ window.portalOverrides = [
   { name: "Plot Twist", status: "premium", href: "plot-twist/index.html" },
   { name: "Puerta", status: "premium", href: "puerta/index.html" },
   { name: "Pho Real", status: "premium", href: "pho-real/index.html" },
+  { name: "Prohibition", status: "premium", href: "prohibition/index.html" },
   { name: "Mily & Lalo Peruvian Restaurant", portalSection: "later", note: "Located in Columbus GA outside Charlotte market; hold for regional queue." },
   { name: "Angela’s Pizzeria & Restaurant", portalSection: "later", note: "Third-party delivery platforms report temporarily closed; needs recheck." },
   { name: "Lorem Ipsum Listening Bar", status: "closed", note: "Permanently closed in July 2026" }
