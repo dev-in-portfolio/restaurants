@@ -41,6 +41,7 @@ window.portalOverrides = [
   { name: "Poppy’s Bagels & More", status: "premium", href: "poppy-s-bagels-and-more/index.html" },
   { name: "Pho Quynh", status: "premium", href: "pho-quynh/index.html" },
   { name: "Platform Coffee + Kitchen", status: "premium", href: "platform-coffee-plus-kitchen/index.html" },
+  { name: "Plot Twist", status: "premium", href: "plot-twist/index.html" },
   { name: "Mily & Lalo Peruvian Restaurant", portalSection: "later", note: "Located in Columbus GA outside Charlotte market; hold for regional queue." },
   { name: "Angela’s Pizzeria & Restaurant", portalSection: "later", note: "Third-party delivery platforms report temporarily closed; needs recheck." },
   { name: "Lorem Ipsum Listening Bar", status: "closed", note: "Permanently closed in July 2026" }
