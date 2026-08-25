@@ -1,0 +1,120 @@
+{
+  "slug": "pokebowl-ramen",
+  "generatedAt": "2026-08-25T17:03:17.216Z",
+  "recentCompared": 10,
+  "recentSlugs": [
+    "papi-queso",
+    "papi-ricko-latin-kitchen-and-lounge",
+    "parkway-house-family-restaurant",
+    "passage-to-india-indian-cuisine",
+    "pho-huong-que",
+    "picasso-s-sports-cafe",
+    "persuasian-restaurant",
+    "pertinacious-coffee",
+    "littl-madeleine",
+    "laurel-park"
+  ],
+  "rejectionThreshold": 0.72,
+  "closestMatch": {
+    "priorSlug": "papi-ricko-latin-kitchen-and-lounge",
+    "score": 0.5233198380566801,
+    "classSimilarity": 0.3684210526315789,
+    "cssClassSimilarity": 0.38461538461538464,
+    "domSimilarity": 1,
+    "sectionSimilarity": 0,
+    "fontSimilarity": 1
+  },
+  "passed": true,
+  "comparisons": [
+    {
+      "priorSlug": "papi-ricko-latin-kitchen-and-lounge",
+      "score": 0.5233198380566801,
+      "classSimilarity": 0.3684210526315789,
+      "cssClassSimilarity": 0.38461538461538464,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 1
+    },
+    {
+      "priorSlug": "parkway-house-family-restaurant",
+      "score": 0.4785876082611592,
+      "classSimilarity": 0.3684210526315789,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "passage-to-india-indian-cuisine",
+      "score": 0.4785876082611592,
+      "classSimilarity": 0.3684210526315789,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "pho-huong-que",
+      "score": 0.4785876082611592,
+      "classSimilarity": 0.3684210526315789,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "picasso-s-sports-cafe",
+      "score": 0.4785876082611592,
+      "classSimilarity": 0.3684210526315789,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "persuasian-restaurant",
+      "score": 0.4785876082611592,
+      "classSimilarity": 0.3684210526315789,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "pertinacious-coffee",
+      "score": 0.4785876082611592,
+      "classSimilarity": 0.3684210526315789,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "littl-madeleine",
+      "score": 0.4785876082611592,
+      "classSimilarity": 0.3684210526315789,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "laurel-park",
+      "score": 0.4785876082611592,
+      "classSimilarity": 0.3684210526315789,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "papi-queso",
+      "score": 0.47385076615589605,
+      "classSimilarity": 0.3508771929824561,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    }
+  ]
+}
