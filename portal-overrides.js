@@ -31,6 +31,7 @@ window.portalOverrides = [
   { name: "Papi Ricko Latin Kitchen & Lounge", status: "premium", href: "papi-ricko-latin-kitchen-and-lounge/index.html" },
   { name: "Parkway House Family Restaurant", status: "premium", href: "parkway-house-family-restaurant/index.html" },
   { name: "Passage to India Indian Cuisine", status: "premium", href: "passage-to-india-indian-cuisine/index.html" },
+  { name: "Pho Huong Que", status: "premium", href: "pho-huong-que/index.html" },
   { name: "Mily & Lalo Peruvian Restaurant", portalSection: "later", note: "Located in Columbus GA outside Charlotte market; hold for regional queue." },
   { name: "Angela’s Pizzeria & Restaurant", portalSection: "later", note: "Third-party delivery platforms report temporarily closed; needs recheck." },
   { name: "Lorem Ipsum Listening Bar", status: "closed", note: "Permanently closed in July 2026" }
