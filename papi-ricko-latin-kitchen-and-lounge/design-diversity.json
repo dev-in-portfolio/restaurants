@@ -1,0 +1,120 @@
+{
+  "slug": "papi-ricko-latin-kitchen-and-lounge",
+  "generatedAt": "2026-08-25T14:04:10.640Z",
+  "recentCompared": 10,
+  "recentSlugs": [
+    "ninety-s-dessert-bar",
+    "no-proof",
+    "noda-bodega",
+    "nora-mac-s-traditional-irish-pub",
+    "oaklore-bar-and-bottle-shop",
+    "oh-my-ganache-the-cheesecake-bar",
+    "oh-my-soul",
+    "olivelli-deli",
+    "panda-s-den",
+    "papi-queso"
+  ],
+  "rejectionThreshold": 0.72,
+  "closestMatch": {
+    "priorSlug": "oh-my-soul",
+    "score": 0.518582995951417,
+    "classSimilarity": 0.3508771929824561,
+    "cssClassSimilarity": 0.38461538461538464,
+    "domSimilarity": 1,
+    "sectionSimilarity": 0,
+    "fontSimilarity": 1
+  },
+  "passed": true,
+  "comparisons": [
+    {
+      "priorSlug": "oh-my-soul",
+      "score": 0.518582995951417,
+      "classSimilarity": 0.3508771929824561,
+      "cssClassSimilarity": 0.38461538461538464,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 1
+    },
+    {
+      "priorSlug": "olivelli-deli",
+      "score": 0.4803639240506329,
+      "classSimilarity": 0.375,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "ninety-s-dessert-bar",
+      "score": 0.47385076615589605,
+      "classSimilarity": 0.3508771929824561,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "no-proof",
+      "score": 0.47385076615589605,
+      "classSimilarity": 0.3508771929824561,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "noda-bodega",
+      "score": 0.47385076615589605,
+      "classSimilarity": 0.3508771929824561,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "nora-mac-s-traditional-irish-pub",
+      "score": 0.47385076615589605,
+      "classSimilarity": 0.3508771929824561,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "oaklore-bar-and-bottle-shop",
+      "score": 0.47385076615589605,
+      "classSimilarity": 0.3508771929824561,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "oh-my-ganache-the-cheesecake-bar",
+      "score": 0.47385076615589605,
+      "classSimilarity": 0.3508771929824561,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "panda-s-den",
+      "score": 0.47385076615589605,
+      "classSimilarity": 0.3508771929824561,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "papi-queso",
+      "score": 0.47385076615589605,
+      "classSimilarity": 0.3508771929824561,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    }
+  ]
+}
