@@ -1,0 +1,120 @@
+{
+  "slug": "picasso-s-sports-cafe",
+  "generatedAt": "2026-08-25T15:39:01.900Z",
+  "recentCompared": 10,
+  "recentSlugs": [
+    "oaklore-bar-and-bottle-shop",
+    "oh-my-ganache-the-cheesecake-bar",
+    "oh-my-soul",
+    "olivelli-deli",
+    "panda-s-den",
+    "papi-queso",
+    "papi-ricko-latin-kitchen-and-lounge",
+    "parkway-house-family-restaurant",
+    "passage-to-india-indian-cuisine",
+    "pho-huong-que"
+  ],
+  "rejectionThreshold": 0.72,
+  "closestMatch": {
+    "priorSlug": "olivelli-deli",
+    "score": 0.4803639240506329,
+    "classSimilarity": 0.375,
+    "cssClassSimilarity": 0.3670886075949367,
+    "domSimilarity": 1,
+    "sectionSimilarity": 0,
+    "fontSimilarity": 0.5
+  },
+  "passed": true,
+  "comparisons": [
+    {
+      "priorSlug": "olivelli-deli",
+      "score": 0.4803639240506329,
+      "classSimilarity": 0.375,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "papi-ricko-latin-kitchen-and-lounge",
+      "score": 0.4785876082611592,
+      "classSimilarity": 0.3684210526315789,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "parkway-house-family-restaurant",
+      "score": 0.4785876082611592,
+      "classSimilarity": 0.3684210526315789,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "passage-to-india-indian-cuisine",
+      "score": 0.4785876082611592,
+      "classSimilarity": 0.3684210526315789,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "pho-huong-que",
+      "score": 0.4785876082611592,
+      "classSimilarity": 0.3684210526315789,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "oaklore-bar-and-bottle-shop",
+      "score": 0.47385076615589605,
+      "classSimilarity": 0.3508771929824561,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "oh-my-ganache-the-cheesecake-bar",
+      "score": 0.47385076615589605,
+      "classSimilarity": 0.3508771929824561,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "oh-my-soul",
+      "score": 0.47385076615589605,
+      "classSimilarity": 0.3508771929824561,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "panda-s-den",
+      "score": 0.47385076615589605,
+      "classSimilarity": 0.3508771929824561,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "papi-queso",
+      "score": 0.47385076615589605,
+      "classSimilarity": 0.3508771929824561,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    }
+  ]
+}
