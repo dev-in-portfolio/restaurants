@@ -48,6 +48,7 @@ window.portalOverrides = [
   { name: "Punta Cana Caribbean Grill & Bar", status: "premium", href: "punta-cana-caribbean-grill-and-bar/index.html" },
   { name: "Queen Park Social", status: "premium", href: "queen-park-social/index.html" },
   { name: "Queen City Bites & Crafts", status: "premium", href: "queen-city-bites-and-crafts/index.html" },
+  { name: "Rai Lay Thai Cuisine", status: "premium", href: "rai-lay-thai-cuisine/index.html" },
   { name: "Mily & Lalo Peruvian Restaurant", portalSection: "later", note: "Located in Columbus GA outside Charlotte market; hold for regional queue." },
   { name: "Angela’s Pizzeria & Restaurant", portalSection: "later", note: "Third-party delivery platforms report temporarily closed; needs recheck." },
   { name: "Lorem Ipsum Listening Bar", status: "closed", note: "Permanently closed in July 2026" },
