@@ -73,6 +73,7 @@ window.portalOverrides = [
   { name: "South End Hideaway", status: "premium", href: "south-end-hideaway/index.html" },
   { name: "Southern Pecan Gulf Coast Kitchen", status: "premium", href: "southern-pecan-gulf-coast-kitchen/index.html" },
   { name: "Somewhere CLT", status: "premium", href: "somewhere-clt/index.html" },
+  { name: "Spaghett", status: "premium", href: "spaghett/index.html" },
   { name: "QC Social Lounge", status: "premium", href: "qc-social-lounge/index.html" },
   { name: "Mily & Lalo Peruvian Restaurant", portalSection: "later", note: "Located in Columbus GA outside Charlotte market; hold for regional queue." },
   { name: "Angela’s Pizzeria & Restaurant", portalSection: "later", note: "Third-party delivery platforms report temporarily closed; needs recheck." },
