@@ -1,6 +1,6 @@
 {
   "slug": "ricko-s-churro-bar",
-  "generatedAt": "2026-08-26T01:19:43.671Z",
+  "generatedAt": "2026-08-26T15:50:52.720Z",
   "htmlPages": [
     "concept.html",
     "horchata-sundaes-and-drink-craft.html",
@@ -257,7 +257,7 @@
     {
       "name": "Cross-demo design diversity",
       "passed": true,
-      "detail": "PASS ricko-s-churro-bar: closest recent design 'pho-real' scored 0.513."
+      "detail": "PASS ricko-s-churro-bar: closest recent design 'room-service' scored 0.487."
     }
   ]
 }
