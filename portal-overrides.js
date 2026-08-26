@@ -61,6 +61,7 @@ window.portalOverrides = [
   { name: "Saffron Indian Cuisine", status: "premium", href: "saffron-indian-cuisine/index.html" },
   { name: "Sabores de Oaxaca", status: "premium", href: "sabores-de-oaxaca/index.html" },
   { name: "Salted Melon Market & Eatery", status: "premium", href: "salted-melon-market-and-eatery/index.html" },
+  { name: "RuRu’s Tacos + Tequila", status: "premium", href: "ruru-s-tacos-plus-tequila/index.html" },
   { name: "QC Social Lounge", status: "premium", href: "qc-social-lounge/index.html" },
   { name: "Mily & Lalo Peruvian Restaurant", portalSection: "later", note: "Located in Columbus GA outside Charlotte market; hold for regional queue." },
   { name: "Angela’s Pizzeria & Restaurant", portalSection: "later", note: "Third-party delivery platforms report temporarily closed; needs recheck." },
