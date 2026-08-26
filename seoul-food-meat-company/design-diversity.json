@@ -1,0 +1,120 @@
+{
+  "slug": "seoul-food-meat-company",
+  "generatedAt": "2026-08-26T21:20:44.756Z",
+  "recentCompared": 10,
+  "recentSlugs": [
+    "room-service",
+    "roz-grill",
+    "saffron-indian-cuisine",
+    "sabores-de-oaxaca",
+    "salted-melon-market-and-eatery",
+    "ruru-s-tacos-plus-tequila",
+    "salud-cerveceria",
+    "roppongi-ramen-bar",
+    "sea-level-nc",
+    "qc-social-lounge"
+  ],
+  "rejectionThreshold": 0.72,
+  "closestMatch": {
+    "priorSlug": "saffron-indian-cuisine",
+    "score": 0.617459636899578,
+    "classSimilarity": 0.559322033898305,
+    "cssClassSimilarity": 0.6231884057971014,
+    "domSimilarity": 0.9090909090909091,
+    "sectionSimilarity": 0,
+    "fontSimilarity": 1
+  },
+  "passed": true,
+  "comparisons": [
+    {
+      "priorSlug": "saffron-indian-cuisine",
+      "score": 0.617459636899578,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 0.9090909090909091,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 1
+    },
+    {
+      "priorSlug": "sabores-de-oaxaca",
+      "score": 0.617459636899578,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 0.9090909090909091,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 1
+    },
+    {
+      "priorSlug": "ruru-s-tacos-plus-tequila",
+      "score": 0.617459636899578,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 0.9090909090909091,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 1
+    },
+    {
+      "priorSlug": "salud-cerveceria",
+      "score": 0.617459636899578,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 0.9090909090909091,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 1
+    },
+    {
+      "priorSlug": "roppongi-ramen-bar",
+      "score": 0.617459636899578,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 0.9090909090909091,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 1
+    },
+    {
+      "priorSlug": "sea-level-nc",
+      "score": 0.617459636899578,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 0.9090909090909091,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 1
+    },
+    {
+      "priorSlug": "roz-grill",
+      "score": 0.577459636899578,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 0.9090909090909091,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "salted-melon-market-and-eatery",
+      "score": 0.577459636899578,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 0.9090909090909091,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "qc-social-lounge",
+      "score": 0.5241818181818182,
+      "classSimilarity": 0.5333333333333333,
+      "cssClassSimilarity": 0.6,
+      "domSimilarity": 0.9090909090909091,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0
+    },
+    {
+      "priorSlug": "room-service",
+      "score": 0.26645386278302424,
+      "classSimilarity": 0.08235294117647059,
+      "cssClassSimilarity": 0.08181818181818182,
+      "domSimilarity": 0.7588652482269503,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    }
+  ]
+}

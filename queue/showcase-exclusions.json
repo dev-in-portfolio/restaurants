@@ -12,8 +12,8 @@
     "reason": "Preserves the original 407 audited A/B rows so Showcase subtraction is reproducible on every sync."
   },
   "originalQueueCount": 407,
-  "excludedCount": 194,
-  "excludedActiveCount": 188,
+  "excludedCount": 195,
+  "excludedActiveCount": 189,
   "excludedHoldCount": 6,
   "netQueueCount": 223,
   "excluded": [
@@ -2536,6 +2536,19 @@
       "auditBatch": 19,
       "showcaseName": "Sea Level NC",
       "showcaseSlug": "sea-level-nc",
+      "showcaseSource": "active",
+      "matchMethod": "exact-slug"
+    },
+    {
+      "queue": "queue/a-yes-2.js",
+      "restaurant": "Seoul Food Meat Company",
+      "slug": "seoul-food-meat-company",
+      "grade": "A",
+      "disposition": "YES",
+      "score": 100,
+      "auditBatch": 19,
+      "showcaseName": "Seoul Food Meat Company",
+      "showcaseSlug": "seoul-food-meat-company",
       "showcaseSource": "active",
       "matchMethod": "exact-slug"
     }
