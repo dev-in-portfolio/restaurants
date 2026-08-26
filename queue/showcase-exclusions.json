@@ -12,8 +12,8 @@
     "reason": "Preserves the original 407 audited A/B rows so Showcase subtraction is reproducible on every sync."
   },
   "originalQueueCount": 407,
-  "excludedCount": 200,
-  "excludedActiveCount": 194,
+  "excludedCount": 201,
+  "excludedActiveCount": 195,
   "excludedHoldCount": 6,
   "netQueueCount": 223,
   "excluded": [
@@ -2614,6 +2614,19 @@
       "auditBatch": 19,
       "showcaseName": "South End Hideaway",
       "showcaseSlug": "south-end-hideaway",
+      "showcaseSource": "active",
+      "matchMethod": "exact-slug"
+    },
+    {
+      "queue": "queue/a-yes-2.js",
+      "restaurant": "Southern Pecan Gulf Coast Kitchen",
+      "slug": "southern-pecan-gulf-coast-kitchen",
+      "grade": "A",
+      "disposition": "YES",
+      "score": 88,
+      "auditBatch": 19,
+      "showcaseName": "Southern Pecan Gulf Coast Kitchen",
+      "showcaseSlug": "southern-pecan-gulf-coast-kitchen",
       "showcaseSource": "active",
       "matchMethod": "exact-slug"
     }
