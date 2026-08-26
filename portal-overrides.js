@@ -63,6 +63,7 @@ window.portalOverrides = [
   { name: "Salted Melon Market & Eatery", status: "premium", href: "salted-melon-market-and-eatery/index.html" },
   { name: "RuRu’s Tacos + Tequila", status: "premium", href: "ruru-s-tacos-plus-tequila/index.html" },
   { name: "Salud Cerveceria", status: "premium", href: "salud-cerveceria/index.html" },
+  { name: "Roppongi Ramen Bar", status: "premium", href: "roppongi-ramen-bar/index.html" },
   { name: "QC Social Lounge", status: "premium", href: "qc-social-lounge/index.html" },
   { name: "Mily & Lalo Peruvian Restaurant", portalSection: "later", note: "Located in Columbus GA outside Charlotte market; hold for regional queue." },
   { name: "Angela’s Pizzeria & Restaurant", portalSection: "later", note: "Third-party delivery platforms report temporarily closed; needs recheck." },
