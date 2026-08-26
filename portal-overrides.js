@@ -68,6 +68,7 @@ window.portalOverrides = [
   { name: "Seoul Food Meat Company", status: "premium", href: "seoul-food-meat-company/index.html" },
   { name: "Sharigato", status: "premium", href: "sharigato/index.html" },
   { name: "The Sanctuary Pub", status: "premium", href: "sanctuary-pub/index.html" },
+  { name: "Sheng Ramen", status: "premium", href: "sheng-ramen/index.html" },
   { name: "QC Social Lounge", status: "premium", href: "qc-social-lounge/index.html" },
   { name: "Mily & Lalo Peruvian Restaurant", portalSection: "later", note: "Located in Columbus GA outside Charlotte market; hold for regional queue." },
   { name: "Angela’s Pizzeria & Restaurant", portalSection: "later", note: "Third-party delivery platforms report temporarily closed; needs recheck." },
