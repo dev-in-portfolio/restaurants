@@ -53,6 +53,7 @@ window.portalOverrides = [
   { name: "Ramen Bar Kazoku", status: "premium", href: "ramen-bar-kazoku/index.html" },
   { name: "Rhino Market & Deli", status: "premium", href: "rhino-market-and-deli/index.html" },
   { name: "Riceblossom", status: "premium", href: "riceblossom/index.html" },
+  { name: "Ricko’s Churro Bar", status: "premium", href: "ricko-s-churro-bar/index.html" },
   { name: "Mily & Lalo Peruvian Restaurant", portalSection: "later", note: "Located in Columbus GA outside Charlotte market; hold for regional queue." },
   { name: "Angela’s Pizzeria & Restaurant", portalSection: "later", note: "Third-party delivery platforms report temporarily closed; needs recheck." },
   { name: "Lorem Ipsum Listening Bar", status: "closed", note: "Permanently closed in July 2026" },
