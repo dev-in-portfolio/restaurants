@@ -12,8 +12,8 @@
     "reason": "Preserves the original 407 audited A/B rows so Showcase subtraction is reproducible on every sync."
   },
   "originalQueueCount": 407,
-  "excludedCount": 193,
-  "excludedActiveCount": 187,
+  "excludedCount": 194,
+  "excludedActiveCount": 188,
   "excludedHoldCount": 6,
   "netQueueCount": 223,
   "excluded": [
@@ -2523,6 +2523,19 @@
       "auditBatch": 18,
       "showcaseName": "Roppongi Ramen Bar",
       "showcaseSlug": "roppongi-ramen-bar",
+      "showcaseSource": "active",
+      "matchMethod": "exact-slug"
+    },
+    {
+      "queue": "queue/a-yes-2.js",
+      "restaurant": "Sea Level NC",
+      "slug": "sea-level-nc",
+      "grade": "A",
+      "disposition": "YES",
+      "score": 100,
+      "auditBatch": 19,
+      "showcaseName": "Sea Level NC",
+      "showcaseSlug": "sea-level-nc",
       "showcaseSource": "active",
       "matchMethod": "exact-slug"
     }
