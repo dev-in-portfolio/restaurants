@@ -51,6 +51,7 @@ window.portalOverrides = [
   { name: "Rai Lay Thai Cuisine", status: "premium", href: "rai-lay-thai-cuisine/index.html" },
   { name: "Red Sea Restaurant & Bar", status: "premium", href: "red-sea-restaurant-and-bar/index.html" },
   { name: "Red@28th", status: "premium", href: "red-28th/index.html" },
+  { name: "República Restaurant & Lounge", status: "premium", href: "republica-restaurant-and-lounge/index.html" },
   { name: "Ramen Bar Kazoku", status: "premium", href: "ramen-bar-kazoku/index.html" },
   { name: "Rhino Market & Deli", status: "premium", href: "rhino-market-and-deli/index.html" },
   { name: "Riceblossom", status: "premium", href: "riceblossom/index.html" },
