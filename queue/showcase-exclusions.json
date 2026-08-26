@@ -12,8 +12,8 @@
     "reason": "Preserves the original 407 audited A/B rows so Showcase subtraction is reproducible on every sync."
   },
   "originalQueueCount": 407,
-  "excludedCount": 188,
-  "excludedActiveCount": 182,
+  "excludedCount": 189,
+  "excludedActiveCount": 183,
   "excludedHoldCount": 6,
   "netQueueCount": 223,
   "excluded": [
@@ -2458,6 +2458,19 @@
       "auditBatch": 18,
       "showcaseName": "Saffron Indian Cuisine",
       "showcaseSlug": "saffron-indian-cuisine",
+      "showcaseSource": "active",
+      "matchMethod": "exact-slug"
+    },
+    {
+      "queue": "queue/a-yes-2.js",
+      "restaurant": "Sabores de Oaxaca",
+      "slug": "sabores-de-oaxaca",
+      "grade": "A",
+      "disposition": "YES",
+      "score": 99,
+      "auditBatch": 18,
+      "showcaseName": "Sabores de Oaxaca",
+      "showcaseSlug": "sabores-de-oaxaca",
       "showcaseSource": "active",
       "matchMethod": "exact-slug"
     }
