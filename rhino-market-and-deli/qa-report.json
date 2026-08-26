@@ -1,6 +1,6 @@
 {
   "slug": "rhino-market-and-deli",
-  "generatedAt": "2026-08-25T23:20:58.848Z",
+  "generatedAt": "2026-08-26T17:19:51.797Z",
   "htmlPages": [
     "concept.html",
     "craft-bottleshoppe-and-local-provisions.html",
@@ -257,7 +257,7 @@
     {
       "name": "Cross-demo design diversity",
       "passed": true,
-      "detail": "PASS rhino-market-and-deli: closest recent design 'plot-twist' scored 0.468."
+      "detail": "PASS rhino-market-and-deli: closest recent design 'red-sea-restaurant-and-bar' scored 0.485."
     }
   ]
 }

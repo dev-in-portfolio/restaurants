@@ -1,10 +1,8 @@
 {
   "slug": "riceblossom",
-  "generatedAt": "2026-08-26T00:12:16.489Z",
+  "generatedAt": "2026-08-26T17:19:51.453Z",
   "recentCompared": 10,
   "recentSlugs": [
-    "puerta",
-    "pho-real",
     "prohibition",
     "punta-cana-caribbean-grill-and-bar",
     "queen-park-social",
@@ -12,107 +10,109 @@
     "rai-lay-thai-cuisine",
     "red-sea-restaurant-and-bar",
     "ramen-bar-kazoku",
-    "rhino-market-and-deli"
+    "rhino-market-and-deli",
+    "ricko-s-churro-bar",
+    "room-service"
   ],
   "rejectionThreshold": 0.72,
   "closestMatch": {
-    "priorSlug": "prohibition",
-    "score": 0.5126325827282765,
-    "classSimilarity": 0.3508771929824561,
+    "priorSlug": "red-sea-restaurant-and-bar",
+    "score": 0.48459242250287027,
+    "classSimilarity": 0.373134328358209,
     "cssClassSimilarity": 0.38461538461538464,
-    "domSimilarity": 0.9752066115702479,
+    "domSimilarity": 1,
     "sectionSimilarity": 0,
-    "fontSimilarity": 1
+    "fontSimilarity": 0.5
   },
   "passed": true,
   "comparisons": [
     {
-      "priorSlug": "prohibition",
-      "score": 0.5126325827282765,
-      "classSimilarity": 0.3508771929824561,
+      "priorSlug": "red-sea-restaurant-and-bar",
+      "score": 0.48459242250287027,
+      "classSimilarity": 0.373134328358209,
       "cssClassSimilarity": 0.38461538461538464,
-      "domSimilarity": 0.9752066115702479,
-      "sectionSimilarity": 0,
-      "fontSimilarity": 1
-    },
-    {
-      "priorSlug": "rhino-market-and-deli",
-      "score": 0.4755424954792043,
-      "classSimilarity": 0.35714285714285715,
-      "cssClassSimilarity": 0.3670886075949367,
       "domSimilarity": 1,
       "sectionSimilarity": 0,
       "fontSimilarity": 0.5
     },
     {
-      "priorSlug": "puerta",
-      "score": 0.46790035293275556,
-      "classSimilarity": 0.3508771929824561,
-      "cssClassSimilarity": 0.3670886075949367,
-      "domSimilarity": 0.9752066115702479,
+      "priorSlug": "rhino-market-and-deli",
+      "score": 0.48459242250287027,
+      "classSimilarity": 0.373134328358209,
+      "cssClassSimilarity": 0.38461538461538464,
+      "domSimilarity": 1,
       "sectionSimilarity": 0,
       "fontSimilarity": 0.5
     },
     {
-      "priorSlug": "pho-real",
-      "score": 0.46790035293275556,
-      "classSimilarity": 0.3508771929824561,
-      "cssClassSimilarity": 0.3670886075949367,
-      "domSimilarity": 0.9752066115702479,
+      "priorSlug": "ricko-s-churro-bar",
+      "score": 0.48459242250287027,
+      "classSimilarity": 0.373134328358209,
+      "cssClassSimilarity": 0.38461538461538464,
+      "domSimilarity": 1,
       "sectionSimilarity": 0,
       "fontSimilarity": 0.5
     },
     {
-      "priorSlug": "punta-cana-caribbean-grill-and-bar",
-      "score": 0.46790035293275556,
-      "classSimilarity": 0.3508771929824561,
-      "cssClassSimilarity": 0.3670886075949367,
-      "domSimilarity": 0.9752066115702479,
-      "sectionSimilarity": 0,
-      "fontSimilarity": 0.5
-    },
-    {
-      "priorSlug": "queen-city-bites-and-crafts",
-      "score": 0.46790035293275556,
-      "classSimilarity": 0.3508771929824561,
-      "cssClassSimilarity": 0.3670886075949367,
-      "domSimilarity": 0.9752066115702479,
-      "sectionSimilarity": 0,
-      "fontSimilarity": 0.5
-    },
-    {
-      "priorSlug": "rai-lay-thai-cuisine",
-      "score": 0.46790035293275556,
-      "classSimilarity": 0.3508771929824561,
-      "cssClassSimilarity": 0.3670886075949367,
-      "domSimilarity": 0.9752066115702479,
-      "sectionSimilarity": 0,
-      "fontSimilarity": 0.5
-    },
-    {
-      "priorSlug": "red-sea-restaurant-and-bar",
-      "score": 0.46790035293275556,
-      "classSimilarity": 0.3508771929824561,
-      "cssClassSimilarity": 0.3670886075949367,
-      "domSimilarity": 0.9752066115702479,
+      "priorSlug": "room-service",
+      "score": 0.48459242250287027,
+      "classSimilarity": 0.373134328358209,
+      "cssClassSimilarity": 0.38461538461538464,
+      "domSimilarity": 1,
       "sectionSimilarity": 0,
       "fontSimilarity": 0.5
     },
     {
       "priorSlug": "ramen-bar-kazoku",
-      "score": 0.46449999999999997,
-      "classSimilarity": 0.3333333333333333,
-      "cssClassSimilarity": 0.35,
+      "score": 0.4794559460760713,
+      "classSimilarity": 0.373134328358209,
+      "cssClassSimilarity": 0.3655913978494624,
       "domSimilarity": 1,
       "sectionSimilarity": 0,
       "fontSimilarity": 0.5
     },
     {
+      "priorSlug": "prohibition",
+      "score": 0.46270572100313484,
+      "classSimilarity": 0.2878787878787879,
+      "cssClassSimilarity": 0.3448275862068966,
+      "domSimilarity": 0.8828125,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 1
+    },
+    {
+      "priorSlug": "punta-cana-caribbean-grill-and-bar",
+      "score": 0.4185795454545454,
+      "classSimilarity": 0.2878787878787879,
+      "cssClassSimilarity": 0.32954545454545453,
+      "domSimilarity": 0.8828125,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "queen-city-bites-and-crafts",
+      "score": 0.4185795454545454,
+      "classSimilarity": 0.2878787878787879,
+      "cssClassSimilarity": 0.32954545454545453,
+      "domSimilarity": 0.8828125,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "rai-lay-thai-cuisine",
+      "score": 0.4185795454545454,
+      "classSimilarity": 0.2878787878787879,
+      "cssClassSimilarity": 0.32954545454545453,
+      "domSimilarity": 0.8828125,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
       "priorSlug": "queen-park-social",
-      "score": 0.45699786263892844,
-      "classSimilarity": 0.3275862068965517,
-      "cssClassSimilarity": 0.35,
-      "domSimilarity": 0.9752066115702479,
+      "score": 0.4145460929519918,
+      "classSimilarity": 0.2878787878787879,
+      "cssClassSimilarity": 0.3146067415730337,
+      "domSimilarity": 0.8828125,
       "sectionSimilarity": 0,
       "fontSimilarity": 0.5
     }

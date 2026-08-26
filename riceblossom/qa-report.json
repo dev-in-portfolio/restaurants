@@ -1,6 +1,6 @@
 {
   "slug": "riceblossom",
-  "generatedAt": "2026-08-26T00:12:16.507Z",
+  "generatedAt": "2026-08-26T17:19:51.468Z",
   "htmlPages": [
     "concept.html",
     "dimsum-flaming-pans-and-tea-craft.html",
@@ -257,7 +257,7 @@
     {
       "name": "Cross-demo design diversity",
       "passed": true,
-      "detail": "PASS riceblossom: closest recent design 'prohibition' scored 0.513."
+      "detail": "PASS riceblossom: closest recent design 'red-sea-restaurant-and-bar' scored 0.485."
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "slug": "ramen-bar-kazoku",
-  "generatedAt": "2026-08-25T22:58:24.047Z",
+  "generatedAt": "2026-08-26T17:19:52.153Z",
   "htmlPages": [
     "concept.html",
     "index.html",
@@ -257,7 +257,7 @@
     {
       "name": "Cross-demo design diversity",
       "passed": true,
-      "detail": "PASS ramen-bar-kazoku: closest recent design 'platform-coffee-plus-kitchen' scored 0.457."
+      "detail": "PASS ramen-bar-kazoku: closest recent design 'red-sea-restaurant-and-bar' scored 0.479."
     }
   ]
 }

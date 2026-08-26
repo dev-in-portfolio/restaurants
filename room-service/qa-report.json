@@ -1,6 +1,6 @@
 {
   "slug": "room-service",
-  "generatedAt": "2026-08-26T15:33:34.421Z",
+  "generatedAt": "2026-08-26T17:19:50.775Z",
   "htmlPages": [
     "cocktails-and-hotel-bar-craft.html",
     "concept.html",
@@ -257,7 +257,7 @@
     {
       "name": "Cross-demo design diversity",
       "passed": true,
-      "detail": "PASS room-service: closest recent design 'punta-cana-caribbean-grill-and-bar' scored 0.474."
+      "detail": "PASS room-service: closest recent design 'red-sea-restaurant-and-bar' scored 0.485."
     }
   ]
 }

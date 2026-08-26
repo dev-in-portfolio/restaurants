@@ -1,6 +1,6 @@
 {
   "slug": "red-sea-restaurant-and-bar",
-  "generatedAt": "2026-08-25T22:20:28.668Z",
+  "generatedAt": "2026-08-26T17:19:52.479Z",
   "htmlPages": [
     "concept.html",
     "ethiopian-eritrean-wats-and-injera-craft.html",
@@ -257,7 +257,7 @@
     {
       "name": "Cross-demo design diversity",
       "passed": true,
-      "detail": "PASS red-sea-restaurant-and-bar: closest recent design 'puerta' scored 0.523."
+      "detail": "PASS red-sea-restaurant-and-bar: closest recent design 'rhino-market-and-deli' scored 0.485."
     }
   ]
 }
