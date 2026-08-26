@@ -12,8 +12,8 @@
     "reason": "Preserves the original 407 audited A/B rows so Showcase subtraction is reproducible on every sync."
   },
   "originalQueueCount": 407,
-  "excludedCount": 186,
-  "excludedActiveCount": 180,
+  "excludedCount": 187,
+  "excludedActiveCount": 181,
   "excludedHoldCount": 6,
   "netQueueCount": 223,
   "excluded": [
@@ -2432,6 +2432,19 @@
       "auditBatch": 17,
       "showcaseName": "Red@28th",
       "showcaseSlug": "red-28th",
+      "showcaseSource": "active",
+      "matchMethod": "exact-slug"
+    },
+    {
+      "queue": "queue/a-yes-2.js",
+      "restaurant": "Roz Grill",
+      "slug": "roz-grill",
+      "grade": "A",
+      "disposition": "YES",
+      "score": 100,
+      "auditBatch": 18,
+      "showcaseName": "Roz Grill",
+      "showcaseSlug": "roz-grill",
       "showcaseSource": "active",
       "matchMethod": "exact-slug"
     }
