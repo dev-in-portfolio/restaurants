@@ -58,6 +58,7 @@ window.portalOverrides = [
   { name: "Ricko’s Churro Bar", status: "premium", href: "ricko-s-churro-bar/index.html" },
   { name: "Room Service", status: "premium", href: "room-service/index.html" },
   { name: "Roz Grill", status: "premium", href: "roz-grill/index.html" },
+  { name: "Saffron Indian Cuisine", status: "premium", href: "saffron-indian-cuisine/index.html" },
   { name: "QC Social Lounge", status: "premium", href: "qc-social-lounge/index.html" },
   { name: "Mily & Lalo Peruvian Restaurant", portalSection: "later", note: "Located in Columbus GA outside Charlotte market; hold for regional queue." },
   { name: "Angela’s Pizzeria & Restaurant", portalSection: "later", note: "Third-party delivery platforms report temporarily closed; needs recheck." },
