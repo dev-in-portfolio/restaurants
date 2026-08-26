@@ -12,8 +12,8 @@
     "reason": "Preserves the original 407 audited A/B rows so Showcase subtraction is reproducible on every sync."
   },
   "originalQueueCount": 407,
-  "excludedCount": 198,
-  "excludedActiveCount": 192,
+  "excludedCount": 199,
+  "excludedActiveCount": 193,
   "excludedHoldCount": 6,
   "netQueueCount": 223,
   "excluded": [
@@ -2588,6 +2588,19 @@
       "auditBatch": 19,
       "showcaseName": "Sheng Ramen",
       "showcaseSlug": "sheng-ramen",
+      "showcaseSource": "active",
+      "matchMethod": "exact-slug"
+    },
+    {
+      "queue": "queue/a-yes-2.js",
+      "restaurant": "Sidelines Sports Bar & Billiards",
+      "slug": "sidelines-sports-bar-and-billiards",
+      "grade": "A",
+      "disposition": "YES",
+      "score": 93,
+      "auditBatch": 19,
+      "showcaseName": "Sidelines Sports Bar & Billiards",
+      "showcaseSlug": "sidelines-sports-bar-and-billiards",
       "showcaseSource": "active",
       "matchMethod": "exact-slug"
     }
