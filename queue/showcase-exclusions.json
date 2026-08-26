@@ -12,8 +12,8 @@
     "reason": "Preserves the original 407 audited A/B rows so Showcase subtraction is reproducible on every sync."
   },
   "originalQueueCount": 407,
-  "excludedCount": 184,
-  "excludedActiveCount": 178,
+  "excludedCount": 185,
+  "excludedActiveCount": 179,
   "excludedHoldCount": 6,
   "netQueueCount": 223,
   "excluded": [
@@ -2408,6 +2408,19 @@
       "showcaseSlug": "waldhorn-restaurant",
       "showcaseSource": "active",
       "matchMethod": "normalized-name"
+    },
+    {
+      "queue": "queue/a-yes-2.js",
+      "restaurant": "QC Social Lounge",
+      "slug": "qc-social-lounge",
+      "grade": "A",
+      "disposition": "YES",
+      "score": 100,
+      "auditBatch": 17,
+      "showcaseName": "QC Social Lounge",
+      "showcaseSlug": "qc-social-lounge",
+      "showcaseSource": "active",
+      "matchMethod": "exact-slug"
     }
   ],
   "remainingByBucket": {
