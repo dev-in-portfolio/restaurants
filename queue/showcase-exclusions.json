@@ -12,8 +12,8 @@
     "reason": "Preserves the original 407 audited A/B rows so Showcase subtraction is reproducible on every sync."
   },
   "originalQueueCount": 407,
-  "excludedCount": 223,
-  "excludedActiveCount": 216,
+  "excludedCount": 224,
+  "excludedActiveCount": 217,
   "excludedHoldCount": 6,
   "netQueueCount": 223,
   "excluded": [
@@ -2913,6 +2913,19 @@
       "auditBatch": 24,
       "showcaseName": "Town Brewing Company",
       "showcaseSlug": "town-brewing-company",
+      "showcaseSource": "active",
+      "matchMethod": "exact-slug"
+    },
+    {
+      "queue": "queue/a-yes-2.js",
+      "restaurant": "The Teal Turnip",
+      "slug": "the-teal-turnip",
+      "grade": "A",
+      "disposition": "YES",
+      "score": 100,
+      "auditBatch": 23,
+      "showcaseName": "The Teal Turnip",
+      "showcaseSlug": "the-teal-turnip",
       "showcaseSource": "active",
       "matchMethod": "exact-slug"
     }
