@@ -86,6 +86,7 @@ window.portalOverrides = [
   { name: "Tavern on the Tracks", status: "premium", href: "tavern-on-the-tracks/index.html" },
   { name: "Thai House", status: "premium", href: "thai-house/index.html" },
   { name: "Taipei South", status: "premium", href: "taipei-south/index.html" },
+  { name: "Pasuta", status: "premium", href: "pasuta/index.html" },
   { name: "QC Social Lounge", status: "premium", href: "qc-social-lounge/index.html" },
   { name: "Sweet Boutique Bakery", portalSection: "later", note: "Residential custom cake studio at 9814 Zackery Ave; no public retail walk-in storefront." },
   { name: "Mily & Lalo Peruvian Restaurant", portalSection: "later", note: "Located in Columbus GA outside Charlotte market; hold for regional queue." },
