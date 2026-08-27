@@ -1,0 +1,120 @@
+{
+  "slug": "the-exchange-uptown",
+  "generatedAt": "2026-08-27T21:55:12.594Z",
+  "recentCompared": 10,
+  "recentSlugs": [
+    "the-gin-mill-south-end",
+    "the-wafflery",
+    "the-wine-shop-at-rivergate",
+    "three-amigos-mexican-grill",
+    "tryon-house-restaurant-woodlawn",
+    "tropical-goodies",
+    "verdant-bread",
+    "yume-ramen-sushi-and-bar",
+    "zio-casual-italian",
+    "qc-social-lounge"
+  ],
+  "rejectionThreshold": 0.72,
+  "closestMatch": {
+    "priorSlug": "the-wine-shop-at-rivergate",
+    "score": 0.6373578187177598,
+    "classSimilarity": 0.559322033898305,
+    "cssClassSimilarity": 0.6231884057971014,
+    "domSimilarity": 0.992,
+    "sectionSimilarity": 0,
+    "fontSimilarity": 1
+  },
+  "passed": true,
+  "comparisons": [
+    {
+      "priorSlug": "the-wine-shop-at-rivergate",
+      "score": 0.6373578187177598,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 0.992,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 1
+    },
+    {
+      "priorSlug": "tryon-house-restaurant-woodlawn",
+      "score": 0.6373578187177598,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 0.992,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 1
+    },
+    {
+      "priorSlug": "tropical-goodies",
+      "score": 0.6373578187177598,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 0.992,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 1
+    },
+    {
+      "priorSlug": "verdant-bread",
+      "score": 0.6373578187177598,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 0.992,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 1
+    },
+    {
+      "priorSlug": "zio-casual-italian",
+      "score": 0.6373578187177598,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 0.992,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 1
+    },
+    {
+      "priorSlug": "three-amigos-mexican-grill",
+      "score": 0.5973578187177598,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 0.992,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "yume-ramen-sushi-and-bar",
+      "score": 0.5973578187177598,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 0.992,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "the-gin-mill-south-end",
+      "score": 0.5733578187177598,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 0.992,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.2
+    },
+    {
+      "priorSlug": "the-wafflery",
+      "score": 0.5573578187177598,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 0.992,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0
+    },
+    {
+      "priorSlug": "qc-social-lounge",
+      "score": 0.54408,
+      "classSimilarity": 0.5333333333333333,
+      "cssClassSimilarity": 0.6,
+      "domSimilarity": 0.992,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0
+    }
+  ]
+}
