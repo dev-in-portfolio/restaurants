@@ -12,8 +12,8 @@
     "reason": "Preserves the original 407 audited A/B rows so Showcase subtraction is reproducible on every sync."
   },
   "originalQueueCount": 407,
-  "excludedCount": 240,
-  "excludedActiveCount": 230,
+  "excludedCount": 241,
+  "excludedActiveCount": 231,
   "excludedHoldCount": 6,
   "netQueueCount": 223,
   "excluded": [
@@ -3137,6 +3137,19 @@
       "auditBatch": 25,
       "showcaseName": "Vibe Café & Wine Bar",
       "showcaseSlug": "vibe-cafe-and-wine-bar",
+      "showcaseSource": "active",
+      "matchMethod": "exact-slug"
+    },
+    {
+      "queue": "queue/a-yes-2.js",
+      "restaurant": "Tyber Creek Pub",
+      "slug": "tyber-creek-pub",
+      "grade": "A",
+      "disposition": "YES",
+      "score": 100,
+      "auditBatch": 24,
+      "showcaseName": "Tyber Creek Pub",
+      "showcaseSlug": "tyber-creek-pub",
       "showcaseSource": "active",
       "matchMethod": "exact-slug"
     }
