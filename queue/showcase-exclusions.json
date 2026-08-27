@@ -12,8 +12,8 @@
     "reason": "Preserves the original 407 audited A/B rows so Showcase subtraction is reproducible on every sync."
   },
   "originalQueueCount": 407,
-  "excludedCount": 219,
-  "excludedActiveCount": 213,
+  "excludedCount": 220,
+  "excludedActiveCount": 214,
   "excludedHoldCount": 6,
   "netQueueCount": 223,
   "excluded": [
@@ -2861,6 +2861,19 @@
       "auditBatch": 23,
       "showcaseName": "The Olde Mecklenburg Brewery",
       "showcaseSlug": "the-olde-mecklenburg-brewery",
+      "showcaseSource": "active",
+      "matchMethod": "exact-slug"
+    },
+    {
+      "queue": "queue/a-yes-2.js",
+      "restaurant": "The Waterman Fish Bar",
+      "slug": "the-waterman-fish-bar",
+      "grade": "A",
+      "disposition": "YES",
+      "score": 100,
+      "auditBatch": 24,
+      "showcaseName": "The Waterman Fish Bar",
+      "showcaseSlug": "the-waterman-fish-bar",
       "showcaseSource": "active",
       "matchMethod": "exact-slug"
     }
