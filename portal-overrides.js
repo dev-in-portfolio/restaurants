@@ -76,6 +76,7 @@ window.portalOverrides = [
   { name: "Spaghett", status: "premium", href: "spaghett/index.html" },
   { name: "Stable Hand", status: "premium", href: "stable-hand/index.html" },
   { name: "Substrate", status: "premium", href: "substrate/index.html" },
+  { name: "Suffolk Punch Brewing", status: "premium", href: "suffolk-punch-brewing/index.html" },
   { name: "QC Social Lounge", status: "premium", href: "qc-social-lounge/index.html" },
   { name: "Mily & Lalo Peruvian Restaurant", portalSection: "later", note: "Located in Columbus GA outside Charlotte market; hold for regional queue." },
   { name: "Angela’s Pizzeria & Restaurant", portalSection: "later", note: "Third-party delivery platforms report temporarily closed; needs recheck." },
