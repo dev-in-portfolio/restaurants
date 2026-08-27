@@ -95,6 +95,7 @@ window.portalOverrides = [
   { name: "Town Brewing Company", status: "premium", href: "town-brewing-company/index.html" },
   { name: "The Teal Turnip", status: "premium", href: "the-teal-turnip/index.html" },
   { name: "The Story of Mi Cariño", status: "premium", href: "the-story-of-mi-carino/index.html" },
+  { name: "The Thirsty Beaver Saloon", status: "premium", href: "the-thirsty-beaver-saloon/index.html" },
   { name: "The Gin Mill South End", status: "premium", href: "the-gin-mill-south-end/index.html" },
   { name: "The Wafflery", status: "premium", href: "the-wafflery/index.html" },
   { name: "The Wine Shop at Rivergate", status: "premium", href: "the-wine-shop-at-rivergate/index.html" },
