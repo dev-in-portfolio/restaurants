@@ -12,8 +12,8 @@
     "reason": "Preserves the original 407 audited A/B rows so Showcase subtraction is reproducible on every sync."
   },
   "originalQueueCount": 407,
-  "excludedCount": 214,
-  "excludedActiveCount": 208,
+  "excludedCount": 215,
+  "excludedActiveCount": 209,
   "excludedHoldCount": 6,
   "netQueueCount": 223,
   "excluded": [
@@ -2796,6 +2796,19 @@
       "auditBatch": 21,
       "showcaseName": "Thai House",
       "showcaseSlug": "thai-house",
+      "showcaseSource": "active",
+      "matchMethod": "exact-slug"
+    },
+    {
+      "queue": "queue/a-yes-2.js",
+      "restaurant": "Taipei South",
+      "slug": "taipei-south",
+      "grade": "A",
+      "disposition": "YES",
+      "score": 98,
+      "auditBatch": 21,
+      "showcaseName": "Taipei South",
+      "showcaseSlug": "taipei-south",
       "showcaseSource": "active",
       "matchMethod": "exact-slug"
     }
