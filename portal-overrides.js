@@ -99,6 +99,7 @@ window.portalOverrides = [
   { name: "The Wafflery", status: "premium", href: "the-wafflery/index.html" },
   { name: "The Wine Shop at Rivergate", status: "premium", href: "the-wine-shop-at-rivergate/index.html" },
   { name: "Three Amigos Mexican Grill", status: "premium", href: "three-amigos-mexican-grill/index.html" },
+  { name: "Tryon House Restaurant — Woodlawn", status: "premium", href: "tryon-house-restaurant-woodlawn/index.html" },
   { name: "QC Social Lounge", status: "premium", href: "qc-social-lounge/index.html" },
   { name: "Sweet Boutique Bakery", portalSection: "later", note: "Residential custom cake studio at 9814 Zackery Ave; no public retail walk-in storefront." },
   { name: "Mily & Lalo Peruvian Restaurant", portalSection: "later", note: "Located in Columbus GA outside Charlotte market; hold for regional queue." },
