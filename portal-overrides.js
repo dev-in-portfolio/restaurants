@@ -97,6 +97,7 @@ window.portalOverrides = [
   { name: "The Story of Mi Cariño", status: "premium", href: "the-story-of-mi-carino/index.html" },
   { name: "The Gin Mill South End", status: "premium", href: "the-gin-mill-south-end/index.html" },
   { name: "The Wafflery", status: "premium", href: "the-wafflery/index.html" },
+  { name: "The Wine Shop at Rivergate", status: "premium", href: "the-wine-shop-at-rivergate/index.html" },
   { name: "QC Social Lounge", status: "premium", href: "qc-social-lounge/index.html" },
   { name: "Sweet Boutique Bakery", portalSection: "later", note: "Residential custom cake studio at 9814 Zackery Ave; no public retail walk-in storefront." },
   { name: "Mily & Lalo Peruvian Restaurant", portalSection: "later", note: "Located in Columbus GA outside Charlotte market; hold for regional queue." },

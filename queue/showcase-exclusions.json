@@ -12,8 +12,8 @@
     "reason": "Preserves the original 407 audited A/B rows so Showcase subtraction is reproducible on every sync."
   },
   "originalQueueCount": 407,
-  "excludedCount": 227,
-  "excludedActiveCount": 220,
+  "excludedCount": 228,
+  "excludedActiveCount": 221,
   "excludedHoldCount": 6,
   "netQueueCount": 223,
   "excluded": [
@@ -2965,6 +2965,19 @@
       "auditBatch": 24,
       "showcaseName": "The Wafflery",
       "showcaseSlug": "the-wafflery",
+      "showcaseSource": "active",
+      "matchMethod": "exact-slug"
+    },
+    {
+      "queue": "queue/a-yes-2.js",
+      "restaurant": "The Wine Shop at Rivergate",
+      "slug": "the-wine-shop-at-rivergate",
+      "grade": "A",
+      "disposition": "YES",
+      "score": 100,
+      "auditBatch": 24,
+      "showcaseName": "The Wine Shop at Rivergate",
+      "showcaseSlug": "the-wine-shop-at-rivergate",
       "showcaseSource": "active",
       "matchMethod": "exact-slug"
     }
