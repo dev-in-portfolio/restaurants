@@ -95,6 +95,7 @@ window.portalOverrides = [
   { name: "Town Brewing Company", status: "premium", href: "town-brewing-company/index.html" },
   { name: "The Teal Turnip", status: "premium", href: "the-teal-turnip/index.html" },
   { name: "The Story of Mi Cariño", status: "premium", href: "the-story-of-mi-carino/index.html" },
+  { name: "The Gin Mill South End", status: "premium", href: "the-gin-mill-south-end/index.html" },
   { name: "QC Social Lounge", status: "premium", href: "qc-social-lounge/index.html" },
   { name: "Sweet Boutique Bakery", portalSection: "later", note: "Residential custom cake studio at 9814 Zackery Ave; no public retail walk-in storefront." },
   { name: "Mily & Lalo Peruvian Restaurant", portalSection: "later", note: "Located in Columbus GA outside Charlotte market; hold for regional queue." },
