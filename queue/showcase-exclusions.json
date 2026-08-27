@@ -12,8 +12,8 @@
     "reason": "Preserves the original 407 audited A/B rows so Showcase subtraction is reproducible on every sync."
   },
   "originalQueueCount": 407,
-  "excludedCount": 210,
-  "excludedActiveCount": 204,
+  "excludedCount": 211,
+  "excludedActiveCount": 205,
   "excludedHoldCount": 6,
   "netQueueCount": 223,
   "excluded": [
@@ -2744,6 +2744,19 @@
       "auditBatch": 21,
       "showcaseName": "Tabla Indian Restaurant",
       "showcaseSlug": "tabla-indian-restaurant",
+      "showcaseSource": "active",
+      "matchMethod": "exact-slug"
+    },
+    {
+      "queue": "queue/a-yes-2.js",
+      "restaurant": "Tap & Vine",
+      "slug": "tap-and-vine",
+      "grade": "A",
+      "disposition": "YES",
+      "score": 100,
+      "auditBatch": 21,
+      "showcaseName": "Tap & Vine",
+      "showcaseSlug": "tap-and-vine",
       "showcaseSource": "active",
       "matchMethod": "exact-slug"
     }
