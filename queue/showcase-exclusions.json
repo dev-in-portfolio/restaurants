@@ -12,8 +12,8 @@
     "reason": "Preserves the original 407 audited A/B rows so Showcase subtraction is reproducible on every sync."
   },
   "originalQueueCount": 407,
-  "excludedCount": 228,
-  "excludedActiveCount": 221,
+  "excludedCount": 229,
+  "excludedActiveCount": 222,
   "excludedHoldCount": 6,
   "netQueueCount": 223,
   "excluded": [
@@ -2978,6 +2978,19 @@
       "auditBatch": 24,
       "showcaseName": "The Wine Shop at Rivergate",
       "showcaseSlug": "the-wine-shop-at-rivergate",
+      "showcaseSource": "active",
+      "matchMethod": "exact-slug"
+    },
+    {
+      "queue": "queue/a-yes-2.js",
+      "restaurant": "Three Amigos Mexican Grill",
+      "slug": "three-amigos-mexican-grill",
+      "grade": "A",
+      "disposition": "YES",
+      "score": 94,
+      "auditBatch": 24,
+      "showcaseName": "Three Amigos Mexican Grill",
+      "showcaseSlug": "three-amigos-mexican-grill",
       "showcaseSource": "active",
       "matchMethod": "exact-slug"
     }
