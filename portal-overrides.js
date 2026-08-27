@@ -92,10 +92,12 @@ window.portalOverrides = [
   { name: "The Olde Mecklenburg Brewery", status: "premium", href: "the-olde-mecklenburg-brewery/index.html" },
   { name: "The Waterman Fish Bar", status: "premium", href: "the-waterman-fish-bar/index.html" },
   { name: "The Public House", status: "premium", href: "the-public-house/index.html" },
+  { name: "Town Brewing Company", status: "premium", href: "town-brewing-company/index.html" },
   { name: "QC Social Lounge", status: "premium", href: "qc-social-lounge/index.html" },
   { name: "Sweet Boutique Bakery", portalSection: "later", note: "Residential custom cake studio at 9814 Zackery Ave; no public retail walk-in storefront." },
   { name: "Mily & Lalo Peruvian Restaurant", portalSection: "later", note: "Located in Columbus GA outside Charlotte market; hold for regional queue." },
   { name: "Angela’s Pizzeria & Restaurant", portalSection: "later", note: "Third-party delivery platforms report temporarily closed; needs recheck." },
+  { name: "The Royal Tot", status: "closed", note: "Closed; rooftop tiki lounge at 933 Louise Ave ceased operations." },
   { name: "Lorem Ipsum Listening Bar", status: "closed", note: "Permanently closed in July 2026" },
   { name: "Provided Coffee", status: "closed", note: "Charlotte locations closed in June 2026; consolidated to Concord NC flagship" }
 ];
