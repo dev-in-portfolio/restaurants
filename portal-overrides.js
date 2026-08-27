@@ -82,6 +82,7 @@ window.portalOverrides = [
   { name: "Taipei Express", status: "premium", href: "taipei-express/index.html" },
   { name: "Tabla Indian Restaurant", status: "premium", href: "tabla-indian-restaurant/index.html" },
   { name: "Tap & Vine", status: "premium", href: "tap-and-vine/index.html" },
+  { name: "Taqueria Los Altos", status: "premium", href: "taqueria-los-altos/index.html" },
   { name: "QC Social Lounge", status: "premium", href: "qc-social-lounge/index.html" },
   { name: "Sweet Boutique Bakery", portalSection: "later", note: "Residential custom cake studio at 9814 Zackery Ave; no public retail walk-in storefront." },
   { name: "Mily & Lalo Peruvian Restaurant", portalSection: "later", note: "Located in Columbus GA outside Charlotte market; hold for regional queue." },
