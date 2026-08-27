@@ -102,6 +102,7 @@ window.portalOverrides = [
   { name: "Tryon House Restaurant — Woodlawn", status: "premium", href: "tryon-house-restaurant-woodlawn/index.html" },
   { name: "Tropical Goodies", status: "premium", href: "tropical-goodies/index.html" },
   { name: "YUME Ramen Sushi & Bar", status: "premium", href: "yume-ramen-sushi-and-bar/index.html" },
+  { name: "Zio Casual Italian", status: "premium", href: "zio-casual-italian/index.html" },
   { name: "QC Social Lounge", status: "premium", href: "qc-social-lounge/index.html" },
   { name: "Sweet Boutique Bakery", portalSection: "later", note: "Residential custom cake studio at 9814 Zackery Ave; no public retail walk-in storefront." },
   { name: "Mily & Lalo Peruvian Restaurant", portalSection: "later", note: "Located in Columbus GA outside Charlotte market; hold for regional queue." },

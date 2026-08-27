@@ -12,8 +12,8 @@
     "reason": "Preserves the original 407 audited A/B rows so Showcase subtraction is reproducible on every sync."
   },
   "originalQueueCount": 407,
-  "excludedCount": 235,
-  "excludedActiveCount": 225,
+  "excludedCount": 236,
+  "excludedActiveCount": 226,
   "excludedHoldCount": 6,
   "netQueueCount": 223,
   "excluded": [
@@ -3072,6 +3072,19 @@
       "auditBatch": 24,
       "showcaseName": "Tropical Goodies",
       "showcaseSlug": "tropical-goodies",
+      "showcaseSource": "active",
+      "matchMethod": "exact-slug"
+    },
+    {
+      "queue": "queue/a-yes-2.js",
+      "restaurant": "Zio Casual Italian",
+      "slug": "zio-casual-italian",
+      "grade": "A",
+      "disposition": "YES",
+      "score": 100,
+      "auditBatch": 26,
+      "showcaseName": "Zio Casual Italian",
+      "showcaseSlug": "zio-casual-italian",
       "showcaseSource": "active",
       "matchMethod": "exact-slug"
     }
