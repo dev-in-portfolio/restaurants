@@ -106,6 +106,7 @@ window.portalOverrides = [
   { name: "Tropical Goodies", status: "premium", href: "tropical-goodies/index.html" },
   { name: "Verdant Bread", status: "premium", href: "verdant-bread/index.html" },
   { name: "Vibe Café & Wine Bar", status: "premium", href: "vibe-cafe-and-wine-bar/index.html" },
+  { name: "VINYL", status: "premium", href: "vinyl/index.html" },
   { name: "YUME Ramen Sushi & Bar", status: "premium", href: "yume-ramen-sushi-and-bar/index.html" },
   { name: "Zio Casual Italian", status: "premium", href: "zio-casual-italian/index.html" },
   { name: "QC Social Lounge", status: "premium", href: "qc-social-lounge/index.html" },
