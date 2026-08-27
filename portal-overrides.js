@@ -101,6 +101,7 @@ window.portalOverrides = [
   { name: "The Wafflery", status: "premium", href: "the-wafflery/index.html" },
   { name: "The Wine Shop at Rivergate", status: "premium", href: "the-wine-shop-at-rivergate/index.html" },
   { name: "Three Amigos Mexican Grill", status: "premium", href: "three-amigos-mexican-grill/index.html" },
+  { name: "Tin Tin Café", status: "premium", href: "tin-tin-cafe/index.html" },
   { name: "Tryon House Restaurant — Woodlawn", status: "premium", href: "tryon-house-restaurant-woodlawn/index.html" },
   { name: "Tyber Creek Pub", status: "premium", href: "tyber-creek-pub/index.html" },
   { name: "Tropical Goodies", status: "premium", href: "tropical-goodies/index.html" },
