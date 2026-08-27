@@ -12,8 +12,8 @@
     "reason": "Preserves the original 407 audited A/B rows so Showcase subtraction is reproducible on every sync."
   },
   "originalQueueCount": 407,
-  "excludedCount": 206,
-  "excludedActiveCount": 200,
+  "excludedCount": 207,
+  "excludedActiveCount": 201,
   "excludedHoldCount": 6,
   "netQueueCount": 223,
   "excluded": [
@@ -2692,6 +2692,19 @@
       "auditBatch": 20,
       "showcaseName": "Suffolk Punch Brewing",
       "showcaseSlug": "suffolk-punch-brewing",
+      "showcaseSource": "active",
+      "matchMethod": "exact-slug"
+    },
+    {
+      "queue": "queue/a-yes-2.js",
+      "restaurant": "Sweet Lew’s BBQ",
+      "slug": "sweet-lew-s-bbq",
+      "grade": "A",
+      "disposition": "YES",
+      "score": 99,
+      "auditBatch": 20,
+      "showcaseName": "Sweet Lew’s BBQ",
+      "showcaseSlug": "sweet-lew-s-bbq",
       "showcaseSource": "active",
       "matchMethod": "exact-slug"
     }
