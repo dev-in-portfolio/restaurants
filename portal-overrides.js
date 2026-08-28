@@ -137,6 +137,7 @@ window.portalOverrides = [
   { name: "Johnny Burrito", status: "premium", href: "johnny-burrito/index.html" },
   { name: "Pie in the Sky Pizza", status: "premium", href: "pie-in-the-sky-pizza/index.html" },
   { name: "Halfpenny’s Cafe", status: "premium", href: "halfpenny-s-cafe/index.html" },
+  { name: "Nirvana II", status: "premium", href: "nirvana-ii/index.html" },
   { name: "Sweet Boutique Bakery", portalSection: "later", note: "Residential custom cake studio at 9814 Zackery Ave; no public retail walk-in storefront." },
   { name: "Mily & Lalo Peruvian Restaurant", portalSection: "later", note: "Located in Columbus GA outside Charlotte market; hold for regional queue." },
   { name: "Angela’s Pizzeria & Restaurant", portalSection: "later", note: "Third-party delivery platforms report temporarily closed; needs recheck." },

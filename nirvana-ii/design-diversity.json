@@ -1,0 +1,120 @@
+{
+  "slug": "nirvana-ii",
+  "generatedAt": "2026-08-28T20:09:54.101Z",
+  "recentCompared": 10,
+  "recentSlugs": [
+    "deli-hn",
+    "dona-ana-deli-and-restaurant",
+    "el-rinconcito-chilango-taqueria",
+    "el-taco-deli",
+    "freshwaters-southern-new-orleans",
+    "golden-bakery",
+    "hasaki-grill-and-sushi",
+    "johnny-burrito",
+    "pie-in-the-sky-pizza",
+    "halfpenny-s-cafe"
+  ],
+  "rejectionThreshold": 0.72,
+  "closestMatch": {
+    "priorSlug": "golden-bakery",
+    "score": 0.6557044334975369,
+    "classSimilarity": 0.5862068965517241,
+    "cssClassSimilarity": 0.6571428571428571,
+    "domSimilarity": 1,
+    "sectionSimilarity": 0,
+    "fontSimilarity": 1
+  },
+  "passed": true,
+  "comparisons": [
+    {
+      "priorSlug": "golden-bakery",
+      "score": 0.6557044334975369,
+      "classSimilarity": 0.5862068965517241,
+      "cssClassSimilarity": 0.6571428571428571,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 1
+    },
+    {
+      "priorSlug": "deli-hn",
+      "score": 0.615704433497537,
+      "classSimilarity": 0.5862068965517241,
+      "cssClassSimilarity": 0.6571428571428571,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "dona-ana-deli-and-restaurant",
+      "score": 0.615704433497537,
+      "classSimilarity": 0.5862068965517241,
+      "cssClassSimilarity": 0.6571428571428571,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "el-rinconcito-chilango-taqueria",
+      "score": 0.615704433497537,
+      "classSimilarity": 0.5862068965517241,
+      "cssClassSimilarity": 0.6571428571428571,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "el-taco-deli",
+      "score": 0.615704433497537,
+      "classSimilarity": 0.5862068965517241,
+      "cssClassSimilarity": 0.6571428571428571,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "freshwaters-southern-new-orleans",
+      "score": 0.615704433497537,
+      "classSimilarity": 0.5862068965517241,
+      "cssClassSimilarity": 0.6571428571428571,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "hasaki-grill-and-sushi",
+      "score": 0.615704433497537,
+      "classSimilarity": 0.5862068965517241,
+      "cssClassSimilarity": 0.6571428571428571,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "johnny-burrito",
+      "score": 0.615704433497537,
+      "classSimilarity": 0.5862068965517241,
+      "cssClassSimilarity": 0.6571428571428571,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "pie-in-the-sky-pizza",
+      "score": 0.615704433497537,
+      "classSimilarity": 0.5862068965517241,
+      "cssClassSimilarity": 0.6571428571428571,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "halfpenny-s-cafe",
+      "score": 0.615704433497537,
+      "classSimilarity": 0.5862068965517241,
+      "cssClassSimilarity": 0.6571428571428571,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    }
+  ]
+}
