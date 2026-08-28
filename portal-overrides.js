@@ -119,6 +119,7 @@ window.portalOverrides = [
   { name: "Yummm Donuts", status: "premium", href: "yummm-donuts/index.html" },
   { name: "Zafran Kabab Palace", status: "premium", href: "zafran-kabab-palace/index.html" },
   { name: "Zapata’s Mexican Restaurant", status: "premium", href: "zapata-s-mexican-restaurant/index.html" },
+  { name: "Zinicola", status: "premium", href: "zinicola/index.html" },
   { name: "Zio Casual Italian", status: "premium", href: "zio-casual-italian/index.html" },
   { name: "QC Social Lounge", status: "premium", href: "qc-social-lounge/index.html" },
   { name: "Sweet Boutique Bakery", portalSection: "later", note: "Residential custom cake studio at 9814 Zackery Ave; no public retail walk-in storefront." },
