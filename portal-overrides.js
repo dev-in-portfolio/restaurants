@@ -114,6 +114,7 @@ window.portalOverrides = [
   { name: "Vibe Café & Wine Bar", status: "premium", href: "vibe-cafe-and-wine-bar/index.html" },
   { name: "Vin Master", status: "premium", href: "vin-master/index.html" },
   { name: "VINYL", status: "premium", href: "vinyl/index.html" },
+  { name: "XOXO Cocktail Lounge", status: "premium", href: "xoxo-cocktail-lounge/index.html" },
   { name: "YUGENN", status: "premium", href: "yugenn/index.html" },
   { name: "YUME Ramen Sushi & Bar", status: "premium", href: "yume-ramen-sushi-and-bar/index.html" },
   { name: "Yummm Donuts", status: "premium", href: "yummm-donuts/index.html" },
