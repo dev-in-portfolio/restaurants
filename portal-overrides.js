@@ -110,6 +110,7 @@ window.portalOverrides = [
   { name: "VINYL", status: "premium", href: "vinyl/index.html" },
   { name: "YUGENN", status: "premium", href: "yugenn/index.html" },
   { name: "YUME Ramen Sushi & Bar", status: "premium", href: "yume-ramen-sushi-and-bar/index.html" },
+  { name: "Yummm Donuts", status: "premium", href: "yummm-donuts/index.html" },
   { name: "Zio Casual Italian", status: "premium", href: "zio-casual-italian/index.html" },
   { name: "QC Social Lounge", status: "premium", href: "qc-social-lounge/index.html" },
   { name: "Sweet Boutique Bakery", portalSection: "later", note: "Residential custom cake studio at 9814 Zackery Ave; no public retail walk-in storefront." },
