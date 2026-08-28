@@ -12,8 +12,8 @@
     "reason": "Preserves the original 407 audited A/B rows so Showcase subtraction is reproducible on every sync."
   },
   "originalQueueCount": 407,
-  "excludedCount": 248,
-  "excludedActiveCount": 238,
+  "excludedCount": 249,
+  "excludedActiveCount": 239,
   "excludedHoldCount": 6,
   "netQueueCount": 223,
   "excluded": [
@@ -3241,6 +3241,19 @@
       "auditBatch": 26,
       "showcaseName": "Zapata’s Mexican Restaurant",
       "showcaseSlug": "zapata-s-mexican-restaurant",
+      "showcaseSource": "active",
+      "matchMethod": "exact-slug"
+    },
+    {
+      "queue": "queue/a-yes-2.js",
+      "restaurant": "Tommy’s Pub",
+      "slug": "tommy-s-pub",
+      "grade": "A",
+      "disposition": "YES",
+      "score": 99,
+      "auditBatch": 24,
+      "showcaseName": "Tommy’s Pub",
+      "showcaseSlug": "tommy-s-pub",
       "showcaseSource": "active",
       "matchMethod": "exact-slug"
     }
