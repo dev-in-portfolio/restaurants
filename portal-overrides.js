@@ -100,6 +100,7 @@ window.portalOverrides = [
   { name: "The Gin Mill South End", status: "premium", href: "the-gin-mill-south-end/index.html" },
   { name: "The Wafflery", status: "premium", href: "the-wafflery/index.html" },
   { name: "The Wine Shop at Rivergate", status: "premium", href: "the-wine-shop-at-rivergate/index.html" },
+  { name: "The Wine Vault", status: "premium", href: "the-wine-vault/index.html" },
   { name: "Three Amigos Mexican Grill", status: "premium", href: "three-amigos-mexican-grill/index.html" },
   { name: "Tin Tin Café", status: "premium", href: "tin-tin-cafe/index.html" },
   { name: "Tommy’s Pub", status: "premium", href: "tommy-s-pub/index.html" },
