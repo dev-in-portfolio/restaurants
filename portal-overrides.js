@@ -129,6 +129,7 @@ window.portalOverrides = [
   { name: "Crunch Bistro", status: "premium", href: "crunch-bistro/index.html" },
   { name: "Deli HN", status: "premium", href: "deli-hn/index.html" },
   { name: "Doña Ana Deli & Restaurant", status: "premium", href: "dona-ana-deli-and-restaurant/index.html" },
+  { name: "El Rinconcito Chilango Taqueria", status: "premium", href: "el-rinconcito-chilango-taqueria/index.html" },
   { name: "Sweet Boutique Bakery", portalSection: "later", note: "Residential custom cake studio at 9814 Zackery Ave; no public retail walk-in storefront." },
   { name: "Mily & Lalo Peruvian Restaurant", portalSection: "later", note: "Located in Columbus GA outside Charlotte market; hold for regional queue." },
   { name: "Angela’s Pizzeria & Restaurant", portalSection: "later", note: "Third-party delivery platforms report temporarily closed; needs recheck." },
