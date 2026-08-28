@@ -67,19 +67,19 @@ Use the generated queue after that sync. Do not rely on remembered counts.
 
 ## Canonical prospect queue
 
-The active build queue is:
+The active build queue combines two authoritative sources minus all existing demos in `dev-in-portfolio/restaurant-showcase` (both active and HOLD):
 
-> final reconciled A/B audit set **minus every restaurant already represented in `dev-in-portfolio/restaurant-showcase`, including Showcase HOLD demos**.
+1. **Original Rada-Depth Audit (407 A/B rows):**
+   - 223 active net-new prospects (129 A-grade YES, 36 B-grade YES, 58 B-grade CONDITIONAL)
+   - 184 audited A/B prospects excluded because a Showcase demo already exists
 
-At the current checkpoint the queue is:
+2. **Charlotte Restaurant Prospect Sweep (2026-08-28) (94 rows):**
+   - 90 active net-new prospects admitted (46 A+, 28 A, 16 B)
+   - 4 reconciled/excluded records (3 active Showcase demos: Mert’s Heart & Soul, Exotica Indian Kitchen & Bar, Deluxe Fun Dining; 1 existing audit record: The Public House)
 
-- 223 active net-new prospects;
-- 129 A / YES;
-- 36 B / YES;
-- 58 B / CONDITIONAL;
-- 184 audited A/B prospects excluded because a Showcase demo already exists.
+**Combined Active Queue Total: 313 net-new prospects**
 
-These counts can change. `queue/meta.js` after the fresh sync is authoritative.
+These counts are maintained dynamically. `queue/meta.js` after running `node scripts/sync-showcase-exclusions.mjs` is authoritative.
 
 Canonical data:
 
@@ -87,9 +87,11 @@ Canonical data:
 - `queue/a-yes-2.js`
 - `queue/b-yes.js`
 - `queue/b-conditional.js`
+- `queue/sweep-2026-08-28.js` — generated active supplemental sweep prospects
 - `queue/meta.js` — generated net-new counts
-- `queue/showcase-exclusions.json` — exact restaurants removed because Showcase demos already exist
+- `queue/showcase-exclusions.json` — exact restaurants removed because Showcase demos already exist or duplicate existing audit
 - `queue/audit-ab-master.json` — immutable 407-row audited A/B source snapshot
+- `queue/charlotte-prospect-sweep-2026-08-28.json` — authoritative 94-record supplemental sweep source snapshot
 
 Do not select from old restaurant folders, retired lead scripts, or `portal-concepts-source.html`.
 
@@ -99,9 +101,10 @@ Existing Showcase demo = hard exclusion from automatic new-demo rotation unless 
 
 Choose the next eligible `lead` in this order:
 
-1. A / YES
-2. B / YES
-3. B / CONDITIONAL
+1. A-grade YES (Audit) / A+ (Sweep)
+2. A (Sweep)
+3. B-grade YES (Audit)
+4. B-grade CONDITIONAL (Audit) / B (Sweep)
 
 Within the highest available tier, sort alphabetically while ignoring leading `The`, `A`, and `An`.
 

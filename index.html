@@ -30,7 +30,7 @@
     <header class="portal-header">
       <h1 class="portal-title">Restaurant Premium Demo Queue</h1>
       <p class="portal-subtitle">Final reconciled A/B prospects from the 645-record Rada-depth audit.</p>
-      <div class="concept-notice"><strong>Net-new demo queue:</strong> the completed audit produced 407 A/B prospects, but restaurants with an existing demo in <code>restaurant-showcase</code> are hard-excluded from automatic Gemini build rotation. Current net-new queue: 223 restaurants — 129 A-grade YES, 36 B-grade YES, and 58 B-grade CONDITIONAL. 184 audited A/B prospects are excluded because a Showcase demo already exists.</div>
+      <div class="concept-notice"><strong>Active demo queue:</strong> the canonical queue combines 223 net-new prospects from the 407-row Rada-depth audit (129 A-grade YES, 36 B-grade YES, 58 B-grade CONDITIONAL; 184 Showcase excluded) plus 89 net-new prospects from the Charlotte Prospect Sweep (46 A+, 27 A, 16 B; 5 reconciled/excluded). Total active build queue: 312 restaurants.</div>
       <div class="portal-stats" id="portal-stats" aria-live="polite">Loading the audited queue…</div>
       <nav class="alpha-nav" id="alpha-nav" aria-label="Jump to restaurants by letter"></nav>
     </header>
@@ -42,6 +42,7 @@
   <script src="queue/a-yes-2.js"></script>
   <script src="queue/b-yes.js"></script>
   <script src="queue/b-conditional.js"></script>
+  <script src="queue/sweep-2026-08-28.js"></script>
   <script src="portal-overrides.js"></script>
   <script src="portal.js"></script>
 </body>
