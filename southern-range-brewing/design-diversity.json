@@ -1,0 +1,120 @@
+{
+  "slug": "southern-range-brewing",
+  "generatedAt": "2026-08-28T14:19:22.216Z",
+  "recentCompared": 10,
+  "recentSlugs": [
+    "verdant-bread",
+    "vibe-cafe-and-wine-bar",
+    "vinyl",
+    "yugenn",
+    "yume-ramen-sushi-and-bar",
+    "yummm-donuts",
+    "zafran-kabab-palace",
+    "zapata-s-mexican-restaurant",
+    "zio-casual-italian",
+    "qc-social-lounge"
+  ],
+  "rejectionThreshold": 0.72,
+  "closestMatch": {
+    "priorSlug": "yummm-donuts",
+    "score": 0.5616521739130436,
+    "classSimilarity": 0.5333333333333333,
+    "cssClassSimilarity": 0.6,
+    "domSimilarity": 0.8985507246376812,
+    "sectionSimilarity": 0,
+    "fontSimilarity": 0.5
+  },
+  "passed": true,
+  "comparisons": [
+    {
+      "priorSlug": "yummm-donuts",
+      "score": 0.5616521739130436,
+      "classSimilarity": 0.5333333333333333,
+      "cssClassSimilarity": 0.6,
+      "domSimilarity": 0.8985507246376812,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "zapata-s-mexican-restaurant",
+      "score": 0.5612722666936873,
+      "classSimilarity": 0.5333333333333333,
+      "cssClassSimilarity": 0.5915492957746479,
+      "domSimilarity": 0.9064748201438849,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "zafran-kabab-palace",
+      "score": 0.5593704837721984,
+      "classSimilarity": 0.5333333333333333,
+      "cssClassSimilarity": 0.5915492957746479,
+      "domSimilarity": 0.8985507246376812,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "yugenn",
+      "score": 0.5592915181753386,
+      "classSimilarity": 0.5245901639344263,
+      "cssClassSimilarity": 0.6,
+      "domSimilarity": 0.8985507246376812,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "vibe-cafe-and-wine-bar",
+      "score": 0.5376521739130435,
+      "classSimilarity": 0.5333333333333333,
+      "cssClassSimilarity": 0.6,
+      "domSimilarity": 0.8985507246376812,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.2
+    },
+    {
+      "priorSlug": "verdant-bread",
+      "score": 0.5359130434782609,
+      "classSimilarity": 0.5333333333333333,
+      "cssClassSimilarity": 0.6,
+      "domSimilarity": 0.8913043478260869,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.2
+    },
+    {
+      "priorSlug": "yume-ramen-sushi-and-bar",
+      "score": 0.5359130434782609,
+      "classSimilarity": 0.5333333333333333,
+      "cssClassSimilarity": 0.6,
+      "domSimilarity": 0.8913043478260869,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.2
+    },
+    {
+      "priorSlug": "zio-casual-italian",
+      "score": 0.5359130434782609,
+      "classSimilarity": 0.5333333333333333,
+      "cssClassSimilarity": 0.6,
+      "domSimilarity": 0.8913043478260869,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.2
+    },
+    {
+      "priorSlug": "vinyl",
+      "score": 0.5353704837721984,
+      "classSimilarity": 0.5333333333333333,
+      "cssClassSimilarity": 0.5915492957746479,
+      "domSimilarity": 0.8985507246376812,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.2
+    },
+    {
+      "priorSlug": "qc-social-lounge",
+      "score": 0.5199130434782608,
+      "classSimilarity": 0.5333333333333333,
+      "cssClassSimilarity": 0.6,
+      "domSimilarity": 0.8913043478260869,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0
+    }
+  ]
+}

@@ -12,8 +12,8 @@
     "reason": "Preserves the original 407 audited A/B rows so Showcase subtraction is reproducible on every sync."
   },
   "originalQueueCount": 407,
-  "excludedCount": 250,
-  "excludedActiveCount": 240,
+  "excludedCount": 251,
+  "excludedActiveCount": 241,
   "excludedHoldCount": 6,
   "netQueueCount": 223,
   "excluded": [
@@ -3267,6 +3267,19 @@
       "auditBatch": 24,
       "showcaseName": "The Wine Vault",
       "showcaseSlug": "the-wine-vault",
+      "showcaseSource": "active",
+      "matchMethod": "exact-slug"
+    },
+    {
+      "queue": "queue/a-yes-2.js",
+      "restaurant": "Southern Range Brewing",
+      "slug": "southern-range-brewing",
+      "grade": "A",
+      "disposition": "YES",
+      "score": 95,
+      "auditBatch": 20,
+      "showcaseName": "Southern Range Brewing",
+      "showcaseSlug": "southern-range-brewing",
       "showcaseSource": "active",
       "matchMethod": "exact-slug"
     }

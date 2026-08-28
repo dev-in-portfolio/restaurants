@@ -72,6 +72,7 @@ window.portalOverrides = [
   { name: "Sidelines Sports Bar & Billiards", status: "premium", href: "sidelines-sports-bar-and-billiards/index.html" },
   { name: "South End Hideaway", status: "premium", href: "south-end-hideaway/index.html" },
   { name: "Southern Pecan Gulf Coast Kitchen", status: "premium", href: "southern-pecan-gulf-coast-kitchen/index.html" },
+  { name: "Southern Range Brewing", status: "premium", href: "southern-range-brewing/index.html" },
   { name: "Somewhere CLT", status: "premium", href: "somewhere-clt/index.html" },
   { name: "Spaghett", status: "premium", href: "spaghett/index.html" },
   { name: "Stable Hand", status: "premium", href: "stable-hand/index.html" },
