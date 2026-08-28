@@ -112,6 +112,7 @@ window.portalOverrides = [
   { name: "Two Buck Saloon", status: "premium", href: "two-buck-saloon/index.html" },
   { name: "Verdant Bread", status: "premium", href: "verdant-bread/index.html" },
   { name: "Vibe Café & Wine Bar", status: "premium", href: "vibe-cafe-and-wine-bar/index.html" },
+  { name: "Vin Master", status: "premium", href: "vin-master/index.html" },
   { name: "VINYL", status: "premium", href: "vinyl/index.html" },
   { name: "YUGENN", status: "premium", href: "yugenn/index.html" },
   { name: "YUME Ramen Sushi & Bar", status: "premium", href: "yume-ramen-sushi-and-bar/index.html" },
