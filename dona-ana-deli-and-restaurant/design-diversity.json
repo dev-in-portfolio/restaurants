@@ -1,0 +1,120 @@
+{
+  "slug": "dona-ana-deli-and-restaurant",
+  "generatedAt": "2026-08-28T18:55:35.314Z",
+  "recentCompared": 10,
+  "recentSlugs": [
+    "zafran-kabab-palace",
+    "zapata-s-mexican-restaurant",
+    "zinicola",
+    "zio-casual-italian",
+    "qc-social-lounge",
+    "cedars-halal-market-restaurant-and-hookah",
+    "central-tea-house",
+    "chin-garden",
+    "crunch-bistro",
+    "deli-hn"
+  ],
+  "rejectionThreshold": 0.72,
+  "closestMatch": {
+    "priorSlug": "chin-garden",
+    "score": 0.6557044334975369,
+    "classSimilarity": 0.5862068965517241,
+    "cssClassSimilarity": 0.6571428571428571,
+    "domSimilarity": 1,
+    "sectionSimilarity": 0,
+    "fontSimilarity": 1
+  },
+  "passed": true,
+  "comparisons": [
+    {
+      "priorSlug": "chin-garden",
+      "score": 0.6557044334975369,
+      "classSimilarity": 0.5862068965517241,
+      "cssClassSimilarity": 0.6571428571428571,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 1
+    },
+    {
+      "priorSlug": "deli-hn",
+      "score": 0.615704433497537,
+      "classSimilarity": 0.5862068965517241,
+      "cssClassSimilarity": 0.6571428571428571,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "central-tea-house",
+      "score": 0.6061136999068034,
+      "classSimilarity": 0.5862068965517241,
+      "cssClassSimilarity": 0.6216216216216216,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "crunch-bistro",
+      "score": 0.6038758620689655,
+      "classSimilarity": 0.5862068965517241,
+      "cssClassSimilarity": 0.6133333333333333,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "cedars-halal-market-restaurant-and-hookah",
+      "score": 0.6021437097159227,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6338028169014085,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "zio-casual-italian",
+      "score": 0.519974105894106,
+      "classSimilarity": 0.4153846153846154,
+      "cssClassSimilarity": 0.4805194805194805,
+      "domSimilarity": 0.992,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "zafran-kabab-palace",
+      "score": 0.49623076923076925,
+      "classSimilarity": 0.4153846153846154,
+      "cssClassSimilarity": 0.47435897435897434,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.2
+    },
+    {
+      "priorSlug": "zapata-s-mexican-restaurant",
+      "score": 0.48692844364937393,
+      "classSimilarity": 0.4153846153846154,
+      "cssClassSimilarity": 0.47435897435897434,
+      "domSimilarity": 0.9612403100775194,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.2
+    },
+    {
+      "priorSlug": "zinicola",
+      "score": 0.47415459349810496,
+      "classSimilarity": 0.3939393939393939,
+      "cssClassSimilarity": 0.46153846153846156,
+      "domSimilarity": 0.9465648854961832,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.2
+    },
+    {
+      "priorSlug": "qc-social-lounge",
+      "score": 0.46905902097902097,
+      "classSimilarity": 0.3939393939393939,
+      "cssClassSimilarity": 0.46153846153846156,
+      "domSimilarity": 0.992,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0
+    }
+  ]
+}
