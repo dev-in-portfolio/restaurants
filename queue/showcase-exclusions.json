@@ -12,8 +12,8 @@
     "reason": "Preserves the original 407 audited A/B rows so Showcase subtraction is reproducible on every sync."
   },
   "originalQueueCount": 407,
-  "excludedCount": 251,
-  "excludedActiveCount": 241,
+  "excludedCount": 252,
+  "excludedActiveCount": 242,
   "excludedHoldCount": 6,
   "netQueueCount": 223,
   "excluded": [
@@ -3280,6 +3280,19 @@
       "auditBatch": 20,
       "showcaseName": "Southern Range Brewing",
       "showcaseSlug": "southern-range-brewing",
+      "showcaseSource": "active",
+      "matchMethod": "exact-slug"
+    },
+    {
+      "queue": "queue/a-yes-2.js",
+      "restaurant": "Tacos Rick-O",
+      "slug": "tacos-rick-o",
+      "grade": "A",
+      "disposition": "YES",
+      "score": 95,
+      "auditBatch": 21,
+      "showcaseName": "Tacos Rick-O",
+      "showcaseSlug": "tacos-rick-o",
       "showcaseSource": "active",
       "matchMethod": "exact-slug"
     }

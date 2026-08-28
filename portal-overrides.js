@@ -84,6 +84,7 @@ window.portalOverrides = [
   { name: "Tabla Indian Restaurant", status: "premium", href: "tabla-indian-restaurant/index.html" },
   { name: "Tap & Vine", status: "premium", href: "tap-and-vine/index.html" },
   { name: "Taqueria Los Altos", status: "premium", href: "taqueria-los-altos/index.html" },
+  { name: "Tacos Rick-O", status: "premium", href: "tacos-rick-o/index.html" },
   { name: "Tavern on the Tracks", status: "premium", href: "tavern-on-the-tracks/index.html" },
   { name: "Thai House", status: "premium", href: "thai-house/index.html" },
   { name: "Taipei South", status: "premium", href: "taipei-south/index.html" },
