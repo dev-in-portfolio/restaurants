@@ -105,6 +105,7 @@ window.portalOverrides = [
   { name: "Tryon House Restaurant — Woodlawn", status: "premium", href: "tryon-house-restaurant-woodlawn/index.html" },
   { name: "Tyber Creek Pub", status: "premium", href: "tyber-creek-pub/index.html" },
   { name: "Tropical Goodies", status: "premium", href: "tropical-goodies/index.html" },
+  { name: "Two Buck Saloon", status: "premium", href: "two-buck-saloon/index.html" },
   { name: "Verdant Bread", status: "premium", href: "verdant-bread/index.html" },
   { name: "Vibe Café & Wine Bar", status: "premium", href: "vibe-cafe-and-wine-bar/index.html" },
   { name: "VINYL", status: "premium", href: "vinyl/index.html" },
