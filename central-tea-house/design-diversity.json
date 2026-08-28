@@ -1,0 +1,120 @@
+{
+  "slug": "central-tea-house",
+  "generatedAt": "2026-08-28T18:09:25.461Z",
+  "recentCompared": 10,
+  "recentSlugs": [
+    "xoxo-cocktail-lounge",
+    "yugenn",
+    "yume-ramen-sushi-and-bar",
+    "yummm-donuts",
+    "zafran-kabab-palace",
+    "zapata-s-mexican-restaurant",
+    "zinicola",
+    "zio-casual-italian",
+    "qc-social-lounge",
+    "cedars-halal-market-restaurant-and-hookah"
+  ],
+  "rejectionThreshold": 0.72,
+  "closestMatch": {
+    "priorSlug": "cedars-halal-market-restaurant-and-hookah",
+    "score": 0.5930169491525424,
+    "classSimilarity": 0.559322033898305,
+    "cssClassSimilarity": 0.6,
+    "domSimilarity": 1,
+    "sectionSimilarity": 0,
+    "fontSimilarity": 0.5
+  },
+  "passed": true,
+  "comparisons": [
+    {
+      "priorSlug": "cedars-halal-market-restaurant-and-hookah",
+      "score": 0.5930169491525424,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "yume-ramen-sushi-and-bar",
+      "score": 0.5135671794871796,
+      "classSimilarity": 0.4153846153846154,
+      "cssClassSimilarity": 0.4567901234567901,
+      "domSimilarity": 0.992,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "zio-casual-italian",
+      "score": 0.5135671794871796,
+      "classSimilarity": 0.4153846153846154,
+      "cssClassSimilarity": 0.4567901234567901,
+      "domSimilarity": 0.992,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "yummm-donuts",
+      "score": 0.4914871794871795,
+      "classSimilarity": 0.4153846153846154,
+      "cssClassSimilarity": 0.4567901234567901,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.2
+    },
+    {
+      "priorSlug": "zafran-kabab-palace",
+      "score": 0.4899831144465291,
+      "classSimilarity": 0.4153846153846154,
+      "cssClassSimilarity": 0.45121951219512196,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.2
+    },
+    {
+      "priorSlug": "zapata-s-mexican-restaurant",
+      "score": 0.48068078886513377,
+      "classSimilarity": 0.4153846153846154,
+      "cssClassSimilarity": 0.45121951219512196,
+      "domSimilarity": 0.9612403100775194,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.2
+    },
+    {
+      "priorSlug": "yugenn",
+      "score": 0.47931270476883875,
+      "classSimilarity": 0.3880597014925373,
+      "cssClassSimilarity": 0.43902439024390244,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.2
+    },
+    {
+      "priorSlug": "xoxo-cocktail-lounge",
+      "score": 0.47659574504110197,
+      "classSimilarity": 0.3880597014925373,
+      "cssClassSimilarity": 0.4634146341463415,
+      "domSimilarity": 0.9612403100775194,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.2
+    },
+    {
+      "priorSlug": "zinicola",
+      "score": 0.46807579424857404,
+      "classSimilarity": 0.3939393939393939,
+      "cssClassSimilarity": 0.43902439024390244,
+      "domSimilarity": 0.9465648854961832,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.2
+    },
+    {
+      "priorSlug": "qc-social-lounge",
+      "score": 0.46298022172949005,
+      "classSimilarity": 0.3939393939393939,
+      "cssClassSimilarity": 0.43902439024390244,
+      "domSimilarity": 0.992,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0
+    }
+  ]
+}
