@@ -126,6 +126,7 @@ window.portalOverrides = [
   { name: "Cedars Halal Market, Restaurant & Hookah", status: "premium", href: "cedars-halal-market-restaurant-and-hookah/index.html" },
   { name: "Central Tea House", status: "premium", href: "central-tea-house/index.html" },
   { name: "Chin Garden", status: "premium", href: "chin-garden/index.html" },
+  { name: "Crunch Bistro", status: "premium", href: "crunch-bistro/index.html" },
   { name: "Sweet Boutique Bakery", portalSection: "later", note: "Residential custom cake studio at 9814 Zackery Ave; no public retail walk-in storefront." },
   { name: "Mily & Lalo Peruvian Restaurant", portalSection: "later", note: "Located in Columbus GA outside Charlotte market; hold for regional queue." },
   { name: "Angela’s Pizzeria & Restaurant", portalSection: "later", note: "Third-party delivery platforms report temporarily closed; needs recheck." },
