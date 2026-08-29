@@ -1,0 +1,263 @@
+{
+  "slug": "the-sandwich-club",
+  "generatedAt": "2026-08-29T02:57:46.668Z",
+  "htmlPages": [
+    "breakfast-coffee.html",
+    "catering-boxes.html",
+    "index.html",
+    "menu.html",
+    "signature-clubs.html",
+    "visit.html"
+  ],
+  "cssFiles": [
+    "site.css"
+  ],
+  "jsFiles": [
+    "site.js"
+  ],
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "checks": [
+    {
+      "name": "Minimum substantive HTML page count",
+      "passed": true,
+      "detail": "6 HTML pages found; minimum is 5"
+    },
+    {
+      "name": "index.html exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "menu.html exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "visit/contact page exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "evidence.md exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CSS balance site.css",
+      "passed": true,
+      "detail": "balanced"
+    },
+    {
+      "name": "JavaScript parse site.js",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "breakfast-coffee.html has <title>",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "breakfast-coffee.html has viewport meta",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "breakfast-coffee.html duplicate IDs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "breakfast-coffee.html image alt attributes",
+      "passed": true,
+      "detail": "0 image(s) missing alt"
+    },
+    {
+      "name": "breakfast-coffee.html automatic-demo form prohibition",
+      "passed": true,
+      "detail": "0 form(s) found"
+    },
+    {
+      "name": "breakfast-coffee.html links back to home",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catering-boxes.html has <title>",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catering-boxes.html has viewport meta",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catering-boxes.html duplicate IDs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catering-boxes.html image alt attributes",
+      "passed": true,
+      "detail": "0 image(s) missing alt"
+    },
+    {
+      "name": "catering-boxes.html automatic-demo form prohibition",
+      "passed": true,
+      "detail": "0 form(s) found"
+    },
+    {
+      "name": "catering-boxes.html links back to home",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "index.html has <title>",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "index.html has viewport meta",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "index.html duplicate IDs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "index.html image alt attributes",
+      "passed": true,
+      "detail": "0 image(s) missing alt"
+    },
+    {
+      "name": "index.html automatic-demo form prohibition",
+      "passed": true,
+      "detail": "0 form(s) found"
+    },
+    {
+      "name": "menu.html has <title>",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "menu.html has viewport meta",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "menu.html duplicate IDs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "menu.html image alt attributes",
+      "passed": true,
+      "detail": "0 image(s) missing alt"
+    },
+    {
+      "name": "menu.html automatic-demo form prohibition",
+      "passed": true,
+      "detail": "0 form(s) found"
+    },
+    {
+      "name": "menu.html links back to home",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "signature-clubs.html has <title>",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "signature-clubs.html has viewport meta",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "signature-clubs.html duplicate IDs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "signature-clubs.html image alt attributes",
+      "passed": true,
+      "detail": "0 image(s) missing alt"
+    },
+    {
+      "name": "signature-clubs.html automatic-demo form prohibition",
+      "passed": true,
+      "detail": "0 form(s) found"
+    },
+    {
+      "name": "signature-clubs.html links back to home",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "visit.html has <title>",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "visit.html has viewport meta",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "visit.html duplicate IDs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "visit.html image alt attributes",
+      "passed": true,
+      "detail": "0 image(s) missing alt"
+    },
+    {
+      "name": "visit.html automatic-demo form prohibition",
+      "passed": true,
+      "detail": "0 form(s) found"
+    },
+    {
+      "name": "visit.html links back to home",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "No exact duplicate HTML pages",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "evidence.md contains ## Creative Brief",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "evidence.md contains ## Claim Ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "evidence.md contains ## Add-On Preservation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "evidence.md contains ## Cross-Demo Diversity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Cross-demo design diversity",
+      "passed": true,
+      "detail": "PASS the-sandwich-club: closest recent design 'el-taco-deli' scored 0.653."
+    }
+  ]
+}
