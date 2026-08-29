@@ -141,6 +141,7 @@ window.portalOverrides = [
   { name: "The Sandwich Club", status: "premium", href: "the-sandwich-club/index.html" },
   { name: "Luce Ristorante", status: "premium", href: "luce-ristorante/index.html" },
   { name: "Indigo Tea & Coffee Co.", status: "premium", href: "indigo-tea-and-coffee-co/index.html" },
+  { name: "Nefelie’s", status: "premium", href: "nefelie-s/index.html" },
   { name: "Sweet Boutique Bakery", portalSection: "later", note: "Residential custom cake studio at 9814 Zackery Ave; no public retail walk-in storefront." },
   { name: "Mily & Lalo Peruvian Restaurant", portalSection: "later", note: "Located in Columbus GA outside Charlotte market; hold for regional queue." },
   { name: "Angela’s Pizzeria & Restaurant", portalSection: "later", note: "Third-party delivery platforms report temporarily closed; needs recheck." },
