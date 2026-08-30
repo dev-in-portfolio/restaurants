@@ -67,19 +67,22 @@ Use the generated queue after that sync. Do not rely on remembered counts.
 
 ## Canonical prospect queue
 
-The active build queue combines two authoritative sources minus all existing demos in `dev-in-portfolio/restaurant-showcase` (both active and HOLD):
+The active build queue is assembled dynamically from the authoritative prospect sources, then excludes restaurants already represented in `dev-in-portfolio/restaurant-showcase` (including active and HOLD inventory).
 
-1. **Original Rada-Depth Audit (407 A/B rows):**
-   - 223 active net-new prospects (129 A-grade YES, 36 B-grade YES, 58 B-grade CONDITIONAL)
-   - 184 audited A/B prospects excluded because a Showcase demo already exists
+Do **not** hard-code, copy forward, or rely on queue totals in this README. The inventory changes as prospects are added, reconciled, built, promoted, held, archived, or explicitly removed.
 
-2. **Charlotte Restaurant Prospect Sweep (2026-08-28) (94 rows):**
-   - 90 active net-new prospects admitted (46 A+, 28 A, 16 B)
-   - 4 reconciled/excluded records (3 active Showcase demos: Mert’s Heart & Soul, Exotica Indian Kitchen & Bar, Deluxe Fun Dining; 1 existing audit record: The Public House)
+Authoritative prospect sources:
 
-**Combined Active Queue Total: 313 net-new prospects**
+1. **Original Rada-Depth Audit** — canonical audited A/B prospect source.
+2. **Charlotte Restaurant Prospect Sweep (2026-08-28)** — canonical supplemental sweep source.
 
-These counts are maintained dynamically. `queue/meta.js` after running `node scripts/sync-showcase-exclusions.mjs` is authoritative.
+After running:
+
+```bash
+node scripts/sync-showcase-exclusions.mjs
+```
+
+treat the generated queue state as current. `queue/meta.js` and the generated exclusion data are the runtime authority for what is presently eligible; this README intentionally does not publish inventory figures.
 
 Canonical data:
 
@@ -88,10 +91,10 @@ Canonical data:
 - `queue/b-yes.js`
 - `queue/b-conditional.js`
 - `queue/sweep-2026-08-28.js` — generated active supplemental sweep prospects
-- `queue/meta.js` — generated net-new counts
-- `queue/showcase-exclusions.json` — exact restaurants removed because Showcase demos already exist or duplicate existing audit
-- `queue/audit-ab-master.json` — immutable 407-row audited A/B source snapshot
-- `queue/charlotte-prospect-sweep-2026-08-28.json` — authoritative 94-record supplemental sweep source snapshot
+- `queue/meta.js` — generated current queue metadata
+- `queue/showcase-exclusions.json` — exact restaurants removed because Showcase demos already exist or duplicate an existing audit record
+- `queue/audit-ab-master.json` — immutable audited A/B source snapshot
+- `queue/charlotte-prospect-sweep-2026-08-28.json` — authoritative supplemental sweep source snapshot
 
 Do not select from old restaurant folders, retired lead scripts, or `portal-concepts-source.html`.
 
