@@ -1,0 +1,40 @@
+name: Build Block 7 restaurant demos
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-block7
+  cancel-in-progress: false
+
+jobs:
+  build:
+    if: github.event.pull_request.title == 'Run Block 7 restaurant build'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Generate and validate Block 7
+        run: python .migration/block7/build.py
+
+      - name: Remove temporary migration files
+        run: |
+          rm -rf .migration/block7
+          rm -f .github/workflows/build-block7.yml
+
+      - name: Commit generated restaurant sites
+        shell: bash
+        run: |
+          git config user.name 'restaurant-demo-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add -A
+          git diff --cached --quiet && exit 0
+          git commit -m 'Build Block 7 full five-page restaurant demos [skip ci]'
+          git push origin main
