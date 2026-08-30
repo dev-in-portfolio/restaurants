@@ -5,22 +5,22 @@
 The canonical demo queue combines two authoritative sources minus all existing demos in `dev-in-portfolio/restaurant-showcase` (both active and HOLD):
 
 1. **Original Rada-Depth Audit (407 A/B rows):**
-   - **223 active net-new prospects**
-   - **129 A-grade YES**
+   - **107 active net-new prospects**
+   - **13 A-grade YES**
    - **36 B-grade YES**
    - **58 B-grade CONDITIONAL**
-   - **184 audited A/B prospects removed because a Showcase demo already exists** (178 active Showcase, 6 Showcase HOLD)
+   - **300 audited A/B prospects removed because a Showcase demo already exists** (294 active Showcase, 6 Showcase HOLD)
 
 2. **Charlotte Restaurant Prospect Sweep (2026-08-28) (94 rows):**
-   - **89 active net-new prospects admitted**
-   - **46 A+ prospects**
+   - **69 active net-new prospects admitted**
+   - **26 A+ prospects**
    - **27 A prospects**
    - **16 B prospects**
-   - **5 records reconciled/excluded** (4 active Showcase demos: Mert’s Heart & Soul, Homestyle Kitchn LLC, Exotica Indian Kitchen & Bar, Deluxe Fun Dining; 1 existing audit record & premium build: The Public House)
+   - **25 records reconciled/excluded** (25 active Showcase demos: Mert’s Heart & Soul, Homestyle Kitchn LLC, Exotica Indian Kitchen & Bar, Deluxe Fun Dining; 0 existing audit record & premium build: The Public House)
 
-**Combined Active Queue Total: 312 net-new prospects**
+**Combined Active Queue Total: 176 net-new prospects**
 
-Showcase inventory checked: **203 active + 31 hold = 234 existing demos**
+Showcase inventory checked: **337 active + 31 hold = 368 existing demos**
 
 Exact removals and reconciliations are recorded in `queue/showcase-exclusions.json`.
 Immutable sources: `queue/audit-ab-master.json` and `queue/charlotte-prospect-sweep-2026-08-28.json`.
