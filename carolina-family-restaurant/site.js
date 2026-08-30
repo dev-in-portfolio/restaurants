@@ -1,0 +1,7 @@
+
+const navToggle=document.querySelector('[data-nav-toggle]');
+if(navToggle){navToggle.addEventListener('click',()=>{const nav=document.querySelector('[data-nav-links]');const open=nav.classList.toggle('open');navToggle.setAttribute('aria-expanded',String(open));});}
+document.querySelectorAll('[data-filter]').forEach(btn=>btn.addEventListener('click',()=>{const f=btn.dataset.filter;document.querySelectorAll('[data-filter]').forEach(b=>b.classList.toggle('active',b===btn));document.querySelectorAll('[data-menu-card]').forEach(card=>card.hidden=!(f==='all'||card.dataset.category===f));}));
+const form=document.querySelector('[data-demo-form]');if(form){form.addEventListener('submit',e=>{e.preventDefault();const out=document.querySelector('[data-form-status]');if(out)out.textContent='Demo only — no information was sent.';});}
+const tool=document.querySelector('[data-tool]');
+if(tool){const inputs=[...tool.querySelectorAll('input,select')];const output=tool.querySelector('[data-tool-output]');const update=()=>{const vals=Object.fromEntries(inputs.map(i=>[i.name,i.type==='checkbox'?i.checked:i.value]));const guests=Number(vals.guests||vals.count||4);const style=vals.style||vals.path||vals.base||'balanced';const extra=vals.extra===true?' with extra planning notes':'';output.innerHTML=`<strong>${guests} guest${guests===1?'':'s'}:</strong> ${style}${extra}. <span>No request has been sent.</span>`;};inputs.forEach(i=>i.addEventListener('input',update));update();}
