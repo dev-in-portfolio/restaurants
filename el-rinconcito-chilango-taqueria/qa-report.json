@@ -1,0 +1,263 @@
+{
+  "slug": "el-rinconcito-chilango-taqueria",
+  "generatedAt": "2026-08-28T19:26:43.519Z",
+  "htmlPages": [
+    "index.html",
+    "masa-tradicion.html",
+    "menu.html",
+    "tacos-cazo.html",
+    "tortas-huaraches.html",
+    "visit.html"
+  ],
+  "cssFiles": [
+    "site.css"
+  ],
+  "jsFiles": [
+    "site.js"
+  ],
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "checks": [
+    {
+      "name": "Minimum substantive HTML page count",
+      "passed": true,
+      "detail": "6 HTML pages found; minimum is 5"
+    },
+    {
+      "name": "index.html exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "menu.html exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "visit/contact page exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "evidence.md exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CSS balance site.css",
+      "passed": true,
+      "detail": "balanced"
+    },
+    {
+      "name": "JavaScript parse site.js",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "index.html has <title>",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "index.html has viewport meta",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "index.html duplicate IDs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "index.html image alt attributes",
+      "passed": true,
+      "detail": "0 image(s) missing alt"
+    },
+    {
+      "name": "index.html automatic-demo form prohibition",
+      "passed": true,
+      "detail": "0 form(s) found"
+    },
+    {
+      "name": "masa-tradicion.html has <title>",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "masa-tradicion.html has viewport meta",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "masa-tradicion.html duplicate IDs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "masa-tradicion.html image alt attributes",
+      "passed": true,
+      "detail": "0 image(s) missing alt"
+    },
+    {
+      "name": "masa-tradicion.html automatic-demo form prohibition",
+      "passed": true,
+      "detail": "0 form(s) found"
+    },
+    {
+      "name": "masa-tradicion.html links back to home",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "menu.html has <title>",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "menu.html has viewport meta",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "menu.html duplicate IDs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "menu.html image alt attributes",
+      "passed": true,
+      "detail": "0 image(s) missing alt"
+    },
+    {
+      "name": "menu.html automatic-demo form prohibition",
+      "passed": true,
+      "detail": "0 form(s) found"
+    },
+    {
+      "name": "menu.html links back to home",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "tacos-cazo.html has <title>",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "tacos-cazo.html has viewport meta",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "tacos-cazo.html duplicate IDs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "tacos-cazo.html image alt attributes",
+      "passed": true,
+      "detail": "0 image(s) missing alt"
+    },
+    {
+      "name": "tacos-cazo.html automatic-demo form prohibition",
+      "passed": true,
+      "detail": "0 form(s) found"
+    },
+    {
+      "name": "tacos-cazo.html links back to home",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "tortas-huaraches.html has <title>",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "tortas-huaraches.html has viewport meta",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "tortas-huaraches.html duplicate IDs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "tortas-huaraches.html image alt attributes",
+      "passed": true,
+      "detail": "0 image(s) missing alt"
+    },
+    {
+      "name": "tortas-huaraches.html automatic-demo form prohibition",
+      "passed": true,
+      "detail": "0 form(s) found"
+    },
+    {
+      "name": "tortas-huaraches.html links back to home",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "visit.html has <title>",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "visit.html has viewport meta",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "visit.html duplicate IDs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "visit.html image alt attributes",
+      "passed": true,
+      "detail": "0 image(s) missing alt"
+    },
+    {
+      "name": "visit.html automatic-demo form prohibition",
+      "passed": true,
+      "detail": "0 form(s) found"
+    },
+    {
+      "name": "visit.html links back to home",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "No exact duplicate HTML pages",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "evidence.md contains ## Creative Brief",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "evidence.md contains ## Claim Ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "evidence.md contains ## Add-On Preservation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "evidence.md contains ## Cross-Demo Diversity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Cross-demo design diversity",
+      "passed": true,
+      "detail": "PASS el-rinconcito-chilango-taqueria: closest recent design 'chin-garden' scored 0.656."
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "slug": "johnny-burrito",
+  "generatedAt": "2026-08-28T19:44:41.494Z",
+  "recentCompared": 10,
+  "recentSlugs": [
+    "central-tea-house",
+    "chin-garden",
+    "crunch-bistro",
+    "deli-hn",
+    "dona-ana-deli-and-restaurant",
+    "el-rinconcito-chilango-taqueria",
+    "el-taco-deli",
+    "freshwaters-southern-new-orleans",
+    "golden-bakery",
+    "hasaki-grill-and-sushi"
+  ],
+  "rejectionThreshold": 0.72,
+  "closestMatch": {
+    "priorSlug": "chin-garden",
+    "score": 0.6557044334975369,
+    "classSimilarity": 0.5862068965517241,
+    "cssClassSimilarity": 0.6571428571428571,
+    "domSimilarity": 1,
+    "sectionSimilarity": 0,
+    "fontSimilarity": 1
+  },
+  "passed": true,
+  "comparisons": [
+    {
+      "priorSlug": "chin-garden",
+      "score": 0.6557044334975369,
+      "classSimilarity": 0.5862068965517241,
+      "cssClassSimilarity": 0.6571428571428571,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 1
+    },
+    {
+      "priorSlug": "dona-ana-deli-and-restaurant",
+      "score": 0.6557044334975369,
+      "classSimilarity": 0.5862068965517241,
+      "cssClassSimilarity": 0.6571428571428571,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 1
+    },
+    {
+      "priorSlug": "el-rinconcito-chilango-taqueria",
+      "score": 0.6557044334975369,
+      "classSimilarity": 0.5862068965517241,
+      "cssClassSimilarity": 0.6571428571428571,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 1
+    },
+    {
+      "priorSlug": "deli-hn",
+      "score": 0.615704433497537,
+      "classSimilarity": 0.5862068965517241,
+      "cssClassSimilarity": 0.6571428571428571,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "el-taco-deli",
+      "score": 0.615704433497537,
+      "classSimilarity": 0.5862068965517241,
+      "cssClassSimilarity": 0.6571428571428571,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "freshwaters-southern-new-orleans",
+      "score": 0.615704433497537,
+      "classSimilarity": 0.5862068965517241,
+      "cssClassSimilarity": 0.6571428571428571,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "golden-bakery",
+      "score": 0.615704433497537,
+      "classSimilarity": 0.5862068965517241,
+      "cssClassSimilarity": 0.6571428571428571,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "hasaki-grill-and-sushi",
+      "score": 0.615704433497537,
+      "classSimilarity": 0.5862068965517241,
+      "cssClassSimilarity": 0.6571428571428571,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "central-tea-house",
+      "score": 0.6061136999068034,
+      "classSimilarity": 0.5862068965517241,
+      "cssClassSimilarity": 0.6216216216216216,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "crunch-bistro",
+      "score": 0.6038758620689655,
+      "classSimilarity": 0.5862068965517241,
+      "cssClassSimilarity": 0.6133333333333333,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    }
+  ]
+}

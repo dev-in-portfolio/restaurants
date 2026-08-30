@@ -1,0 +1,120 @@
+{
+  "slug": "tropical-goodies",
+  "generatedAt": "2026-08-27T20:41:31.739Z",
+  "recentCompared": 10,
+  "recentSlugs": [
+    "town-brewing-company",
+    "the-teal-turnip",
+    "the-story-of-mi-carino",
+    "the-gin-mill-south-end",
+    "the-wafflery",
+    "the-wine-shop-at-rivergate",
+    "three-amigos-mexican-grill",
+    "tryon-house-restaurant-woodlawn",
+    "yume-ramen-sushi-and-bar",
+    "qc-social-lounge"
+  ],
+  "rejectionThreshold": 0.72,
+  "closestMatch": {
+    "priorSlug": "the-wine-shop-at-rivergate",
+    "score": 0.6392778187177598,
+    "classSimilarity": 0.559322033898305,
+    "cssClassSimilarity": 0.6231884057971014,
+    "domSimilarity": 1,
+    "sectionSimilarity": 0,
+    "fontSimilarity": 1
+  },
+  "passed": true,
+  "comparisons": [
+    {
+      "priorSlug": "the-wine-shop-at-rivergate",
+      "score": 0.6392778187177598,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 1
+    },
+    {
+      "priorSlug": "tryon-house-restaurant-woodlawn",
+      "score": 0.6392778187177598,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 1
+    },
+    {
+      "priorSlug": "the-teal-turnip",
+      "score": 0.5992778187177599,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "three-amigos-mexican-grill",
+      "score": 0.5992778187177599,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "yume-ramen-sushi-and-bar",
+      "score": 0.5992778187177599,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "town-brewing-company",
+      "score": 0.5752778187177598,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.2
+    },
+    {
+      "priorSlug": "the-story-of-mi-carino",
+      "score": 0.5752778187177598,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.2
+    },
+    {
+      "priorSlug": "the-gin-mill-south-end",
+      "score": 0.5752778187177598,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.2
+    },
+    {
+      "priorSlug": "the-wafflery",
+      "score": 0.5592778187177598,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0
+    },
+    {
+      "priorSlug": "qc-social-lounge",
+      "score": 0.546,
+      "classSimilarity": 0.5333333333333333,
+      "cssClassSimilarity": 0.6,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0
+    }
+  ]
+}

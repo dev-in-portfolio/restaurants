@@ -1,0 +1,120 @@
+{
+  "slug": "the-gin-mill-south-end",
+  "generatedAt": "2026-08-27T14:47:45.140Z",
+  "recentCompared": 10,
+  "recentSlugs": [
+    "pasuta",
+    "the-hobbyist",
+    "the-lodge-a-sportsman-s-grill",
+    "the-olde-mecklenburg-brewery",
+    "the-waterman-fish-bar",
+    "the-public-house",
+    "town-brewing-company",
+    "the-teal-turnip",
+    "the-story-of-mi-carino",
+    "qc-social-lounge"
+  ],
+  "rejectionThreshold": 0.72,
+  "closestMatch": {
+    "priorSlug": "the-hobbyist",
+    "score": 0.5592778187177598,
+    "classSimilarity": 0.559322033898305,
+    "cssClassSimilarity": 0.6231884057971014,
+    "domSimilarity": 1,
+    "sectionSimilarity": 0,
+    "fontSimilarity": 0
+  },
+  "passed": true,
+  "comparisons": [
+    {
+      "priorSlug": "the-hobbyist",
+      "score": 0.5592778187177598,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0
+    },
+    {
+      "priorSlug": "the-lodge-a-sportsman-s-grill",
+      "score": 0.5592778187177598,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0
+    },
+    {
+      "priorSlug": "the-olde-mecklenburg-brewery",
+      "score": 0.5592778187177598,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0
+    },
+    {
+      "priorSlug": "the-waterman-fish-bar",
+      "score": 0.5592778187177598,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0
+    },
+    {
+      "priorSlug": "the-public-house",
+      "score": 0.5592778187177598,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0
+    },
+    {
+      "priorSlug": "town-brewing-company",
+      "score": 0.5592778187177598,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0
+    },
+    {
+      "priorSlug": "the-teal-turnip",
+      "score": 0.5592778187177598,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0
+    },
+    {
+      "priorSlug": "the-story-of-mi-carino",
+      "score": 0.5592778187177598,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0
+    },
+    {
+      "priorSlug": "pasuta",
+      "score": 0.553563533003474,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 0.9761904761904762,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0
+    },
+    {
+      "priorSlug": "qc-social-lounge",
+      "score": 0.546,
+      "classSimilarity": 0.5333333333333333,
+      "cssClassSimilarity": 0.6,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0
+    }
+  ]
+}

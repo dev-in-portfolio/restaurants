@@ -1,0 +1,120 @@
+{
+  "slug": "nalan-indian-cuisine",
+  "generatedAt": "2026-08-24T20:34:46.244Z",
+  "recentCompared": 10,
+  "recentSlugs": [
+    "the-brickyard",
+    "the-changebaker-place",
+    "the-corner-pub",
+    "the-craic",
+    "the-diamond-restaurant",
+    "milkbread",
+    "midwood-country-club",
+    "miro-spanish-grille",
+    "mother-of-dragons",
+    "must-be-nice"
+  ],
+  "rejectionThreshold": 0.72,
+  "closestMatch": {
+    "priorSlug": "milkbread",
+    "score": 0.4755424954792043,
+    "classSimilarity": 0.35714285714285715,
+    "cssClassSimilarity": 0.3670886075949367,
+    "domSimilarity": 1,
+    "sectionSimilarity": 0,
+    "fontSimilarity": 0.5
+  },
+  "passed": true,
+  "comparisons": [
+    {
+      "priorSlug": "milkbread",
+      "score": 0.4755424954792043,
+      "classSimilarity": 0.35714285714285715,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "miro-spanish-grille",
+      "score": 0.4755424954792043,
+      "classSimilarity": 0.35714285714285715,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "mother-of-dragons",
+      "score": 0.4755424954792043,
+      "classSimilarity": 0.35714285714285715,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "must-be-nice",
+      "score": 0.4755424954792043,
+      "classSimilarity": 0.35714285714285715,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "midwood-country-club",
+      "score": 0.45154249547920433,
+      "classSimilarity": 0.35714285714285715,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.2
+    },
+    {
+      "priorSlug": "the-brickyard",
+      "score": 0.10285714285714284,
+      "classSimilarity": 0,
+      "cssClassSimilarity": 0,
+      "domSimilarity": 0.42857142857142855,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0
+    },
+    {
+      "priorSlug": "the-diamond-restaurant",
+      "score": 0.0976271186440678,
+      "classSimilarity": 0,
+      "cssClassSimilarity": 0,
+      "domSimilarity": 0.4067796610169492,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0
+    },
+    {
+      "priorSlug": "the-corner-pub",
+      "score": 0.09549738219895287,
+      "classSimilarity": 0,
+      "cssClassSimilarity": 0,
+      "domSimilarity": 0.39790575916230364,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0
+    },
+    {
+      "priorSlug": "the-changebaker-place",
+      "score": 0.09032258064516129,
+      "classSimilarity": 0,
+      "cssClassSimilarity": 0,
+      "domSimilarity": 0.3763440860215054,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0
+    },
+    {
+      "priorSlug": "the-craic",
+      "score": 0.08918032786885247,
+      "classSimilarity": 0,
+      "cssClassSimilarity": 0,
+      "domSimilarity": 0.37158469945355194,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0
+    }
+  ]
+}

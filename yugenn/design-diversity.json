@@ -1,0 +1,120 @@
+{
+  "slug": "yugenn",
+  "generatedAt": "2026-08-27T23:24:42.317Z",
+  "recentCompared": 10,
+  "recentSlugs": [
+    "tin-tin-cafe",
+    "tryon-house-restaurant-woodlawn",
+    "tyber-creek-pub",
+    "tropical-goodies",
+    "verdant-bread",
+    "vibe-cafe-and-wine-bar",
+    "vinyl",
+    "yume-ramen-sushi-and-bar",
+    "zio-casual-italian",
+    "qc-social-lounge"
+  ],
+  "rejectionThreshold": 0.72,
+  "closestMatch": {
+    "priorSlug": "tin-tin-cafe",
+    "score": 0.5836393442622951,
+    "classSimilarity": 0.5245901639344263,
+    "cssClassSimilarity": 0.6,
+    "domSimilarity": 1,
+    "sectionSimilarity": 0,
+    "fontSimilarity": 0.5
+  },
+  "passed": true,
+  "comparisons": [
+    {
+      "priorSlug": "tin-tin-cafe",
+      "score": 0.5836393442622951,
+      "classSimilarity": 0.5245901639344263,
+      "cssClassSimilarity": 0.6,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "yume-ramen-sushi-and-bar",
+      "score": 0.5817193442622951,
+      "classSimilarity": 0.5245901639344263,
+      "cssClassSimilarity": 0.6,
+      "domSimilarity": 0.992,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "vinyl",
+      "score": 0.564218309859155,
+      "classSimilarity": 0.55,
+      "cssClassSimilarity": 0.5915492957746479,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.2
+    },
+    {
+      "priorSlug": "tyber-creek-pub",
+      "score": 0.5596393442622951,
+      "classSimilarity": 0.5245901639344263,
+      "cssClassSimilarity": 0.6,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.2
+    },
+    {
+      "priorSlug": "vibe-cafe-and-wine-bar",
+      "score": 0.5596393442622951,
+      "classSimilarity": 0.5245901639344263,
+      "cssClassSimilarity": 0.6,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.2
+    },
+    {
+      "priorSlug": "tryon-house-restaurant-woodlawn",
+      "score": 0.5577193442622951,
+      "classSimilarity": 0.5245901639344263,
+      "cssClassSimilarity": 0.6,
+      "domSimilarity": 0.992,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.2
+    },
+    {
+      "priorSlug": "tropical-goodies",
+      "score": 0.5577193442622951,
+      "classSimilarity": 0.5245901639344263,
+      "cssClassSimilarity": 0.6,
+      "domSimilarity": 0.992,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.2
+    },
+    {
+      "priorSlug": "verdant-bread",
+      "score": 0.5577193442622951,
+      "classSimilarity": 0.5245901639344263,
+      "cssClassSimilarity": 0.6,
+      "domSimilarity": 0.992,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.2
+    },
+    {
+      "priorSlug": "zio-casual-italian",
+      "score": 0.5577193442622951,
+      "classSimilarity": 0.5245901639344263,
+      "cssClassSimilarity": 0.6,
+      "domSimilarity": 0.992,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.2
+    },
+    {
+      "priorSlug": "qc-social-lounge",
+      "score": 0.5417193442622951,
+      "classSimilarity": 0.5245901639344263,
+      "cssClassSimilarity": 0.6,
+      "domSimilarity": 0.992,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0
+    }
+  ]
+}

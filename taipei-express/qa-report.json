@@ -1,0 +1,263 @@
+{
+  "slug": "taipei-express",
+  "generatedAt": "2026-08-27T01:55:40.495Z",
+  "htmlPages": [
+    "concept.html",
+    "dumplings-and-providence-classics.html",
+    "index.html",
+    "menu.html",
+    "visit.html",
+    "wok-hei-craft-and-taiwanese-heritage.html"
+  ],
+  "cssFiles": [
+    "site.css"
+  ],
+  "jsFiles": [
+    "site.js"
+  ],
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "checks": [
+    {
+      "name": "Minimum substantive HTML page count",
+      "passed": true,
+      "detail": "6 HTML pages found; minimum is 5"
+    },
+    {
+      "name": "index.html exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "menu.html exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "visit/contact page exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "evidence.md exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CSS balance site.css",
+      "passed": true,
+      "detail": "balanced"
+    },
+    {
+      "name": "JavaScript parse site.js",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "concept.html has <title>",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "concept.html has viewport meta",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "concept.html duplicate IDs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "concept.html image alt attributes",
+      "passed": true,
+      "detail": "0 image(s) missing alt"
+    },
+    {
+      "name": "concept.html automatic-demo form prohibition",
+      "passed": true,
+      "detail": "0 form(s) found"
+    },
+    {
+      "name": "concept.html links back to home",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "dumplings-and-providence-classics.html has <title>",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "dumplings-and-providence-classics.html has viewport meta",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "dumplings-and-providence-classics.html duplicate IDs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "dumplings-and-providence-classics.html image alt attributes",
+      "passed": true,
+      "detail": "0 image(s) missing alt"
+    },
+    {
+      "name": "dumplings-and-providence-classics.html automatic-demo form prohibition",
+      "passed": true,
+      "detail": "0 form(s) found"
+    },
+    {
+      "name": "dumplings-and-providence-classics.html links back to home",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "index.html has <title>",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "index.html has viewport meta",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "index.html duplicate IDs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "index.html image alt attributes",
+      "passed": true,
+      "detail": "0 image(s) missing alt"
+    },
+    {
+      "name": "index.html automatic-demo form prohibition",
+      "passed": true,
+      "detail": "0 form(s) found"
+    },
+    {
+      "name": "menu.html has <title>",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "menu.html has viewport meta",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "menu.html duplicate IDs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "menu.html image alt attributes",
+      "passed": true,
+      "detail": "0 image(s) missing alt"
+    },
+    {
+      "name": "menu.html automatic-demo form prohibition",
+      "passed": true,
+      "detail": "0 form(s) found"
+    },
+    {
+      "name": "menu.html links back to home",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "visit.html has <title>",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "visit.html has viewport meta",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "visit.html duplicate IDs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "visit.html image alt attributes",
+      "passed": true,
+      "detail": "0 image(s) missing alt"
+    },
+    {
+      "name": "visit.html automatic-demo form prohibition",
+      "passed": true,
+      "detail": "0 form(s) found"
+    },
+    {
+      "name": "visit.html links back to home",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "wok-hei-craft-and-taiwanese-heritage.html has <title>",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "wok-hei-craft-and-taiwanese-heritage.html has viewport meta",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "wok-hei-craft-and-taiwanese-heritage.html duplicate IDs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "wok-hei-craft-and-taiwanese-heritage.html image alt attributes",
+      "passed": true,
+      "detail": "0 image(s) missing alt"
+    },
+    {
+      "name": "wok-hei-craft-and-taiwanese-heritage.html automatic-demo form prohibition",
+      "passed": true,
+      "detail": "0 form(s) found"
+    },
+    {
+      "name": "wok-hei-craft-and-taiwanese-heritage.html links back to home",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "No exact duplicate HTML pages",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "evidence.md contains ## Creative Brief",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "evidence.md contains ## Claim Ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "evidence.md contains ## Add-On Preservation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "evidence.md contains ## Cross-Demo Diversity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Cross-demo design diversity",
+      "passed": true,
+      "detail": "PASS taipei-express: closest recent design 'south-end-hideaway' scored 0.639."
+    }
+  ]
+}

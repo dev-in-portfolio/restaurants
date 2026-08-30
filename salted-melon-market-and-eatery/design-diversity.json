@@ -1,0 +1,120 @@
+{
+  "slug": "salted-melon-market-and-eatery",
+  "generatedAt": "2026-08-26T20:27:06.226Z",
+  "recentCompared": 10,
+  "recentSlugs": [
+    "republica-restaurant-and-lounge",
+    "ramen-bar-kazoku",
+    "rhino-market-and-deli",
+    "riceblossom",
+    "ricko-s-churro-bar",
+    "room-service",
+    "roz-grill",
+    "saffron-indian-cuisine",
+    "sabores-de-oaxaca",
+    "qc-social-lounge"
+  ],
+  "rejectionThreshold": 0.72,
+  "closestMatch": {
+    "priorSlug": "roz-grill",
+    "score": 0.6392778187177598,
+    "classSimilarity": 0.559322033898305,
+    "cssClassSimilarity": 0.6231884057971014,
+    "domSimilarity": 1,
+    "sectionSimilarity": 0,
+    "fontSimilarity": 1
+  },
+  "passed": true,
+  "comparisons": [
+    {
+      "priorSlug": "roz-grill",
+      "score": 0.6392778187177598,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 1
+    },
+    {
+      "priorSlug": "republica-restaurant-and-lounge",
+      "score": 0.5993333333333334,
+      "classSimilarity": 0.5333333333333333,
+      "cssClassSimilarity": 0.6,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.6666666666666666
+    },
+    {
+      "priorSlug": "saffron-indian-cuisine",
+      "score": 0.5992778187177599,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "sabores-de-oaxaca",
+      "score": 0.5992778187177599,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "qc-social-lounge",
+      "score": 0.546,
+      "classSimilarity": 0.5333333333333333,
+      "cssClassSimilarity": 0.6,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0
+    },
+    {
+      "priorSlug": "rhino-market-and-deli",
+      "score": 0.2749144385026738,
+      "classSimilarity": 0.08235294117647059,
+      "cssClassSimilarity": 0.08181818181818182,
+      "domSimilarity": 0.7941176470588235,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "riceblossom",
+      "score": 0.2749144385026738,
+      "classSimilarity": 0.08235294117647059,
+      "cssClassSimilarity": 0.08181818181818182,
+      "domSimilarity": 0.7941176470588235,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "ricko-s-churro-bar",
+      "score": 0.2749144385026738,
+      "classSimilarity": 0.08235294117647059,
+      "cssClassSimilarity": 0.08181818181818182,
+      "domSimilarity": 0.7941176470588235,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "room-service",
+      "score": 0.2749144385026738,
+      "classSimilarity": 0.08235294117647059,
+      "cssClassSimilarity": 0.08181818181818182,
+      "domSimilarity": 0.7941176470588235,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "ramen-bar-kazoku",
+      "score": 0.27471542130365656,
+      "classSimilarity": 0.08235294117647059,
+      "cssClassSimilarity": 0.08108108108108109,
+      "domSimilarity": 0.7941176470588235,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    }
+  ]
+}

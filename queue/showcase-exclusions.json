@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-13T20:58:59.769Z",
+  "generatedAt": "2026-08-29T03:09:16.288Z",
   "source": {
     "repository": "dev-in-portfolio/restaurant-showcase",
     "activeRecords": 203,
@@ -10,6 +10,12 @@
     "repository": "dev-in-portfolio/restaurants",
     "immutableRef": "99d7e3b4c809a367d230db0fc285ea44a802f662",
     "reason": "Preserves the original 407 audited A/B rows so Showcase subtraction is reproducible on every sync."
+  },
+  "canonicalSweepSource": {
+    "file": "queue/charlotte-prospect-sweep-2026-08-28.json",
+    "checkpointDate": "2026-08-28",
+    "totalRecords": 94,
+    "reason": "Preserves the authoritative 94-record supplemental Charlotte prospect sweep with supplied grades (A+, A, B)."
   },
   "originalQueueCount": 407,
   "excludedCount": 184,
@@ -2415,5 +2421,73 @@
     "restaurantAuditQueue_A_YES_2": 123,
     "restaurantAuditQueue_B_YES": 36,
     "restaurantAuditQueue_B_COND": 58
+  },
+  "sweep": {
+    "total": 94,
+    "excludedShowcase": 4,
+    "existingAudit": 1,
+    "admitted": 89,
+    "byGrade": {
+      "A": 27,
+      "A+": 46,
+      "B": 16
+    },
+    "exclusions": [
+      {
+        "position": 39,
+        "restaurant": "Mert’s Heart & Soul",
+        "slug": "mert-s-heart-and-soul",
+        "grade": "A",
+        "reason": "showcase_exclusion",
+        "showcaseName": "Mert’s Heart & Soul",
+        "showcaseSlug": "mert-s-heart-and-soul",
+        "showcaseSource": "active",
+        "matchMethod": "normalized-name"
+      },
+      {
+        "position": 40,
+        "restaurant": "Homestyle Kitchn LLC",
+        "slug": "homestyle-kitchn-llc",
+        "grade": "A",
+        "reason": "showcase_exclusion",
+        "showcaseName": "Home Style Kitchn",
+        "showcaseSlug": "home-style-kitchn",
+        "showcaseSource": "active",
+        "matchMethod": "unique-name-prefix"
+      },
+      {
+        "position": 41,
+        "restaurant": "Exotica Indian Kitchen & Bar",
+        "slug": "exotica-indian-kitchen-and-bar",
+        "grade": "B",
+        "reason": "showcase_exclusion",
+        "showcaseName": "Exotica Indian Kitchen & Bar",
+        "showcaseSlug": "exotica-indian-kitchen-and-bar",
+        "showcaseSource": "active",
+        "matchMethod": "normalized-name"
+      },
+      {
+        "position": 42,
+        "restaurant": "The Public House",
+        "slug": "the-public-house",
+        "grade": "B",
+        "reason": "existing_audit_lead",
+        "auditName": "The Public House",
+        "auditSlug": "the-public-house",
+        "auditGrade": "A",
+        "auditDisposition": "YES"
+      },
+      {
+        "position": 66,
+        "restaurant": "Deluxe Fun Dining",
+        "slug": "deluxe-fun-dining",
+        "grade": "B",
+        "reason": "showcase_exclusion",
+        "showcaseName": "Deluxe Fun Dining",
+        "showcaseSlug": "deluxe-fun-dining",
+        "showcaseSource": "active",
+        "matchMethod": "normalized-name"
+      }
+    ]
   }
 }

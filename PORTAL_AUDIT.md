@@ -1,24 +1,30 @@
-# Portal Architecture — Audited Net-New Queue
+# Portal Architecture — Canonical Two-Source Net-New Queue
 
 ## Current state
 
-The portal starts from the completed audit's A/B prospect universe, then subtracts every restaurant that already has a demo in `dev-in-portfolio/restaurant-showcase`. Showcase HOLD demos are excluded too: HOLD means not currently presented there, not "needs another demo here."
+The portal combines two authoritative prospect sources, then subtracts every restaurant that already has a demo in `dev-in-portfolio/restaurant-showcase` (both active and HOLD):
 
-Current reconciliation:
+1. **Rada-Depth Audit (Immutable 407 A/B rows):**
+   - 407 total rows
+   - 184 Showcase exclusions
+   - 223 net-new active prospects (129 A YES / 36 B YES / 58 B CONDITIONAL)
 
-- Audit A/B universe: **407**
-- Showcase inventory checked: **203 active + 31 hold = 234 demos**
-- Audit A/B restaurants with an existing Showcase demo: **184**
-- Net-new Gemini queue: **223**
-- Remaining tiers: **129 A YES / 36 B YES / 58 B CONDITIONAL**
+2. **Charlotte Prospect Sweep 2026-08-28 (Authoritative 94 rows):**
+   - 94 total rows
+   - 4 Showcase exclusions
+   - 1 Existing audit duplicate (The Public House)
+   - 89 net-new active prospects (46 A+ / 27 A / 16 B)
+
+**Combined active queue: 312 net-new prospects**
 
 ## Canonical data
 
 - `queue/audit-ab-master.json` preserves the original 407 audited A/B rows.
-- `scripts/sync-showcase-exclusions.mjs` compares that immutable source against both Showcase data files.
-- The generated active queue lives in the four `queue/*.js` bucket files.
+- `queue/charlotte-prospect-sweep-2026-08-28.json` preserves the authoritative 94 supplemental sweep rows with supplied grades (A+, A, B).
+- `scripts/sync-showcase-exclusions.mjs` reconciles both sources against Showcase active and hold files.
+- Active queue data: `queue/a-yes-1.js`, `queue/a-yes-2.js`, `queue/b-yes.js`, `queue/b-conditional.js`, and `queue/sweep-2026-08-28.js`.
 - `queue/showcase-exclusions.json` records every removed overlap and how it matched.
-- `queue/meta.js` supplies the portal's expected live count.
+- `queue/meta.js` supplies the portal's expected live count (312).
 
 ## Hard rule
 
@@ -26,12 +32,8 @@ If a restaurant exists in Showcase active **or Showcase HOLD**, it is excluded f
 
 ## Integrity checks
 
-The portal no longer hardcodes 407 as its rendered queue size. It reads `queue/meta.js` and verifies that the number of loaded rows equals the latest generated net-new count. It also warns on duplicate canonical names or overrides for names outside the net-new queue.
+The portal reads `queue/meta.js` and verifies that the number of loaded rows equals the combined net-new count (312). It also warns on duplicate canonical names or overrides for names outside the active queue.
 
-## Legacy folders and sources
+## Source data truthfulness
 
-Old restaurant folders and the retired legacy lead/concept files remain historical/reference material only. They cannot make a restaurant eligible. Build selection comes only from the generated net-new queue.
-
-## Completion rule
-
-The current six-page premium standard in `README.md` remains unchanged: restaurant-specific design, six substantive pages, two useful interactions including one conversion interaction, current evidence, responsive/browser QA, accessibility checks, and truthful demo-safe behavior.
+Sweep records are rendered with their authentic source and grade (A+, A, B) without fabricating numeric scores or audit batches.

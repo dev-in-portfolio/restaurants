@@ -1,1 +1,46 @@
-const t=document.querySelector("[data-nav-toggle]"),n=document.querySelector("[data-nav]");if(t&&n)t.addEventListener("click",()=>{const o=n.classList.toggle("open");t.setAttribute("aria-expanded",String(o))});const b=[...document.querySelectorAll("[data-filter]")],g=[...document.querySelectorAll("[data-menu-group]")];b.forEach(x=>x.addEventListener("click",()=>{b.forEach(y=>y.classList.remove("active"));x.classList.add("active");const v=x.dataset.filter;g.forEach(y=>y.hidden=v!=="all"&&y.dataset.category!==v)}));const p=document.querySelector("[data-planner]");if(p){const k=p.querySelector("[data-kind]"),s=p.querySelector("[data-size]"),r=p.querySelector("[data-priority]"),c=p.querySelector("[data-count]"),h=p.querySelector("[data-title]"),d=p.querySelector("[data-copy]"),u=()=>{const z=Math.max(1,Number(s.value)||1);c.textContent=`${z} guest${z===1?"":"s"}`;h.textContent=k.value;d.textContent=`A ${r.value.toLowerCase()} starting point for approximately ${z} guest${z===1?"":"s"}. Live availability, pricing, timing and policies require restaurant confirmation.`};[k,s,r].forEach(x=>x.addEventListener("input",u));u()}document.querySelectorAll("[data-demo-form]").forEach(f=>f.addEventListener("submit",x=>{x.preventDefault();const q=f.querySelector("[data-note]");if(q)q.textContent="Preview complete. No information was sent or stored."}));
+/* NoDa Bodega — Interactive Scripts */
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Mobile Navigation Drawer Toggle
+  const toggleBtn = document.querySelector('.mobile-drawer-trigger');
+  const drawerPane = document.querySelector('.mobile-bodega-drawer');
+
+  if (toggleBtn && drawerPane) {
+    toggleBtn.addEventListener('click', () => {
+      const isOpen = drawerPane.classList.contains('open');
+      if (isOpen) {
+        drawerPane.classList.remove('open');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+      } else {
+        drawerPane.classList.add('open');
+        toggleBtn.setAttribute('aria-expanded', 'true');
+      }
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!toggleBtn.contains(e.target) && !drawerPane.contains(e.target)) {
+        drawerPane.classList.remove('open');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
+  // Accordion Component Behavior
+  const accordionButtons = document.querySelectorAll('.accordion-trigger-btn');
+  accordionButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      const isActive = item.classList.contains('active');
+
+      const siblings = item.parentElement.querySelectorAll('.bodega-accordion');
+      siblings.forEach((s) => s.classList.remove('active'));
+
+      if (!isActive) {
+        item.classList.add('active');
+        btn.setAttribute('aria-expanded', 'true');
+      } else {
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+});

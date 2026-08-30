@@ -1,0 +1,120 @@
+{
+  "slug": "hasaki-grill-and-sushi",
+  "generatedAt": "2026-08-28T19:40:41.823Z",
+  "recentCompared": 10,
+  "recentSlugs": [
+    "cedars-halal-market-restaurant-and-hookah",
+    "central-tea-house",
+    "chin-garden",
+    "crunch-bistro",
+    "deli-hn",
+    "dona-ana-deli-and-restaurant",
+    "el-rinconcito-chilango-taqueria",
+    "el-taco-deli",
+    "freshwaters-southern-new-orleans",
+    "golden-bakery"
+  ],
+  "rejectionThreshold": 0.72,
+  "closestMatch": {
+    "priorSlug": "deli-hn",
+    "score": 0.6557044334975369,
+    "classSimilarity": 0.5862068965517241,
+    "cssClassSimilarity": 0.6571428571428571,
+    "domSimilarity": 1,
+    "sectionSimilarity": 0,
+    "fontSimilarity": 1
+  },
+  "passed": true,
+  "comparisons": [
+    {
+      "priorSlug": "deli-hn",
+      "score": 0.6557044334975369,
+      "classSimilarity": 0.5862068965517241,
+      "cssClassSimilarity": 0.6571428571428571,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 1
+    },
+    {
+      "priorSlug": "el-taco-deli",
+      "score": 0.6557044334975369,
+      "classSimilarity": 0.5862068965517241,
+      "cssClassSimilarity": 0.6571428571428571,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 1
+    },
+    {
+      "priorSlug": "central-tea-house",
+      "score": 0.6461136999068033,
+      "classSimilarity": 0.5862068965517241,
+      "cssClassSimilarity": 0.6216216216216216,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 1
+    },
+    {
+      "priorSlug": "crunch-bistro",
+      "score": 0.6438758620689654,
+      "classSimilarity": 0.5862068965517241,
+      "cssClassSimilarity": 0.6133333333333333,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 1
+    },
+    {
+      "priorSlug": "chin-garden",
+      "score": 0.615704433497537,
+      "classSimilarity": 0.5862068965517241,
+      "cssClassSimilarity": 0.6571428571428571,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "dona-ana-deli-and-restaurant",
+      "score": 0.615704433497537,
+      "classSimilarity": 0.5862068965517241,
+      "cssClassSimilarity": 0.6571428571428571,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "el-rinconcito-chilango-taqueria",
+      "score": 0.615704433497537,
+      "classSimilarity": 0.5862068965517241,
+      "cssClassSimilarity": 0.6571428571428571,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "freshwaters-southern-new-orleans",
+      "score": 0.615704433497537,
+      "classSimilarity": 0.5862068965517241,
+      "cssClassSimilarity": 0.6571428571428571,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "golden-bakery",
+      "score": 0.615704433497537,
+      "classSimilarity": 0.5862068965517241,
+      "cssClassSimilarity": 0.6571428571428571,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "cedars-halal-market-restaurant-and-hookah",
+      "score": 0.6021437097159227,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6338028169014085,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    }
+  ]
+}

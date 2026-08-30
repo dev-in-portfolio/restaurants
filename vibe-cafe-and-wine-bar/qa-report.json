@@ -1,0 +1,263 @@
+{
+  "slug": "vibe-cafe-and-wine-bar",
+  "generatedAt": "2026-08-27T22:19:16.195Z",
+  "htmlPages": [
+    "concept.html",
+    "european-brunch-and-comfort-kitchen.html",
+    "index.html",
+    "menu.html",
+    "visit.html",
+    "wine-bar-and-artisan-patisserie.html"
+  ],
+  "cssFiles": [
+    "site.css"
+  ],
+  "jsFiles": [
+    "site.js"
+  ],
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "checks": [
+    {
+      "name": "Minimum substantive HTML page count",
+      "passed": true,
+      "detail": "6 HTML pages found; minimum is 5"
+    },
+    {
+      "name": "index.html exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "menu.html exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "visit/contact page exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "evidence.md exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CSS balance site.css",
+      "passed": true,
+      "detail": "balanced"
+    },
+    {
+      "name": "JavaScript parse site.js",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "concept.html has <title>",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "concept.html has viewport meta",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "concept.html duplicate IDs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "concept.html image alt attributes",
+      "passed": true,
+      "detail": "0 image(s) missing alt"
+    },
+    {
+      "name": "concept.html automatic-demo form prohibition",
+      "passed": true,
+      "detail": "0 form(s) found"
+    },
+    {
+      "name": "concept.html links back to home",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "european-brunch-and-comfort-kitchen.html has <title>",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "european-brunch-and-comfort-kitchen.html has viewport meta",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "european-brunch-and-comfort-kitchen.html duplicate IDs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "european-brunch-and-comfort-kitchen.html image alt attributes",
+      "passed": true,
+      "detail": "0 image(s) missing alt"
+    },
+    {
+      "name": "european-brunch-and-comfort-kitchen.html automatic-demo form prohibition",
+      "passed": true,
+      "detail": "0 form(s) found"
+    },
+    {
+      "name": "european-brunch-and-comfort-kitchen.html links back to home",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "index.html has <title>",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "index.html has viewport meta",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "index.html duplicate IDs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "index.html image alt attributes",
+      "passed": true,
+      "detail": "0 image(s) missing alt"
+    },
+    {
+      "name": "index.html automatic-demo form prohibition",
+      "passed": true,
+      "detail": "0 form(s) found"
+    },
+    {
+      "name": "menu.html has <title>",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "menu.html has viewport meta",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "menu.html duplicate IDs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "menu.html image alt attributes",
+      "passed": true,
+      "detail": "0 image(s) missing alt"
+    },
+    {
+      "name": "menu.html automatic-demo form prohibition",
+      "passed": true,
+      "detail": "0 form(s) found"
+    },
+    {
+      "name": "menu.html links back to home",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "visit.html has <title>",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "visit.html has viewport meta",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "visit.html duplicate IDs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "visit.html image alt attributes",
+      "passed": true,
+      "detail": "0 image(s) missing alt"
+    },
+    {
+      "name": "visit.html automatic-demo form prohibition",
+      "passed": true,
+      "detail": "0 form(s) found"
+    },
+    {
+      "name": "visit.html links back to home",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "wine-bar-and-artisan-patisserie.html has <title>",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "wine-bar-and-artisan-patisserie.html has viewport meta",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "wine-bar-and-artisan-patisserie.html duplicate IDs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "wine-bar-and-artisan-patisserie.html image alt attributes",
+      "passed": true,
+      "detail": "0 image(s) missing alt"
+    },
+    {
+      "name": "wine-bar-and-artisan-patisserie.html automatic-demo form prohibition",
+      "passed": true,
+      "detail": "0 form(s) found"
+    },
+    {
+      "name": "wine-bar-and-artisan-patisserie.html links back to home",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "No exact duplicate HTML pages",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "evidence.md contains ## Creative Brief",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "evidence.md contains ## Claim Ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "evidence.md contains ## Add-On Preservation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "evidence.md contains ## Cross-Demo Diversity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Cross-demo design diversity",
+      "passed": true,
+      "detail": "PASS vibe-cafe-and-wine-bar: closest recent design 'the-wine-shop-at-rivergate' scored 0.637."
+    }
+  ]
+}

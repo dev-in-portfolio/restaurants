@@ -1,0 +1,120 @@
+{
+  "slug": "swirl-dessert-bar",
+  "generatedAt": "2026-08-27T01:45:58.749Z",
+  "recentCompared": 10,
+  "recentSlugs": [
+    "sidelines-sports-bar-and-billiards",
+    "south-end-hideaway",
+    "southern-pecan-gulf-coast-kitchen",
+    "somewhere-clt",
+    "spaghett",
+    "stable-hand",
+    "substrate",
+    "suffolk-punch-brewing",
+    "sweet-lew-s-bbq",
+    "qc-social-lounge"
+  ],
+  "rejectionThreshold": 0.72,
+  "closestMatch": {
+    "priorSlug": "sidelines-sports-bar-and-billiards",
+    "score": 0.6392778187177598,
+    "classSimilarity": 0.559322033898305,
+    "cssClassSimilarity": 0.6231884057971014,
+    "domSimilarity": 1,
+    "sectionSimilarity": 0,
+    "fontSimilarity": 1
+  },
+  "passed": true,
+  "comparisons": [
+    {
+      "priorSlug": "sidelines-sports-bar-and-billiards",
+      "score": 0.6392778187177598,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 1
+    },
+    {
+      "priorSlug": "south-end-hideaway",
+      "score": 0.6392778187177598,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 1
+    },
+    {
+      "priorSlug": "southern-pecan-gulf-coast-kitchen",
+      "score": 0.6392778187177598,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 1
+    },
+    {
+      "priorSlug": "somewhere-clt",
+      "score": 0.6392778187177598,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 1
+    },
+    {
+      "priorSlug": "spaghett",
+      "score": 0.6392778187177598,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 1
+    },
+    {
+      "priorSlug": "stable-hand",
+      "score": 0.6392778187177598,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 1
+    },
+    {
+      "priorSlug": "substrate",
+      "score": 0.6392778187177598,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 1
+    },
+    {
+      "priorSlug": "suffolk-punch-brewing",
+      "score": 0.6392778187177598,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 1
+    },
+    {
+      "priorSlug": "sweet-lew-s-bbq",
+      "score": 0.6392778187177598,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 1
+    },
+    {
+      "priorSlug": "qc-social-lounge",
+      "score": 0.546,
+      "classSimilarity": 0.5333333333333333,
+      "cssClassSimilarity": 0.6,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0
+    }
+  ]
+}

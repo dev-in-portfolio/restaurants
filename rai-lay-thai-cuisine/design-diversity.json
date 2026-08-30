@@ -1,0 +1,120 @@
+{
+  "slug": "rai-lay-thai-cuisine",
+  "generatedAt": "2026-08-25T20:54:28.478Z",
+  "recentCompared": 10,
+  "recentSlugs": [
+    "poppy-s-bagels-and-more",
+    "pho-quynh",
+    "platform-coffee-plus-kitchen",
+    "plot-twist",
+    "puerta",
+    "pho-real",
+    "prohibition",
+    "punta-cana-caribbean-grill-and-bar",
+    "queen-park-social",
+    "queen-city-bites-and-crafts"
+  ],
+  "rejectionThreshold": 0.72,
+  "closestMatch": {
+    "priorSlug": "pho-quynh",
+    "score": 0.4785876082611592,
+    "classSimilarity": 0.3684210526315789,
+    "cssClassSimilarity": 0.3670886075949367,
+    "domSimilarity": 1,
+    "sectionSimilarity": 0,
+    "fontSimilarity": 0.5
+  },
+  "passed": true,
+  "comparisons": [
+    {
+      "priorSlug": "pho-quynh",
+      "score": 0.4785876082611592,
+      "classSimilarity": 0.3684210526315789,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "platform-coffee-plus-kitchen",
+      "score": 0.4785876082611592,
+      "classSimilarity": 0.3684210526315789,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "plot-twist",
+      "score": 0.4785876082611592,
+      "classSimilarity": 0.3684210526315789,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "puerta",
+      "score": 0.4785876082611592,
+      "classSimilarity": 0.3684210526315789,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "pho-real",
+      "score": 0.4785876082611592,
+      "classSimilarity": 0.3684210526315789,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "prohibition",
+      "score": 0.4785876082611592,
+      "classSimilarity": 0.3684210526315789,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "punta-cana-caribbean-grill-and-bar",
+      "score": 0.4785876082611592,
+      "classSimilarity": 0.3684210526315789,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "queen-city-bites-and-crafts",
+      "score": 0.4785876082611592,
+      "classSimilarity": 0.3684210526315789,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "queen-park-social",
+      "score": 0.46760344827586203,
+      "classSimilarity": 0.3448275862068966,
+      "cssClassSimilarity": 0.35,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "poppy-s-bagels-and-more",
+      "score": 0.4670676082611592,
+      "classSimilarity": 0.3684210526315789,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 0.952,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    }
+  ]
+}

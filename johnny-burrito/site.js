@@ -1,6 +1,26 @@
+// Johnny Burrito Client Script
+document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const mobileDrawer = document.querySelector('.mobile-drawer');
 
-const navToggle=document.querySelector('[data-nav-toggle]');const navLinks=document.querySelector('[data-nav-links]');if(navToggle&&navLinks){navToggle.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');navToggle.setAttribute('aria-expanded',String(open));});}
-const search=document.querySelector('[data-menu-search]');if(search){search.addEventListener('input',()=>{const q=search.value.toLowerCase().trim();document.querySelectorAll('[data-menu-item]').forEach(el=>{el.hidden=q&&!el.dataset.search.includes(q);});});}
-let selectedChoice='';document.querySelectorAll('[data-choice]').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('[data-choice]').forEach(x=>x.classList.remove('active'));btn.classList.add('active');selectedChoice=btn.dataset.choice;}));
-document.querySelectorAll('[data-build-plan]').forEach(btn=>btn.addEventListener('click',()=>{const tool=btn.closest('[data-tool]');const guests=tool.querySelector('[name=guests]')?.value||'your group';const select=tool.querySelector('select[name=style]');const radio=tool.querySelector('input[name=style]:checked');const style=selectedChoice||select?.value||radio?.value||'selected direction';const extra=tool.querySelector('[name=extra]')?.checked?' Include the optional add-on.':'';tool.querySelector('[data-tool-output]').innerHTML=`<small>Demo planning summary</small><h2>${style}</h2><p>Plan for ${guests} guest${Number(guests)===1?'':'s'}.${extra}</p><p><strong>No order, reservation or message was sent.</strong></p>`;}));
-document.querySelectorAll('[data-demo-form]').forEach(form=>form.addEventListener('submit',e=>{e.preventDefault();form.querySelector('[data-form-status]').textContent='Demo only — this form did not send information.';}));
+  if (menuToggle && mobileDrawer) {
+    menuToggle.addEventListener('click', () => {
+      const isOpen = mobileDrawer.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', isOpen);
+    });
+  }
+
+  // Smooth scroll for internal anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href');
+      if (targetId && targetId !== '#') {
+        const targetElem = document.querySelector(targetId);
+        if (targetElem) {
+          e.preventDefault();
+          targetElem.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    });
+  });
+});

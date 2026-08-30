@@ -1,1 +1,46 @@
-const t=document.querySelector("[data-nav-toggle]"),l=document.querySelector("[data-nav-links]");if(t&&l)t.addEventListener("click",()=>{const o=l.classList.toggle("open");t.setAttribute("aria-expanded",String(o))});const s=document.querySelector("[data-menu-search]");if(s)s.addEventListener("input",()=>{const q=s.value.trim().toLowerCase();document.querySelectorAll("[data-menu-group]").forEach(g=>{g.hidden=q&&!g.textContent.toLowerCase().includes(q)})});const tool=document.querySelector("[data-tool]");if(tool){const b=tool.querySelector("[data-build-plan]"),o=tool.querySelector("[data-tool-output]");b.addEventListener("click",()=>{const g=tool.querySelector("[name=guests]").value,st=tool.querySelector("[name=style]").value,x=tool.querySelector("[name=extra]").checked;o.innerHTML=`<small>Demo planning summary</small><h2>${g} guest${g==="1"?"":"s"}</h2><p><strong>Direction:</strong> ${st}</p><p>${x?"Include an additional timing, accessibility, allergy or celebration note.":"No additional note selected."}</p><p>This summary has not been sent.</p>`})}const f=document.querySelector("[data-demo-form]");if(f)f.addEventListener("submit",e=>{e.preventDefault();f.querySelector("[data-form-note]").textContent="Demo captured locally only. Nothing was sent."});
+/* Miro Spanish Grille — Interactive Scripts */
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Mobile Navigation Drawer Toggle
+  const toggleBtn = document.querySelector('.mobile-drawer-trigger');
+  const drawerPane = document.querySelector('.mobile-miro-drawer');
+
+  if (toggleBtn && drawerPane) {
+    toggleBtn.addEventListener('click', () => {
+      const isOpen = drawerPane.classList.contains('open');
+      if (isOpen) {
+        drawerPane.classList.remove('open');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+      } else {
+        drawerPane.classList.add('open');
+        toggleBtn.setAttribute('aria-expanded', 'true');
+      }
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!toggleBtn.contains(e.target) && !drawerPane.contains(e.target)) {
+        drawerPane.classList.remove('open');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
+  // Accordion Component Behavior
+  const accordionButtons = document.querySelectorAll('.accordion-trigger-btn');
+  accordionButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      const isActive = item.classList.contains('active');
+
+      const siblings = item.parentElement.querySelectorAll('.miro-accordion');
+      siblings.forEach((s) => s.classList.remove('active'));
+
+      if (!isActive) {
+        item.classList.add('active');
+        btn.setAttribute('aria-expanded', 'true');
+      } else {
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+});

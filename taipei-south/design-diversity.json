@@ -1,0 +1,120 @@
+{
+  "slug": "taipei-south",
+  "generatedAt": "2026-08-27T02:51:11.223Z",
+  "recentCompared": 10,
+  "recentSlugs": [
+    "suffolk-punch-brewing",
+    "sweet-lew-s-bbq",
+    "swirl-dessert-bar",
+    "taipei-express",
+    "tabla-indian-restaurant",
+    "tap-and-vine",
+    "taqueria-los-altos",
+    "tavern-on-the-tracks",
+    "thai-house",
+    "qc-social-lounge"
+  ],
+  "rejectionThreshold": 0.72,
+  "closestMatch": {
+    "priorSlug": "suffolk-punch-brewing",
+    "score": 0.6392778187177598,
+    "classSimilarity": 0.559322033898305,
+    "cssClassSimilarity": 0.6231884057971014,
+    "domSimilarity": 1,
+    "sectionSimilarity": 0,
+    "fontSimilarity": 1
+  },
+  "passed": true,
+  "comparisons": [
+    {
+      "priorSlug": "suffolk-punch-brewing",
+      "score": 0.6392778187177598,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 1
+    },
+    {
+      "priorSlug": "sweet-lew-s-bbq",
+      "score": 0.6392778187177598,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 1
+    },
+    {
+      "priorSlug": "swirl-dessert-bar",
+      "score": 0.6392778187177598,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 1
+    },
+    {
+      "priorSlug": "taipei-express",
+      "score": 0.6392778187177598,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 1
+    },
+    {
+      "priorSlug": "tap-and-vine",
+      "score": 0.6392778187177598,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 1
+    },
+    {
+      "priorSlug": "taqueria-los-altos",
+      "score": 0.6392778187177598,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 1
+    },
+    {
+      "priorSlug": "tavern-on-the-tracks",
+      "score": 0.6392778187177598,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 1
+    },
+    {
+      "priorSlug": "tabla-indian-restaurant",
+      "score": 0.6367608695652174,
+      "classSimilarity": 0.55,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 1
+    },
+    {
+      "priorSlug": "thai-house",
+      "score": 0.6122101495448274,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 0.8872180451127819,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 1
+    },
+    {
+      "priorSlug": "qc-social-lounge",
+      "score": 0.546,
+      "classSimilarity": 0.5333333333333333,
+      "cssClassSimilarity": 0.6,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0
+    }
+  ]
+}

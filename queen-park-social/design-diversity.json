@@ -1,0 +1,120 @@
+{
+  "slug": "queen-park-social",
+  "generatedAt": "2026-08-25T19:15:28.798Z",
+  "recentCompared": 10,
+  "recentSlugs": [
+    "laurel-park",
+    "pokebowl-ramen",
+    "poppy-s-bagels-and-more",
+    "pho-quynh",
+    "platform-coffee-plus-kitchen",
+    "plot-twist",
+    "puerta",
+    "pho-real",
+    "prohibition",
+    "punta-cana-caribbean-grill-and-bar"
+  ],
+  "rejectionThreshold": 0.72,
+  "closestMatch": {
+    "priorSlug": "laurel-park",
+    "score": 0.46760344827586203,
+    "classSimilarity": 0.3448275862068966,
+    "cssClassSimilarity": 0.35,
+    "domSimilarity": 1,
+    "sectionSimilarity": 0,
+    "fontSimilarity": 0.5
+  },
+  "passed": true,
+  "comparisons": [
+    {
+      "priorSlug": "laurel-park",
+      "score": 0.46760344827586203,
+      "classSimilarity": 0.3448275862068966,
+      "cssClassSimilarity": 0.35,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "pokebowl-ramen",
+      "score": 0.46760344827586203,
+      "classSimilarity": 0.3448275862068966,
+      "cssClassSimilarity": 0.35,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "pho-quynh",
+      "score": 0.46760344827586203,
+      "classSimilarity": 0.3448275862068966,
+      "cssClassSimilarity": 0.35,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "platform-coffee-plus-kitchen",
+      "score": 0.46760344827586203,
+      "classSimilarity": 0.3448275862068966,
+      "cssClassSimilarity": 0.35,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "plot-twist",
+      "score": 0.46760344827586203,
+      "classSimilarity": 0.3448275862068966,
+      "cssClassSimilarity": 0.35,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "puerta",
+      "score": 0.46760344827586203,
+      "classSimilarity": 0.3448275862068966,
+      "cssClassSimilarity": 0.35,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "pho-real",
+      "score": 0.46760344827586203,
+      "classSimilarity": 0.3448275862068966,
+      "cssClassSimilarity": 0.35,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "prohibition",
+      "score": 0.46760344827586203,
+      "classSimilarity": 0.3448275862068966,
+      "cssClassSimilarity": 0.35,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "punta-cana-caribbean-grill-and-bar",
+      "score": 0.46760344827586203,
+      "classSimilarity": 0.3448275862068966,
+      "cssClassSimilarity": 0.35,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "poppy-s-bagels-and-more",
+      "score": 0.45608344827586206,
+      "classSimilarity": 0.3448275862068966,
+      "cssClassSimilarity": 0.35,
+      "domSimilarity": 0.952,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    }
+  ]
+}

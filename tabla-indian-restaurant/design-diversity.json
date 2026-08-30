@@ -1,0 +1,120 @@
+{
+  "slug": "tabla-indian-restaurant",
+  "generatedAt": "2026-08-27T02:05:20.211Z",
+  "recentCompared": 10,
+  "recentSlugs": [
+    "southern-pecan-gulf-coast-kitchen",
+    "somewhere-clt",
+    "spaghett",
+    "stable-hand",
+    "substrate",
+    "suffolk-punch-brewing",
+    "sweet-lew-s-bbq",
+    "swirl-dessert-bar",
+    "taipei-express",
+    "qc-social-lounge"
+  ],
+  "rejectionThreshold": 0.72,
+  "closestMatch": {
+    "priorSlug": "taipei-express",
+    "score": 0.6438540899042005,
+    "classSimilarity": 0.576271186440678,
+    "cssClassSimilarity": 0.6231884057971014,
+    "domSimilarity": 1,
+    "sectionSimilarity": 0,
+    "fontSimilarity": 1
+  },
+  "passed": true,
+  "comparisons": [
+    {
+      "priorSlug": "taipei-express",
+      "score": 0.6438540899042005,
+      "classSimilarity": 0.576271186440678,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 1
+    },
+    {
+      "priorSlug": "southern-pecan-gulf-coast-kitchen",
+      "score": 0.6367608695652174,
+      "classSimilarity": 0.55,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 1
+    },
+    {
+      "priorSlug": "somewhere-clt",
+      "score": 0.6367608695652174,
+      "classSimilarity": 0.55,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 1
+    },
+    {
+      "priorSlug": "spaghett",
+      "score": 0.6367608695652174,
+      "classSimilarity": 0.55,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 1
+    },
+    {
+      "priorSlug": "stable-hand",
+      "score": 0.6367608695652174,
+      "classSimilarity": 0.55,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 1
+    },
+    {
+      "priorSlug": "substrate",
+      "score": 0.6367608695652174,
+      "classSimilarity": 0.55,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 1
+    },
+    {
+      "priorSlug": "suffolk-punch-brewing",
+      "score": 0.6367608695652174,
+      "classSimilarity": 0.55,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 1
+    },
+    {
+      "priorSlug": "sweet-lew-s-bbq",
+      "score": 0.6367608695652174,
+      "classSimilarity": 0.55,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 1
+    },
+    {
+      "priorSlug": "swirl-dessert-bar",
+      "score": 0.6367608695652174,
+      "classSimilarity": 0.55,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 1
+    },
+    {
+      "priorSlug": "qc-social-lounge",
+      "score": 0.5436393442622951,
+      "classSimilarity": 0.5245901639344263,
+      "cssClassSimilarity": 0.6,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0
+    }
+  ]
+}

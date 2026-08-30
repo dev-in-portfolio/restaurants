@@ -1,0 +1,120 @@
+{
+  "slug": "tin-tin-cafe",
+  "generatedAt": "2026-08-27T23:03:10.492Z",
+  "recentCompared": 10,
+  "recentSlugs": [
+    "three-amigos-mexican-grill",
+    "tryon-house-restaurant-woodlawn",
+    "tyber-creek-pub",
+    "tropical-goodies",
+    "verdant-bread",
+    "vibe-cafe-and-wine-bar",
+    "vinyl",
+    "yume-ramen-sushi-and-bar",
+    "zio-casual-italian",
+    "qc-social-lounge"
+  ],
+  "rejectionThreshold": 0.72,
+  "closestMatch": {
+    "priorSlug": "vinyl",
+    "score": 0.5968740920096853,
+    "classSimilarity": 0.559322033898305,
+    "cssClassSimilarity": 0.6142857142857143,
+    "domSimilarity": 1,
+    "sectionSimilarity": 0,
+    "fontSimilarity": 0.5
+  },
+  "passed": true,
+  "comparisons": [
+    {
+      "priorSlug": "vinyl",
+      "score": 0.5968740920096853,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6142857142857143,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "tyber-creek-pub",
+      "score": 0.5752778187177598,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.2
+    },
+    {
+      "priorSlug": "vibe-cafe-and-wine-bar",
+      "score": 0.5752778187177598,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.2
+    },
+    {
+      "priorSlug": "three-amigos-mexican-grill",
+      "score": 0.5733578187177598,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 0.992,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.2
+    },
+    {
+      "priorSlug": "tryon-house-restaurant-woodlawn",
+      "score": 0.5733578187177598,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 0.992,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.2
+    },
+    {
+      "priorSlug": "tropical-goodies",
+      "score": 0.5733578187177598,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 0.992,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.2
+    },
+    {
+      "priorSlug": "verdant-bread",
+      "score": 0.5733578187177598,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 0.992,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.2
+    },
+    {
+      "priorSlug": "yume-ramen-sushi-and-bar",
+      "score": 0.5733578187177598,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 0.992,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.2
+    },
+    {
+      "priorSlug": "zio-casual-italian",
+      "score": 0.5733578187177598,
+      "classSimilarity": 0.559322033898305,
+      "cssClassSimilarity": 0.6231884057971014,
+      "domSimilarity": 0.992,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.2
+    },
+    {
+      "priorSlug": "qc-social-lounge",
+      "score": 0.54408,
+      "classSimilarity": 0.5333333333333333,
+      "cssClassSimilarity": 0.6,
+      "domSimilarity": 0.992,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0
+    }
+  ]
+}

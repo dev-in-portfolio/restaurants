@@ -1,0 +1,120 @@
+{
+  "slug": "pho-quynh",
+  "generatedAt": "2026-08-25T18:04:42.735Z",
+  "recentCompared": 10,
+  "recentSlugs": [
+    "parkway-house-family-restaurant",
+    "passage-to-india-indian-cuisine",
+    "pho-huong-que",
+    "picasso-s-sports-cafe",
+    "persuasian-restaurant",
+    "pertinacious-coffee",
+    "littl-madeleine",
+    "laurel-park",
+    "pokebowl-ramen",
+    "poppy-s-bagels-and-more"
+  ],
+  "rejectionThreshold": 0.72,
+  "closestMatch": {
+    "priorSlug": "pho-huong-que",
+    "score": 0.5745933014354067,
+    "classSimilarity": 0.41818181818181815,
+    "cssClassSimilarity": 0.42105263157894735,
+    "domSimilarity": 1,
+    "sectionSimilarity": 0.2,
+    "fontSimilarity": 1
+  },
+  "passed": true,
+  "comparisons": [
+    {
+      "priorSlug": "pho-huong-que",
+      "score": 0.5745933014354067,
+      "classSimilarity": 0.41818181818181815,
+      "cssClassSimilarity": 0.42105263157894735,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0.2,
+      "fontSimilarity": 1
+    },
+    {
+      "priorSlug": "parkway-house-family-restaurant",
+      "score": 0.4785876082611592,
+      "classSimilarity": 0.3684210526315789,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "passage-to-india-indian-cuisine",
+      "score": 0.4785876082611592,
+      "classSimilarity": 0.3684210526315789,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "picasso-s-sports-cafe",
+      "score": 0.4785876082611592,
+      "classSimilarity": 0.3684210526315789,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "persuasian-restaurant",
+      "score": 0.4785876082611592,
+      "classSimilarity": 0.3684210526315789,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "pertinacious-coffee",
+      "score": 0.4785876082611592,
+      "classSimilarity": 0.3684210526315789,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "littl-madeleine",
+      "score": 0.4785876082611592,
+      "classSimilarity": 0.3684210526315789,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "laurel-park",
+      "score": 0.4785876082611592,
+      "classSimilarity": 0.3684210526315789,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "pokebowl-ramen",
+      "score": 0.4785876082611592,
+      "classSimilarity": 0.3684210526315789,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 1,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    },
+    {
+      "priorSlug": "poppy-s-bagels-and-more",
+      "score": 0.4670676082611592,
+      "classSimilarity": 0.3684210526315789,
+      "cssClassSimilarity": 0.3670886075949367,
+      "domSimilarity": 0.952,
+      "sectionSimilarity": 0,
+      "fontSimilarity": 0.5
+    }
+  ]
+}

@@ -1,0 +1,1135 @@
+{
+  "source": "Charlotte Restaurant Prospect Sweep",
+  "checkpointDate": "2026-08-28",
+  "totalRecords": 94,
+  "records": [
+    {
+      "position": 1,
+      "name": "K.O. Sushi",
+      "slug": "k-o-sushi",
+      "grade": "A",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 2,
+      "name": "Halfpenny’s Cafe",
+      "slug": "halfpenny-s-cafe",
+      "grade": "A+",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 3,
+      "name": "Johnny Burrito",
+      "slug": "johnny-burrito",
+      "grade": "A+",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 4,
+      "name": "Nirvana II",
+      "slug": "nirvana-ii",
+      "grade": "A+",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 5,
+      "name": "Red Ginger",
+      "slug": "red-ginger",
+      "grade": "A",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 6,
+      "name": "The Sandwich Club",
+      "slug": "the-sandwich-club",
+      "grade": "A+",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 7,
+      "name": "Crunch Bistro",
+      "slug": "crunch-bistro",
+      "grade": "A+",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 8,
+      "name": "Luce Ristorante",
+      "slug": "luce-ristorante",
+      "grade": "A+",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 9,
+      "name": "Room 112",
+      "slug": "room-112",
+      "grade": "A",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 10,
+      "name": "Hasaki Grill & Sushi",
+      "slug": "hasaki-grill-and-sushi",
+      "grade": "A+",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 11,
+      "name": "Valhalla Pub & Eatery",
+      "slug": "valhalla-pub-and-eatery",
+      "grade": "A",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 12,
+      "name": "French Quarter Restaurant",
+      "slug": "french-quarter-restaurant",
+      "grade": "A",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 13,
+      "name": "Indigo Tea & Coffee Co.",
+      "slug": "indigo-tea-and-coffee-co",
+      "grade": "A+",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 14,
+      "name": "Nefelie’s",
+      "slug": "nefelie-s",
+      "grade": "A+",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 15,
+      "name": "Pie in the Sky Pizza",
+      "slug": "pie-in-the-sky-pizza",
+      "grade": "A+",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 16,
+      "name": "Basil Thai Cuisine",
+      "slug": "basil-thai-cuisine",
+      "grade": "A",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 17,
+      "name": "Cheers Mate Bar & Lounge",
+      "slug": "cheers-mate-bar-and-lounge",
+      "grade": "A",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 18,
+      "name": "Great Wok",
+      "slug": "great-wok",
+      "grade": "A",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 19,
+      "name": "The Local",
+      "slug": "the-local",
+      "grade": "A+",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 20,
+      "name": "Mortimer’s Café & Pub",
+      "slug": "mortimer-s-cafe-and-pub",
+      "grade": "A+",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 21,
+      "name": "Lottie’s Cafe",
+      "slug": "lottie-s-cafe",
+      "grade": "A",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 22,
+      "name": "Cedar Street Tavern",
+      "slug": "cedar-street-tavern",
+      "grade": "A",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 23,
+      "name": "Cuzcatlan Restaurant",
+      "slug": "cuzcatlan-restaurant",
+      "grade": "A",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 24,
+      "name": "Santa Fe Mexican Restaurant — Central Ave",
+      "slug": "santa-fe-mexican-restaurant-central-ave",
+      "grade": "A+",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 25,
+      "name": "Central Tea House",
+      "slug": "central-tea-house",
+      "grade": "A+",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 26,
+      "name": "Landmark Restaurant Diner",
+      "slug": "landmark-restaurant-diner",
+      "grade": "A+",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 27,
+      "name": "Van Loi Chinese Barbecue",
+      "slug": "van-loi-chinese-barbecue",
+      "grade": "A+",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 28,
+      "name": "Cedars Halal Market, Restaurant & Hookah",
+      "slug": "cedars-halal-market-restaurant-and-hookah",
+      "grade": "A+",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 29,
+      "name": "Pho An Hoa",
+      "slug": "pho-an-hoa",
+      "grade": "A+",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 30,
+      "name": "Bernardin’s",
+      "slug": "bernardin-s",
+      "grade": "B",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 31,
+      "name": "Cowbell Burger & Whiskey Bar",
+      "slug": "cowbell-burger-and-whiskey-bar",
+      "grade": "B",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 32,
+      "name": "SAVÚ",
+      "slug": "savu",
+      "grade": "B",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 33,
+      "name": "Thomas Street Tavern",
+      "slug": "thomas-street-tavern",
+      "grade": "A",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 34,
+      "name": "Mezzo Market",
+      "slug": "mezzo-market",
+      "grade": "A",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 35,
+      "name": "Akahana Asian Bistro",
+      "slug": "akahana-asian-bistro",
+      "grade": "B",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 36,
+      "name": "China Bowl",
+      "slug": "china-bowl",
+      "grade": "B",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 37,
+      "name": "Guatelinda Restaurante & Panadería",
+      "slug": "guatelinda-restaurante-and-panaderia",
+      "grade": "B",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 38,
+      "name": "Island Flavors II",
+      "slug": "island-flavors-ii",
+      "grade": "B",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 39,
+      "name": "Mert’s Heart & Soul",
+      "slug": "mert-s-heart-and-soul",
+      "grade": "A",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "excluded_showcase",
+        "details": "Existing active Showcase demo (mert-s-heart-and-soul); excluded from build rotation"
+      }
+    },
+    {
+      "position": 40,
+      "name": "Homestyle Kitchn LLC",
+      "slug": "homestyle-kitchn-llc",
+      "grade": "A",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "excluded_showcase",
+        "details": "Existing active Showcase demo (Home Style Kitchn / home-style-kitchn); excluded from build rotation"
+      }
+    },
+    {
+      "position": 41,
+      "name": "Exotica Indian Kitchen & Bar",
+      "slug": "exotica-indian-kitchen-and-bar",
+      "grade": "B",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "excluded_showcase",
+        "details": "Existing active Showcase demo (exotica-indian-kitchen-and-bar); excluded from build rotation"
+      }
+    },
+    {
+      "position": 42,
+      "name": "The Public House",
+      "slug": "the-public-house",
+      "grade": "B",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "existing_audit",
+        "details": "Present in original audit queue and completed factory build (the-public-house, premium status); preserved without duplicate lead"
+      }
+    },
+    {
+      "position": 43,
+      "name": "Shawarma2Go",
+      "slug": "shawarma2go",
+      "grade": "A+",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 44,
+      "name": "Don’s Restaurant",
+      "slug": "don-s-restaurant",
+      "grade": "B",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 45,
+      "name": "Freshwaters Southern New Orleans",
+      "slug": "freshwaters-southern-new-orleans",
+      "grade": "A+",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 46,
+      "name": "It’s Poppin! Gourmet Kettle Korn",
+      "slug": "it-s-poppin-gourmet-kettle-korn",
+      "grade": "A",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 47,
+      "name": "Jewell Treats",
+      "slug": "jewell-treats",
+      "grade": "A",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 48,
+      "name": "Soho Bistro",
+      "slug": "soho-bistro",
+      "grade": "B",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 49,
+      "name": "Ten58 Sports Bar & Lounge",
+      "slug": "ten58-sports-bar-and-lounge",
+      "grade": "A",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 50,
+      "name": "Sweet Crunch Waffles",
+      "slug": "sweet-crunch-waffles",
+      "grade": "A+",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 51,
+      "name": "Sugar & Sip Coffee & Workshop",
+      "slug": "sugar-and-sip-coffee-and-workshop",
+      "grade": "A",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 52,
+      "name": "Kuya Omakase 2.0",
+      "slug": "kuya-omakase-2-0",
+      "grade": "A+",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 53,
+      "name": "Seoul Good CLT",
+      "slug": "seoul-good-clt",
+      "grade": "A+",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 54,
+      "name": "Kicks Deli",
+      "slug": "kicks-deli",
+      "grade": "A",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 55,
+      "name": "Pasta Crush",
+      "slug": "pasta-crush",
+      "grade": "A+",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 56,
+      "name": "Maroon Market",
+      "slug": "maroon-market",
+      "grade": "A+",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 57,
+      "name": "La Cocina Mexicana",
+      "slug": "la-cocina-mexicana",
+      "grade": "A+",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 58,
+      "name": "Phil’s Deli To Go",
+      "slug": "phil-s-deli-to-go",
+      "grade": "A+",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 59,
+      "name": "Sub One Hoagie House",
+      "slug": "sub-one-hoagie-house",
+      "grade": "A+",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 60,
+      "name": "Energy Cafe",
+      "slug": "energy-cafe",
+      "grade": "B",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 61,
+      "name": "Poppin Sushi & Poke",
+      "slug": "poppin-sushi-and-poke",
+      "grade": "A+",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 62,
+      "name": "Hippin’ Hops",
+      "slug": "hippin-hops",
+      "grade": "A",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 63,
+      "name": "Impeckable Chicken",
+      "slug": "impeckable-chicken",
+      "grade": "A+",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 64,
+      "name": "Barley & Burger Smashed",
+      "slug": "barley-and-burger-smashed",
+      "grade": "B",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 65,
+      "name": "Arbol Eatery",
+      "slug": "arbol-eatery",
+      "grade": "B",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 66,
+      "name": "Deluxe Fun Dining",
+      "slug": "deluxe-fun-dining",
+      "grade": "B",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "excluded_showcase",
+        "details": "Existing active Showcase demo (deluxe-fun-dining); excluded from build rotation"
+      }
+    },
+    {
+      "position": 67,
+      "name": "Bisonte Pizza Co.",
+      "slug": "bisonte-pizza-co",
+      "grade": "B",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 68,
+      "name": "Istanbul Hookah Lounge",
+      "slug": "istanbul-hookah-lounge",
+      "grade": "A",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 69,
+      "name": "Hip Hop Smoothies",
+      "slug": "hip-hop-smoothies",
+      "grade": "A+",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 70,
+      "name": "Fonda Las Tarascas",
+      "slug": "fonda-las-tarascas",
+      "grade": "A",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 71,
+      "name": "Tima African Restaurant",
+      "slug": "tima-african-restaurant",
+      "grade": "A",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 72,
+      "name": "Fortune Cookie V",
+      "slug": "fortune-cookie-v",
+      "grade": "A",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 73,
+      "name": "Jamile’s Cuisine International",
+      "slug": "jamile-s-cuisine-international",
+      "grade": "A+",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 74,
+      "name": "Nile Grocery & Cafe",
+      "slug": "nile-grocery-and-cafe",
+      "grade": "A+",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 75,
+      "name": "Kilimanjaro Kitchen",
+      "slug": "kilimanjaro-kitchen",
+      "grade": "A+",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 76,
+      "name": "Chin Garden",
+      "slug": "chin-garden",
+      "grade": "A+",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 77,
+      "name": "Deli HN",
+      "slug": "deli-hn",
+      "grade": "A+",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 78,
+      "name": "Doña Ana Deli & Restaurant",
+      "slug": "dona-ana-deli-and-restaurant",
+      "grade": "A+",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 79,
+      "name": "La Caridad Cocina Latina",
+      "slug": "la-caridad-cocina-latina",
+      "grade": "A+",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 80,
+      "name": "Golden Bakery",
+      "slug": "golden-bakery",
+      "grade": "A+",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 81,
+      "name": "El Bohio Tipico",
+      "slug": "el-bohio-tipico",
+      "grade": "A",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 82,
+      "name": "Las Megas Tortas",
+      "slug": "las-megas-tortas",
+      "grade": "A+",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 83,
+      "name": "Nica Chapin",
+      "slug": "nica-chapin",
+      "grade": "A+",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 84,
+      "name": "Retaj Restaurant & Cafe",
+      "slug": "retaj-restaurant-and-cafe",
+      "grade": "A",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 85,
+      "name": "MI SABOR CATRACHO",
+      "slug": "mi-sabor-catracho",
+      "grade": "B",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 86,
+      "name": "El Rinconcito Chilango Taqueria",
+      "slug": "el-rinconcito-chilango-taqueria",
+      "grade": "A+",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 87,
+      "name": "Tortilleria Y Carnicería Los Paisanos 3",
+      "slug": "tortilleria-y-carniceria-los-paisanos-3",
+      "grade": "A+",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 88,
+      "name": "New York Diner",
+      "slug": "new-york-diner",
+      "grade": "A",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 89,
+      "name": "El Taco Deli",
+      "slug": "el-taco-deli",
+      "grade": "A+",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 90,
+      "name": "Restaurante Y Panaderia Salvadoreña",
+      "slug": "restaurante-y-panaderia-salvadorena",
+      "grade": "A+",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 91,
+      "name": "K’s Asian Xpress",
+      "slug": "k-s-asian-xpress",
+      "grade": "A+",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 92,
+      "name": "China Taste",
+      "slug": "china-taste",
+      "grade": "A",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 93,
+      "name": "Taqueria Express",
+      "slug": "taqueria-express",
+      "grade": "B",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    },
+    {
+      "position": 94,
+      "name": "Teriyaki Express",
+      "slug": "teriyaki-express",
+      "grade": "B",
+      "source": "Charlotte Restaurant Prospect Sweep",
+      "checkpointDate": "2026-08-28",
+      "reconciliation": {
+        "status": "admitted",
+        "details": "Admitted as net-new Charlotte prospect lead"
+      }
+    }
+  ]
+}
