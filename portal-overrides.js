@@ -47,6 +47,7 @@ window.portalOverrides = [
   { name: "Johnny Burrito", status: "premium", href: "johnny-burrito/index.html" },
   { name: "Nirvana II", status: "premium", href: "nirvana-ii/index.html" },
   { name: "The Sandwich Club", status: "premium", href: "the-sandwich-club/index.html" },
+  { name: "Crunch Bistro", status: "premium", href: "crunch-bistro/index.html" },
   { name: "Maroon Market", portalSection: "later", note: "Typographical artifact for parent food hall Monarch Market housing individual vendor stalls (Kuya Omakase, Seoul Good, Pasta Crush); no standalone stall." },
   { name: "Sweet Boutique Bakery", portalSection: "later", note: "Residential custom cake studio at 9814 Zackery Ave; no public retail walk-in storefront." },
   { name: "Mily & Lalo Peruvian Restaurant", portalSection: "later", note: "Located in Columbus GA outside Charlotte market; hold for regional queue." },
