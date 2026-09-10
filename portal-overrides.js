@@ -24,6 +24,7 @@ window.portalOverrides = [
   { name: "Sub One Hoagie House", status: "premium", href: "sub-one-hoagie-house/index.html" },
   { name: "Poppin Sushi & Poke", status: "premium", href: "poppin-sushi-and-poke/index.html" },
   { name: "Impeckable Chicken", status: "premium", href: "impeckable-chicken/index.html" },
+  { name: "Hip Hop Smoothies", status: "premium", href: "hip-hop-smoothies/index.html" },
   { name: "Maroon Market", portalSection: "later", note: "Typographical artifact for parent food hall Monarch Market housing individual vendor stalls (Kuya Omakase, Seoul Good, Pasta Crush); no standalone stall." },
   { name: "Sweet Boutique Bakery", portalSection: "later", note: "Residential custom cake studio at 9814 Zackery Ave; no public retail walk-in storefront." },
   { name: "Mily & Lalo Peruvian Restaurant", portalSection: "later", note: "Located in Columbus GA outside Charlotte market; hold for regional queue." },
