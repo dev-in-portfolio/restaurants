@@ -1,0 +1,242 @@
+﻿# -*- coding: utf-8 -*-
+import os
+import sys
+sys.path.append("scripts")
+from basil_builder import header_html, footer_html
+
+# Page 5: executive-lunch-and-catering.html
+catering_content = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Executive Lunch &amp; Catering | Basil Thai Cuisine Uptown Charlotte</title>
+  <meta name="description" content="Host corporate lunches and private events with Basil Thai Cuisine in Uptown Charlotte. Executive bento boxes, party curry trays, and group noodle platters.">
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+{header_html("executive-lunch-and-catering.html")}
+
+  <section class="basil-hero-compact">
+    <div class="basil-container">
+      <span class="basil-badge">Corporate Dining &amp; Group Trays</span>
+      <h1 style="font-size:2.6rem; font-weight:900; margin:15px 0;">Executive Lunch &amp; Corporate Catering</h1>
+      <p style="font-size:1.1rem; color:#cbd5e1; max-width:720px; margin:0 auto;">Sophisticated Thai dining packages designed for Uptown Charlotte business meetings, corporate conferences, and private celebrations.</p>
+    </div>
+  </section>
+
+  <main class="basil-container" style="padding:60px 24px;">
+    <!-- Interactive Estimator & Corporate Overview -->
+    <div class="basil-grid-2" style="gap:40px; margin-bottom:60px; align-items:start;">
+      <div>
+        <span class="basil-tag">Tailored for Business</span>
+        <h2 style="font-size:2rem; color:#064e3b; margin:15px 0; font-weight:800;">Elevated Group Catering Solutions</h2>
+        <p style="color:#475569; line-height:1.7; margin-bottom:15px;">
+          Basil Thai Cuisine provides refined, hassle-free catering for financial institutions, legal firms, and corporate teams across Uptown Charlotte.
+        </p>
+        <p style="color:#475569; line-height:1.7; margin-bottom:20px;">
+          From individually boxed executive Thai bento sets to generous buffet-style half and full pans of curries, noodles, and fresh basil rolls, we deliver restaurant-quality elegance directly to your boardroom or event space.
+        </p>
+        
+        <div class="basil-calc-box">
+          <h3 style="color:#064e3b; font-size:1.3rem; margin-bottom:12px;">Interactive Event &amp; Lunch Estimator</h3>
+          <p style="color:#475569; font-size:0.9rem; margin-bottom:14px;">Select your group size and meeting format to estimate package requirements:</p>
+          
+          <label style="font-weight:600; font-size:0.9rem; color:#374151;">Expected Number of Guests:</label>
+          <select id="basil-calc-guests" class="basil-calc-select">
+            <option value="10">10 Guests</option>
+            <option value="15">15 Guests</option>
+            <option value="20" selected>20 Guests</option>
+            <option value="30">30 Guests</option>
+            <option value="50">50 Guests</option>
+          </select>
+
+          <label style="font-weight:600; font-size:0.9rem; color:#374151;">Meeting / Event Format:</label>
+          <select id="basil-calc-type" class="basil-calc-select">
+            <option value="executive" selected>Executive Boxed Bento Lunches</option>
+            <option value="buffet">Buffet-Style Curry &amp; Noodle Trays</option>
+            <option value="vip">Chef Signature VIP Dinner Spread</option>
+          </select>
+
+          <div id="basil-calc-output" class="basil-calc-res">
+            <!-- Populated via site.js -->
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <img src="images/basil-rolls-appetizers.jpg" alt="Fresh Thai Basil Rolls and appetizers for catering" style="width:100%; height:360px; object-fit:cover; border-radius:12px; box-shadow:var(--basil-shadow-lg); margin-bottom:25px;">
+        <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:12px; padding:24px; box-shadow:var(--basil-shadow);">
+          <h4 style="color:#064e3b; font-size:1.15rem; margin-bottom:8px;">Placing Group &amp; Catering Orders</h4>
+          <p style="color:#475569; font-size:0.95rem; line-height:1.6; margin-bottom:14px;">
+            We recommend ordering at least 4 hours in advance for lunch bento sets, and 24 hours for large corporate buffets. Complete with serving utensils, sauces, and jasmine rice.
+          </p>
+          <a href="tel:7043327212" class="basil-btn-primary" style="display:block; text-align:center;">Call Catering Desk: (704) 332-7212</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Signature Group Packages -->
+    <h2 style="font-size:1.9rem; color:#064e3b; text-align:center; margin-bottom:35px;">Popular Corporate &amp; Group Trays</h2>
+
+    <div class="basil-grid-3" style="gap:28px; margin-bottom:60px;">
+      <div class="basil-card">
+        <h3 style="color:#064e3b; margin-bottom:8px;">Executive Bento Box Package</h3>
+        <p style="color:#475569; font-size:0.95rem; line-height:1.6; margin-bottom:16px;">Individually packaged bento meals featuring choice of Chicken Pad Thai, Green Curry, or Basil Stir-Fry, accompanied by a fresh basil roll, ginger salad, and jasmine rice.</p>
+        <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid #e2e8f0; padding-top:12px;">
+          <span style="font-weight:700; color:#d97706; font-size:1.2rem;">$19.50 / person</span>
+          <span class="basil-tag">Min 8 Orders</span>
+        </div>
+      </div>
+
+      <div class="basil-card">
+        <h3 style="color:#064e3b; margin-bottom:8px;">Pad Thai Catering Tray (Half Pan)</h3>
+        <p style="color:#475569; font-size:0.95rem; line-height:1.6; margin-bottom:16px;">Serves 8 - 10 guests. Half hotel pan of classic Pad Thai with chicken, shrimp, or organic tofu, tossed with farm egg, bean sprouts, crushed peanuts, and lime wedges.</p>
+        <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid #e2e8f0; padding-top:12px;">
+          <span style="font-weight:700; color:#d97706; font-size:1.2rem;">$78.00</span>
+          <span class="basil-tag">Serves 8-10</span>
+        </div>
+      </div>
+
+      <div class="basil-card">
+        <h3 style="color:#064e3b; margin-bottom:8px;">Masaman Curry Buffet Pan</h3>
+        <p style="color:#475569; font-size:0.95rem; line-height:1.6; margin-bottom:16px;">Serves 8 - 10 guests. Half pan of slow-simmered Masaman coconut curry with tender chicken breast, Idaho potatoes, onions, and cashews, with separate pan of jasmine rice.</p>
+        <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid #e2e8f0; padding-top:12px;">
+          <span style="font-weight:700; color:#d97706; font-size:1.2rem;">$85.00</span>
+          <span class="basil-tag">Serves 8-10</span>
+        </div>
+      </div>
+
+      <div class="basil-card">
+        <h3 style="color:#064e3b; margin-bottom:8px;">Basil Rolls Party Platter (20 Rolls)</h3>
+        <p style="color:#475569; font-size:0.95rem; line-height:1.6; margin-bottom:16px;">20 hand-rolled fresh Thai basil rolls filled with shrimp or tofu, vermicelli noodles, fresh herbs, and served with a bowl of warm peanut dipping sauce.</p>
+        <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid #e2e8f0; padding-top:12px;">
+          <span style="font-weight:700; color:#d97706; font-size:1.2rem;">$65.00</span>
+          <span class="basil-tag">20 Rolls</span>
+        </div>
+      </div>
+
+      <div class="basil-card">
+        <h3 style="color:#064e3b; margin-bottom:8px;">Pad See Eu Catering Tray</h3>
+        <p style="color:#475569; font-size:0.95rem; line-height:1.6; margin-bottom:16px;">Serves 8 - 10 guests. Wide flat rice noodles wok-seared in dark soy sauce with farm egg, fresh Chinese broccoli, and choice of tender chicken or beef.</p>
+        <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid #e2e8f0; padding-top:12px;">
+          <span style="font-weight:700; color:#d97706; font-size:1.2rem;">$78.00</span>
+          <span class="basil-tag">Serves 8-10</span>
+        </div>
+      </div>
+
+      <div class="basil-card">
+        <h3 style="color:#064e3b; margin-bottom:8px;">Crispy Wonton &amp; Spring Roll Combo</h3>
+        <p style="color:#475569; font-size:0.95rem; line-height:1.6; margin-bottom:16px;">30 pieces total (15 crispy egg rolls and 15 fried pork wontons) accompanied by sweet chili and plum dipping sauces.</p>
+        <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid #e2e8f0; padding-top:12px;">
+          <span style="font-weight:700; color:#d97706; font-size:1.2rem;">$55.00</span>
+          <span class="basil-tag">30 Pieces</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Banner -->
+    <div class="basil-banner-strip">
+      <h2 style="color:#ffffff; font-size:2rem; margin-bottom:12px;">Coordinate Your Corporate Event</h2>
+      <p style="color:#cbd5e1; max-width:650px; margin:0 auto 20px;">Contact our catering coordinators directly to discuss timing, custom spice requirements, and tax-exempt accounts.</p>
+      <a href="tel:7043327212" class="basil-btn-primary">Call (704) 332-7212</a>
+    </div>
+  </main>
+
+{footer_html()}
+"""
+
+with open("basil-thai-cuisine/executive-lunch-and-catering.html", "w", encoding="utf-8") as f:
+    f.write(catering_content)
+print("Written: basil-thai-cuisine/executive-lunch-and-catering.html")
+
+# Page 6: visit.html
+visit_content = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visit &amp; Hours | Basil Thai Cuisine Uptown Charlotte NC</title>
+  <meta name="description" content="Plan your visit to Basil Thai Cuisine at 210 N Church St in Uptown Charlotte. Lunch &amp; dinner hours, parking tips, walking directions, and reservations.">
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+{header_html("visit.html")}
+
+  <section class="basil-hero-compact">
+    <div class="basil-container">
+      <span class="basil-badge">Fourth Ward Corridor</span>
+      <h1 style="font-size:2.6rem; font-weight:900; margin:15px 0;">Visit Basil Thai Cuisine</h1>
+      <p style="font-size:1.1rem; color:#cbd5e1; max-width:720px; margin:0 auto;">Located at 210 North Church Street, between Trade Street and 5th Street in Uptown Charlotte.</p>
+    </div>
+  </section>
+
+  <main class="basil-container" style="padding:60px 24px;">
+    <div class="basil-grid-2" style="gap:40px; margin-bottom:60px;">
+      <!-- Contact & Directions -->
+      <div class="basil-card" style="padding:32px;">
+        <h2 style="color:#064e3b; margin-top:0; font-size:1.6rem; border-bottom:2px solid #e2e8f0; padding-bottom:12px;">Location &amp; Contact</h2>
+        
+        <div style="margin:20px 0; line-height:1.8; color:#374151;">
+          <p><strong>Physical Address:</strong><br>210 N Church St<br>Charlotte, NC 28202</p>
+          <p><strong>District:</strong> Uptown Charlotte / Fourth Ward</p>
+          <p><strong>Phone:</strong> <a href="tel:7043327212" style="color:#d97706; font-weight:700;">(704) 332-7212</a></p>
+          <p><strong>Email:</strong> <a href="mailto:info@eatatbasil.com" style="color:#d97706;">info@eatatbasil.com</a></p>
+        </div>
+
+        <h3 style="color:#064e3b; font-size:1.25rem; margin-top:24px;">Walking &amp; Neighborhood Directions</h3>
+        <p style="color:#475569; font-size:0.95rem; line-height:1.6;">
+          We are situated on North Church Street, just two blocks northwest of the historic Square at Trade and Tryon. A quick 3-minute stroll from Discovery Place Science and Blumenthal Performing Arts Center.
+        </p>
+
+        <h3 style="color:#064e3b; font-size:1.25rem; margin-top:20px;">Parking &amp; Transit</h3>
+        <ul style="color:#475569; font-size:0.95rem; line-height:1.6; padding-left:20px;">
+          <li>Metered street parking available along N Church St, W 5th St, and W 6th St</li>
+          <li>7th Street Station Parking Deck (2 blocks east)</li>
+          <li>Discovery Place Parking Garage directly adjacent on Church Street</li>
+          <li>CATS CityLYNX Gold Line: CTC / Arena Station or Tryon St stop</li>
+        </ul>
+      </div>
+
+      <!-- Hours & Policies -->
+      <div class="basil-card" style="padding:32px;">
+        <h2 style="color:#064e3b; margin-top:0; font-size:1.6rem; border-bottom:2px solid #e2e8f0; padding-bottom:12px;">Dining Hours</h2>
+        
+        <div style="margin-top:20px;">
+          <h3 style="color:#064e3b; font-size:1.2rem; margin-bottom:8px;">Lunch Service</h3>
+          <p style="color:#475569; font-size:0.95rem; margin-bottom:16px;">
+            <strong>Monday - Thursday:</strong> 11:30 AM - 2:00 PM<br>
+            <small style="color:#64748b;">(Express lunch combos, noodle bowls, and corporate bento service)</small>
+          </p>
+
+          <h3 style="color:#064e3b; font-size:1.2rem; margin-bottom:8px;">Dinner Service</h3>
+          <p style="color:#475569; font-size:0.95rem; margin-bottom:16px;">
+            <strong>Monday - Sunday:</strong> 5:00 PM - 9:00 PM<br>
+            <small style="color:#64748b;">(Full dinner menu, chef duck specialties, craft cocktails, and wine)</small>
+          </p>
+        </div>
+
+        <div style="background:#ecfdf5; border:1px solid #a7f3d0; border-radius:8px; padding:16px; margin-top:24px;">
+          <h4 style="color:#065f46; margin-bottom:4px;">Reservations &amp; Carryout</h4>
+          <p style="color:#047857; font-size:0.9rem; margin:0;">
+            Table reservations are welcomed for evening dining and private parties. Call our dining room directly to reserve or place carryout orders.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Banner -->
+    <div class="basil-banner-strip">
+      <h2 style="color:#ffffff; font-size:2rem; margin-bottom:12px;">We Look Forward to Serving You</h2>
+      <p style="color:#cbd5e1; max-width:600px; margin:0 auto 20px;">Experience contemporary Thai cuisine at its finest in the heart of Uptown Charlotte.</p>
+      <a href="tel:7043327212" class="basil-btn-primary">Call (704) 332-7212</a>
+    </div>
+  </main>
+
+{footer_html()}
+"""
+
+with open("basil-thai-cuisine/visit.html", "w", encoding="utf-8") as f:
+    f.write(visit_content)
+print("Written: basil-thai-cuisine/visit.html")
+
