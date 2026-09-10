@@ -43,6 +43,7 @@ window.portalOverrides = [
   { name: "Cheers Mate Bar & Lounge", status: "premium", href: "cheers-mate-bar-and-lounge/index.html" },
   { name: "Great Wok", status: "premium", href: "great-wok/index.html" },
   { name: "Lottie's Cafe", status: "premium", href: "lottie-s-cafe/index.html" },
+  { name: "Halfpenny's Cafe", status: "premium", href: "halfpenny-s-cafe/index.html" },
   { name: "Maroon Market", portalSection: "later", note: "Typographical artifact for parent food hall Monarch Market housing individual vendor stalls (Kuya Omakase, Seoul Good, Pasta Crush); no standalone stall." },
   { name: "Sweet Boutique Bakery", portalSection: "later", note: "Residential custom cake studio at 9814 Zackery Ave; no public retail walk-in storefront." },
   { name: "Mily & Lalo Peruvian Restaurant", portalSection: "later", note: "Located in Columbus GA outside Charlotte market; hold for regional queue." },
