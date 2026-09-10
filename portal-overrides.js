@@ -1,4 +1,4 @@
-// Build-status patches for the canonical audited queue only.
+﻿// Build-status patches for the canonical audited queue only.
 // Do not add restaurants that are not already present in queue/*.js.
 // Allowed statuses: lead, incomplete, qa, premium, promoted, promoted_secondary.
 // Minimal completed-build patch example:
@@ -7,6 +7,10 @@
 window.portalOverrides = [
   { name: "Midwood Country Club", status: "qa", href: "midwood-country-club/index.html" },
   { name: "República Restaurant & Lounge", status: "promoted", href: "republica-restaurant-and-lounge/index.html", note: "Promoted to Showcase as Republica" },
+  { name: "Indigo Tea & Coffee Co.", status: "premium", href: "indigo-tea-and-coffee-co/index.html" },
+  { name: "Nefelie’s", status: "premium", href: "nefelie-s/index.html" },
+  { name: "The Local", status: "premium", href: "the-local/index.html" },
+  { name: "Mortimer’s Café & Pub", status: "premium", href: "mortimer-s-cafe-and-pub/index.html" },
   { name: "Sweet Boutique Bakery", portalSection: "later", note: "Residential custom cake studio at 9814 Zackery Ave; no public retail walk-in storefront." },
   { name: "Mily & Lalo Peruvian Restaurant", portalSection: "later", note: "Located in Columbus GA outside Charlotte market; hold for regional queue." },
   { name: "Angela’s Pizzeria & Restaurant", portalSection: "later", note: "Third-party delivery platforms report temporarily closed; needs recheck." },
