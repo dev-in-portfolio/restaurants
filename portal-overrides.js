@@ -19,6 +19,8 @@ window.portalOverrides = [
   { name: "Kuya Omakase 2.0", status: "premium", href: "kuya-omakase-2-0/index.html" },
   { name: "Seoul Good CLT", status: "premium", href: "seoul-good-clt/index.html" },
   { name: "Pasta Crush", status: "premium", href: "pasta-crush/index.html" },
+  { name: "La Cocina Mexicana", status: "premium", href: "la-cocina-mexicana/index.html" },
+  { name: "Maroon Market", portalSection: "later", note: "Typographical artifact for parent food hall Monarch Market housing individual vendor stalls (Kuya Omakase, Seoul Good, Pasta Crush); no standalone stall." },
   { name: "Sweet Boutique Bakery", portalSection: "later", note: "Residential custom cake studio at 9814 Zackery Ave; no public retail walk-in storefront." },
   { name: "Mily & Lalo Peruvian Restaurant", portalSection: "later", note: "Located in Columbus GA outside Charlotte market; hold for regional queue." },
   { name: "Angela’s Pizzeria & Restaurant", portalSection: "later", note: "Third-party delivery platforms report temporarily closed; needs recheck." },
