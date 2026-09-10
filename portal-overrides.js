@@ -32,6 +32,7 @@ window.portalOverrides = [
   { name: "Las Megas Tortas", status: "premium", href: "las-megas-tortas/index.html" },
   { name: "Nica Chapin", status: "premium", href: "nica-chapin/index.html" },
   { name: "Tortilleria Y Carnicería Los Paisanos 3", status: "premium", href: "tortilleria-y-carniceria-los-paisanos-3/index.html" },
+  { name: "Restaurante Y Panaderia Salvadoreña", status: "premium", href: "restaurante-y-panaderia-salvadorena/index.html" },
   { name: "Maroon Market", portalSection: "later", note: "Typographical artifact for parent food hall Monarch Market housing individual vendor stalls (Kuya Omakase, Seoul Good, Pasta Crush); no standalone stall." },
   { name: "Sweet Boutique Bakery", portalSection: "later", note: "Residential custom cake studio at 9814 Zackery Ave; no public retail walk-in storefront." },
   { name: "Mily & Lalo Peruvian Restaurant", portalSection: "later", note: "Located in Columbus GA outside Charlotte market; hold for regional queue." },
