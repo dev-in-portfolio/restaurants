@@ -1,7 +1,51 @@
+﻿document.addEventListener("DOMContentLoaded", () => {
+  // 1. Mobile Navigation
+  const toggleBtn = document.querySelector(".diner-menu-toggle-btn");
+  const navMenu = document.querySelector(".diner-nav-menu");
 
-const navToggle=document.querySelector('[data-nav-toggle]');
-if(navToggle){navToggle.addEventListener('click',()=>{const nav=document.querySelector('[data-nav-links]');const open=nav.classList.toggle('open');navToggle.setAttribute('aria-expanded',String(open));});}
-document.querySelectorAll('[data-filter]').forEach(btn=>btn.addEventListener('click',()=>{const f=btn.dataset.filter;document.querySelectorAll('[data-filter]').forEach(b=>b.classList.toggle('active',b===btn));document.querySelectorAll('[data-menu-card]').forEach(card=>card.hidden=!(f==='all'||card.dataset.category===f));}));
-const form=document.querySelector('[data-demo-form]');if(form){form.addEventListener('submit',e=>{e.preventDefault();const out=document.querySelector('[data-form-status]');if(out)out.textContent='Demo only — no information was sent.';});}
-const tool=document.querySelector('[data-tool]');
-if(tool){const inputs=[...tool.querySelectorAll('input,select')];const output=tool.querySelector('[data-tool-output]');const update=()=>{const vals=Object.fromEntries(inputs.map(i=>[i.name,i.type==='checkbox'?i.checked:i.value]));const guests=Number(vals.guests||vals.count||4);const style=vals.style||vals.path||vals.base||'balanced';const extra=vals.extra===true?' with extra planning notes':'';output.innerHTML=`<strong>${guests} guest${guests===1?'':'s'}:</strong> ${style}${extra}. <span>No request has been sent.</span>`;};inputs.forEach(i=>i.addEventListener('input',update));update();}
+  if (toggleBtn && navMenu) {
+    toggleBtn.addEventListener("click", () => {
+      navMenu.classList.toggle("show");
+      const isExpanded = navMenu.classList.contains("show");
+      toggleBtn.setAttribute("aria-expanded", isExpanded);
+    });
+  }
+
+  // 2. Ledger Menu Tabs
+  const tabBtns = document.querySelectorAll(".diner-tab-btn");
+  const ledgerSections = document.querySelectorAll(".diner-menu-ledger");
+
+  if (tabBtns.length > 0 && ledgerSections.length > 0) {
+    tabBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        tabBtns.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        const targetCat = btn.getAttribute("data-category");
+
+        ledgerSections.forEach(section => {
+          if (targetCat === "all" || section.getAttribute("data-cat") === targetCat) {
+            section.style.display = "block";
+          } else {
+            section.style.display = "none";
+          }
+        });
+      });
+    });
+  }
+
+  // 3. FAQ Unit Toggles
+  const faqTriggers = document.querySelectorAll(".diner-faq-trigger");
+  faqTriggers.forEach(trigger => {
+    trigger.addEventListener("click", () => {
+      const unit = trigger.parentElement;
+      const isActive = unit.classList.contains("active");
+
+      document.querySelectorAll(".diner-faq-unit").forEach(el => el.classList.remove("active"));
+
+      if (!isActive) {
+        unit.classList.add("active");
+      }
+    });
+  });
+});
