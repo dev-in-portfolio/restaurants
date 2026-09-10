@@ -28,6 +28,7 @@ window.portalOverrides = [
   { name: "Jamile’s Cuisine International", status: "premium", href: "jamile-s-cuisine-international/index.html" },
   { name: "Nile Grocery & Cafe", status: "premium", href: "nile-grocery-and-cafe/index.html" },
   { name: "Kilimanjaro Kitchen", status: "premium", href: "kilimanjaro-kitchen/index.html" },
+  { name: "La Caridad Cocina Latina", status: "premium", href: "la-caridad-cocina-latina/index.html" },
   { name: "Maroon Market", portalSection: "later", note: "Typographical artifact for parent food hall Monarch Market housing individual vendor stalls (Kuya Omakase, Seoul Good, Pasta Crush); no standalone stall." },
   { name: "Sweet Boutique Bakery", portalSection: "later", note: "Residential custom cake studio at 9814 Zackery Ave; no public retail walk-in storefront." },
   { name: "Mily & Lalo Peruvian Restaurant", portalSection: "later", note: "Located in Columbus GA outside Charlotte market; hold for regional queue." },
