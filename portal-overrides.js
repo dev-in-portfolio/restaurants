@@ -17,6 +17,7 @@ window.portalOverrides = [
   { name: "Pho An Hoa", status: "premium", href: "pho-an-hoa/index.html" },
   { name: "Sweet Crunch Waffles", status: "premium", href: "sweet-crunch-waffles/index.html" },
   { name: "Kuya Omakase 2.0", status: "premium", href: "kuya-omakase-2-0/index.html" },
+  { name: "Seoul Good CLT", status: "premium", href: "seoul-good-clt/index.html" },
   { name: "Sweet Boutique Bakery", portalSection: "later", note: "Residential custom cake studio at 9814 Zackery Ave; no public retail walk-in storefront." },
   { name: "Mily & Lalo Peruvian Restaurant", portalSection: "later", note: "Located in Columbus GA outside Charlotte market; hold for regional queue." },
   { name: "Angela’s Pizzeria & Restaurant", portalSection: "later", note: "Third-party delivery platforms report temporarily closed; needs recheck." },
