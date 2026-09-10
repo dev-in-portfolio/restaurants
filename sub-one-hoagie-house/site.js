@@ -1,7 +1,64 @@
+﻿// Sub One Hoagie House - Interactive Client Scripts
+document.addEventListener('DOMContentLoaded', () => {
+  // Mobile Navigation Toggle
+  const navToggle = document.querySelector('.subone-nav-toggle');
+  const navList = document.querySelector('.subone-nav-list');
+  if (navToggle && navList) {
+    navToggle.addEventListener('click', () => {
+      navList.classList.toggle('is-open');
+      const expanded = navList.classList.contains('is-open');
+      navToggle.setAttribute('aria-expanded', expanded);
+    });
+  }
 
-const navToggle=document.querySelector('[data-nav-toggle]');
-if(navToggle){navToggle.addEventListener('click',()=>{const nav=document.querySelector('[data-nav-links]');const open=nav.classList.toggle('open');navToggle.setAttribute('aria-expanded',String(open));});}
-document.querySelectorAll('[data-filter]').forEach(btn=>btn.addEventListener('click',()=>{const f=btn.dataset.filter;document.querySelectorAll('[data-filter]').forEach(b=>b.classList.toggle('active',b===btn));document.querySelectorAll('[data-menu-card]').forEach(card=>card.hidden=!(f==='all'||card.dataset.category===f));}));
-const form=document.querySelector('[data-demo-form]');if(form){form.addEventListener('submit',e=>{e.preventDefault();const out=document.querySelector('[data-form-status]');if(out)out.textContent='Demo only — no information was sent.';});}
-const tool=document.querySelector('[data-tool]');
-if(tool){const inputs=[...tool.querySelectorAll('input,select')];const output=tool.querySelector('[data-tool-output]');const update=()=>{const vals=Object.fromEntries(inputs.map(i=>[i.name,i.type==='checkbox'?i.checked:i.value]));const guests=Number(vals.guests||vals.count||4);const style=vals.style||vals.path||vals.base||'balanced';const extra=vals.extra===true?' with extra planning notes':'';output.innerHTML=`<strong>${guests} guest${guests===1?'':'s'}:</strong> ${style}${extra}. <span>No request has been sent.</span>`;};inputs.forEach(i=>i.addEventListener('input',update));update();}
+  // Interactive Menu Category Filter
+  const filterBtns = document.querySelectorAll('.subone-filter-btn');
+  const menuItems = document.querySelectorAll('.subone-menu-item');
+  if (filterBtns.length > 0 && menuItems.length > 0) {
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filterValue = btn.getAttribute('data-filter');
+
+        menuItems.forEach(item => {
+          if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+            item.style.display = 'flex';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+  }
+
+  // Interactive Catering & Party Box Estimator
+  const guestSlider = document.getElementById('subone-guest-count');
+  const guestDisplay = document.getElementById('subone-guest-display');
+  const styleSelect = document.getElementById('subone-platter-style');
+  const subTotal = document.getElementById('subone-sub-total');
+  const chipTotal = document.getElementById('subone-chip-total');
+  const teaTotal = document.getElementById('subone-tea-total');
+
+  function updateCateringEstimates() {
+    if (!guestSlider || !guestDisplay) return;
+    const guests = parseInt(guestSlider.value, 10);
+    guestDisplay.textContent = guests + ' People';
+
+    const isParty = styleSelect && styleSelect.value === 'party';
+    const wholeSubs = isParty ? Math.ceil(guests * 0.75) : guests;
+    const chipsBags = guests;
+    const teaGallons = Math.max(1, Math.ceil(guests / 10));
+
+    if (subTotal) subTotal.textContent = wholeSubs + ' Whole Hoagies (Cut & Boxed)';
+    if (chipTotal) chipTotal.textContent = chipsBags + ' Bags Kettle Chips';
+    if (teaTotal) teaTotal.textContent = teaGallons + ' Gallons Sweet Tea';
+  }
+
+  if (guestSlider) {
+    guestSlider.addEventListener('input', updateCateringEstimates);
+  }
+  if (styleSelect) {
+    styleSelect.addEventListener('change', updateCateringEstimates);
+  }
+});
