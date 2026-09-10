@@ -35,6 +35,7 @@ window.portalOverrides = [
   { name: "Restaurante Y Panaderia Salvadoreña", status: "premium", href: "restaurante-y-panaderia-salvadorena/index.html" },
   { name: "K’s Asian Xpress", status: "premium", href: "k-s-asian-xpress/index.html" },
   { name: "K.O. Sushi", status: "premium", href: "k-o-sushi/index.html" },
+  { name: "Red Ginger", status: "premium", href: "red-ginger/index.html" },
   { name: "Maroon Market", portalSection: "later", note: "Typographical artifact for parent food hall Monarch Market housing individual vendor stalls (Kuya Omakase, Seoul Good, Pasta Crush); no standalone stall." },
   { name: "Sweet Boutique Bakery", portalSection: "later", note: "Residential custom cake studio at 9814 Zackery Ave; no public retail walk-in storefront." },
   { name: "Mily & Lalo Peruvian Restaurant", portalSection: "later", note: "Located in Columbus GA outside Charlotte market; hold for regional queue." },
