@@ -41,6 +41,7 @@ window.portalOverrides = [
   { name: "French Quarter Restaurant", status: "premium", href: "french-quarter-restaurant/index.html" },
   { name: "Basil Thai Cuisine", status: "premium", href: "basil-thai-cuisine/index.html" },
   { name: "Cheers Mate Bar & Lounge", status: "premium", href: "cheers-mate-bar-and-lounge/index.html" },
+  { name: "Great Wok", status: "premium", href: "great-wok/index.html" },
   { name: "Maroon Market", portalSection: "later", note: "Typographical artifact for parent food hall Monarch Market housing individual vendor stalls (Kuya Omakase, Seoul Good, Pasta Crush); no standalone stall." },
   { name: "Sweet Boutique Bakery", portalSection: "later", note: "Residential custom cake studio at 9814 Zackery Ave; no public retail walk-in storefront." },
   { name: "Mily & Lalo Peruvian Restaurant", portalSection: "later", note: "Located in Columbus GA outside Charlotte market; hold for regional queue." },
