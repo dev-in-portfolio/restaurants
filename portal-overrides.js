@@ -1,4 +1,4 @@
-﻿// Build-status patches for the canonical audited queue only.
+// Build-status patches for the canonical audited queue only.
 // Do not add restaurants that are not already present in queue/*.js.
 // Allowed statuses: lead, incomplete, qa, premium, promoted, promoted_secondary.
 // Minimal completed-build patch example:
@@ -14,6 +14,7 @@ window.portalOverrides = [
   { name: "Santa Fe Mexican Restaurant — Central Ave", status: "premium", href: "santa-fe-mexican-restaurant-central-ave/index.html" },
   { name: "Landmark Restaurant Diner", status: "premium", href: "landmark-restaurant-diner/index.html" },
   { name: "Van Loi Chinese Barbecue", status: "premium", href: "van-loi-chinese-barbecue/index.html" },
+  { name: "Pho An Hoa", status: "premium", href: "pho-an-hoa/index.html" },
   { name: "Sweet Boutique Bakery", portalSection: "later", note: "Residential custom cake studio at 9814 Zackery Ave; no public retail walk-in storefront." },
   { name: "Mily & Lalo Peruvian Restaurant", portalSection: "later", note: "Located in Columbus GA outside Charlotte market; hold for regional queue." },
   { name: "Angela’s Pizzeria & Restaurant", portalSection: "later", note: "Third-party delivery platforms report temporarily closed; needs recheck." },
