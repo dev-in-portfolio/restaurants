@@ -11,6 +11,7 @@ window.portalOverrides = [
   { name: "Nefelie’s", status: "premium", href: "nefelie-s/index.html" },
   { name: "The Local", status: "premium", href: "the-local/index.html" },
   { name: "Mortimer’s Café & Pub", status: "premium", href: "mortimer-s-cafe-and-pub/index.html" },
+  { name: "Santa Fe Mexican Restaurant — Central Ave", status: "premium", href: "santa-fe-mexican-restaurant-central-ave/index.html" },
   { name: "Sweet Boutique Bakery", portalSection: "later", note: "Residential custom cake studio at 9814 Zackery Ave; no public retail walk-in storefront." },
   { name: "Mily & Lalo Peruvian Restaurant", portalSection: "later", note: "Located in Columbus GA outside Charlotte market; hold for regional queue." },
   { name: "Angela’s Pizzeria & Restaurant", portalSection: "later", note: "Third-party delivery platforms report temporarily closed; needs recheck." },
