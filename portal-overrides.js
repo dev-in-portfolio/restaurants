@@ -15,9 +15,11 @@ window.portalOverrides = [
   { name: "Landmark Restaurant Diner", status: "premium", href: "landmark-restaurant-diner/index.html" },
   { name: "Van Loi Chinese Barbecue", status: "premium", href: "van-loi-chinese-barbecue/index.html" },
   { name: "Pho An Hoa", status: "premium", href: "pho-an-hoa/index.html" },
+  { name: "Sweet Crunch Waffles", status: "premium", href: "sweet-crunch-waffles/index.html" },
   { name: "Sweet Boutique Bakery", portalSection: "later", note: "Residential custom cake studio at 9814 Zackery Ave; no public retail walk-in storefront." },
   { name: "Mily & Lalo Peruvian Restaurant", portalSection: "later", note: "Located in Columbus GA outside Charlotte market; hold for regional queue." },
   { name: "Angela’s Pizzeria & Restaurant", portalSection: "later", note: "Third-party delivery platforms report temporarily closed; needs recheck." },
+  { name: "Shawarma2Go", status: "closed", note: "Closed; ghost kitchen concept at 231 N Caldwell St ceased operations in July 2025." },
   { name: "The Royal Tot", status: "closed", note: "Closed; rooftop tiki lounge at 933 Louise Ave ceased operations." },
   { name: "Lorem Ipsum Listening Bar", status: "closed", note: "Permanently closed in July 2026" },
   { name: "Provided Coffee", status: "closed", note: "Charlotte locations closed in June 2026; consolidated to Concord NC flagship" }
