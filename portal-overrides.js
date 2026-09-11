@@ -65,6 +65,7 @@ window.portalOverrides = [
   { name: "It's Poppin! Gourmet Kettle Korn", status: "premium", href: "it-s-poppin-gourmet-kettle-korn/index.html" },
   { name: "Jewell Treats", status: "premium", href: "jewell-treats/index.html" },
   { name: "Soho Bistro", status: "premium", href: "soho-bistro/index.html" },
+  { name: "Ten58 Sports Bar & Lounge", status: "premium", href: "ten58-sports-bar-and-lounge/index.html" },
   { name: "Maroon Market", portalSection: "later", note: "Typographical artifact for parent food hall Monarch Market housing individual vendor stalls (Kuya Omakase, Seoul Good, Pasta Crush); no standalone stall." },
   { name: "Sweet Boutique Bakery", portalSection: "later", note: "Residential custom cake studio at 9814 Zackery Ave; no public retail walk-in storefront." },
   { name: "Mily & Lalo Peruvian Restaurant", portalSection: "later", note: "Located in Columbus GA outside Charlotte market; hold for regional queue." },
