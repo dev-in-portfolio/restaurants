@@ -76,6 +76,7 @@ window.portalOverrides = [
   { name: "Istanbul Hookah Lounge", status: "premium", href: "istanbul-hookah-lounge/index.html" },
   { name: "Fonda Las Tarascas", status: "premium", href: "fonda-las-tarascas/index.html" },
   { name: "Tima African Restaurant", status: "premium", href: "tima-african-restaurant/index.html" },
+  { name: "Fortune Cookie V", status: "premium", href: "fortune-cookie-v/index.html" },
   { name: "Maroon Market", portalSection: "later", note: "Typographical artifact for parent food hall Monarch Market housing individual vendor stalls (Kuya Omakase, Seoul Good, Pasta Crush); no standalone stall." },
   { name: "Sweet Boutique Bakery", portalSection: "later", note: "Residential custom cake studio at 9814 Zackery Ave; no public retail walk-in storefront." },
   { name: "Mily & Lalo Peruvian Restaurant", portalSection: "later", note: "Located in Columbus GA outside Charlotte market; hold for regional queue." },
